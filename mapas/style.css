@@ -136,6 +136,7 @@ main {
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
+  min-height: 42px;
 }
 .omb-map-card-tags-container {
   display: flex;
