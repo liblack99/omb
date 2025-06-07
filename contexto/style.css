@@ -192,6 +192,7 @@ main {
   size: 16px;
   line-height: 24px;
   gap: 8px;
+  cursor: pointer;
 }
 .omb-bottom-descarga span {
   width: 23px;
