@@ -143,16 +143,32 @@ main {
 .omb-botones-lista {
   width: 125px;
   height: 70px;
+  padding: 24px 16px 24px 16px;
+  gap: 8px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  border: none;
+  background-color: inherit;
+  color: #c6cb87;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.omb-botones-lista:hover {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border: 1px solid #d3d3ca;
-  padding: 24px 16px 24px 16px;
-  gap: 8px;
+  color: #212400;
   background: linear-gradient(180deg, #ffffff 0%, #f9ffbd 100%);
 }
 
 .omb-botones-lista-seleccionado {
-  border-bottom: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid #d3d3ca;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(180deg, #ffffff 0%, #f9ffbd 100%);
 }
 .omb-grafica-container {
   width: 100%;
@@ -191,8 +207,12 @@ main {
   font-weight: 700;
   size: 16px;
   line-height: 24px;
+  font-family: Montserrat;
   gap: 8px;
   cursor: pointer;
+}
+.omb-bottom-descarga:hover {
+  background-color: var(--secundario-yellow);
 }
 .omb-bottom-descarga span {
   width: 23px;
@@ -290,4 +310,7 @@ main {
   letter-spacing: 0px;
   vertical-align: middle;
   color: #acbd00;
+}
+.omb-enlace a:hover {
+  color: #a5ad4a;
 }

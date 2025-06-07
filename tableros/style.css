@@ -7,9 +7,11 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 main {
   max-width: 1280px;
+  margin-top: 40px;
 }
 .omb-section {
   width: 100%;
@@ -103,11 +105,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  flex: 1;
 }
 
 .omb-busqueda {
-  width: 100%;
+  width: 990px;
   height: 48px;
   background-color: #f8f9f1;
   padding: 0;
@@ -136,11 +137,11 @@ main {
 }
 
 .omb-container {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 16px;
+  width: calc(1238px - 324px);
 }
 .omb-card {
   width: 320px;
@@ -153,6 +154,7 @@ main {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  gap: 0px;
 }
 
 .omb-card:hover {
@@ -160,6 +162,8 @@ main {
   background: linear-gradient(180deg, #ffffff 0%, #fefff5 100%);
   border: 1px solid transparent;
   transform: scale(1.01);
+  gap: 3px;
+  padding-bottom: 0px;
 }
 
 .omb-card:hover h2 {
@@ -183,7 +187,6 @@ main {
 .omb-card-tag {
   width: auto;
   min-width: 132px;
-  height: 25px;
   border-radius: 16px;
   padding: 6px 12px 6px 12px;
   background-color: #f3f4f1;
