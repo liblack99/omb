@@ -1,0 +1,227 @@
+:root {
+  --primario-yellow: #f9ffbd;
+  --secundario-yellow: #dbf000;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+main {
+  max-width: 1280px;
+}
+
+.omb-button {
+  background-color: var(--primario-yellow);
+  width: 304px;
+  height: 62px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #71735e;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 12px;
+  position: relative;
+}
+
+.omb-button__width {
+  width: 336px;
+}
+.omb-button:hover {
+  background-color: var(--secundario-yellow);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #000;
+}
+
+.omb-button__secundario {
+  background-color: inherit;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.omb-content-button-active {
+  color: #000;
+  background-color: var(--secundario-yellow);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.omb-content-button-active::before {
+  content: "";
+  position: absolute;
+  right: -12px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 14px solid var(--secundario-yellow);
+  border-bottom: 8px solid transparent;
+}
+
+.omb-icon-button {
+  width: 46px;
+  height: 46px;
+  padding: 4px;
+}
+.omb-sidebar {
+  width: 304px;
+  height: 545px;
+  background: linear-gradient(180deg, #f9ffbd 0%, #ffffff 100%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  margin-top: 10px;
+}
+
+.omb-sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: start;
+  gap: 16px;
+}
+.omb-sidebar-list-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.omb-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.omb-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.omb-busqueda {
+  width: 100%;
+  height: 48px;
+  background-color: #f8f9f1;
+  padding: 0;
+  border: none;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.omb-input-busqueda {
+  width: 383px;
+  height: 22px;
+  background-color: #f8f9f1;
+  border: none;
+  padding: 0px 16px;
+  font-size: 16px;
+  color: #71735e;
+}
+.omb-input-busqueda:focus {
+  outline: none;
+  box-shadow: none;
+}
+.omb-icon-busqueda {
+  padding: 6px 16px 6px 16px;
+}
+
+.omb-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 16px;
+}
+.omb-card {
+  width: 320px;
+  height: 370px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #d3d3ca;
+  padding: 16px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.omb-card:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180deg, #ffffff 0%, #fefff5 100%);
+  border: 1px solid transparent;
+  transform: scale(1.01);
+}
+
+.omb-card:hover h2 {
+  color: #bed000; /* Cambia el color al que desees */
+}
+.omb-card-img {
+  height: 158px;
+  border-radius: 8px;
+  border: 1px solid #d3d3ca;
+  object-fit: cover;
+}
+
+.omb-card-tags-container {
+  display: flex;
+  gap: 8px;
+  width: 288px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.omb-card-tag {
+  width: 134px;
+  height: 25px;
+  border-radius: 16px;
+  padding: 6px 12px 6px 12px;
+  background-color: #f3f4f1;
+  color: #71735e;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 8px;
+}
+.omb-card-tag img {
+  width: 12px;
+  height: 12px;
+}
+
+.omb-card-tag:hover {
+  background-color: var(--primario-yellow);
+}
+
+.omb-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0%;
+  font-family: sans-serif;
+  min-height: 42px;
+}
+
+.omb-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 288px;
+  font-family: sans-serif;
+}
