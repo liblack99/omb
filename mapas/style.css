@@ -122,14 +122,14 @@ main {
   background: linear-gradient(180deg, #ffffff 0%, #fefff5 100%);
   transform: scale(1.01);
 }
-.omb-map-card h2:hover {
-  color: #bed000; /* Cambia el color al que desees */
-}
 
 .omb-map-card-img {
   width: 288px;
   height: 208px;
   border-radius: 8px;
+}
+.omb-map-card h2:hover {
+  color: #bed000; /* Cambia el color al que desees */
 }
 
 .omb-map-card h2 {
@@ -159,4 +159,8 @@ main {
   justify-items: center;
   align-items: center;
   gap: 8px;
+}
+
+.omb-map-card-tag:hover {
+  background-color: var(--primario-yellow);
 }
