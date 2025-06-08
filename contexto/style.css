@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 main {
   display: flex;
@@ -14,6 +15,55 @@ main {
   width: 100%;
   margin-top: 40px;
 }
+.omb-breadcrumb-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  border: 1px solid #d3d3ca;
+  box-shadow: 0px 2px 10px 0px #0000001f;
+  background-color: #f8f9f1;
+  box-sizing: border-box;
+}
+
+.omb-breadcrumb-lista {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 12px;
+  color: #bbbcae;
+  max-width: auto;
+  min-width: 324px;
+  height: 25px;
+  border-radius: 16px;
+  padding: 4px 16px 4px 16px;
+  gap: 14px;
+  margin-left: 294px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+}
+.omb-breadcrumb-lista span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #9ea453;
+}
+.omb-breadcrumb-lista li a {
+  color: #9ea453;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-family: Montserrat;
+}
+.omb-breadcrumb-lista li a:hover {
+  color: #acbd00;
+}
+
 .omb-card-content {
   width: 1280px;
   display: flex;
@@ -127,9 +177,10 @@ main {
   margin-top: 100px;
   position: relative;
 }
-.omb-vav-grafica {
-  width: 100%;
+.omb-nav-grafica {
+  width: 1280px;
   height: 100%;
+  margin-left: 264px;
 }
 .omb-lista-selectores-grafica {
   display: flex;
@@ -169,6 +220,7 @@ main {
   border: 1px solid #d3d3ca;
   border-bottom: 1px solid transparent;
   background: linear-gradient(180deg, #ffffff 0%, #f9ffbd 100%);
+  color: #212400;
 }
 .omb-grafica-container {
   width: 100%;
