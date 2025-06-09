@@ -20,15 +20,15 @@ main {
   gap: 16px;
 }
 .omb-button {
-  background-color: var(--primario-yellow);
+  background-color: var(--secundario-yellow);
   width: 304px;
   height: 62px;
   border: none;
-  padding: 0;
+  padding: 0px 0px 0px 16px;
   margin: 0;
   cursor: pointer;
   font-size: 16px;
-  color: #71735e;
+  color: #000;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -40,18 +40,19 @@ main {
   width: 336px;
 }
 .omb-button:hover {
-  background-color: var(--secundario-yellow);
+  background-color: #8e9c00;
+  color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: #000;
 }
 
 .omb-button__secundario {
-  background-color: inherit;
+  background-color: #ffffff;
+  padding: 0px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .omb-content-button-active {
-  color: #000;
-  background-color: var(--secundario-yellow);
+  color: white;
+  background-color: #8e9c00;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .omb-content-button-active::before {
@@ -61,7 +62,7 @@ main {
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
-  border-left: 14px solid var(--secundario-yellow);
+  border-left: 14px solid #8e9c00;
   border-bottom: 8px solid transparent;
 }
 
@@ -70,10 +71,11 @@ main {
   height: 46px;
   padding: 4px;
 }
+
 .omb-sidebar {
   width: 304px;
-  height: 545px;
-  background: linear-gradient(180deg, #f9ffbd 0%, #ffffff 100%);
+  height: auto;
+  background: var(--secundario-yellow);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -146,15 +148,15 @@ main {
 .omb-card {
   width: 320px;
   height: 370px;
+  display: flex;
+  gap: 8px;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid #d3d3ca;
   padding: 16px;
   transition: all 0.3s ease-in-out;
-  display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  gap: 8px;
 }
 
 .omb-card:hover {
