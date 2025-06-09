@@ -154,7 +154,7 @@ main {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  gap: 0px;
+  gap: 8px;
 }
 
 .omb-card:hover {
@@ -162,7 +162,7 @@ main {
   background: linear-gradient(180deg, #ffffff 0%, #fefff5 100%);
   border: 1px solid transparent;
   transform: scale(1.01);
-  gap: 3px;
+  gap: 11px;
   padding-bottom: 0px;
 }
 
@@ -178,10 +178,9 @@ main {
 
 .omb-card-tags-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   width: 288px;
-  margin-top: 8px;
-  margin-bottom: 8px;
 }
 
 .omb-card-tag {
@@ -216,8 +215,7 @@ main {
   line-height: 26px;
   color: #000000;
   margin: 0;
-  letter-spacing: 0%;
-  min-height: 42px;
+  min-height: 50px;
 }
 
 .omb-card p {
@@ -227,4 +225,5 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 288px;
+  margin: 0;
 }
