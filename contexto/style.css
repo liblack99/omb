@@ -130,7 +130,7 @@ main {
 
 .omb-texto-descripcion {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 30px;
   letter-spacing: 0;
   display: -webkit-box;
@@ -138,6 +138,7 @@ main {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #4d4d4d;
 }
 .omb-texto-descripcion-expandido {
   -webkit-line-clamp: unset;
@@ -161,6 +162,8 @@ main {
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0;
+  color: #4d4d4d;
+  font-family: "Montserrat";
 }
 .omb-text-button-container {
   width: 100%;
@@ -299,6 +302,7 @@ main {
   margin-top: 80px;
   display: flex;
   justify-content: center;
+  color: #4d4d4d;
 }
 .omb-contexto-content {
   width: 1280px;
@@ -311,6 +315,7 @@ main {
   font-size: 24px;
   line-height: 28px;
   margin: 0;
+  color: #000;
 }
 .omb-contexto-section p {
   font-weight: 500;
