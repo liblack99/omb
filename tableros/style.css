@@ -34,6 +34,7 @@ main {
   align-items: center;
   border-radius: 12px;
   position: relative;
+  font-family: "Montserrat", sans-serif;
 }
 
 .omb-button__width {

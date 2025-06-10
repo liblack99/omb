@@ -7,6 +7,7 @@ body {
   background: linear-gradient(to bottom, #fefefe, #ffffff);
   padding: 40px 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 .aliados h2 {
   font-size: 1.5rem;
@@ -23,7 +24,6 @@ body {
 .aliados-logos img {
   height: 70px;
   object-fit: contain;
-  filter: grayscale(100%);
   opacity: 0.85;
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
