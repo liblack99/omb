@@ -1,0 +1,202 @@
+:root {
+  --primario-yellow: #f9ffbd;
+  --secundario-yellow: #dbf000;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+main {
+  max-width: 100%;
+  margin-top: 40px;
+}
+.omb-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background-image: url("http://149.130.178.89/media/78");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.omb-decoracion {
+  position: absolute;
+  height: 32px;
+  width: 100px;
+  top: -4px;
+}
+.omb-decoracion img {
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.3));
+}
+
+.omb-button {
+  width: 544px;
+  height: 59px;
+  top: 312px;
+  left: 200px;
+  border-left-width: 3px;
+  padding-top: 16px;
+  padding-right: 8px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  background-color: #fff;
+  border: 2px solid var(--secundario-yellow);
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+}
+
+.omb-button__secundario {
+  background-color: #ffffff;
+  padding: 0px 0px 0px 12px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.omb-content-button-active {
+  color: white;
+  background-color: #8e9c00;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.omb-content-button-active::before {
+  content: "";
+  position: absolute;
+  right: -12px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 14px solid #8e9c00;
+  border-bottom: 8px solid transparent;
+}
+
+.omb-icon-button {
+  width: 46px;
+  height: 46px;
+  padding: 4px;
+}
+.omb-sidebar {
+  width: 304px;
+  height: auto;
+  background: var(--secundario-yellow);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  margin-top: 10px;
+}
+
+.omb-map-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  width: 1328px;
+}
+
+.omb-map-card {
+  width: 424px;
+  height: 277px;
+  gap: 12px;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.omb-map-card:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180deg, #ffffff 0%, #fefff5 100%);
+  transform: scale(1.01);
+}
+.omb-map-card:hover .omb-descripcion-container {
+  transform: translateY(-112px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    #fcffe0 100%
+  );
+}
+.omb-map-card:hover .omb-descripcion-number {
+  background-color: var(--primario-yellow);
+}
+.omb-map-card-img {
+  width: 392px;
+  height: 243px;
+  border-radius: 8px;
+}
+.omb-map-card h2:hover {
+  color: #bed000; /* Cambia el color al que desees */
+}
+
+.omb-map-card h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  min-height: 42px;
+}
+.omb-descripcion-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  width: 100%;
+  height: 125px;
+  position: absolute;
+  transform: translateY(-51px);
+  transition: all 0.3s ease;
+  left: 0;
+  padding-top: 20px;
+  padding-right: 16px;
+  padding-bottom: 20px;
+  padding-left: 32px;
+  gap: 24px;
+  box-sizing: border-box;
+}
+.omb-titulo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.omb-titulo-container h2 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.omb-descripcion-number {
+  width: 30px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.omb-descripcion-container p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 288px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  vertical-align: bottom;
+  height: 48px;
+  margin-left: 44px;
+}
