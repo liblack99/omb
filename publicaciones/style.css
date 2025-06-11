@@ -1,0 +1,152 @@
+:root {
+  --primario-yellow: #f9ffbd;
+  --secundario-yellow: #dbf000;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+.omb-publicaciones-section h2 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 24px;
+  vertical-align: middle;
+  padding-left: 218px;
+}
+
+.omb-publicaciones-container {
+  width: 100%;
+  height: 954px;
+  position: relative;
+  background-color: #eeeff1;
+}
+
+.omb-contenedor-buttones {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
+  margin-top: 14px !important;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 32px !important;
+  font-weight: 900 !important;
+}
+.publicacionesSwiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.omb-publicacion {
+  width: 1280px;
+  height: 352px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("http://149.130.178.89/media/75");
+}
+
+.omb-publicacion-card {
+  width: 391px;
+  height: 352px;
+  top: 2869px;
+  left: 312px;
+  gap: 24px;
+  border-radius: 16px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 32px;
+  padding-left: 24px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+}
+.omb-publicacion-card h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  vertical-align: middle;
+  color: #4a5223;
+}
+.omb-publicacion-card p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+.omb-publicacion-card button {
+  background-color: var(--secundario-yellow);
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  width: 179px;
+  height: 40px;
+  gap: 6px;
+  border-radius: 20px;
+  border-width: 2px;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+}
+.omb-publicacion-img {
+  width: 570px;
+  height: 640px;
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.omg-publciaiones-background {
+  width: 100%;
+  position: absolute;
+  bottom: -200px;
+  z-index: 10;
+}
+
+.omg-publciaiones-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination {
+  position: relative !important;
+  text-align: start !important;
+  padding-left: 218px;
+  box-sizing: border-box;
+}
+/* Estilo base de los bullets */
+.swiper-pagination-bullet {
+  width: 14px !important;
+  height: 14px !important;
+  background-color: var(--secundario-yellow) !important;
+  border: 2px solid white;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Bullet activo */
+.swiper-pagination-bullet-active {
+  background-color: var(--secundario-yellow) !important;
+  border-color: #bbbcae;
+  transform: scale(1.2);
+}
