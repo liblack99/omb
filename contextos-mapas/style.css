@@ -339,7 +339,7 @@ main {
 
 .omb-enlace a {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 4px;
   text-decoration: none;
   font-weight: 600;
