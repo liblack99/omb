@@ -1,0 +1,354 @@
+:root {
+  --primario-yellow: #f9ffbd;
+  --secundario-yellow: #dbf000;
+}
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.omb-breadcrumb-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  border: 1px solid #d3d3ca;
+  box-shadow: 0px 2px 10px 0px #0000001f;
+  background-color: #f8f9f1;
+  box-sizing: border-box;
+}
+
+.omb-breadcrumb-lista {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 12px;
+  color: #bbbcae;
+  max-width: auto;
+  min-width: 324px;
+  height: 25px;
+  border-radius: 16px;
+  padding: 4px 16px 4px 16px;
+  gap: 14px;
+  margin-left: 294px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+}
+.omb-breadcrumb-lista span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #9ea453;
+}
+.omb-breadcrumb-lista li a {
+  color: #9ea453;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.omb-breadcrumb-lista li a:hover {
+  color: #acbd00;
+}
+.omb-descripcion-contexto-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.omb-descripcion-contexto-section h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  margin: 0px 0px 16px;
+}
+.omb-descripcion-content {
+  width: 1280px;
+  height: auto;
+}
+.omb-texto-descripcion {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  height: auto;
+}
+.omb-texto-descripcion p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  height: auto;
+  width: 600px;
+}
+.omb-fuentes-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.omb-fuentes-container {
+  width: 1280px;
+  height: 72px;
+  border: 1px solid #d3d3ca;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.omb-fuentes-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.omb-fuentes-item {
+  width: 332px;
+  height: 40px;
+  padding-right: 16px;
+  padding-left: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  border-left-width: 1px;
+  border-left: 1px solid #d3d3ca;
+}
+.omb-fuentes-item:first-of-type {
+  border: none;
+}
+.omb-fuentes-item h3 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1a1a1a;
+  margin: 0;
+}
+.omb-fuentes-item p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #4d4d4d;
+  margin: 0;
+}
+.omb-botom-container {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.omb-botom-container button {
+  width: 90%;
+  height: 40px;
+  border-radius: 20px;
+  border-width: 2px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  gap: 6px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 3.2 ease;
+  border: 1px solid #c4d600;
+}
+
+.omb-botom-container button:hover {
+  background-color: var(--secundario-yellow);
+}
+.omb-botom-container button > span {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: auto;
+  height: auto;
+  position: relative;
+  bottom: 2px;
+}
+
+.omb-mapa-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  position: relative;
+}
+.omb-mapa-container {
+  overflow: hidden;
+  width: 1280px;
+  height: 808px;
+  border-radius: 16px;
+  position: relative;
+}
+.omb-mapa-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.omb-descripcion-mapa {
+  position: absolute;
+  border: 1px solid #bbbcae;
+  width: 455px;
+  height: 232px;
+  opacity: 0.7;
+  gap: 10px;
+  padding: 32px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.omb-descripcion-mapa h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+}
+.omb-descripcion-mapa p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+.omb-compartir-section {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.omb-compartir-content {
+  width: 1280px;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.omb-redes-sociales {
+  width: 464px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9f1;
+  gap: 26px;
+}
+.omb-redes-sociales p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: right;
+  vertical-align: middle;
+}
+.omb-lista-redes {
+  display: flex;
+  gap: 28px;
+}
+.omb-lista-redes a {
+  text-decoration: none;
+}
+.omb-contexto-section {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  color: #4d4d4d;
+  margin-bottom: 40px;
+}
+.omb-contexto-content {
+  width: 1280px;
+  display: flex;
+  gap: 16px;
+}
+
+.omb-contexto-section h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  color: #000;
+}
+.omb-contexto-section p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+.omb-contexto-section ul {
+  padding: 0px 0px 0px 20px;
+}
+.omb-contexto-section ul li {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.omb-enlaces-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.omb-context-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.omb-lista-enlaces {
+  width: 545px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.omb-enlace {
+  display: flex;
+  align-items: center;
+}
+
+.omb-enlace a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #acbd00;
+}
+.omb-enlace a:hover {
+  color: #a5ad4a;
+}

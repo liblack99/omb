@@ -36,19 +36,19 @@
           const botonEnviar = document.querySelector('[name="op"]');
 
           let camposRequeridos = [];
-          let estadoPdf = false;
-          let estadoExcel = false;
 
           const inputValorAnexo = document.getElementById("edit-valor-anexo");
-          const campoAnexo = document.getElementsByName("valor_sin_decimal");
+          const fileInput = document.getElementById("edit-adjuntar-pdf");
+          const excelInput = document.getElementById("edit-adjuntar-excel");
+          const campoAnexo = document.querySelector("[name=valor_sin_decimal]");
 
-          $("#edit-valor-anexo").on("input", () => {
-            validarCampos({hayPdf: false, hayExcel: false});
-          });
+          fileInput.addEventListener("change", validarCampos);
+          excelInput.addEventListener("change", validarCampos);
 
-          function validarCampos({hayPdf = false, hayExcel = false}) {
-            if (typeof hayPdf === "boolean") estadoPdf = hayPdf;
-            if (typeof hayExcel === "boolean") estadoExcel = hayExcel;
+          $("#edit-valor-anexo").on("input", validarCampos);
+
+          function validarCampos() {
+            // Obtener el valor del input
             const valorAnexo = inputValorAnexo.value.trim();
             const limpio = valorAnexo
               .replace(/\$/g, "")
@@ -66,10 +66,56 @@
             console.log("Limpio:", limpio);
             console.log("Entero:", entero);
             console.log("Valor válido:", valorValido);
-            console.log("campo anexo:", campoAnexo.value);
+            console.log("campo anexo", campoAnexo.value);
 
-            console.log("PDF adjunto:", hayPdf);
-            console.log("Excel adjunto:", hayExcel);
+            ////
+
+            (function ($) {
+              // Función reutilizable: retorna true si hay uno o más archivos cargados
+              function tieneArchivos(campo) {
+                const $fids = $(`input[name^="${campo}"][name*="[fids]"]`);
+                return (
+                  $fids.length > 0 &&
+                  $fids.filter((_, el) => $(el).val()).length > 0
+                );
+              }
+
+              // Función adicional: retorna un array con los FIDs cargados
+              function obtenerFIDs(campo) {
+                return $(`input[name^="${campo}"][name*="[fids]"]`)
+                  .map((_, el) => $(el).val())
+                  .get()
+                  .filter((fid) => fid); // Elimina vacíos
+              }
+
+              // Ejecuta al cargar la página
+              $(function () {
+                if (tieneArchivos("adjuntar_pdf")) {
+                  const fids = obtenerFIDs("adjuntar_pdf");
+                  console.log("Archivos precargados:", fids);
+                } else {
+                  console.log("No hay archivos al cargar sm");
+                }
+              });
+
+              // Detecta cuando se suben archivos vía AJAX
+              $(document).on("ajaxComplete", function () {
+                if (tieneArchivos("adjuntar_pdf")) {
+                  const fids = obtenerFIDs("adjuntar_pdf");
+                  console.log("Archivos cargados vía AJAX:", fids);
+                } else {
+                  console.log("Campo aún sin archivos sm");
+                }
+              });
+            })(jQuery);
+
+            ////
+
+            const pdfAdjunto = fileInput?.files?.length > 0;
+            const excelAdjunto = excelInput?.files?.length > 0;
+
+            console.log("PDF adjunto:", pdfAdjunto);
+            console.log("Excel adjunto:", excelAdjunto);
 
             const todosRequeridos = camposRequeridos.every(
               (campo) => campo?.checked
@@ -80,11 +126,12 @@
             );
 
             const todoValido =
-              valorValido && estadoPdf && estadoExcel && todosRequeridos;
+              valorValido && pdfAdjunto && excelAdjunto && todosRequeridos;
             console.log("¿Todo válido?:", todoValido);
 
             botonEnviar.disabled = !todoValido;
           }
+
           function actualizarCamposSegunAnexo(valor) {
             if (valor === "3" || valor === "6") {
               camposRequeridos = [representanteLegal];
@@ -103,7 +150,7 @@
             } else {
               camposRequeridos = [];
             }
-            validarCampos({hayPdf: false, hayExcel: false});
+            validarCampos();
           }
 
           if (tipoAnexo) {
@@ -121,9 +168,7 @@
             conceptoAbono,
             existenProrratas,
           ].forEach((checkbox) => {
-            checkbox?.addEventListener("change", () => {
-              validarCampos({hayPdf: false, hayExcel: false});
-            });
+            checkbox?.addEventListener("change", validarCampos);
           });
 
           if (valor === "2 - INMOBILIARIO") {
@@ -355,12 +400,12 @@
             alerta.setAttribute("role", "alert");
 
             alerta.innerHTML = `
-    <div>
-      <h2 class="alert-heading"></h2>
-      ${mensaje}
-    </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  `;
+      <div>
+        <h2 class="alert-heading"></h2>
+        ${mensaje}
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
 
             targetElement.insertAdjacentElement("afterend", alerta);
 
@@ -371,7 +416,60 @@
             }, 100000);
           }
 
+          //   (function ($) {
+          //     $(document).ready(function () {
+          //       // Solo valida si el usuario escribió algo y luego salió del campo
+          //       $(campos.join(",")).each(function () {
+          //         let inputElement = $(this);
+
+          //         inputElement.data("touched", false);
+
+          //         inputElement.on("input", function () {
+          //           inputElement.data("touched", true);
+          //         });
+
+          //         inputElement.on("blur", function () {
+          //           let touched = inputElement.data("touched");
+          //           let value = inputElement.val().trim();
+
+          //           if (!touched || value === "") return; // si no tocó o está vacío, no valida
+
+          //           const input = document.getElementById("edit-valor-anexo");
+
+          //           // Obtener el valor del input
+          //           let valorAnexo = input.value;
+          //           let campoAnexo =
+          //             document.getElementsByName("valor_sin_decimal")[0];
+
+          //           // Quitar símbolo $, espacios, puntos y decimales
+          //           let limpio = valorAnexo
+          //             .replace(/\$/g, "") // Quita el símbolo $
+          //             .replace(/\s/g, "") // Quita espacios
+          //             .replace(/\.00$/, "") // Quita decimales .00 si están
+          //             .replace(/,/g, "") // Quita comas si existieran
+          //             .replace(/\./g, ""); // Quita puntos de miles
+
+          //           // Convertir a entero
+          //           let entero = parseInt(limpio, 10);
+
+          //           campoAnexo.value = entero;
+
+          //           console.log("campoAnexo valor es", campoAnexo.value);
+
+          //           // Resultado
+          //           console.log(entero); // Ej: 1000000
+
+          //           //if (!/^-?[1-9]\d*$/.test(value)) {
+          //           //inputElement.val('');
+          //           //mensajeAlerta(targetDivValor, 'Por favor, ingrese un valor de anexo válido (entero distinto de 0).');
+          //           //}
+          //         });
+          //       });
+          //     });
+          //   })(jQuery);
+
           let pdfFiles = [];
+          console.log(pdfFiles);
 
           jQuery(document).ajaxSuccess(function (event, xhr, settings) {
             (function ($) {
@@ -394,14 +492,7 @@
                   console.warn("Faltan elementos clave en el DOM.");
                   return;
                 }
-                const eliminarBtn = document.querySelector(
-                  '[name="adjuntar_pdf_remove_button"]'
-                );
-
-                eliminarBtn.addEventListener("click", () => {
-                  pdfFiles.filter((file, index) => {});
-                });
-
+                console.log(pdfFiles);
                 const hiddenInputs = [
                   document.querySelector('input[name="adjuntar_pdf_1"]'),
                   document.querySelector('input[name="adjuntar_pdf_2"]'),
@@ -423,8 +514,6 @@
                   const file = event.target.files[0];
                   if (file) {
                     excelSizeMB = file.size / (1024 * 1024);
-
-                    validarCampos({hayExcel: true});
                     console.log(
                       `Tamaño del Excel: ${excelSizeMB.toFixed(2)} MB`
                     );
@@ -439,55 +528,51 @@
 
                 // PDFs (acumulativo)
                 fileInput.addEventListener("change", function (event) {
-                  const file = event.target.files[0];
-                  if (file) {
-                    validarCampos({hayPdf: true, hayExcel: true});
-                    const newFiles = Array.from(event.target.files);
-                    const combinedFiles = [...pdfFiles, ...newFiles];
+                  const newFiles = Array.from(event.target.files);
+                  const combinedFiles = [...pdfFiles, ...newFiles];
 
-                    const uniqueFiles = [];
-                    const fileMap = new Set();
+                  const uniqueFiles = [];
+                  const fileMap = new Set();
 
-                    for (const file of combinedFiles) {
-                      const identifier = file.name + Date.now();
-                      if (!fileMap.has(identifier) && uniqueFiles.length < 10) {
-                        fileMap.add(identifier);
-                        uniqueFiles.push(file);
-                      }
+                  for (const file of combinedFiles) {
+                    const identifier = file.name + Date.now();
+                    if (!fileMap.has(identifier) && uniqueFiles.length < 10) {
+                      fileMap.add(identifier);
+                      uniqueFiles.push(file);
                     }
-
-                    pdfFiles = uniqueFiles;
-                    pdfSizeMB = 0;
-
-                    // Limpiar campos ocultos
-                    hiddenInputs.forEach((input) => {
-                      if (input) input.value = "";
-                    });
-
-                    pdfFiles.forEach((file, index) => {
-                      pdfSizeMB += file.size / (1024 * 1024);
-                      const reader = new FileReader();
-                      const currentIndex = index;
-
-                      reader.onload = function (e) {
-                        const base64 = e.target.result.split(",")[1];
-                        if (hiddenInputs[currentIndex]) {
-                          hiddenInputs[currentIndex].value = base64;
-                          console.log(
-                            `PDF ${currentIndex + 1} convertido y guardado`
-                          );
-                        }
-                      };
-
-                      reader.onerror = function (e) {
-                        console.error(`Error leyendo archivo ${file.name}:`, e);
-                      };
-
-                      reader.readAsDataURL(file);
-                    });
-
-                    setTimeout(checkTotalSize, 500);
                   }
+
+                  pdfFiles = uniqueFiles;
+                  pdfSizeMB = 0;
+
+                  // Limpiar campos ocultos
+                  hiddenInputs.forEach((input) => {
+                    if (input) input.value = "";
+                  });
+
+                  pdfFiles.forEach((file, index) => {
+                    pdfSizeMB += file.size / (1024 * 1024);
+                    const reader = new FileReader();
+                    const currentIndex = index;
+
+                    reader.onload = function (e) {
+                      const base64 = e.target.result.split(",")[1];
+                      if (hiddenInputs[currentIndex]) {
+                        hiddenInputs[currentIndex].value = base64;
+                        console.log(
+                          `PDF ${currentIndex + 1} convertido y guardado`
+                        );
+                      }
+                    };
+
+                    reader.onerror = function (e) {
+                      console.error(`Error leyendo archivo ${file.name}:`, e);
+                    };
+
+                    reader.readAsDataURL(file);
+                  });
+
+                  setTimeout(checkTotalSize, 500);
                 });
 
                 function checkTotalSize() {
