@@ -7,12 +7,17 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 main {
   max-width: 100%;
   margin-top: 40px;
 }
 .omb-section {
   width: 100%;
+  height: 739px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,12 +26,19 @@ main {
   background-position: center;
   background-size: cover;
   position: relative;
+  background-color: #eaedf5;
 }
 .omb-decoracion {
   position: absolute;
   height: 32px;
   width: 100px;
   top: -4px;
+}
+.omb-decoracion-abajo {
+  position: absolute;
+  height: 32px;
+  width: 100px;
+  bottom: -32px;
 }
 .omb-decoracion img {
   filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.3));
@@ -199,4 +211,95 @@ main {
   vertical-align: bottom;
   height: 48px;
   margin-left: 44px;
+}
+
+.omb-recursos-cartografico-section {
+  width: 100%;
+  height: 667px;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f3f7 100%);
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.omb-recursos-container {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.omb-titulo-container-recursos {
+  width: 880px;
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.omb-titulo-container-recursos h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  margin: 0;
+}
+.omb-titulo-container-recursos p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  color: #1a1a1a;
+}
+.omb-card-recursos-container {
+  width: 100%;
+  height: 405px;
+  display: flex;
+  gap: 16px;
+}
+.omb-card-recursos {
+  width: 320px;
+  height: 405px;
+  gap: 12px;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.omb-card-recursos:hover {
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.28);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    #fcffe0 100%
+  );
+}
+.omb-card-recursos img {
+  width: 288px;
+  height: 208px;
+  border-radius: 8px;
+}
+.omb-card-recursos h3 {
+  width: 288px;
+  height: 61px;
+  gap: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+}
+.omb-card-recursos p {
+  width: 288px;
+  height: 88px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  color: #4d4d4d;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
 }
