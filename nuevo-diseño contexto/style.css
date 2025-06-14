@@ -150,6 +150,16 @@ main {
   gap: 16px;
   box-sizing: border-box;
 }
+.omb-icon-title-descripcion {
+  width: auto;
+  height: auto;
+  padding: 8px;
+  background: var(--secundario-yellow);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .omb-title-descripcion-container h1 {
   font-weight: 600;
   font-size: 32px;
@@ -375,28 +385,28 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #d3d3ca;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  padding: 32px 0px 0px 0px;
+  border-radius: 20px;
+  padding: 52px;
+  background-color: #e6e6e6;
 }
 
 .omb-bottom-descarga {
   width: 275px;
-  height: 40px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #c4d600;
-  border-radius: 20px;
+  background-color: var(--secundario-yellow);
+  border: 2px solid var(--secundario-yellow);
+  border-radius: 32px;
   padding: 8px 24px 8px 24px;
   font-weight: 700;
   size: 16px;
   line-height: 24px;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   gap: 8px;
   cursor: pointer;
+  margin-left: 64px;
 }
 .omb-bottom-descarga:hover {
   background-color: var(--secundario-yellow);
@@ -411,7 +421,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9f1;
   gap: 26px;
 }
 .omb-redes-sociales p {
@@ -427,7 +436,14 @@ main {
   gap: 28px;
 }
 .omb-lista-redes a {
-  text-decoration: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4c531e;
+  border-radius: 50%;
+  padding: 8px;
 }
 
 .omb-contexto-section {
@@ -435,6 +451,7 @@ main {
   display: flex;
   justify-content: center;
   color: #4d4d4d;
+  margin-bottom: 40px;
 }
 .omb-contexto-content {
   width: 1280px;
@@ -473,7 +490,6 @@ main {
 .omb-context-container {
   display: flex;
   flex-direction: column;
-  gap: 35px;
 }
 
 .omb-lista-enlaces {
