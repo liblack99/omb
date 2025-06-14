@@ -1,3 +1,21 @@
+const swiper = new Swiper(".tablerosSwiper", {
+  slidesPerView: 1.2,
+  spaceBetween: 0,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {slidesPerView: 2},
+    1024: {slidesPerView: 3},
+    1280: {slidesPerView: 3},
+  },
+});
+
 const btnVerMas = document.getElementById("btnVerMas");
 const texto = document.querySelector(".omb-texto-descripcion");
 
@@ -41,14 +59,4 @@ graficaContainers.forEach((card) => {
     grafica.toLowerCase() === categoriaPorDefecto.toLowerCase()
       ? "flex"
       : "none";
-});
-
-btnVerMas.addEventListener("click", () => {
-  texto.classList.toggle("omb-texto-descripcion-expandido");
-
-  if (texto.classList.contains("omb-texto-descripcion-expandido")) {
-    btnVerMas.textContent = "Ver menos";
-  } else {
-    btnVerMas.textContent = "Ver más";
-  }
 });
