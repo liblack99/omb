@@ -542,6 +542,12 @@ main {
   color: black !important;
   margin-top: 14px !important;
 }
+.swiper-button-prev {
+  left: -50px;
+}
+.swiper-button-next {
+  right: -50px;
+}
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 32px !important;
