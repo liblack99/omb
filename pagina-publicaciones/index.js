@@ -1,4 +1,4 @@
-const swiper = new Swiper(".publicacionesSwiper", {
+const swiper = new Swiper(".publicacionesSlideSwiper", {
   slidesPerView: 1.2,
   spaceBetween: 16,
   navigation: {
@@ -10,8 +10,8 @@ const swiper = new Swiper(".publicacionesSwiper", {
     clickable: true,
   },
   breakpoints: {
-    640: {slidesPerView: 1},
-    1024: {slidesPerView: 1},
-    1280: {slidesPerView: 1},
+    640: {slidesPerView: 2},
+    1024: {slidesPerView: 3},
+    1280: {slidesPerView: 3},
   },
 });
