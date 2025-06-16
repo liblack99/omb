@@ -111,7 +111,7 @@ const articulos = [
 ];
 
 const buttons = document.querySelectorAll(".omb-button");
-const cards = document.querySelectorAll(".omb-card");
+const cards = document.querySelectorAll(".omb-card-enlace");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {

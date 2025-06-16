@@ -2,6 +2,10 @@
   --primario-yellow: #f9ffbd;
   --secundario-yellow: #dbf000;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 body {
   display: flex;
