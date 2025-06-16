@@ -18,53 +18,55 @@ body {
   background-size: cover;
   width: 100%;
 }
+.omb-indicadores-section h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  margin: 0;
+}
 
 .indicadores-destacados {
   position: relative;
 }
 
-.omb-contenedor-botones {
+.omb-contenedor-botones-indicadores {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.swiper-button-prev {
+.omb-button-indicadores-prev {
   left: -100px !important;
 }
-.swiper-button-next {
+.omb-button-indicadores-next {
   right: -100px !important;
 }
-.swiper-button-prev,
-.swiper-button-next {
+.omb-button-indicadores-prev,
+.omb-button-indicadores-next {
   color: black !important;
 }
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.omb-button-indicadores-prev::after,
+.omb-button-indicadores-next::after {
   font-size: 32px !important;
   font-weight: 900 !important;
 }
 
-.omb-slide-container {
+.omb-slide-container-card-indicadores {
   width: 1280px;
   height: 300px;
-}
-.swiper-wrapper {
-  height: 500px;
-}
-
-.swiper {
   padding: 3rem;
   max-width: 1280px;
   margin: 0 auto;
-  width: 100%;
 }
-.swiper-wrapper {
+.omb-swiper-wrapper-indicadores {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.swiper-slide {
+
+.omb-swiper-card-indicadores {
   overflow: visible !important;
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -78,6 +80,7 @@ body {
   overflow: visible;
   width: 200px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 .icono-wrapper {
   position: absolute;
@@ -125,13 +128,8 @@ body {
   text-align: center;
 }
 
-.swiper-container-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
 /* Estilo base de los bullets */
-.swiper-pagination-bullet {
+.omb-paginacion-indicadores > .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: white !important;
@@ -142,7 +140,7 @@ body {
 }
 
 /* Bullet activo */
-.swiper-pagination-bullet-active {
+.omb-paginacion-indicadores > .swiper-pagination-bullet-active {
   background-color: #4b521d !important;
   border-color: #4b521d;
   transform: scale(1.2);

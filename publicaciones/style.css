@@ -22,7 +22,7 @@ body {
   background-color: #eeeff1;
 }
 
-.omb-contenedor-buttones {
+.omb-contenedor-buttones-publicaciones-home {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -31,13 +31,13 @@ body {
   z-index: 2;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.omb-boton-publicaciones-home-prev,
+.omb-boton-publicaciones-home-next {
   color: black !important;
   margin-top: 14px !important;
 }
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.omb-boton-publicaciones-home-prev::after,
+.omb-boton-publicaciones-home-next::after {
   font-size: 32px !important;
   font-weight: 900 !important;
 }
@@ -45,7 +45,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.swiper-slide {
+.omb-swiper-slide-publicaciones-home {
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -115,28 +115,28 @@ body {
   margin-right: 40px;
 }
 
-.omg-publciaiones-background {
+.omg-publicaciones-background {
   width: 100%;
   position: absolute;
   bottom: -200px;
   z-index: 10;
 }
 
-.omg-publciaiones-background img {
+.omg-publicaciones-background img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.swiper-pagination {
+.omb-pagination-publicaciones-home {
   position: relative !important;
   text-align: start !important;
   padding-left: 218px;
   box-sizing: border-box;
 }
 /* Estilo base de los bullets */
-.swiper-pagination-bullet {
-  width: 14px !important;
-  height: 14px !important;
+.omb-pagination-publicaciones-home > .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
   background-color: var(--secundario-yellow) !important;
   border: 2px solid white;
   border-radius: 50%;
@@ -145,7 +145,7 @@ body {
 }
 
 /* Bullet activo */
-.swiper-pagination-bullet-active {
+.omb-pagination-publicaciones-home > .swiper-pagination-bullet-active {
   background-color: var(--secundario-yellow) !important;
   border-color: #bbbcae;
   transform: scale(1.2);

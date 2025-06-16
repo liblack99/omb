@@ -116,18 +116,18 @@ main {
   color: #000;
 }
 
-.omb-card-section {
+.omb-card-tableros-interes-section {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.omb-card-container {
+.omb-card-tableros-interes-container {
   width: 1280px;
   display: flex;
   justify-content: center;
 }
-.omb-card-content {
+.omb-card-tableros-interes-content {
   display: flex;
   justify-content: center;
   width: 90%;
@@ -532,24 +532,24 @@ main {
   justify-content: center;
 }
 
-.omb-contenedor-botones {
+.omb-contenedor-botones-tableros-interes {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.swiper-button-prev,
-.swiper-button-next {
+.omb-button-tableros-interes-prev,
+.omb-button-tableros-interes-next {
   color: black !important;
   margin-top: 14px !important;
 }
-.swiper-button-prev {
+.omb-button-tableros-interes-prev {
   left: -50px;
 }
-.swiper-button-next {
+.omb-button-tableros-interes-next {
   right: -50px;
 }
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.omb-button-tableros-interes-prev::after,
+.omb-button-tableros-interes-next::after {
   font-size: 32px !important;
   font-weight: 900 !important;
 }
@@ -573,12 +573,9 @@ main {
   margin: 0;
   margin-bottom: 8px;
 }
-.omb-slide-container {
+.omb-slide-container-tableros-interes {
   width: 1280px;
   height: 500px;
-}
-
-.swiper {
   padding: 0;
   max-width: 1280px;
   margin: 0 auto;
@@ -586,19 +583,14 @@ main {
   overflow: hidden !important;
 }
 
-.swiper-slide {
+.omb-swiper-slide-tableros-interes {
   display: flex !important;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-container-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
 /* Estilo base de los bullets */
-.swiper-pagination-bullet {
+.omb-paginacion-tableros-interes > .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: white !important;
@@ -609,13 +601,13 @@ main {
 }
 
 /* Bullet activo */
-.swiper-pagination-bullet-active {
+.omb-paginacion-tableros-interes > .swiper-pagination-bullet-active {
   background-color: #4b521d !important;
   border-color: #4b521d;
   transform: scale(1.2);
 }
 
-.omb-card {
+.omb-card-tableros-interes {
   width: 320px;
   height: 370px;
   display: flex;
@@ -630,18 +622,18 @@ main {
   overflow: hidden;
 }
 
-.omb-card:hover {
+.omb-card-tableros-interes:hover {
   border: 1px solid var(--secundario-yellow);
   padding-bottom: 0px;
 }
 
-.omb-card-img {
+.omb-card-tableros-interes-img {
   height: 158px;
   border: 1px solid #d3d3ca;
   object-fit: cover;
 }
 
-.omb-card-tags-container {
+.omb-card-tableros-interes-tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -649,7 +641,7 @@ main {
   padding: 0px 16px;
 }
 
-.omb-card-tag {
+.omb-card-tableros-interes-tag {
   width: auto;
   min-width: 132px;
   border-radius: 16px;
@@ -666,16 +658,16 @@ main {
   gap: 8px;
 }
 
-.omb-card-tag img {
+.omb-card-tableros-interes-tag img {
   width: 12px;
   height: 12px;
 }
 
-.omb-card-tag:hover {
+.omb-card-tableros-interes-tag:hover {
   background-color: var(--primario-yellow);
 }
 
-.omb-card h2 {
+.omb-card-tableros-interes h2 {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -685,7 +677,7 @@ main {
   padding: 0px 16px;
 }
 
-.omb-card p {
+.omb-card-tableros-interes p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
