@@ -15,7 +15,47 @@ main {
   max-width: 100%;
   margin-top: 40px;
 }
-.omb-section {
+.omb-titulo-libro-mapa-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.omb-titulo-libro-mapa-container {
+  width: 1280px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.omb-titulo-libro-mapa-container p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1a1a;
+  width: 548px;
+  height: 48px;
+}
+.omb-logo-libro-mapa {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #d3d3ca;
+  width: 295px;
+  height: 85px;
+  gap: 8px;
+  border-right-width: 1px;
+  padding-top: 8px;
+  padding-right: 32px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+.omb-logo-libro-mapa h2 {
+  width: 152px;
+  height: 56px;
+}
+
+.omb-section-libro-mapas {
   width: 100%;
   height: 739px;
   display: flex;
