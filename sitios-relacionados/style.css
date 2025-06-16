@@ -1,0 +1,13 @@
+:root {
+  --primario-yellow: #f9ffbd;
+  --secundario-yellow: #dbf000;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+.omb-sitios-relacionados-section {
+  width: 100%;
+  position: relative;
+}
