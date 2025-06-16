@@ -1,6 +1,6 @@
 const swiper = new Swiper(".indicadoresSwiper", {
   slidesPerView: 1.2,
-  spaceBetween: 16,
+  spaceBetween: 0,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
