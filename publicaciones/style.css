@@ -36,6 +36,13 @@ body {
   color: black !important;
   margin-top: 14px !important;
 }
+
+.omb-boton-publicaciones-home-prev {
+  left: 100px;
+}
+.omb-boton-publicaciones-home-next {
+  right: 100px;
+}
 .omb-boton-publicaciones-home-prev::after,
 .omb-boton-publicaciones-home-next::after {
   font-size: 32px !important;
@@ -51,7 +58,7 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
-.omb-publicacion {
+.omb-publicacion-slide-home {
   width: 1280px;
   height: 352px;
   display: flex;
