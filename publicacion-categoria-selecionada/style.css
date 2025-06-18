@@ -1,0 +1,206 @@
+:root {
+  --primario-yellow: #f9ffbd;
+  --secundario-yellow: #dbf000;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin-top: 40px;
+}
+.omb-info-categoria-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.omb-info-categoria-section h2 {
+  text-align: start;
+  width: 1280px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+}
+.omb-card-info-categoria {
+  width: 1280px;
+  display: flex;
+  gap: 32px;
+  justify-content: start;
+}
+
+.omb-card-info-categoria img {
+  width: 495px;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.omb-texto-categoria {
+  width: 656px;
+  height: 151px;
+}
+.omb-texto-categoria h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  margin-top: 0;
+}
+.omb-texto-categoria p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+.omb-texto-categoria button {
+  width: auto;
+  height: 32px;
+  border-radius: 20px;
+  border-width: 2px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  background-color: white;
+  border: 2px solid #c4d600;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.omb-texto-categoria button:hover {
+  background-color: #dbf000;
+}
+.omb-categorias-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  background-color: #f1f3f7;
+  margin-top: 40px;
+}
+
+.omb-ordenar-control-container {
+  width: 1280px;
+  height: 48px;
+  margin: 40px 0px;
+}
+.omb-ordernar-select {
+  width: 145px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid #a4a592;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  background-color: inherit;
+  transition: all 0.5s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("http://149.130.178.89/media/111");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+}
+.omb-ordernar-select:hover {
+  color: #7e8a00;
+}
+
+.omb-cards-categorias-container {
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.omb-wrapper-categoria-selecionada {
+  width: 100px;
+  height: 480px;
+}
+
+.omb-card-categoria-selecionada {
+  width: 392px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 24px;
+  padding: 16px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+.omb-card-categoria-selecionada:hover {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(180deg, #fafafa 0%, #fcffe0 100%);
+
+  transform: scale(1.01);
+}
+.omb-card-categoria-selecionada:hover .omb-enlace-categoria-selecionada {
+  color: #7e8a00;
+}
+.omb-card-categoria-selecionada img {
+  width: 100%;
+  height: 216px;
+  border-radius: 8px;
+}
+
+.omb-card-categoria-selecionada h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  height: 68px;
+  gap: 8px;
+  padding: 6px;
+  border-bottom-width: 1px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.omb-card-categoria-selecionada p {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #4d4d4d;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.omb-enlace-categoria-selecionada {
+  color: #acbd00;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.5 ease;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 28px;
+  vertical-align: middle;
+}
