@@ -53,6 +53,7 @@ body {
 }
 .omb-sitios-relacionados-container {
   width: 1280px;
+  height: auto;
 }
 
 .omb-contenedor-buttones-sitios-relacionados {
@@ -63,10 +64,10 @@ body {
 }
 
 .omb-boton-sitios-relacionados-prev {
-  left: -200px !important;
+  left: -150px !important;
 }
 .omb-boton-sitios-relacionados-next {
-  right: -200px !important;
+  right: -150px !important;
 }
 .omb-boton-sitios-relacionados-prev,
 .omb-boton-sitios-relacionados-next {
@@ -96,12 +97,17 @@ body {
 }
 .omb-wrapper-sitios-relacionados {
   width: 100%;
-  display: flex;
-  box-sizing: border-box;
+  height: 200px;
 }
 
 .omb-pagination-sitios-relacionados {
   bottom: -40px !important;
+}
+.omb-swiper-slide-sitios-relacionados {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilo base de los bullets */
@@ -123,23 +129,48 @@ body {
 }
 
 .omb-card-sitios-relacionados {
-  width: 415px;
+  width: 400px;
   height: 185px;
-  gap: 18px;
   border-radius: 16px;
-  padding-top: 16px;
-  padding-right: 16px;
-  padding-bottom: 32px;
-  padding-left: 16px;
-  transition: all 0.3 ease;
-  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.09);
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+  border: 1px solid transparent;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
 }
 
 .omb-card-sitios-relacionados:hover {
   background-color: #fff;
   box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.09);
+  border: 1px solid black;
+  transform: scale(1.01);
+}
+.omb-botom-control-carrousel-sitios-relacionados {
+  position: absolute;
+  z-index: 10;
+  bottom: -50px;
+  min-width: 120px;
+  height: 34px;
+  width: auto;
+}
+
+.omb-botom-control-carrousel-sitios-relacionados button {
+  color: #565747;
+  border-radius: 8px;
+  font-family: "Worl sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: inherit;
 }
