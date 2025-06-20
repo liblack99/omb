@@ -3,9 +3,8 @@ body {
   margin: 0;
 }
 .omb-indicadores-section {
-  padding: 2rem;
+  padding: 2rem 0px;
   box-sizing: border-box;
-  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,8 +16,9 @@ body {
   background-size: cover;
   width: 100%;
 }
+
 .omb-indicadores-section h2 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 32px;
   line-height: 150%;
   margin-bottom: 0;
@@ -27,6 +27,7 @@ body {
 
 .indicadores-destacados {
   position: relative;
+  width: 1280px;
 }
 
 .omb-contenedor-botones-indicadores {
@@ -41,15 +42,16 @@ body {
 .omb-button-indicadores-next {
   right: -100px !important;
 }
+
 .omb-button-indicadores-prev,
 .omb-button-indicadores-next {
-  color: #565747 !important;
-  background-color: #f3f4f1cc;
   width: 53px;
   height: 53px;
   border-radius: 8px;
   border-width: 1px;
   transition: all 0.9 ease;
+  background-color: #f3f4f1cc;
+  color: #565747 !important;
   border: 1px solid #d9e36e;
 }
 .omb-button-indicadores-prev::after,
@@ -61,21 +63,22 @@ body {
 .omb-slide-container-card-indicadores {
   width: 1280px;
   height: 300px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.omb-swiper-wrapper-indicadores {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.omb-swiper-wrapper-indicadores {
+  display: flex;
+  width: 1280px;
+}
+
 .omb-swiper-card-indicadores {
-  overflow: visible !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 200px !important;
 }
+
 .indicador-card {
   position: relative;
   background: white;
@@ -133,7 +136,9 @@ body {
   line-height: 1.3;
   text-align: center;
 }
-
+.omb-paginacion-indicadores {
+  bottom: -40px !important;
+}
 /* Estilo base de los bullets */
 .omb-paginacion-indicadores > .swiper-pagination-bullet {
   width: 10px;
@@ -150,4 +155,77 @@ body {
   background-color: #4b521d !important;
   border-color: #4b521d;
   transform: scale(1.2);
+}
+.omb-botom-control-carrousel-indicadores {
+  position: absolute;
+  z-index: 10;
+  bottom: -50px;
+  min-width: 120px;
+  height: 34px;
+  width: auto;
+}
+.omb-botom-control-carrousel-indicadores button {
+  color: #565747;
+  border-radius: 8px;
+  font-family: "Worl sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+}
+
+.aliados {
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  height: 718px;
+  box-sizing: border-box;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -160px;
+}
+.aliados h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.aliados-logos-container {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.aliados-logos img {
+  width: 118px;
+  height: 94px;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.aliados-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.omb-fondo-aliados {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+.omb-fondo-aliados img {
+  width: 100%;
+  height: 100%;
 }

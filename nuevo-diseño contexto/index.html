@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Swiper CSS -->
@@ -19,7 +18,7 @@
   </head>
   <body>
     <header class="omb-header">
-      <nav class="omb-nav" >
+      <nav class="omb-nav">
         <ul class="omb-lista-nav">
           <li><a href="#">Inicio</a></li>
           <li><a href="#" class="active">Tableros</a></li>
@@ -32,94 +31,98 @@
       </nav>
     </header>
     <main>
-      <div class="omb-breadcrumb-container">
-        <nav aria-label="omb-breadcrumb">
-          <ol class="omb-breadcrumb-lista">
-            <li><a href="/">Inicio</a></li>
-            <span
-              ><svg
-                width="18"
-                height="18"
-                viewBox="0 0 7 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_8759_1785)">
-                  <path
-                    opacity="0.3"
-                    d="M0.292444 1.21075C0.199741 1.30327 0.126193 1.41316 0.0760117 1.53413C0.0258302 1.6551 0 1.78479 0 1.91575C0 2.04672 0.0258302 2.17641 0.0760117 2.29738C0.126193 2.41835 0.199741 2.52824 0.292444 2.62075L4.17244 6.50075L0.292444 10.3808C0.199862 10.4733 0.126423 10.5832 0.0763178 10.7042C0.0262128 10.8252 0.000423432 10.9548 0.000423431 11.0858C0.00042343 11.2167 0.0262128 11.3463 0.0763178 11.4673C0.126423 11.5883 0.199862 11.6982 0.292444 11.7908C0.385026 11.8833 0.494937 11.9568 0.615901 12.0069C0.736865 12.057 0.866514 12.0828 0.997444 12.0828C1.12837 12.0828 1.25802 12.057 1.37899 12.0069C1.49995 11.9568 1.60986 11.8833 1.70244 11.7908L6.29244 7.20075C6.38515 7.10824 6.4587 6.99835 6.50888 6.87738C6.55906 6.75641 6.58489 6.62672 6.58489 6.49575C6.58489 6.36479 6.55906 6.2351 6.50888 6.11413C6.4587 5.99316 6.38515 5.88327 6.29244 5.79075L1.70244 1.20075C1.32244 0.820754 0.682444 0.820754 0.292444 1.21075Z"
-                    fill="currentColor" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_8759_1785">
-                    <rect
-                      width="6.58489"
-                      height="11.1658"
-                      fill="white"
-                      transform="translate(0 0.916992)" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <li><a href="/tableros">Tableros</a></li>
-            <span
-              ><svg
-                width="18"
-                height="18"
-                viewBox="0 0 7 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_8759_1785)">
-                  <path
-                    opacity="0.3"
-                    d="M0.292444 1.21075C0.199741 1.30327 0.126193 1.41316 0.0760117 1.53413C0.0258302 1.6551 0 1.78479 0 1.91575C0 2.04672 0.0258302 2.17641 0.0760117 2.29738C0.126193 2.41835 0.199741 2.52824 0.292444 2.62075L4.17244 6.50075L0.292444 10.3808C0.199862 10.4733 0.126423 10.5832 0.0763178 10.7042C0.0262128 10.8252 0.000423432 10.9548 0.000423431 11.0858C0.00042343 11.2167 0.0262128 11.3463 0.0763178 11.4673C0.126423 11.5883 0.199862 11.6982 0.292444 11.7908C0.385026 11.8833 0.494937 11.9568 0.615901 12.0069C0.736865 12.057 0.866514 12.0828 0.997444 12.0828C1.12837 12.0828 1.25802 12.057 1.37899 12.0069C1.49995 11.9568 1.60986 11.8833 1.70244 11.7908L6.29244 7.20075C6.38515 7.10824 6.4587 6.99835 6.50888 6.87738C6.55906 6.75641 6.58489 6.62672 6.58489 6.49575C6.58489 6.36479 6.55906 6.2351 6.50888 6.11413C6.4587 5.99316 6.38515 5.88327 6.29244 5.79075L1.70244 1.20075C1.32244 0.820754 0.682444 0.820754 0.292444 1.21075Z"
-                    fill="currentColor" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_8759_1785">
-                    <rect
-                      width="6.58489"
-                      height="11.1658"
-                      fill="white"
-                      transform="translate(0 0.916992)" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <li aria-current="page">
-              Política motorizada de cero y bajas emisiones
-            </li>
-          </ol>
-        </nav>
-      </div>
-      <section class="omb-card-tableros-interes-section">
-        <div class="omb-card-tableros-interes-container">
-          <div class="omb-card-tableros-interes-content">
+      <section class="omb-breadcrumb-section">
+        <div class="omb-breadcrumb-container">
+          <nav aria-label="Migaja de pan">
+            <ol class="omb-breadcrumb-lista">
+              <li><a href="/">Inicio</a></li>
+              <span
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 7 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_8759_1785)">
+                    <path
+                      opacity="0.3"
+                      d="M0.292444 1.21075C0.199741 1.30327 0.126193 1.41316 0.0760117 1.53413C0.0258302 1.6551 0 1.78479 0 1.91575C0 2.04672 0.0258302 2.17641 0.0760117 2.29738C0.126193 2.41835 0.199741 2.52824 0.292444 2.62075L4.17244 6.50075L0.292444 10.3808C0.199862 10.4733 0.126423 10.5832 0.0763178 10.7042C0.0262128 10.8252 0.000423432 10.9548 0.000423431 11.0858C0.00042343 11.2167 0.0262128 11.3463 0.0763178 11.4673C0.126423 11.5883 0.199862 11.6982 0.292444 11.7908C0.385026 11.8833 0.494937 11.9568 0.615901 12.0069C0.736865 12.057 0.866514 12.0828 0.997444 12.0828C1.12837 12.0828 1.25802 12.057 1.37899 12.0069C1.49995 11.9568 1.60986 11.8833 1.70244 11.7908L6.29244 7.20075C6.38515 7.10824 6.4587 6.99835 6.50888 6.87738C6.55906 6.75641 6.58489 6.62672 6.58489 6.49575C6.58489 6.36479 6.55906 6.2351 6.50888 6.11413C6.4587 5.99316 6.38515 5.88327 6.29244 5.79075L1.70244 1.20075C1.32244 0.820754 0.682444 0.820754 0.292444 1.21075Z"
+                      fill="currentColor" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_8759_1785">
+                      <rect
+                        width="6.58489"
+                        height="11.1658"
+                        fill="white"
+                        transform="translate(0 0.916992)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <li><a href="/tableros">Tableros</a></li>
+              <span
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 7 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_8759_1785)">
+                    <path
+                      opacity="0.3"
+                      d="M0.292444 1.21075C0.199741 1.30327 0.126193 1.41316 0.0760117 1.53413C0.0258302 1.6551 0 1.78479 0 1.91575C0 2.04672 0.0258302 2.17641 0.0760117 2.29738C0.126193 2.41835 0.199741 2.52824 0.292444 2.62075L4.17244 6.50075L0.292444 10.3808C0.199862 10.4733 0.126423 10.5832 0.0763178 10.7042C0.0262128 10.8252 0.000423432 10.9548 0.000423431 11.0858C0.00042343 11.2167 0.0262128 11.3463 0.0763178 11.4673C0.126423 11.5883 0.199862 11.6982 0.292444 11.7908C0.385026 11.8833 0.494937 11.9568 0.615901 12.0069C0.736865 12.057 0.866514 12.0828 0.997444 12.0828C1.12837 12.0828 1.25802 12.057 1.37899 12.0069C1.49995 11.9568 1.60986 11.8833 1.70244 11.7908L6.29244 7.20075C6.38515 7.10824 6.4587 6.99835 6.50888 6.87738C6.55906 6.75641 6.58489 6.62672 6.58489 6.49575C6.58489 6.36479 6.55906 6.2351 6.50888 6.11413C6.4587 5.99316 6.38515 5.88327 6.29244 5.79075L1.70244 1.20075C1.32244 0.820754 0.682444 0.820754 0.292444 1.21075Z"
+                      fill="currentColor" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_8759_1785">
+                      <rect
+                        width="6.58489"
+                        height="11.1658"
+                        fill="white"
+                        transform="translate(0 0.916992)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <li aria-current="page">
+                Política motorizada de cero y bajas emisiones
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+      <section class="omb-card-contexto-section">
+        <div class="omb-card-contexto-container">
+          <div class="omb-card-contexto-content">
             <div class="omb-descripcion">
               <div class="omb-title-descripcion-container">
-                <span class="omb-icon-title-descripcion">
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 78 65"
-                    fill="#4c531e"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M24.2339 24.0419L30.3778 27.6815L28.7111 30.2645L23.0084 25.9036L24.2339 24.0419ZM22.8777 23.2368L19.8711 21.459L18.9887 22.8343L21.7665 24.9644L22.8777 23.2368ZM17.5017 28.7046C16.9625 27.866 15.9331 27.5473 15.018 27.8995L5.62241 31.5727L11.2108 22.8846C11.7173 22.0963 11.6683 21.09 11.0964 20.352L4.74004 12.2342L14.5115 15.0016C15.4102 15.2532 16.3252 14.8842 16.8318 14.1127L22.3875 5.40782L22.8287 15.7228C22.8777 16.7124 23.564 17.551 24.528 17.7355L35.8845 19.983C36.5708 20.1004 37.2407 19.6476 37.3714 18.9431C37.5022 18.2387 37.0446 17.551 36.3583 17.4168L25.3614 15.3035L24.7568 1.24828C24.7405 0.678015 24.3646 0.191617 23.8254 0.0406655C23.2862 -0.0935133 22.7306 0.107755 22.4201 0.594153L14.9363 12.4187L1.61906 8.62811C1.07983 8.47716 0.524264 8.6952 0.2138 9.1816C-0.0966643 9.65123 -0.0639839 10.2718 0.279161 10.7247L8.93947 21.677L1.32493 33.5183C1.01447 33.9879 1.04715 34.6085 1.39029 35.0613C1.73344 35.4974 2.32169 35.6651 2.84457 35.4639L15.5573 30.4322L21.8973 39.9924C22.1424 40.3446 22.5345 40.5627 22.943 40.5627C23.2045 40.5627 23.4496 40.4788 23.662 40.3446C24.2339 39.9421 24.3973 39.1203 24.0051 38.5332L17.5017 28.7046ZM69.2022 41.8374C67.8132 41.4516 66.3753 42.2902 65.9995 43.7159C65.8197 44.4035 65.9014 45.1248 66.2609 45.7453C66.6041 46.3659 67.176 46.8188 67.8459 47.0033C68.0747 47.0704 68.3035 47.1039 68.5322 47.1039C69.676 47.1039 70.7382 46.3156 71.0486 45.1248C71.4081 43.6991 70.5911 42.2231 69.2022 41.8374ZM77.6174 48.0767L73.9408 61.981C73.467 63.7588 71.8983 65 70.1009 65C69.7577 65 69.4146 64.9497 69.0551 64.8658L66.8165 64.2285C65.7871 63.9433 64.9374 63.2557 64.4145 62.3164C63.8916 61.3772 63.7445 60.2702 64.0223 59.2135L65.0027 55.4901L36.4564 47.5232L35.476 51.2299C35.0021 53.0078 33.4334 54.2322 31.636 54.2322C31.2929 54.2322 30.9334 54.1818 30.6066 54.098L28.3516 53.4774C27.3222 53.1923 26.4725 52.5046 25.9496 51.5653C25.4267 50.6261 25.2797 49.5191 25.5575 48.4625L29.234 34.5582C30.2961 30.5664 33.3844 27.5809 37.3388 26.7087L42.7474 16.8298C44.4794 13.6766 48.0743 12.1335 51.473 13.0728L69.0224 17.9703C72.4375 18.9263 74.7742 22.1131 74.7088 25.7527L74.4964 37.1076C75.3788 37.9294 76.0651 38.7848 76.5716 39.7073C78.0095 42.2902 78.369 45.2422 77.6174 48.0767ZM29.0216 45.4602L28.0412 49.1669C27.8288 49.9384 28.2863 50.7603 29.0379 50.9615L31.2929 51.5821C32.0609 51.7834 32.8289 51.3305 33.0413 50.559L34.0217 46.8355L29.0216 45.4602ZM74.3657 41.0323C73.2872 39.0867 71.5388 37.6946 69.4309 37.1076L41.7179 29.3755C37.3714 28.1679 32.8942 30.8012 31.7177 35.2626L29.6915 42.9276L73.1402 55.054L75.1663 47.389C75.7383 45.2422 75.4605 42.9779 74.3657 41.0323ZM44.986 18.1548L40.4761 26.4068C40.8356 26.4571 41.2114 26.541 41.5709 26.6416L70.9669 34.8433C71.3264 34.9439 71.6859 35.0613 72.0127 35.1955L72.1924 25.7359C72.2414 23.3039 70.6728 21.1738 68.3852 20.5365L50.8194 15.639C48.5318 15.0016 46.1298 16.0247 44.986 18.1548ZM67.4701 56.1945L66.4897 59.918C66.2936 60.6895 66.7348 61.4946 67.4864 61.7126L69.7414 62.3332C70.493 62.5345 71.2774 62.0816 71.4898 61.3101L72.4702 57.5866L67.4701 56.1945ZM15.1651 19.9159L18.4658 22.4318L19.3155 21.1235L15.786 19.027L15.1651 19.9159ZM39.5937 33.5686C38.2048 33.1828 36.7669 34.0215 36.391 35.4471C36.0152 36.8728 36.8322 38.3487 38.2211 38.7345C38.4499 38.8016 38.6787 38.8351 38.9074 38.8351C40.0676 38.8351 41.1133 38.0468 41.4238 36.856C41.6036 36.1683 41.5219 35.4471 41.1624 34.8265C40.8356 34.206 40.28 33.7699 39.5937 33.5686Z"
-                      fill="url(#paint0_linear_10625_1059)" />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_10625_1059"
-                        x1="39"
-                        y1="0"
-                        x2="39"
-                        y2="65"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4c531e" />
-                        <stop offset="1" stop-color="#4c531e" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </span>
+                <div class="omb-container-icon">
+                  <span class="omb-icon-title-descripcion">
+                    <svg
+                      width="52"
+                      height="52"
+                      viewBox="0 0 78 65"
+                      fill="#4c531e"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M24.2339 24.0419L30.3778 27.6815L28.7111 30.2645L23.0084 25.9036L24.2339 24.0419ZM22.8777 23.2368L19.8711 21.459L18.9887 22.8343L21.7665 24.9644L22.8777 23.2368ZM17.5017 28.7046C16.9625 27.866 15.9331 27.5473 15.018 27.8995L5.62241 31.5727L11.2108 22.8846C11.7173 22.0963 11.6683 21.09 11.0964 20.352L4.74004 12.2342L14.5115 15.0016C15.4102 15.2532 16.3252 14.8842 16.8318 14.1127L22.3875 5.40782L22.8287 15.7228C22.8777 16.7124 23.564 17.551 24.528 17.7355L35.8845 19.983C36.5708 20.1004 37.2407 19.6476 37.3714 18.9431C37.5022 18.2387 37.0446 17.551 36.3583 17.4168L25.3614 15.3035L24.7568 1.24828C24.7405 0.678015 24.3646 0.191617 23.8254 0.0406655C23.2862 -0.0935133 22.7306 0.107755 22.4201 0.594153L14.9363 12.4187L1.61906 8.62811C1.07983 8.47716 0.524264 8.6952 0.2138 9.1816C-0.0966643 9.65123 -0.0639839 10.2718 0.279161 10.7247L8.93947 21.677L1.32493 33.5183C1.01447 33.9879 1.04715 34.6085 1.39029 35.0613C1.73344 35.4974 2.32169 35.6651 2.84457 35.4639L15.5573 30.4322L21.8973 39.9924C22.1424 40.3446 22.5345 40.5627 22.943 40.5627C23.2045 40.5627 23.4496 40.4788 23.662 40.3446C24.2339 39.9421 24.3973 39.1203 24.0051 38.5332L17.5017 28.7046ZM69.2022 41.8374C67.8132 41.4516 66.3753 42.2902 65.9995 43.7159C65.8197 44.4035 65.9014 45.1248 66.2609 45.7453C66.6041 46.3659 67.176 46.8188 67.8459 47.0033C68.0747 47.0704 68.3035 47.1039 68.5322 47.1039C69.676 47.1039 70.7382 46.3156 71.0486 45.1248C71.4081 43.6991 70.5911 42.2231 69.2022 41.8374ZM77.6174 48.0767L73.9408 61.981C73.467 63.7588 71.8983 65 70.1009 65C69.7577 65 69.4146 64.9497 69.0551 64.8658L66.8165 64.2285C65.7871 63.9433 64.9374 63.2557 64.4145 62.3164C63.8916 61.3772 63.7445 60.2702 64.0223 59.2135L65.0027 55.4901L36.4564 47.5232L35.476 51.2299C35.0021 53.0078 33.4334 54.2322 31.636 54.2322C31.2929 54.2322 30.9334 54.1818 30.6066 54.098L28.3516 53.4774C27.3222 53.1923 26.4725 52.5046 25.9496 51.5653C25.4267 50.6261 25.2797 49.5191 25.5575 48.4625L29.234 34.5582C30.2961 30.5664 33.3844 27.5809 37.3388 26.7087L42.7474 16.8298C44.4794 13.6766 48.0743 12.1335 51.473 13.0728L69.0224 17.9703C72.4375 18.9263 74.7742 22.1131 74.7088 25.7527L74.4964 37.1076C75.3788 37.9294 76.0651 38.7848 76.5716 39.7073C78.0095 42.2902 78.369 45.2422 77.6174 48.0767ZM29.0216 45.4602L28.0412 49.1669C27.8288 49.9384 28.2863 50.7603 29.0379 50.9615L31.2929 51.5821C32.0609 51.7834 32.8289 51.3305 33.0413 50.559L34.0217 46.8355L29.0216 45.4602ZM74.3657 41.0323C73.2872 39.0867 71.5388 37.6946 69.4309 37.1076L41.7179 29.3755C37.3714 28.1679 32.8942 30.8012 31.7177 35.2626L29.6915 42.9276L73.1402 55.054L75.1663 47.389C75.7383 45.2422 75.4605 42.9779 74.3657 41.0323ZM44.986 18.1548L40.4761 26.4068C40.8356 26.4571 41.2114 26.541 41.5709 26.6416L70.9669 34.8433C71.3264 34.9439 71.6859 35.0613 72.0127 35.1955L72.1924 25.7359C72.2414 23.3039 70.6728 21.1738 68.3852 20.5365L50.8194 15.639C48.5318 15.0016 46.1298 16.0247 44.986 18.1548ZM67.4701 56.1945L66.4897 59.918C66.2936 60.6895 66.7348 61.4946 67.4864 61.7126L69.7414 62.3332C70.493 62.5345 71.2774 62.0816 71.4898 61.3101L72.4702 57.5866L67.4701 56.1945ZM15.1651 19.9159L18.4658 22.4318L19.3155 21.1235L15.786 19.027L15.1651 19.9159ZM39.5937 33.5686C38.2048 33.1828 36.7669 34.0215 36.391 35.4471C36.0152 36.8728 36.8322 38.3487 38.2211 38.7345C38.4499 38.8016 38.6787 38.8351 38.9074 38.8351C40.0676 38.8351 41.1133 38.0468 41.4238 36.856C41.6036 36.1683 41.5219 35.4471 41.1624 34.8265C40.8356 34.206 40.28 33.7699 39.5937 33.5686Z"
+                        fill="url(#paint0_linear_10625_1059)" />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_10625_1059"
+                          x1="39"
+                          y1="0"
+                          x2="39"
+                          y2="65"
+                          gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#4c531e" />
+                          <stop offset="1" stop-color="#4c531e" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </span>
+                </div>
                 <h1>Política motorizada de cero y bajas emisiones</h1>
               </div>
               <div
@@ -165,9 +168,12 @@
             </div>
           </div>
           <div class="omb-botom-container">
-            <button type="button">
-              <span
-                ><svg
+            <button
+              type="button"
+              aria-label="Abrir ayuda para ver el tablero"
+              title="Ayuda para ver el tablero">
+              <span aria-hidden="true">
+                <svg
                   width="7"
                   height="18"
                   viewBox="0 0 7 18"
@@ -176,20 +182,20 @@
                   <g clip-path="url(#clip0_10561_3173)">
                     <path
                       d="M1.15595 13.9648H1.77283V9.56776H1.15595C0.815241 9.56776 0.539062 9.29521 0.539062 8.95899V7.50492C0.539062 7.1687 0.815241 6.89616 1.15595 6.89616H4.61049C4.9512 6.89616 5.22737 7.1687 5.22737 7.50492V13.9648H5.84426C6.18496 13.9648 6.46114 14.2374 6.46114 14.5736V16.0277C6.46114 16.3639 6.18496 16.6364 5.84426 16.6364H1.15595C0.815241 16.6364 0.539062 16.3639 0.539062 16.0277V14.5736C0.539062 14.2374 0.815241 13.9648 1.15595 13.9648ZM3.5001 1.052C2.27358 1.052 1.27932 2.03318 1.27932 3.24356C1.27932 4.45394 2.27358 5.43512 3.5001 5.43512C4.72662 5.43512 5.72088 4.45394 5.72088 3.24356C5.72088 2.03318 4.72659 1.052 3.5001 1.052Z"
-                      fill="black" />
+                      fill="currentColor" />
                   </g>
                   <defs>
                     <clipPath id="clip0_10561_3173">
                       <rect
                         width="6.54545"
                         height="17.4545"
-                        fill="white"
+                        fill="currentColor"
                         transform="translate(0.227539 0.116943)" />
                     </clipPath>
                   </defs>
                 </svg>
               </span>
-              Ayuda para ver el mapa
+              AYUDA PARA VER EL TABLERO
             </button>
           </div>
         </div>
@@ -244,14 +250,26 @@
       </section>
       <section class="omb-compartir-section">
         <div class="omb-compartir-content">
-          <button type="button" class="omb-bottom-descarga">
-            <span>
-              <img
-                src="./iconografia/omb-ico-download.svg"
-                alt="Icono de descarga" />
+          <button
+            type="button"
+            class="omb-bottom-descarga"
+            aria-label="Descargar ficha técnica"
+            title="Descargar ficha técnica">
+            <span aria-hidden="true">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 17 17"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.2466 11.1948H11.0205L9.58808 12.6272C9.20663 13.0087 8.69697 13.2208 8.15565 13.2208C7.61434 13.2208 7.10595 13.0101 6.72323 12.6272L5.2908 11.1948H1.06474C0.505386 11.1948 0.0517578 11.6484 0.0517578 12.2078V15.2467C0.0517578 15.8061 0.505386 16.2597 1.06474 16.2597H15.2466C15.8059 16.2597 16.2596 15.8061 16.2596 15.2467V12.2078C16.2596 11.6475 15.8069 11.1948 15.2466 11.1948ZM13.7271 14.487C13.3092 14.487 12.9673 14.1451 12.9673 13.7273C12.9673 13.3094 13.3092 12.9675 13.7271 12.9675C14.1449 12.9675 14.4868 13.3094 14.4868 13.7273C14.4868 14.1451 14.1449 14.487 13.7271 14.487ZM7.44023 11.9102C7.6365 12.1097 7.89608 12.2078 8.15565 12.2078C8.41523 12.2078 8.67418 12.1089 8.87171 11.911L12.9237 7.85906C13.319 7.46337 13.319 6.82233 12.9237 6.42664C12.528 6.03094 11.8866 6.03094 11.4912 6.42664L9.16864 8.75097V1.06493C9.16864 0.505569 8.71501 0.0519409 8.15565 0.0519409C7.59535 0.0519409 7.14267 0.505569 7.14267 1.06493V8.75097L4.81913 6.42743C4.42375 6.03173 3.7824 6.03173 3.3867 6.42743C2.99132 6.82313 2.99132 7.46416 3.3867 7.85985L7.44023 11.9102Z"
+                  fill="currentColor" />
+              </svg>
             </span>
-            Descargar ficha técnica
+            DESCARGAR FICHA TÉCNICA
           </button>
+
           <div class="omb-redes-sociales">
             <p>Comparte este contenido en tus redes</p>
             <div class="omb-lista-redes">
@@ -259,7 +277,8 @@
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook">
+                title="Ir a facebook"
+                aria-label="Ir a facebook">
                 <svg
                   width="18"
                   height="30"
@@ -288,7 +307,8 @@
                 href="https://www.twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter">
+                title="Ir a twitter"
+                aria-label=" IR A twitter">
                 <svg
                   width="32"
                   height="26"
@@ -317,7 +337,8 @@
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram">
+                title="Ir a instagram"
+                aria-label="Ir a instagram">
                 <svg
                   width="30"
                   height="30"
@@ -451,365 +472,500 @@
         <div class="omb-titulo-otros-tableros-container">
           <h2>Otros tableros que podrían ser de tu interés</h2>
           <p>
-            Explora nuestros publicaciones sobre movilidad en</br> Bogotá, similares
-            a esta
+            Explora nuestros publicaciones sobre movilidad en<br />
+            Bogotá, similares a esta
           </p>
         </div>
-        <div class="omb-contenedor-botones-tableros-interes">
-          <div class="omb-button-container">
-            <div class="swiper-button-prev omb-button-tableros-interes-prev"></div>
+        <div class="omb-tableros-interes-container">
+          <div
+            class="omb-botom-control-carrousel-tableros-interes"
+            id="controlCarrucelTablerosInteres">
+            <button
+              type="button"
+              aria-label="Pausar contenido"
+              title="Pausar contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+              </svg>
+
+              Pausar
+            </button>
           </div>
-          <div class="omb-button-container">
-            <div class="swiper-button-next omb-button-tableros-interes-next"></div>
+          <div class="omb-contenedor-botones-tableros-interes">
+            <div class="omb-button-container">
+              <div
+                class="swiper-button-prev omb-button-tableros-interes-prev"></div>
+            </div>
+            <div class="omb-button-container">
+              <div
+                class="swiper-button-next omb-button-tableros-interes-next"></div>
+            </div>
           </div>
-        </div>
-        <div class="swiper-pagination omb-paginacion-tableros-interes"></div>
-        <div class="swiper tablerosSwiper omb-slide-container-tableros-interes">
-          <div class="swiper-wrapper omb-swiper-wrapper-tableros-interes">
-            <!-- Slide 1 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Movilidad sostenible">
-                <img
-                  src="http://149.130.178.89/media/42"
-                  alt="imagen Política motorizada de cero y bajas emisiones"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+          <div class="swiper-pagination omb-paginacion-tableros-interes"></div>
+          <div
+            class="swiper tablerosSwiper omb-slide-container-tableros-interes">
+            <div class="swiper-wrapper omb-swiper-wrapper-tableros-interes">
+              <!-- Slide 1 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Política motorizada de cero y bajas emisiones"
+                  data-categoria="Movilidad sostenible">
+                  <div class="omb-card-tableros">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Movilidad sostenible</span>
+                      src="./assets/movilidad-sostenible/omb-tableros-pcbe.jpg"
+                      alt="imagen Política motorizada de cero y bajas emisiones"
+                      class="omb-card-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Movilidad sostenible</span>
+                      </div>
+                    </div>
+                    <h5>Política motorizada de cero y bajas emisiones</h5>
+                    <p>
+                      ¿Sabías que el Sistema Integrado de Transporte de Bogotá
+                      cuenta con más de 1.485 buses eléctricos?
+                    </p>
                   </div>
-                </div>
-                <h2>Política motorizada de cero y bajas emisiones</h2>
-                <p>
-                  ¿Sabías que el Sistema Integrado de Transporte de Bogotá
-                  cuenta con más de 1.485 buses eléctricos?
-                </p>
+                </a>
               </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Movilidad sostenible">
-                <img
-                  src="http://149.130.178.89/media/44"
-                  alt="imagen Día sin carro y sin moto"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
-                    <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Movilidad sostenible</span>
-                  </div>
-                </div>
-                <h2>Día sin carro y sin moto</h2>
-                <p>
-                  ¿Sabías que en el día sin carro y sin moto se aumenta en un
-                  90% los viajes en el sistema de bicicletas compartidas
-                  respecto a un día típico?
-                </p>
-              </div>
-            </div>
 
-            <!-- Slide 3 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Movilidad sostenible">
-                <img
-                  src="http://149.130.178.89/media/46"
-                  alt="imagen Ciclista"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Día sin carro y sin moto"
+                  data-categoria="Movilidad sostenible">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Movilidad sostenible">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Movilidad sostenible</span>
+                      src="http://149.130.178.89/media/44"
+                      alt="imagen Día sin carro y sin moto"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Movilidad sostenible</span>
+                      </div>
+                    </div>
+                    <h5>
+                      Día sin carro y sin moto, una oportunidad para transformar
+                      la movilidad urbana
+                    </h5>
+                    <p>
+                      ¿Sabías que en el día sin carro y sin moto se aumenta en
+                      un 90% los viajes en el sistema de bicicletas compartidas
+                      respecto a un día típico?
+                    </p>
                   </div>
-                </div>
-                <h2>Ciclista</h2>
-                <p>
-                  ¿Sabías que en Bogotá hay más de 630 km de
-                  cicloinfraestructura?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 4 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Transporte público">
-                <img
-                  src="http://149.130.178.89/media/47"
-                  alt="imagen Sistema Integrado de Transporte Público (SITP)"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 2 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Ciclista"
+                  data-categoria="Movilidad sostenible">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Movilidad sostenible">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Transporte público</span>
+                      src="http://149.130.178.89/media/46"
+                      alt="imagen Ciclista"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Movilidad sostenible</span>
+                      </div>
+                    </div>
+                    <h5>La cicloinfraestructura de Bogotá</h5>
+                    <p>
+                      ¿Sabías que en Bogotá hay más de 630 km de
+                      cicloinfraestructura?
+                    </p>
                   </div>
-                </div>
-                <h2>Sistema Integrado de Transporte Público (SITP)</h2>
-                <p>
-                  ¿Sabías que el SITP moviliza aproximadamente a 4 millones de
-                  personas en un día típico?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 5 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Transporte público">
-                <img
-                  src="http://149.130.178.89/media/48"
-                  alt="imagen Transporte intermunicipal"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 3-->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Sistema Integrado de Transporte Público (SITP)"
+                  data-categoria="Transporte público">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Transporte público">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Transporte público</span>
+                      src="http://149.130.178.89/media/47"
+                      alt="imagen Sistema Integrado de Transporte Público (SITP)"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Transporte público</span>
+                      </div>
+                    </div>
+                    <h5>Sistema Integrado de Transporte Público (SITP)</h5>
+                    <p>
+                      ¿Sabías que el SITP moviliza aproximadamente a 4 millones
+                      de personas en un día típico?
+                    </p>
                   </div>
-                </div>
-                <h2>Transporte intermunicipal</h2>
-                <p>
-                  ¿Sabías que se realizan 144.288 viajes diarios hacia Bogotá en
-                  transporte público provenientes de los municipios vecinos, con
-                  motivo trabajo o estudio?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 6 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Transporte público taxi">
-                <img
-                  src="http://149.130.178.89/media/49"
-                  alt="imagen Transporte intermunicipal"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 4 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Transporte intermunicipal"
+                  data-categoria="Transporte público">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Transporte público">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Transporte público</span>
+                      src="http://149.130.178.89/media/48"
+                      alt="imagen Transporte intermunicipal"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Transporte público</span>
+                      </div>
+                    </div>
+                    <h5>Transporte intermunicipal en Bogotá</h5>
+                    <p>
+                      ¿Sabías que se realizan 144.288 viajes diarios hacia
+                      Bogotá en transporte público provenientes de los
+                      municipios vecinos, con motivo trabajo o estudio?
+                    </p>
                   </div>
-                </div>
-                <h2>Transporte público individual (Taxi)</h2>
-                <p>
-                 ¿Sabías que solo dos empresas, tienen la mitad del total de vehículos que prestan el servicio de Taxi en Bogotá?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 7 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Comportamiento en vía">
-                <img
-                  src="http://149.130.178.89/media/50"
-                  alt="imagen Comparendos"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 5 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Transporte público individual (Taxi)"
+                  data-categoria="Transporte público">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Transporte público taxi">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Comportamiento en vía</span>
+                      src="http://149.130.178.89/media/49"
+                      alt="imagen Transporte intermunicipal"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Transporte público</span>
+                      </div>
+                    </div>
+                    <h5>Transporte público individual (Taxi)</h5>
+                    <p>
+                      ¿Sabías que solo dos empresas, tienen la mitad del total
+                      de vehículos que prestan el servicio de Taxi en Bogotá?
+                    </p>
                   </div>
-                </div>
-                <h2>Comparendos</h2>
-                <p>
-                  ¿Sabías que las infracciones de tránsito se clasifican por
-                  categorías que establecen el valor de las multas, ligado a la
-                  gravedad de la infracción
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 8 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Comportamiento en vía">
-                <img
-                  src="http://149.130.178.89/media/51"
-                  alt="imagen Siniestralidad vial"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 6 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Comparendos"
+                  data-categoria="Comportamiento en vía">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Comportamiento en vía">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Comportamiento en vía</span>
+                      src="http://149.130.178.89/media/50"
+                      alt="imagen Comparendos"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Comportamiento en vía</span>
+                      </div>
+                    </div>
+                    <h5>Comparendos por infracciones de tránsito</h5>
+                    <p>
+                      ¿Sabías que las infracciones de tránsito se clasifican por
+                      categorías que establecen el valor de las multas, ligado a
+                      la gravedad de la infracción
+                    </p>
                   </div>
-                </div>
-                <h2>Siniestralidad vial</h2>
-                <p>
-                  ¿Sabías que aproximadamente uno de cada tres lesionados en
-                  siniestro viales son motociclistas?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 9 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Comportamiento en vía">
-                <img
-                  src="http://149.130.178.89/media/52"
-                  alt="imagen Velocidades"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 7 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Siniestralidad vial"
+                  data-categoria="Comportamiento en vía">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Comportamiento en vía">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Comportamiento en vía</span>
+                      src="http://149.130.178.89/media/51"
+                      alt="imagen Siniestralidad vial"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Comportamiento en vía</span>
+                      </div>
+                    </div>
+                    <h5>Alta siniestralidad entre motociclistas</h5>
+                    <p>
+                      ¿Sabías que aproximadamente uno de cada tres lesionados en
+                      siniestro viales son motociclistas?
+                    </p>
                   </div>
-                </div>
-                <h2>Velocidades</h2>
-                <p>
-                  ¿Sabías que el límite de velocidad en la zona urbana de Bogotá
-                  es de 50 kilómetros por hora?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 10 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Viajes y volúmenes">
-                <img
-                  src="http://149.130.178.89/media/53"
-                  alt="imagen Volúmenes de carga"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 8 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Velocidades"
+                  data-categoria="Comportamiento en vía">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Comportamiento en vía">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Viajes y volúmenes</span>
+                      src="http://149.130.178.89/media/52"
+                      alt="imagen Velocidades"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Comportamiento en vía</span>
+                      </div>
+                    </div>
+                    <h5>Límite de velocidad urbana en Bogotá</h5>
+                    <p>
+                      ¿Sabías que el límite de velocidad en la zona urbana de
+                      Bogotá es de 50 kilómetros por hora?
+                    </p>
                   </div>
-                </div>
-                <h2>Volúmenes de carga</h2>
-                <p>
-                  ¿Sabías que el periodo máximo de flujo vehicular de carga en
-                  Bogotá es entre las 10 am y las 12 m?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 11 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Viajes y volúmenes">
-                <img
-                  src="http://149.130.178.89/media/54"
-                  alt="imagen Encuestas de movilidad"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 9 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Volúmenes de carga"
+                  data-categoria="Viajes y volúmenes">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Viajes y volúmenes">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Viajes y volúmenes</span>
+                      src="http://149.130.178.89/media/53"
+                      alt="imagen Volúmenes de carga"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Viajes y volúmenes</span>
+                      </div>
+                    </div>
+                    <h5>Pico de vehículos de carga en Bogotá</h5>
+                    <p>
+                      ¿Sabías que el periodo máximo de flujo vehicular de carga
+                      en Bogotá es entre las 10 am y las 12 m?
+                    </p>
                   </div>
-                </div>
-                <h2>Encuestas de movilidad</h2>
-                <p>
-                  ¿Sabías que la primera Encuesta de Movilidad fue realizada en
-                  el año 1995 por el Instituto de Desarrollo Urbano IDU?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 12 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Viajes y volúmenes">
-                <img
-                  src="http://149.130.178.89/media/55"
-                  alt="imagen Registro Distrital Automotor"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 10 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Encuestas de movilidad"
+                  data-categoria="Viajes y volúmenes">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Viajes y volúmenes">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Viajes y volúmenes</span>
+                      src="http://149.130.178.89/media/54"
+                      alt="imagen Encuestas de movilidad"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Viajes y volúmenes</span>
+                      </div>
+                    </div>
+                    <h5>Encuestas de movilidad en bogota</h5>
+                    <p>
+                      ¿Sabías que la primera Encuesta de Movilidad fue realizada
+                      en el año 1995 por el Instituto de Desarrollo Urbano IDU?
+                    </p>
                   </div>
-                </div>
-                <h2>Registro Distrital Automotor</h2>
-                <p>
-                  ¿Sabías que el rango de edad en el que hay la mayor cantidad
-                  de vehículos registrados en Bogotá es entre 10 y 20 años?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 13 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Enfoque de género">
-                <img
-                  src="http://149.130.178.89/media/56"
-                  alt="imagen Movilidad y mujer"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 11 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Registro Distrital Automotor"
+                  data-grafica="Viajes y volúmenes">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Viajes y volúmenes">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Enfoque de género</span>
+                      src="http://149.130.178.89/media/55"
+                      alt="imagen Registro Distrital Automotor"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Viajes y volúmenes</span>
+                      </div>
+                    </div>
+                    <h5>Registro Distrital de vehículos Automotor</h5>
+                    <p>
+                      ¿Sabías que el rango de edad en el que hay la mayor
+                      cantidad de vehículos registrados en Bogotá es entre 10 y
+                      20 años?
+                    </p>
                   </div>
-                </div>
-                <h2>Movilidad y mujer</h2>
-                <p>
-                  ¿Sabías que el 42% de los viajes diarios de las mujeres se
-                  realizan a pie?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 14 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Transparencia">
-                <img
-                  src="http://149.130.178.89/media/57"
-                  alt="imagen Participación ciudadana"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 12 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Movilidad y mujer"
+                  data-categoria="Enfoque de género">
+                  <div
+                    class="omb-card-tableros"
+                    data-categoria="Enfoque de género">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Transparencia</span>
+                      src="http://149.130.178.89/media/56"
+                      alt="imagen Movilidad y mujer"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Enfoque de género</span>
+                      </div>
+                    </div>
+                    <h5>Movilidad y mujer en bogota</h5>
+                    <p>
+                      ¿Sabías que el 42% de los viajes diarios de las mujeres se
+                      realizan a pie?
+                    </p>
                   </div>
-                </div>
-                <h2>Participación ciudadana</h2>
-                <p>
-                  ¿Sabías que el Sistema de Semaforización Inteligente de Bogotá
-                  - SSIB actualmente cuenta con más de 1605 semáforos en
-                  intersecciones viales?
-                </p>
+                </a>
               </div>
-            </div>
 
-            <!-- Slide 15 -->
-            <div class="swiper-slide omb-swiper-slide-tableros-interes">
-              <div class="omb-card-tableros-interes" data-categoria="Transparencia">
-                <img
-                  src="http://149.130.178.89/media/58"
-                  alt="imagen Ejecución presupuestal"
-                  class="omb-card-tableros-interes-img" />
-                <div class="omb-card-tableros-interes-tags-container">
-                  <div class="omb-card-tableros-interes-tag">
+              <!-- Slide 13 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Participación ciudadana"
+                  data-categoria="Transparencia">
+                  <div class="omb-card-tableros" data-categoria="Transparencia">
                     <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Transparencia</span>
+                      src="http://149.130.178.89/media/57"
+                      alt="imagen Participación ciudadana"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Transparencia</span>
+                      </div>
+                    </div>
+                    <h5>
+                      Participación ciudadana en la mejora de la movilidad
+                      urbana
+                    </h5>
+                    <p>
+                      ¿Sabías que el Sistema de Semaforización Inteligente de
+                      Bogotá - SSIB actualmente cuenta con más de 1605 semáforos
+                      en intersecciones viales?
+                    </p>
                   </div>
-                </div>
-                <h2>Ejecución presupuestal</h2>
-                <p>
-                  ¿Quieres saber cómo se está ejecutando el presupuesto de la
-                  Secretaría de movilidad en Bogotá este 2025?
-                </p>
+                </a>
+              </div>
+
+              <!-- Slide 14 -->
+              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+                <a
+                  href=""
+                  title="Ejecución presupuestal"
+                  data-categoria="transparencia">
+                  <div class="omb-card-tableros" data-categoria="Transparencia">
+                    <img
+                      src="http://149.130.178.89/media/58"
+                      alt="imagen Ejecución presupuestal"
+                      class="omb-card-tableros-img" />
+                    <div class="omb-card-tableros-tags-container">
+                      <div class="omb-card-tableros-tag">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag" />
+                        <span>Transparencia</span>
+                      </div>
+                    </div>
+                    <h5>Ejecución del presupuesto de movilidad en Bogotá</h5>
+                    <p>
+                      ¿Quieres saber cómo se está ejecutando el presupuesto de
+                      la Secretaría de movilidad en Bogotá este 2025?
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>

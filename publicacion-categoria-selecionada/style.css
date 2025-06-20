@@ -7,27 +7,23 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
+.omb-card-link {
+  color: #1b1b1b;
 }
 
-main {
-  margin-top: 40px;
-}
 .omb-info-categoria-section {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 40px;
 }
 .omb-info-categoria-section h2 {
-  text-align: start;
+  text-align: center;
   width: 1280px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 32px;
-  line-height: 100%;
+  line-height: 44px;
 }
 .omb-card-info-categoria {
   width: 1280px;
@@ -47,16 +43,18 @@ main {
   height: 151px;
 }
 .omb-texto-categoria h3 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration: underline;
   margin-top: 0;
 }
 .omb-texto-categoria p {
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   letter-spacing: 0%;
+  font-family: "Work sans", sans-serif;
 }
 .omb-texto-categoria button {
   width: auto;
@@ -67,19 +65,21 @@ main {
   padding-right: 16px;
   padding-bottom: 8px;
   padding-left: 16px;
-  background-color: white;
-  border: 2px solid #c4d600;
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  background-color: var(--secundario-yellow);
+  border: none;
+  font-family: "Work sans";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .omb-texto-categoria button:hover {
-  background-color: #dbf000;
+  background-color: #c4d600;
+  color: #ffffff;
 }
 .omb-categorias-section {
   display: flex;
@@ -87,7 +87,7 @@ main {
   flex-direction: column;
   height: auto;
   background-color: #f1f3f7;
-  margin-top: 40px;
+  padding-bottom: 40px;
 }
 
 .omb-ordenar-control-container {
@@ -129,31 +129,27 @@ main {
   width: 1280px;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-}
-
-.omb-wrapper-categoria-selecionada {
-  width: 100px;
-  height: 480px;
+  gap: 30px;
 }
 
 .omb-card-categoria-selecionada {
-  width: 392px;
+  width: 406px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  border-radius: 24px;
-  padding: 16px;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-radius: 16px;
   box-sizing: border-box;
   transition: all 0.5s ease;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
 }
 
 .omb-card-categoria-selecionada:hover {
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(180deg, #fafafa 0%, #fcffe0 100%);
-
-  transform: scale(1.01);
+  border: 1px solid black;
+  transform: scale(1.02);
 }
 .omb-card-categoria-selecionada:hover .omb-enlace-categoria-selecionada {
   color: #7e8a00;
@@ -161,35 +157,36 @@ main {
 .omb-card-categoria-selecionada img {
   width: 100%;
   height: 216px;
-  border-radius: 8px;
 }
 
-.omb-card-categoria-selecionada h3 {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0%;
-  height: 68px;
-  gap: 8px;
-  padding: 6px;
-  border-bottom-width: 1px;
+.omb-card-categoria-selecionada h5 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #1b1b1b;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0px 16px;
+  text-decoration: underline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.688rem;
 }
 
 .omb-card-categoria-selecionada p {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
-  color: #4d4d4d;
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  font-size: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  line-height: 1.5rem;
+  padding: 0px 16px;
+  color: #4d4d4d;
+  font-family: "Work sans", sans-serif;
 }
 
 .omb-enlace-categoria-selecionada {
@@ -198,9 +195,14 @@ main {
   align-items: center;
   gap: 16px;
   transition: all 0.5 ease;
-  font-family: "Montserrat";
+  font-family: "Work sans" sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 28px;
   vertical-align: middle;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
 }

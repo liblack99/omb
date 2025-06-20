@@ -8,11 +8,6 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 main {
   margin-top: 40px;
 }
@@ -24,32 +19,33 @@ main {
 .omb-info-articulo-container {
   width: 1280px;
   display: flex;
-  gap: 16px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.omb-info-articulo-content img {
+  width: 100%;
+  margin-bottom: 40px;
 }
 .omb-info-articulo-content {
   width: 70%;
 }
 
 .omb-info-articulo-content h2 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 32px;
-  line-height: 100%;
+  line-height: 44px;
 }
-.omb-info-articulo-content h3 {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 100%;
-}
+
 .omb-info-articulo-content a {
-  width: 289px;
   height: 28px;
-  gap: 8px;
+  gap: 4px;
   display: flex;
   align-items: center;
   font-family: "Work Sans", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 28px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
   letter-spacing: 0px;
   vertical-align: middle;
   color: #acbd00;
@@ -63,23 +59,70 @@ main {
 }
 
 .omb-info-articulo-content p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   width: 100%;
+  font-family: "Work sans", sans-serif;
 }
-.omb-info-articulo-content img {
+.omb-info-articulo-content > div > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
   width: 100%;
-  margin-top: 80px;
-  margin-bottom: 60px;
+  font-family: "Work sans", sans-serif;
 }
+
 .omb-aside-articulo {
-  flex: 1;
-  gap: 8px;
+  width: 354px;
+  height: 1200px;
   border-radius: 16px;
   padding-right: 8px;
   padding-bottom: 32px;
   padding-left: 8px;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #f9ffbd 0%, #ffffff 100%);
+  background-color: var(--secundario-yellow);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.omb-card-aside-articulo h5 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.omb-card-aside-articulo {
+  border-radius: 16px;
+  background-color: #fff;
+  width: 304px;
+  height: 193px;
+  gap: 16px;
+  border-radius: 16px;
+  padding: 16px;
+}
+.omb-card-aside-articulo ol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 20px;
+}
+.omb-card-aside-articulo ol li {
+  font-family: "Work sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+.omb-card-aside-articulo a {
+  font-family: "Work sans";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #acbd00;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }

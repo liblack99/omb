@@ -8,15 +8,6 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-main {
-  margin-top: 40px;
-}
 .omb-fondo-explorar-publicaciones-slide {
   width: 100%;
   position: absolute;
@@ -28,6 +19,7 @@ main {
   display: flex;
   justify-content: center;
   position: relative;
+  padding-bottom: 40px;
 }
 .omb-fondo-explorar-publicaciones-slide {
   width: 100%;
@@ -40,6 +32,14 @@ main {
 .omb-explora-publicaciones-container {
   width: 1280px;
 }
+.omb-wrapper-publicaciones-explorar {
+  display: flex;
+  height: auto;
+}
+.omb-swiper-slide-publicaciones-explorar {
+  width: 406px !important;
+}
+
 .omb-explora-texto-container {
   display: flex;
   text-align: center;
@@ -56,9 +56,10 @@ main {
 }
 .omb-explora-texto-container p {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   margin: 0;
+  width: 100%;
 }
 .omb-explora-texto-container h3 {
   font-weight: 700;
@@ -92,6 +93,31 @@ main {
   border-color: #4b521d;
   transform: scale(1.2);
 }
+.omb-botom-control-carrousel-publicaciones {
+  position: absolute;
+  z-index: 20;
+  bottom: -50px;
+  left: 0;
+  min-width: 120px;
+  height: 34px;
+  width: auto;
+}
+
+.omb-botom-control-carrousel-publicaciones button {
+  color: #565747;
+  border-radius: 8px;
+  font-family: "Worl sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+}
 
 .omb-contenedor-buttones-publicaciones-explorar {
   width: 100%;
@@ -114,7 +140,7 @@ main {
   border-radius: 8px;
   border-width: 1px;
   transition: all 0.9 ease;
-  top: 80px !important;
+  top: 110px !important;
   border: 1px solid #d9e36e;
 }
 .omb-boton-publicaciones-prev:hover,
@@ -130,12 +156,22 @@ main {
 }
 
 .omb-card-explorar-publicaciones {
-  width: 416px;
-  height: auto;
+  width: 406px;
   border-radius: 8px;
   position: relative;
-  overflow: hidden;
   cursor: pointer;
+  overflow: hidden;
+}
+.omb-imagen-card-explorar-publicaciones {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 260px;
+  display: block;
+}
+.omb-imagen-card-explorar-publicaciones img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .omb-card-content-explorar-publicaciones {
@@ -146,16 +182,18 @@ main {
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 8px;
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 .omb-texto-card-content {
+  display: flex;
   gap: 8px;
   box-sizing: border-box;
   width: 100%;
+  padding: 8px;
 }
 
-.omb-texto-card-content a {
+.omb-texto-card-content h5 {
   font-weight: 500;
   font-size: 18px;
   line-height: 120%;
@@ -174,41 +212,47 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 .omb-boton-ver-documento {
   background-color: var(--secundario-yellow);
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
+  font-family: "Work sans" sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
   text-align: center;
-  vertical-align: middle;
   width: auto;
-  height: 40px;
-  border-radius: 20px;
-  border: 2px solid var(--secundario-yellow);
+  border-radius: 32px;
   padding-top: 8px;
   padding-right: 24px;
   padding-bottom: 8px;
   padding-left: 24px;
   box-sizing: border-box;
   cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
 }
+
+.omb-boton-ver-documento:hover {
+  background-color: #c4d600;
+  color: white;
+}
+
 .omb-categoria-publicaciones-section {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 40px 0px;
+  padding-bottom: 40px;
 }
 .omb-titulo-categoria-publicaciones-container {
   width: 1280px;
 }
 .omb-titulo-categoria-publicaciones-container h2 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 100%;
   text-align: start;
   margin: 0px 0px 40px 0px;
@@ -218,11 +262,14 @@ main {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 30px;
+}
+.omb-categorias-publicaciones-container a {
+  text-decoration: none;
+  color: inherit;
 }
 .omb-card-categoria-publicaciones {
-  width: 416px;
-  gap: 24px;
+  width: 406px;
   padding: 24px;
   border-radius: 16px;
   display: flex;
@@ -230,11 +277,19 @@ main {
   gap: 24px;
   box-sizing: border-box;
   transition: box-shadow 0.5s ease;
-  transition: all 0.5 ease;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+.omb-card-categoria-publicaciones:hover {
+  border-color: black;
 }
 
-.omb-card-categoria-publicaciones:hover h3 {
+.card:focus {
+  border-color: black;
+}
+
+.omb-card-categoria-publicaciones:hover h5 {
   color: #acbd00;
 }
 .omb-icono-card-publicaciones-container {
@@ -256,22 +311,31 @@ main {
   gap: 16px;
   flex: 1;
 }
-.omb-texto-card-publicaciones h3 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0%;
+.omb-texto-card-publicaciones h5 {
+  font-weight: 500;
   margin: 0px;
-  height: 72px;
   transition: all 0.9 ease-in;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: underline;
 }
 .omb-texto-card-publicaciones p {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0%;
   margin: 0;
-  height: 189px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* número de líneas visibles */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .omb-enlace-ver-articulo {
@@ -289,8 +353,4 @@ main {
   align-items: center;
   gap: 8px;
   text-decoration: underline;
-}
-.omb-wrapper-publicaciones-explorar {
-  display: flex;
-  gap: 30px;
 }

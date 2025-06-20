@@ -2,6 +2,9 @@
   --primario-yellow: #f9ffbd;
   --secundario-yellow: #dbf000;
 }
+a {
+  text-decoration: none;
+}
 body {
   display: flex;
   justify-content: center;
@@ -58,16 +61,22 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto 0;
-  width: 1280px;
+  width: 100%;
   margin-top: 40px;
+}
+.omb-breadcrumb-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 40px;
 }
 .omb-breadcrumb-container {
   width: 1280px;
   height: 40px;
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
   box-sizing: border-box;
 }
 
@@ -116,18 +125,19 @@ main {
   color: #000;
 }
 
-.omb-card-tableros-interes-section {
+.omb-card-contexto-section {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 40px;
 }
-.omb-card-tableros-interes-container {
+.omb-card-contexto-container {
   width: 1280px;
   display: flex;
   justify-content: center;
 }
-.omb-card-tableros-interes-content {
+.omb-card-contexto-content {
   display: flex;
   justify-content: center;
   width: 90%;
@@ -149,11 +159,21 @@ main {
   gap: 16px;
   box-sizing: border-box;
 }
-.omb-icon-title-descripcion {
+.omb-container-icon {
   width: auto;
   height: auto;
   padding: 8px;
-  background: var(--secundario-yellow);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(103, 108, 46, 0.1);
+}
+.omb-icon-title-descripcion {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  background: #dbf000;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -176,8 +196,9 @@ main {
 }
 
 .omb-texto-descripcion {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Work sans", sans-serif;
   line-height: 30px;
   letter-spacing: 0;
   color: #1b1b1b;
@@ -191,13 +212,14 @@ main {
   width: 544px;
   height: 322px;
   object-fit: cover;
+  border-radius: 16px;
 }
 .omb-fuentes-section {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  padding-bottom: 40px;
 }
 .omb-fuentes-container {
   width: 1280px;
@@ -229,7 +251,7 @@ main {
 }
 
 .omb-fuentes-item h3 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -238,13 +260,14 @@ main {
   margin: 0;
 }
 .omb-fuentes-item p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   letter-spacing: 0px;
   vertical-align: middle;
   color: #1b1b1b;
   margin: 0;
+  font-family: "Work sans", sans-serif;
 }
 .omb-botom-container {
   flex: 1;
@@ -255,35 +278,31 @@ main {
 }
 
 .omb-botom-container button {
-  cursor: pointer;
-  width: 60%;
-  height: 60px;
-  border-radius: 40px;
-  border-width: 2px;
-  padding-top: 4px;
-  padding-right: 12px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  gap: 6px;
-  font-family: "Montserrat";
+  height: 40px;
+  background-color: var(--secundario-yellow);
+  font-family: "Work sans" sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0%;
+  font-size: 16px;
+  line-height: 22px;
   text-align: center;
-  vertical-align: middle;
-  background-color: white;
+  width: auto;
+  border-radius: 32px;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all 3.2 ease;
-  border: 1px solid var(--secundario-yellow);
-  background-color: var(--secundario-yellow);
+  gap: 8px;
 }
 
 .omb-botom-container button:hover {
-  background-color: var(--secundario-yellow);
+  background-color: #c4d600;
+  color: white;
 }
 .omb-botom-container button > span {
   display: flex;
@@ -296,22 +315,17 @@ main {
   padding: 2px;
 }
 
-.omb-text-buttom {
-  border: none;
-  background: none;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0;
-  color: #4d4d4d;
-  font-family: "Montserrat";
-}
 .omb-text-button-container {
   width: 100%;
   display: flex;
   justify-content: end;
+}
+.omb-grafica-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 40px;
 }
 .omb-selectores-grafica-container {
   width: 1280px;
@@ -367,48 +381,54 @@ main {
   color: #212400;
 }
 .omb-grafica-container {
-  width: 100%;
+  width: 1280px;
   height: 600px;
   text-align: center;
 }
 .omb-compartir-section {
   width: 100%;
-  height: 76px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  padding-bottom: 40px;
 }
 
 .omb-compartir-content {
   width: 1280px;
+  height: 116px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
   padding: 52px;
   background-color: #e6e6e6;
+  box-sizing: border-box;
 }
 
 .omb-bottom-descarga {
-  width: 275px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 40px;
   background-color: var(--secundario-yellow);
-  border: 2px solid var(--secundario-yellow);
+  font-family: "Work sans" sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  width: auto;
   border-radius: 32px;
-  padding: 8px 24px 8px 24px;
-  font-weight: 700;
-  size: 16px;
-  line-height: 24px;
-  font-family: "Montserrat";
-  gap: 8px;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  box-sizing: border-box;
   cursor: pointer;
-  margin-left: 64px;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .omb-bottom-descarga:hover {
-  background-color: var(--secundario-yellow);
+  background-color: #c4d600;
+  color: white;
 }
 .omb-bottom-descarga span {
   width: 23px;
@@ -446,49 +466,51 @@ main {
 }
 
 .omb-contexto-section {
-  margin-top: 80px;
   display: flex;
   justify-content: center;
   color: #4d4d4d;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 .omb-contexto-content {
   width: 1280px;
   display: flex;
-  gap: 16px;
+  gap: 30px;
 }
 
 .omb-contexto-section h2 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;
   line-height: 28px;
-  margin: 0;
   color: #000;
+  margin: 0;
 }
 .omb-contexto-section p {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
   margin: 0;
+  font-family: "Work sans", sans-serif;
 }
 .omb-contexto-section ul {
   padding: 0px 0px 0px 20px;
 }
 .omb-contexto-section ul li {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
   margin: 0;
+  font-family: "Work sans", sans-serif;
 }
 
 .omb-enlaces-container {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 30px;
 }
 .omb-context-container {
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
 .omb-lista-enlaces {
@@ -508,20 +530,27 @@ main {
   align-items: center;
   gap: 4px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 28px;
   letter-spacing: 0px;
   vertical-align: middle;
   color: #acbd00;
+  text-decoration: underline;
+  font-family: "Work sans", sans-serif;
 }
 .omb-enlace a:hover {
   color: #a5ad4a;
 }
 .omb-otros-tableros-section {
-  width: 1280px;
+  width: 100%;
   position: relative;
-  margin-bottom: 40px;
+  background-color: #f3f4f1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .omb-otros-tableros-destacados {
@@ -539,14 +568,20 @@ main {
 }
 .omb-button-tableros-interes-prev,
 .omb-button-tableros-interes-next {
-  color: black !important;
-  margin-top: 14px !important;
+  color: #565747 !important;
+  background-color: #f3f4f1cc;
+  width: 53px;
+  height: 53px;
+  border-radius: 8px;
+  border-width: 1px;
+  transition: all 0.9 ease;
+  border: 1px solid #d9e36e;
 }
 .omb-button-tableros-interes-prev {
-  left: -50px;
+  left: -150px;
 }
 .omb-button-tableros-interes-next {
-  right: -50px;
+  right: -150px;
 }
 .omb-button-tableros-interes-prev::after,
 .omb-button-tableros-interes-next::after {
@@ -559,19 +594,22 @@ main {
   text-align: center;
   font-weight: 500;
   color: #1b1b1b;
-  margin: 0;
-  margin-bottom: 8px;
+  margin-top: 0;
+  font-family: "Montserrat";
 }
 .omb-titulo-otros-tableros-container p {
   font-family: "Montserrat";
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
   letter-spacing: 0%;
   text-align: center;
   color: #1b1b1b;
   margin: 0;
-  margin-bottom: 8px;
+}
+.omb-tableros-interes-container {
+  width: 1280px;
+  position: relative;
 }
 .omb-slide-container-tableros-interes {
   width: 1280px;
@@ -607,84 +645,121 @@ main {
   transform: scale(1.2);
 }
 
-.omb-card-tableros-interes {
-  width: 320px;
-  height: 370px;
+.omb-card-tableros {
+  width: 297px;
   display: flex;
-  gap: 12px;
+  gap: 8px;
   background-color: #ffffff;
   border-radius: 16px;
-  border: 1px solid #d3d3ca;
-  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
   flex-direction: column;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  padding-bottom: 16px;
 }
 
-.omb-card-tableros-interes:hover {
-  border: 1px solid var(--secundario-yellow);
-  padding-bottom: 0px;
+.omb-card-tableros:hover {
+  border: 1px solid black;
+  transform: scale(1.01);
 }
 
-.omb-card-tableros-interes-img {
+.omb-card-tableros-img {
+  width: 100%;
   height: 158px;
-  border: 1px solid #d3d3ca;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-.omb-card-tableros-interes-tags-container {
+.omb-card-tableros-tags-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  width: 288px;
+  gap: 4px;
+  width: 100%;
   padding: 0px 16px;
+  box-sizing: border-box;
 }
 
-.omb-card-tableros-interes-tag {
+.omb-card-tableros-tag {
   width: auto;
-  min-width: 132px;
+  min-width: 150px;
+  height: 24px;
   border-radius: 16px;
   padding: 6px 12px 6px 12px;
-  background-color: var(--secundario-yellow);
-  color: #1b1b1b;
-  font-size: 11px;
-  font-weight: 700;
+  background-color: #f3f4f1;
+  color: #71735e;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 100%;
   letter-spacing: 0;
   display: flex;
   justify-items: center;
   align-items: center;
-  gap: 8px;
+  box-sizing: border-box;
+  gap: 4px;
+  font-family: "Work-sans", sans-serif;
 }
 
-.omb-card-tableros-interes-tag img {
+.omb-card-tableros-tag img {
   width: 12px;
   height: 12px;
 }
 
-.omb-card-tableros-interes-tag:hover {
-  background-color: var(--primario-yellow);
-}
-
-.omb-card-tableros-interes h2 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
+.omb-card-tableros h5 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
   color: #1b1b1b;
   margin: 0;
-  min-height: 48px;
+  min-height: 54px;
   padding: 0px 16px;
+  text-decoration: underline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.688rem;
 }
 
-.omb-card-tableros-interes p {
+.omb-card-tableros p {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 288px;
+  margin: 0;
+  line-height: 1.5rem;
   margin: 0;
   padding: 0px 16px;
-  color: #1b1b1b;
+  color: #4d4d4d;
+  font-family: "Work sans", sans-serif;
+  min-height: 72px;
+}
+.omb-botom-control-carrousel-tableros-interes {
+  position: absolute;
+  z-index: 20;
+  bottom: 0px;
+  left: 0;
+  min-width: 120px;
+  height: 34px;
+  width: auto;
+}
+
+.omb-botom-control-carrousel-tableros-interes button {
+  color: #565747;
+  border-radius: 8px;
+  font-family: "Worl sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: inherit;
 }

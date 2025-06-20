@@ -14,22 +14,57 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>indicadores</title>
+    <title>Document</title>
   </head>
   <body>
     <main>
       <section class="omb-indicadores-section">
+        <div class="omb-blur-container-left"></div>
+        <div class="omb-blur-container-right"></div>
         <h2>Indicadores destacados</h2>
         <div class="indicadores-destacados">
           <div class="omb-contenedor-botones-indicadores">
             <div class="omb-button-container">
-              <div class="swiper-button-prev omb-button-indicadores-prev"></div>
+              <button
+                type="button"
+                class="swiper-button-prev omb-button-indicadores-prev"
+                aria-label="Anterior"
+                title="Anterior"></button>
             </div>
+
             <div class="omb-button-container">
-              <div class="swiper-button-next omb-button-indicadores-next"></div>
+              <button
+                type="button"
+                class="swiper-button-next omb-button-indicadores-next"
+                aria-label="Siguiente"
+                title="Siguiente"></button>
             </div>
           </div>
           <div class="swiper-pagination omb-paginacion-indicadores"></div>
+          <div
+            class="omb-botom-control-carrousel-indicadores"
+            id="controlCarrucelIndicadores">
+            <button
+              type="button"
+              aria-label="Pausar contenido"
+              title="Pausar contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                >
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+              </svg>
+
+              Pausar</button
+            >`
+          </div>
           <div
             class="swiper indicadoresSwiper omb-slide-container-card-indicadores">
             <div class="swiper-wrapper omb-swiper-wrapper-indicadores">
@@ -147,7 +182,40 @@
           </div>
         </div>
       </section>
+      <section class="aliados">
+        <h2>Nuestros aliados</h2>
+        <div class="aliados-logos-container">
+          <img
+            src="http://149.130.178.89/media/73"
+            alt="UMV"
+            width="185"
+            height="70" />
+          <img
+            src="http://149.130.178.89/media/72"
+            alt="La Terminal"
+            width="221"
+            height="56" />
+          <img
+            src="http://149.130.178.89/media/74"
+            alt="Metro de Bogotá"
+            width="178"
+            height="82" />
+          <img
+            src="http://149.130.178.89/media/70"
+            alt="TransMilenio"
+            width="118"
+            height="94" />
+          <img
+            src="http://149.130.178.89/media/71"
+            alt="IDU"
+            width="162"
+            height="158" />
+        </div>
+        <div class="omb-fondo-aliados">
+          <img src="http://149.130.178.89/media/114" alt="Fondo buses" />
+        </div>
+      </section>
     </main>
-    <script src="./index.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

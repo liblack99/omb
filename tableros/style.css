@@ -21,11 +21,11 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 30px;
 }
 .omb-button {
   background-color: var(--secundario-yellow);
-  width: 304px;
+  width: 265px;
   height: 62px;
   border: none;
   padding: 0px 0px 0px 16px;
@@ -42,7 +42,7 @@ main {
 }
 
 .omb-button__width {
-  width: 336px;
+  width: 297px;
 }
 .omb-button:hover {
   background-color: #8e9c00;
@@ -78,14 +78,15 @@ main {
 }
 
 .omb-sidebar {
-  width: 304px;
+  width: 297px;
   height: auto;
   background: var(--secundario-yellow);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
+  padding: 8px;
+  box-sizing: border-box;
   margin-top: 10px;
 }
 
@@ -115,7 +116,7 @@ main {
 }
 
 .omb-busqueda {
-  width: 990px;
+  width: 953px;
   height: 48px;
   background-color: #f8f9f1;
   padding: 0;
@@ -146,91 +147,101 @@ main {
 .omb-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 16px;
-  width: 992px;
+  gap: 30px;
+  width: 953px;
 }
-.omb-card {
-  width: 320px;
-  height: 370px;
+
+.omb-card-tableros {
+  width: 297px;
+  height: 354px;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
   border-radius: 16px;
-  border: 1px solid #d3d3ca;
-  padding: 16px;
-  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
   flex-direction: column;
   box-sizing: border-box;
-}
-
-.omb-card:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(180deg, #ffffff 0%, #fefff5 100%);
-  border: 1px solid transparent;
-  transform: scale(1.01);
-  gap: 11px;
-  padding-bottom: 0px;
+  overflow: hidden;
+  padding-bottom: 16px;
 }
 
-.omb-card:hover h2 {
-  color: #bed000; /* Cambia el color al que desees */
+.omb-card-tableros:hover {
+  border: 1px solid black;
+  transform: scale(1.01);
 }
-.omb-card-img {
+
+.omb-card-tableros-img {
   height: 158px;
-  border-radius: 8px;
   border: 1px solid #d3d3ca;
   object-fit: cover;
 }
 
-.omb-card-tags-container {
+.omb-card-tableros-tags-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  width: 288px;
+  gap: 4px;
+  width: 100%;
+  padding: 0px 16px;
+  box-sizing: border-box;
 }
 
-.omb-card-tag {
+.omb-card-tableros-tag {
   width: auto;
-  min-width: 132px;
+  min-width: 150px;
+  height: 24px;
   border-radius: 16px;
   padding: 6px 12px 6px 12px;
   background-color: #f3f4f1;
   color: #71735e;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 100%;
   letter-spacing: 0;
   display: flex;
   justify-items: center;
   align-items: center;
-  gap: 8px;
+  box-sizing: border-box;
+  gap: 4px;
+  font-family: "Work-sans", sans-serif;
 }
 
-.omb-card-tag img {
+.omb-card-tableros-tag img {
   width: 12px;
   height: 12px;
 }
 
-.omb-card-tag:hover {
-  background-color: var(--primario-yellow);
+.omb-card-tableros h5 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #1b1b1b;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  min-height: 54px;
+  padding: 0px 16px;
+  text-decoration: underline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.688rem;
 }
 
-.omb-card h2 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
-  color: #000000;
-  margin: 0;
-  min-height: 48px;
-}
-
-.omb-card p {
+.omb-card-tableros p {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 288px;
   margin: 0;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0px 16px;
+  color: #4d4d4d;
+  font-family: "Work sans", sans-serif;
+  min-height: 72px;
 }

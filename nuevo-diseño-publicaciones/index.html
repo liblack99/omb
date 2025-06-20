@@ -41,6 +41,29 @@
           </div>
           <div class="omb-publicaciones-explorar-container">
             <div
+              class="omb-botom-control-carrousel-publicaciones"
+              id="controlCarrucelPublicaiones">
+              <button
+                type="button"
+                aria-label="Pausar contenido"
+                title="Pausar contenido">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false">
+                  <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                  <path
+                    d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+                </svg>
+
+                Pausar
+              </button>
+            </div>
+            <div
               class="swiper-pagination omb-pagination-publicaciones-explorar"></div>
             <div class="omb-contenedor-buttones-publicaciones-explorar">
               <div
@@ -52,116 +75,144 @@
               <div class="swiper-wrapper omb-wrapper-publicaciones-explorar">
                 <div
                   class="swiper-slide omb-swiper-slide-publicaciones-explorar">
-                  <div class="omb-card-explorar-publicaciones">
-                    <img
-                      src="http://149.130.178.89/media/89"
-                      alt="Imagen Abecé
-                    plan distrital de desarrollo " />
+                  <a
+                    href="#"
+                    title="Descargar PDF Abecé plan distrital de desarrollo 'Bogotá camina segura'"
+                    class="omb-card-explorar-publicaciones"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="omb-imagen-card-explorar-publicaciones">
+                      <img
+                        src="http://149.130.178.89/media/89"
+                        alt="Imagen Abecé plan distrital de desarrollo" />
+                    </div>
                     <div class="omb-card-content-explorar-publicaciones">
                       <div class="omb-texto-card-content">
-                        <a>
-                          <div class="svg-descarga">
-                            <svg
-                              width="36"
-                              height="36"
-                              viewBox="0 0 56 56"
-                              fill="#acbd00"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
-                                fill="#acbd00" />
-                            </svg>
-                          </div>
+                        <div class="svg-descarga">
+                          <svg
+                            width="36"
+                            height="36"
+                            viewBox="0 0 56 56"
+                            fill="#acbd00"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
+                              fill="#acbd00" />
+                          </svg>
+                        </div>
+                        <h5>
                           Descargar PDF Abecé plan distrital de desarrollo
-                          "Bogota camina segura"
-                        </a>
+                          "Bogotá camina segura"
+                        </h5>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div
                   class="swiper-slide omb-swiper-slide-publicaciones-explorar">
-                  <div class="omb-card-explorar-publicaciones">
-                    <img
-                      src="http://149.130.178.89/media/90"
-                      alt="Imagen Plan de movilidad sostenible y segura" />
+                  <a
+                    href="#"
+                    title="Descargar PDF del Plan de movilidad sostenible y segura"
+                    class="omb-card-explorar-publicaciones"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="omb-imagen-card-explorar-publicaciones">
+                      <img
+                        src="http://149.130.178.89/media/90"
+                        alt="Imagen Plan de movilidad sostenible y segura" />
+                    </div>
                     <div class="omb-card-content-explorar-publicaciones">
                       <div class="omb-texto-card-content">
-                        <a>
-                          <div class="svg-descarga">
-                            <svg
-                              width="36"
-                              height="36"
-                              viewBox="0 0 56 56"
-                              fill="#acbd00"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
-                                fill="#acbd00" />
-                            </svg>
-                          </div>
-                          Descargar PDF de Plan de movilidad sostenible y segura
-                        </a>
+                        <div class="svg-descarga">
+                          <svg
+                            width="36"
+                            height="36"
+                            viewBox="0 0 56 56"
+                            fill="#acbd00"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
+                              fill="#acbd00" />
+                          </svg>
+                        </div>
+                        <h5>
+                          Descargar PDF Plan de movilidad sostenible y segura
+                        </h5>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div
                   class="swiper-slide omb-swiper-slide-publicaciones-explorar">
-                  <div class="omb-card-explorar-publicaciones">
-                    <img
-                      src="http://149.130.178.89/media/91"
-                      alt="Imagen politica publica del peatón " />
+                  <a
+                    href="#"
+                    title="Descargar PDF de la Política Pública del Peatón 'Primero el peatón'"
+                    class="omb-card-explorar-publicaciones"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="omb-imagen-card-explorar-publicaciones">
+                      <img
+                        src="http://149.130.178.89/media/91"
+                        alt="Imagen política pública del peatón" />
+                    </div>
                     <div class="omb-card-content-explorar-publicaciones">
                       <div class="omb-texto-card-content">
-                        <a>
-                          <div class="svg-descarga">
-                            <svg
-                              width="36"
-                              height="36"
-                              viewBox="0 0 56 56"
-                              fill="#acbd00"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
-                                fill="#acbd00" />
-                            </svg>
-                          </div>
-                          Descargar PDF de Politica publica del peatón, "En
-                          Bogota", Primero el peatón
-                        </a>
+                        <div class="svg-descarga">
+                          <svg
+                            width="36"
+                            height="36"
+                            viewBox="0 0 56 56"
+                            fill="#acbd00"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
+                              fill="#acbd00" />
+                          </svg>
+                        </div>
+                        <h5>
+                          Descargar PDF Política pública del peatón, "En Bogotá
+                          primero el peatón"
+                        </h5>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
+
                 <div
                   class="swiper-slide omb-swiper-slide-publicaciones-explorar">
-                  <div class="omb-card-explorar-publicaciones">
-                    <img
-                      src="http://149.130.178.89/media/92"
-                      alt="Imagen Politca de cero y bajas emisiones" />
+                  <a
+                    href="#"
+                    title="Descargar PDF de la Política de cero y bajas emisiones"
+                    class="omb-card-explorar-publicaciones"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="omb-imagen-card-explorar-publicaciones">
+                      <img
+                        src="http://149.130.178.89/media/92"
+                        alt="Imagen Política de cero y bajas emisiones" />
+                    </div>
                     <div class="omb-card-content-explorar-publicaciones">
                       <div class="omb-texto-card-content">
-                        <a>
-                          <div class="svg-descarga">
-                            <svg
-                              width="36"
-                              height="36"
-                              viewBox="0 0 56 56"
-                              fill="#acbd00"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
-                                fill="#acbd00" />
-                            </svg>
-                          </div>
-                          Descargar PDF Politica de cero y bajas emisiones
-                        </a>
+                        <div class="svg-descarga">
+                          <svg
+                            width="36"
+                            height="36"
+                            viewBox="0 0 56 56"
+                            fill="#acbd00"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
+                              fill="#acbd00" />
+                          </svg>
+                        </div>
+                        <h5>
+                          Descargar PDF Política de cero y bajas emisiones
+                        </h5>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -169,8 +220,12 @@
         </div>
       </section>
       <section class="omb-ver-documentos-section">
-        <button type="button" class="omb-boton-ver-documento">
-          Ver todos los documentos de planes y políticas
+        <button
+          type="button"
+          class="omb-boton-ver-documento"
+          aria-label="Ver todos los documentos de planes y políticas"
+          title="Ver todos los documentos de planes y políticas">
+          VER TODOS LOS DOCUMENTOS DE PLANES Y POLITICAS
         </button>
       </section>
 
@@ -180,7 +235,11 @@
         </div>
 
         <div class="omb-categorias-publicaciones-container">
-          <a href="">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir a Resultados Encuestas de Movilidad">
             <div class="omb-card-categoria-publicaciones">
               <div class="omb-icono-card-publicaciones-container">
                 <div class="omb-icono-content">
@@ -197,7 +256,7 @@
                 </div>
               </div>
               <div class="omb-texto-card-publicaciones">
-                <h3>Resultados Encuestas de Movilidad</h3>
+                <h5>Resultados Encuestas de Movilidad</h5>
                 <p>
                   En este espacio encontrarás información detallada de las
                   Encuestas de Movilidad de Bogotá - Región. Estas encuestas
@@ -206,7 +265,7 @@
                   utilizados, las distancias recorridas y los motivos de los
                   viajes.
                 </p>
-                <button class="omb-enlace-ver-articulo">
+                <p class="omb-enlace-ver-articulo">
                   Ver articulo
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -217,12 +276,16 @@
                     <path
                       d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </a>
 
-          <a href="">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir a Anuarios de Siniestralidad Vial de Bogotá">
             <div class="omb-card-categoria-publicaciones">
               <div class="omb-icono-card-publicaciones-container">
                 <div class="omb-icono-content">
@@ -239,7 +302,7 @@
                 </div>
               </div>
               <div class="omb-texto-card-publicaciones">
-                <h3>Anuarios de Siniestralidad Vial de Bogotá</h3>
+                <h5>Anuarios de Siniestralidad Vial de Bogotá</h5>
                 <p>
                   Es un espacio dedicado a la publicación de resultados de
                   investigaciones, análisis y ensayos relacionados con la
@@ -248,7 +311,7 @@
                   la seguridad vial, la sostenibilidad y la innovación en la
                   movilidad urbana, en otras
                 </p>
-                <button class="omb-enlace-ver-articulo">
+                <p class="omb-enlace-ver-articulo">
                   Ver articulo
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -259,12 +322,15 @@
                     <path
                       d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </a>
-
-          <a href="">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir a Informes técnicos y consultorías">
             <div class="omb-card-categoria-publicaciones">
               <div class="omb-icono-card-publicaciones-container">
                 <div class="omb-icono-content">
@@ -281,7 +347,7 @@
                 </div>
               </div>
               <div class="omb-texto-card-publicaciones">
-                <h3>Informes técnicos y consultorías</h3>
+                <h5>Informes técnicos y consultorías</h5>
                 <p>
                   Presenta una colección de documentos de proyectos,
                   consultorías y estudios de la Secretaría Distrital de
@@ -292,7 +358,7 @@
                   referencia para profesionales, académicos y tomadores de
                   decisiones.
                 </p>
-                <button class="omb-enlace-ver-articulo">
+                <p class="omb-enlace-ver-articulo">
                   Ver articulo
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -303,12 +369,16 @@
                     <path
                       d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </a>
 
-          <a href="">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir a Artículos e investigaciones">
             <div class="omb-card-categoria-publicaciones">
               <div class="omb-icono-card-publicaciones-container">
                 <div class="omb-icono-content">
@@ -324,8 +394,9 @@
                   </svg>
                 </div>
               </div>
+
               <div class="omb-texto-card-publicaciones">
-                <h3>Artículos e investigaciones</h3>
+                <h5>Artículos e investigaciones</h5>
                 <p>
                   Es un espacio dedicado a la publicación de resultados de
                   investigaciones, análisis y ensayos relacionados con la
@@ -334,7 +405,7 @@
                   la seguridad vial, la sostenibilidad y la innovación en la
                   movilidad urbana, en otras.
                 </p>
-                <button class="omb-enlace-ver-articulo">
+                <p class="omb-enlace-ver-articulo">
                   Ver articulo
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -345,12 +416,16 @@
                     <path
                       d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </a>
 
-          <a href="">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ir a Memorias MOVI-INNOVA">
             <div class="omb-card-categoria-publicaciones">
               <div class="omb-icono-card-publicaciones-container">
                 <div class="omb-icono-content">
@@ -367,7 +442,7 @@
                 </div>
               </div>
               <div class="omb-texto-card-publicaciones">
-                <h3>Memorias MOVI-INNOVA</h3>
+                <h5>Memorias MOVI-INNOVA</h5>
                 <p>
                   Esta sección reúne el registro detallado de las actividades
                   desarrolladas en el marco del Evento Movi-Innova. Estas
@@ -375,7 +450,7 @@
                   presentadas, paneles, conferencias y conclusiones claves,
                   ofreciendo una fuente valiosa de conocimiento.
                 </p>
-                <button class="omb-enlace-ver-articulo">
+                <p class="omb-enlace-ver-articulo">
                   Ver articulo
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -386,7 +461,7 @@
                     <path
                       d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
                   </svg>
-                </button>
+                </p>
               </div>
             </div>
           </a>

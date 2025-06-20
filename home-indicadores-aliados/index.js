@@ -1,6 +1,6 @@
-const swiperTablerosInteres = new Swiper(".tablerosSwiper", {
-  slidesPerView: 1.2,
-  spaceBetween: 30,
+const swiperIndicadores = new Swiper(".indicadoresSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 68,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -17,19 +17,18 @@ const swiperTablerosInteres = new Swiper(".tablerosSwiper", {
   breakpoints: {
     640: {slidesPerView: 2},
     1024: {slidesPerView: 3},
-    1280: {slidesPerView: 4},
+    1280: {slidesPerView: 5},
   },
 });
+
 let isPlaying = true;
-const pauseButtonTablerosInteres = document.getElementById(
-  "controlCarrucelTablerosInteres"
-);
-if (pauseButtonTablerosInteres) {
-  pauseButtonTablerosInteres.addEventListener("click", () => {
-    pauseButtonTablerosInteres.innerHTML = "";
+const pauseButton = document.getElementById("controlCarrucelIndicadores");
+if (pauseButton) {
+  pauseButton.addEventListener("click", () => {
+    pauseButton.innerHTML = "";
     if (isPlaying) {
-      swiperTablerosInteres.autoplay.stop();
-      pauseButtonTablerosInteres.innerHTML = `<button
+      swiperIndicadores.autoplay.stop();
+      pauseButton.innerHTML = `<button
               type="button"
               aria-label="Reproducir contenido"
               title="Reproducir contenido">
@@ -48,8 +47,8 @@ if (pauseButtonTablerosInteres) {
               Reproducir
             </button>`;
     } else {
-      swiperTablerosInteres.autoplay.start();
-      pauseButtonTablerosInteres.innerHTML = `  <button
+      swiperIndicadores.autoplay.start();
+      pauseButton.innerHTML = `  <button
               type="button"
               aria-label="Pausar contenido"
               title="Pausar contenido">
@@ -73,48 +72,3 @@ if (pauseButtonTablerosInteres) {
     isPlaying = !isPlaying;
   });
 }
-
-const btnVerMas = document.getElementById("btnVerMas");
-const texto = document.querySelector(".omb-texto-descripcion");
-
-const buttons = document.querySelectorAll(".omb-botones-lista");
-const graficaContainers = document.querySelectorAll(".omb-grafica-container");
-
-// Mostrar solo "Fallecidos" por defecto
-const categoriaPorDefecto = "Fallecidos";
-
-buttons.forEach((button) => {
-  const categoria = button.textContent.trim();
-
-  if (categoria === categoriaPorDefecto) {
-    button.classList.add("omb-botones-lista-seleccionado");
-  }
-
-  button.addEventListener("click", () => {
-    buttons.forEach((btn) =>
-      btn.classList.remove("omb-botones-lista-seleccionado")
-    );
-    button.classList.add("omb-botones-lista-seleccionado");
-
-    const categoriaSeleccionada = button.textContent.trim();
-
-    graficaContainers.forEach((card) => {
-      const grafica = card.dataset.grafica;
-
-      if (grafica.toLowerCase() === categoriaSeleccionada.toLowerCase()) {
-        card.style.display = "flex"; // Mostrar solo el que coincide
-      } else {
-        card.style.display = "none"; // Ocultar los demás
-      }
-    });
-  });
-});
-
-// Al cargar la página, solo mostrar "Fallecidos"
-graficaContainers.forEach((card) => {
-  const grafica = card.dataset.grafica;
-  card.style.display =
-    grafica.toLowerCase() === categoriaPorDefecto.toLowerCase()
-      ? "flex"
-      : "none";
-});
