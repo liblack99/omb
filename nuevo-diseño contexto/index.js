@@ -1,5 +1,5 @@
 const swiperTablerosInteres = new Swiper(".tablerosSwiper", {
-  slidesPerView: 1.2,
+  slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",

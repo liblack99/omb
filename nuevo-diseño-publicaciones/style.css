@@ -33,11 +33,14 @@ body {
   width: 1280px;
 }
 .omb-wrapper-publicaciones-explorar {
-  display: flex;
-  height: auto;
+  padding: 4px;
 }
 .omb-swiper-slide-publicaciones-explorar {
   width: 406px !important;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .omb-explora-texto-container {
@@ -139,7 +142,7 @@ body {
   height: 53px;
   border-radius: 8px;
   border-width: 1px;
-  transition: all 0.9 ease;
+  transition: all 0.5s ease;
   top: 110px !important;
   border: 1px solid #d9e36e;
 }
@@ -172,6 +175,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.5s ease;
+}
+.omb-imagen-card-explorar-publicaciones:hover img {
+  transform: scale(0.99);
 }
 
 .omb-card-content-explorar-publicaciones {
@@ -246,21 +253,24 @@ body {
   align-items: center;
   width: 100%;
   padding-bottom: 40px;
+  background-color: #f1f3f7;
 }
 .omb-titulo-categoria-publicaciones-container {
   width: 1280px;
 }
 .omb-titulo-categoria-publicaciones-container h2 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 32px;
   line-height: 100%;
-  text-align: start;
+  text-align: center;
   margin: 0px 0px 40px 0px;
+  margin-top: 40px;
 }
 .omb-categorias-publicaciones-container {
   width: 1280px;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -269,7 +279,8 @@ body {
   color: inherit;
 }
 .omb-card-categoria-publicaciones {
-  width: 406px;
+  width: 360px;
+  height: 380px;
   padding: 24px;
   border-radius: 16px;
   display: flex;
@@ -312,7 +323,7 @@ body {
   flex: 1;
 }
 .omb-texto-card-publicaciones h5 {
-  font-weight: 500;
+  font-weight: 600;
   margin: 0px;
   transition: all 0.9 ease-in;
   font-size: 16px;
@@ -325,6 +336,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: underline;
+  height: 40px;
 }
 .omb-texto-card-publicaciones p {
   font-weight: 500;

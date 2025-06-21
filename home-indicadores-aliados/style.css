@@ -2,6 +2,11 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
+:root {
+  --primario-yellow: #f9ffbd;
+  --secundario-yellow: #dbf000;
+}
+
 .omb-indicadores-section {
   padding: 2rem 0px;
   box-sizing: border-box;
@@ -29,11 +34,10 @@ body {
   position: relative;
   width: 1280px;
 }
-
-.omb-contenedor-botones-indicadores {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.omb-button-container {
+  width: 40px;
+  background-color: red;
+  height: 100%;
 }
 
 .omb-button-indicadores-prev {
@@ -45,19 +49,49 @@ body {
 
 .omb-button-indicadores-prev,
 .omb-button-indicadores-next {
+  /* width: 200px;
+  height: 300px;
+  top: 0;
+  background: #ffffff;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(242, 244, 248, 0.8) 100%
+  ); */
+}
+.omb-button-indicadores-prev,
+.omb-button-indicadores-next {
+  color: #565747 !important;
+  background-color: #f3f4f1cc;
   width: 53px;
   height: 53px;
   border-radius: 8px;
   border-width: 1px;
-  transition: all 0.9 ease;
-  background-color: #f3f4f1cc;
-  color: #565747 !important;
+  transition: all 0.5s ease;
+  top: 110px !important;
   border: 1px solid #d9e36e;
 }
 .omb-button-indicadores-prev::after,
 .omb-button-indicadores-next::after {
+  /* width: 53px;
+  height: 53px;
+  padding: 4px 16px;
+  border-radius: 8px;
+  border-width: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.9s ease;
+  background-color: #f3f4f1cc;
+  color: #565747 !important;
+  border: 1px solid #d9e36e; */
   font-size: 32px !important;
   font-weight: 900 !important;
+}
+.omb-button-indicadores-prev:hover,
+.omb-button-indicadores-next:hover {
+  color: black !important;
+  background-color: var(--secundario-yellow);
 }
 
 .omb-slide-container-card-indicadores {

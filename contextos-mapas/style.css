@@ -161,7 +161,7 @@ main {
 .omb-botom-container button {
   height: 40px;
   background-color: var(--secundario-yellow);
-  font-family: "Work sans" sans-serif;
+  font-family: "Work sans", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -183,7 +183,7 @@ main {
 
 .omb-botom-container button:hover {
   background-color: #c4d600;
-  color: white;
+  color: black;
 }
 .omb-botom-container button > span {
   display: flex;

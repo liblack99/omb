@@ -119,7 +119,7 @@ main {
   line-height: 100%;
   text-align: center;
   vertical-align: middle;
-  font-family: "Montserrat";
+  font-family: "Work sans", sans-serif;
 }
 .omb-breadcrumb-lista li a:hover {
   color: #000;
@@ -302,7 +302,7 @@ main {
 
 .omb-botom-container button:hover {
   background-color: #c4d600;
-  color: white;
+  color: black;
 }
 .omb-botom-container button > span {
   display: flex;
@@ -428,7 +428,7 @@ main {
 }
 .omb-bottom-descarga:hover {
   background-color: #c4d600;
-  color: white;
+  color: #000;
 }
 .omb-bottom-descarga span {
   width: 23px;
@@ -574,8 +574,13 @@ main {
   height: 53px;
   border-radius: 8px;
   border-width: 1px;
-  transition: all 0.9 ease;
+  transition: all 0.5s ease;
   border: 1px solid #d9e36e;
+}
+.omb-button-tableros-interes-prev:hover,
+.omb-button-tableros-interes-next:hover {
+  color: black !important;
+  background-color: var(--secundario-yellow);
 }
 .omb-button-tableros-interes-prev {
   left: -150px;
@@ -592,7 +597,7 @@ main {
 .omb-titulo-otros-tableros-container h2 {
   font-size: 32px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
   color: #1b1b1b;
   margin-top: 0;
   font-family: "Montserrat";

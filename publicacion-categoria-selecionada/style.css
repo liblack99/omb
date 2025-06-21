@@ -79,7 +79,7 @@ body {
 }
 .omb-texto-categoria button:hover {
   background-color: #c4d600;
-  color: #ffffff;
+  color: #000;
 }
 .omb-categorias-section {
   display: flex;
@@ -133,7 +133,8 @@ body {
 }
 
 .omb-card-categoria-selecionada {
-  width: 406px;
+  width: 360px;
+  height: 320px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
