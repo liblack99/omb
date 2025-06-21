@@ -8,6 +8,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>articulo</title>
   </head>
@@ -222,6 +227,136 @@
           </aside>
         </div>
       </section>
+      <section class="omb-explora-publicacion-interes-section">
+        <div class="omb-explora-publicaciones-interes-container">
+          <div class="omb-explora-texto-interes-container">
+            <h2>Estas publicaciones también podrían ser de tu interés</h2>
+            <p>
+              Explora nuestros publicaciones sobre movilidad en Bogotá,
+              similares a esta
+            </p>
+          </div>
+          <div class="omb-explorar-publicaciones-insteres-content">
+            <div
+              class="omb-botom-control-carrousel-publicaciones-interes"
+              id="controlCarrucelPublicaionesInteres">
+              <button
+                type="button"
+                aria-label="Pausar contenido"
+                title="Pausar contenido">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false">
+                  <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                  <path
+                    d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+                </svg>
+
+                Pausar
+              </button>
+            </div>
+            <div
+              class="swiper-pagination omb-pagination-publicaciones-interes"></div>
+            <div class="omb-contenedor-buttones-publicaciones-interes">
+              <div
+                class="swiper-button-prev omb-boton-publicaciones-interes-prev"></div>
+              <div
+                class="swiper-button-next omb-boton-publicaciones-interes-next"></div>
+            </div>
+            <div class="swiper publicacionesInteresSlideSwiper">
+              <div class="swiper-wrapper omb-wrapper-publicaciones-interes">
+                <div
+                  class="swiper-slide omb-swiper-slide-publicaciones-interes">
+                  <a
+                    href="#"
+                    title="Descargar PDF Abecé plan distrital de desarrollo 'Bogotá camina segura'"
+                    class=""
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="omb-card-publicaciones-interes">
+                      <div class="omb-imagen-card-publicaciones-interes">
+                        <img
+                          src="http://149.130.178.89/media/91"
+                          alt="Imagen Abecé plan distrital de desarrollo" />
+                      </div>
+                      <h5>Actualización la caracterización socioeconómica</h5>
+                    </div>
+                  </a>
+                </div>
+
+                <div
+                  class="swiper-slide omb-swiper-slide-publicaciones-interes">
+                  <a
+                    href="#"
+                    title="Descargar PDF del Plan de movilidad sostenible y segura"
+                    class="omb-card-publicaciones-interes"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="omb-card-publicaciones-interes">
+                      <div class="omb-imagen-card-explorar-publicaciones">
+                        <img
+                          src="http://149.130.178.89/media/116"
+                          alt="Imagen Plan de movilidad sostenible y segura" />
+                      </div>
+                      <h5>
+                        Mejorando el diseño de rutas BRT a través del código: el
+                        caso del sistema
+                      </h5>
+                    </div>
+                  </a>
+                </div>
+
+                <div
+                  class="swiper-slide omb-swiper-slide-publicaciones-interes">
+                  <a
+                    href="#"
+                    title="Descargar PDF de la Política Pública del Peatón 'Primero el peatón'"
+                    class="omb-card-publicaciones-interes"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="omb-card-publicaciones-interes">
+                      <div class="omb-imagen-card-explorar-publicaciones">
+                        <img
+                          src="http://149.130.178.89/media/117"
+                          alt="Imagen política pública del peatón" />
+                      </div>
+                      <h5>
+                        Descargar PDF Política pública del peatón, "En Bogotá
+                        primero el peatón"
+                      </h5>
+                    </div>
+                  </a>
+                </div>
+
+                <div
+                  class="swiper-slide omb-swiper-slide-publicaciones-interes">
+                  <a
+                    href="#"
+                    title="Descargar PDF de la Política de cero y bajas emisiones"
+                    class="omb-card-publicaciones-interes"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="omb-card-publicaciones-interes">
+                      <div class="omb-imagen-card-explorar-publicaciones">
+                        <img
+                          src="http://149.130.178.89/media/118"
+                          alt="Imagen Política de cero y bajas emisiones" />
+                      </div>
+                      <h5>Memorias MOVI-INNOVA 2022</h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
