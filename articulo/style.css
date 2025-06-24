@@ -266,11 +266,9 @@ main {
   width: 1280px;
   padding-left: 4px;
   padding-right: 4px;
-  box-sizing: border-box;
 }
 .omb-wrapper-publicaciones-interes {
   width: 1280px;
-  box-sizing: border-box;
 }
 
 .omb-card-publicaciones-interes {
