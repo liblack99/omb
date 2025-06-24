@@ -594,9 +594,12 @@ main {
   font-weight: 900 !important;
 }
 
+.omb-titulo-otros-tableros-container {
+  width: 1280px;
+}
+
 .omb-titulo-otros-tableros-container h2 {
   font-size: 32px;
-  text-align: center;
   font-weight: 600;
   color: #1b1b1b;
   margin-top: 0;
@@ -608,7 +611,6 @@ main {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0%;
-  text-align: center;
   color: #1b1b1b;
   margin: 0;
 }
@@ -618,7 +620,7 @@ main {
 }
 .omb-slide-container-tableros-interes {
   width: 1280px;
-  height: 500px;
+  height: 380px;
   padding: 0;
   max-width: 1280px;
   margin: 0 auto;
@@ -632,7 +634,9 @@ main {
   justify-content: center;
   align-items: center;
 }
-
+.omb-paginacion-tableros-interes {
+  bottom: -32px !important;
+}
 /* Estilo base de los bullets */
 .omb-paginacion-tableros-interes > .swiper-pagination-bullet {
   width: 10px;
@@ -747,7 +751,7 @@ main {
 .omb-botom-control-carrousel-tableros-interes {
   position: absolute;
   z-index: 20;
-  bottom: 0px;
+  bottom: -32px;
   left: 0;
   min-width: 120px;
   height: 34px;
