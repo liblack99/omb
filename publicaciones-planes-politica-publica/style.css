@@ -1,0 +1,68 @@
+:root {
+  --primario-yellow: #f9ffbd;
+  --secundario-yellow: #dbf000;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+.omb-publicaciones-planes-politica {
+  width: 100%;
+}
+
+.omb-publicaciones-planes-politica-container {
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+}
+
+.omb-card-publicaciones-interes {
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  box-sizing: border-box;
+}
+.omb-imagen-card-publicaciones-interes {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+.omb-imagen-card-publicaciones-interes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.omb-card-content-explorar-publicaciones {
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.omb-card-publicaciones-interes h5 {
+  font-weight: 500;
+  margin: 0px;
+  transition: all 0.9 ease-in;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: underline;
+  color: #000;
+  padding: 0px 16px;
+  min-height: 53px;
+}
