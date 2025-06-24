@@ -224,7 +224,7 @@ body {
 }
 .omb-boton-ver-documento {
   background-color: var(--secundario-yellow);
-  font-family: "Work sans" sans-serif;
+  font-family: "Work sans", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
