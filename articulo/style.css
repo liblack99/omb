@@ -317,7 +317,6 @@ main {
   transition: all 0.9 ease-in;
   font-size: 16px;
   line-height: 19px;
-  font-weight: 700;
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
