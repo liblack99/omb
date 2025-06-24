@@ -17,6 +17,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("http://149.130.178.89/media/120");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .omb-publicaciones-section h2 {
   font-weight: 600;

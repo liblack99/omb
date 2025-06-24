@@ -8,6 +8,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Mapa contexto</title>
   </head>
@@ -185,7 +190,7 @@
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Ir a instagram""
+                title="Ir a instagram"
                 aria-label="Ir a instagram">
                 <svg
                   width="30"
@@ -291,6 +296,165 @@
           </div>
         </div>
       </section>
+      <section class="omb-otros-recursos-section">
+        <div class="omb-titulo-otros-recursos-container">
+          <h2>Otros recursos cartograficos que podrían ser de tu interés</h2>
+          <p>Explora nuestros recursos cartograficos.</p>
+        </div>
+        <div class="omb-recursos-interes-container">
+          <div
+            class="omb-botom-control-carrousel-recursos-interes"
+            id="controlCarrucelRecursosInteres">
+            <button
+              type="button"
+              aria-label="Pausar contenido"
+              title="Pausar contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+              </svg>
+
+              Pausar
+            </button>
+          </div>
+          <div class="omb-contenedor-botones-recursos-interes">
+            <div class="omb-button-container">
+              <div
+                class="swiper-button-prev omb-button-recursos-interes-prev"></div>
+            </div>
+            <div class="omb-button-container">
+              <div
+                class="swiper-button-next omb-button-recursos-interes-next"></div>
+            </div>
+          </div>
+          <div class="swiper-pagination omb-paginacion-recursos-interes"></div>
+          <div
+            class="swiper recursosInteresSwiper omb-slide-container-recursos-interes">
+            <div class="swiper-wrapper omb-swiper-wrapper-recursos-interes">
+              <!-- Slide 1 -->
+              <div class="swiper-slide omb-swiper-slide-recursos-interes">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ir a visor de volúmenes">
+                  <div class="omb-card-recursos">
+                    <img
+                      src="http://149.130.178.89/media/84"
+                      alt="Mapa ilustrativo visor de volúmenes" />
+                    <h5>Visor de volúmenes</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nesciunt quisquam veritatis molestiae harum? Dolore cumque
+                      perferendis vero accusantium earum delectus, perspiciatis
+                      dolorem eum, ullam reiciendis qui. Facere voluptatibus
+                      quisquam aliquam!
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide omb-swiper-slide-recursos-interes">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ir a velocidades en 14 corredores viales">
+                  <div class="omb-card-recursos">
+                    <img
+                      src="http://149.130.178.89/media/85"
+                      alt="Mapa ilustrativo velocidades corredores viales" />
+                    <h5>Velocidades 14 corredores viales</h5>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Aspernatur, accusamus ex quisquam necessitatibus at veniam
+                      accusantium, fugiat deleniti dolor placeat deserunt sequi!
+                      Est non, aut dolore pariatur dolorem ipsam saepe?
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 3-->
+              <div class="swiper-slide omb-swiper-slide-recursos-interes">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ir a visor de semaforización">
+                  <div class="omb-card-recursos">
+                    <img
+                      src="http://149.130.178.89/media/86"
+                      alt="Mapa ilustrativo semaforización" />
+                    <h5>Semaforización</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Perspiciatis ad nobis molestiae rerum eos ipsum voluptates
+                      est. Quibusdam tempora, blanditiis repellendus aliquid
+                      iste quidem reprehenderit ipsum architecto explicabo esse
+                      laborum.
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide omb-swiper-slide-recursos-interes">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ir a Planes de Manejo de Tránsito (PMT)">
+                  <div class="omb-card-recursos">
+                    <img
+                      src="http://149.130.178.89/media/87"
+                      alt="Mapa ilustrativo planes de manejo de tránsito" />
+                    <h5>Planes de Manejo de Tránsito (PMT)</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Similique atque iusto cupiditate nam veniam, harum animi
+                      accusamus hic eos tenetur adipisci qui obcaecati, natus
+                      reprehenderit autem odit? Perferendis, mollitia adipisci.
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide omb-swiper-slide-recursos-interes">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ir a visor de volúmenes">
+                  <div class="omb-card-recursos">
+                    <img
+                      src="http://149.130.178.89/media/84"
+                      alt="Mapa ilustrativo visor de volúmenes" />
+                    <h5>Visor de volúmenes</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nesciunt quisquam veritatis molestiae harum? Dolore cumque
+                      perferendis vero accusantium earum delectus, perspiciatis
+                      dolorem eum, ullam reiciendis qui. Facere voluptatibus
+                      quisquam aliquam!
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>

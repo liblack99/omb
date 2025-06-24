@@ -2,6 +2,10 @@
   --primario-yellow: #f9ffbd;
   --secundario-yellow: #dbf000;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 body {
   display: flex;
   justify-content: center;
@@ -369,4 +373,197 @@ main {
 }
 .omb-enlace a:hover {
   color: #a5ad4a;
+}
+
+.omb-otros-recursos-section {
+  width: 100%;
+  position: relative;
+  background-color: #f3f4f1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.omb-otros-recursos-destacados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.omb-contenedor-botones-recursos-interes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.omb-button-recursos-interes-prev,
+.omb-button-recursos-interes-next {
+  color: #565747 !important;
+  background-color: #f3f4f1cc;
+  width: 53px;
+  height: 53px;
+  border-radius: 8px;
+  border-width: 1px;
+  transition: all 0.5s ease;
+  border: 1px solid #d9e36e;
+}
+.omb-button-recursos-interes-prev:hover,
+.omb-button-recursos-interes-next:hover {
+  color: black !important;
+  background-color: var(--secundario-yellow);
+}
+.omb-button-recursos-interes-prev {
+  left: -150px;
+}
+.omb-button-recursos-interes-next {
+  right: -150px;
+}
+.omb-button-recursos-interes-prev::after,
+.omb-button-recursos-interes-next::after {
+  font-size: 32px !important;
+  font-weight: 900 !important;
+}
+
+.omb-titulo-otros-recursos-container h2 {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 600;
+  color: #1b1b1b;
+  margin-top: 0;
+  font-family: "Montserrat";
+}
+.omb-titulo-otros-recursos-container p {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1b1b1b;
+  margin: 0;
+}
+.omb-recursos-interes-container {
+  width: 1280px;
+  position: relative;
+}
+.omb-slide-container-recursos-interes {
+  width: 1280px;
+  height: 500px;
+  padding: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.omb-swiper-slide-recursos-interes {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo base de los bullets */
+.omb-paginacion-recursos-interes > .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: white !important;
+  border: 2px solid #4b521d;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Bullet activo */
+.omb-paginacion-recursos-interes > .swiper-pagination-bullet-active {
+  background-color: #4b521d !important;
+  border-color: #4b521d;
+  transform: scale(1.2);
+}
+.omb-card-recursos-container {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.omb-card-recursos {
+  width: 287px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.28);
+  border: 1px solid transparent;
+}
+.omb-card-recursos:hover {
+  border: 1px solid black;
+  transform: scale(1.01);
+}
+.omb-card-recursos img {
+  width: 100%;
+  height: 158px;
+  border-radius: 8px;
+}
+.omb-card-recursos h5 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #1b1b1b;
+  margin: 0;
+  min-height: 54px;
+  padding: 0px 16px;
+  text-decoration: underline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.688rem;
+}
+.omb-card-recursos p {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0px 16px;
+  color: #4d4d4d;
+  font-family: "Work sans", sans-serif;
+  min-height: 72px;
+}
+
+.omb-botom-control-carrousel-recursos-interes {
+  position: absolute;
+  z-index: 20;
+  bottom: 0px;
+  left: 0;
+  min-width: 120px;
+  height: 34px;
+  width: auto;
+}
+
+.omb-botom-control-carrousel-recursos-interes button {
+  color: #565747;
+  border-radius: 8px;
+  font-family: "Worl sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: inherit;
 }

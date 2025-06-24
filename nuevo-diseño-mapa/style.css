@@ -281,8 +281,6 @@ main {
 .omb-card-recursos:hover {
   border: 1px solid black;
   transform: scale(1.01);
-  gap: 11px;
-  padding-bottom: 0px;
 }
 .omb-card-recursos img {
   width: 100%;
