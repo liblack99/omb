@@ -8,27 +8,55 @@ a {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
-main {
-  max-width: 1280px;
-  margin-top: 40px;
-}
-.omb-section {
+
+.omb-infogracia-section {
   width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 30px;
 }
+
+.omb-titulo-infografia-container {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.omb-titulo-infografia-container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+}
+.omb-titulo-infografia-container p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #000;
+  margin: 0;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  width: 880px;
+}
+.omb-infografia-container {
+  width: 1280px;
+  display: flex;
+  gap: 30px;
+}
+
 .omb-button {
-  background-color: var(--secundario-yellow);
-  width: 265px;
+  background-color: var(--primario-yellow);
+  width: 270px;
   height: 62px;
   border: none;
-  padding: 0px 0px 0px 16px;
+  padding: 0;
   margin: 0;
   cursor: pointer;
   font-size: 16px;
@@ -38,26 +66,31 @@ main {
   align-items: center;
   border-radius: 12px;
   position: relative;
+  gap: 8px;
+  padding: 8px 32px;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .omb-button__width {
   width: 297px;
 }
 .omb-button:hover {
-  background-color: #8e9c00;
-  color: white;
+  background-color: var(--secundario-yellow);
+  color: black;
+  font-weight: 600;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .omb-button__secundario {
-  background-color: #ffffff;
-  padding: 0px;
+  background-color: var(--primario-yellow);
+  padding: 8px 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .omb-content-button-active {
-  color: white;
-  background-color: #8e9c00;
+  color: black;
+  background-color: var(--secundario-yellow);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .omb-content-button-active::before {
@@ -67,7 +100,7 @@ main {
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
-  border-left: 14px solid #8e9c00;
+  border-left: 14px solid var(--secundario-yellow);
   border-bottom: 8px solid transparent;
 }
 
@@ -80,14 +113,15 @@ main {
 .omb-sidebar {
   width: 297px;
   height: auto;
-  background: var(--secundario-yellow);
+  background-color: #f9ffbd;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px;
+  padding: 16px;
   box-sizing: border-box;
   margin-top: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .omb-sidebar-list {
@@ -109,85 +143,53 @@ main {
   margin-bottom: 16px;
 }
 
-.omb-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.omb-busqueda {
-  width: 953px;
-  height: 48px;
-  background-color: #f8f9f1;
-  padding: 0;
-  border: none;
-  border-radius: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.omb-input-busqueda {
-  width: 383px;
-  height: 22px;
-  background-color: #f8f9f1;
-  border: none;
-  padding: 0px 16px;
-  font-size: 16px;
-  color: #71735e;
-}
-.omb-input-busqueda:focus {
-  outline: none;
-  box-shadow: none;
-}
-.omb-icon-busqueda {
-  padding: 6px 16px 6px 16px;
-}
-
-.omb-container {
+.omb-cards-infogracia-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 432px 432px;
+  grid-template-rows: 184px;
   gap: 30px;
   width: 953px;
 }
+.omb-card-enlace {
+  width: 432px;
+  height: 184px;
+}
 
-.omb-card-tableros {
-  width: 297px;
-  height: 354px;
+.omb-card-infografia {
   display: flex;
-  gap: 8px;
-  background-color: #ffffff;
+  width: 432px;
+  height: 184px;
   border-radius: 16px;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
-  flex-direction: column;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  padding-bottom: 16px;
-}
-
-.omb-card-tableros:hover {
-  border: 1px solid black;
-  transform: scale(1.01);
-}
-
-.omb-card-tableros-img {
-  height: 158px;
+  border-width: 1px;
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 12px;
   border: 1px solid #d3d3ca;
-  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+.omb-card-infografia:hover {
+  border: 1px solid #000;
 }
 
-.omb-card-tableros-tags-container {
+.omb-card-infografia-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.omb-card-infografia-tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
   width: 100%;
   padding: 0px 16px;
   box-sizing: border-box;
+  min-height: 56px;
 }
 
-.omb-card-tableros-tag {
+.omb-card-infografia-tag {
   width: auto;
   height: 24px;
   border-radius: 16px;
@@ -211,7 +213,7 @@ main {
   height: 12px;
 }
 
-.omb-card-tableros h5 {
+.omb-card-infografia-content h5 {
   font-size: 18px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
@@ -229,18 +231,16 @@ main {
   line-height: 1.688rem;
 }
 
-.omb-card-tableros p {
+.omb-card-infografia-content p {
   font-size: 16px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   margin: 0;
   line-height: 1.5rem;
+  font-weight: 500;
   margin: 0;
   padding: 0px 16px;
-  color: #4d4d4d;
   font-family: "Work sans", sans-serif;
-  min-height: 72px;
+  color: #7e8a00;
+  text-decoration: underline;
 }

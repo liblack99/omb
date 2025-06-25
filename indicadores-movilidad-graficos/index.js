@@ -76,7 +76,7 @@ if (pauseButtonTablerosInteres) {
 const buttons = document.querySelectorAll(".omb-botones-lista");
 const graficaContainers = document.querySelectorAll(".omb-grafica-container");
 // Mostrar solo "Fallecidos" por defecto
-const categoriaPorDefecto = "Fallecidos";
+const categoriaPorDefecto = "GRAFICAS";
 
 buttons.forEach((button) => {
   const categoria = button.textContent.trim();

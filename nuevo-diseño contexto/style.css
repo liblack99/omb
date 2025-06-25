@@ -521,15 +521,25 @@ main {
   gap: 6px;
 }
 .omb-enlace {
-  display: flex;
   align-items: center;
+  display: flex;
+  align-items: start;
+  gap: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #acbd00;
+  text-decoration: underline;
+  font-family: "Work sans", sans-serif;
 }
 
 .omb-enlace a {
   display: flex;
   align-items: center;
   gap: 4px;
-  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
@@ -665,7 +675,7 @@ main {
   transition: all 0.3s ease;
   flex-direction: column;
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   padding-bottom: 16px;
 }

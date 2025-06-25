@@ -275,7 +275,7 @@ main {
   overflow: hidden;
   box-sizing: border-box;
   transition: all 0.3s ease;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border: 1px solid transparent;
 }
 .omb-card-recursos:hover {
