@@ -1,7 +1,11 @@
 :root {
-  --primario-yellow: #f9ffbd;
-  --secundario-yellow: #dbf000;
+  --color-primario-soft: #f9ffbd;
+  --color-primario: #dbf000;
+  --color-secundario-hover: #8e9c00;
+  --color-texto: #1b1b1b;
+  --color-enlace: #acbd00;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -164,7 +168,7 @@ main {
 
 .omb-botom-container button {
   height: 40px;
-  background-color: var(--secundario-yellow);
+  background-color: var(--color-primario);
   font-family: "Work sans", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -186,8 +190,8 @@ main {
 }
 
 .omb-botom-container button:hover {
-  background-color: #c4d600;
-  color: black;
+  background-color: var(--color-secundario-hover);
+  color: #fff;
 }
 .omb-botom-container button > span {
   display: flex;
@@ -224,7 +228,7 @@ main {
   position: absolute;
   border: 1px solid #bbbcae;
   border-radius: 16px 0px 0px 16px;
-  border-right: 4px solid var(--secundario-yellow);
+  border-right: 4px solid var(--color-primario);
   width: 455px;
   height: 232px;
   opacity: 0.7;
@@ -384,20 +388,20 @@ main {
   align-items: center;
   flex-direction: column;
 }
-
-.omb-otros-recursos-destacados {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  justify-content: center;
+.omb-titulo-section {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+.omb-parrafo-descripcion-section {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: black;
 }
 
-.omb-contenedor-botones-recursos-interes {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
 .omb-button-recursos-interes-prev,
 .omb-button-recursos-interes-next {
   color: #565747 !important;
@@ -412,13 +416,13 @@ main {
 .omb-button-recursos-interes-prev:hover,
 .omb-button-recursos-interes-next:hover {
   color: black !important;
-  background-color: var(--secundario-yellow);
+  background-color: var(--color-primario);
 }
 .omb-button-recursos-interes-prev {
-  left: -150px;
+  left: -100px;
 }
 .omb-button-recursos-interes-next {
-  right: -150px;
+  right: -100px;
 }
 .omb-button-recursos-interes-prev::after,
 .omb-button-recursos-interes-next::after {
@@ -426,47 +430,28 @@ main {
   font-weight: 900 !important;
 }
 
-.omb-titulo-otros-recursos-container {
-  width: 1280px;
-}
-
-.omb-titulo-otros-recursos-container h2 {
-  font-size: 32px;
-  font-weight: 600;
-  color: #1b1b1b;
-  margin-top: 0;
-  font-family: "Montserrat";
-}
-.omb-titulo-otros-recursos-container p {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  color: #1b1b1b;
-  margin: 0;
-}
 .omb-recursos-interes-container {
   width: 1280px;
   position: relative;
 }
-.omb-slide-container-recursos-interes {
-  width: 1280px;
-  height: 380px;
-  padding: 0;
-  max-width: 1280px;
-  margin: 0 auto;
+.recursosInteresSwiper {
   width: 100%;
-  overflow: hidden !important;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.omb-swiper-wrapper-recursos-interes {
+  width: 100%;
 }
 
 .omb-swiper-slide-recursos-interes {
-  display: flex !important;
+  padding: 8px;
+  display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 .omb-paginacion-recursos-interes {
-  bottom: -20px !important;
+  bottom: -32px !important;
 }
 
 /* Estilo base de los bullets */
@@ -486,24 +471,19 @@ main {
   border-color: #4b521d;
   transform: scale(1.2);
 }
-.omb-card-recursos-container {
-  width: 100%;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
+/* Estilo de la tarjeta de recursos */
 .omb-card-recursos {
-  width: 287px;
-  padding-bottom: 16px;
+  width: 297px;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  background-color: #ffffff;
   border-radius: 16px;
-  overflow: hidden;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border: 1px solid transparent;
+  transition: all 0.3s ease;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding-bottom: 16px;
 }
 .omb-card-recursos:hover {
   border: 1px solid black;
@@ -515,23 +495,27 @@ main {
   border-radius: 8px;
 }
 .omb-card-recursos h5 {
-  font-size: 18px;
+  min-height: 53px;
   font-weight: 600;
+  color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
-  color: #1b1b1b;
-  margin: 0;
-  min-height: 54px;
-  padding: 0px 16px;
   text-decoration: underline;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-height: 1.688rem;
+  padding: 0px 16px;
+  transition: all 0.9s ease-in;
 }
+
 .omb-card-recursos p {
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Work sans", sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -539,17 +523,15 @@ main {
   -webkit-box-orient: vertical;
   margin: 0;
   line-height: 1.5rem;
-  margin: 0;
   padding: 0px 16px;
-  color: #4d4d4d;
-  font-family: "Work sans", sans-serif;
+  color: var(--color-texto);
   min-height: 72px;
 }
 
 .omb-botom-control-carrousel-recursos-interes {
   position: absolute;
   z-index: 20;
-  bottom: -20px;
+  bottom: -40px;
   left: 0;
   min-width: 120px;
   height: 34px;

@@ -1,7 +1,11 @@
 :root {
-  --primario-yellow: #f9ffbd;
-  --secundario-yellow: #dbf000;
+  --color-primario-soft: #f9ffbd;
+  --color-primario: #dbf000;
+  --color-secundario-hover: #8e9c00;
+  --color-texto: #1b1b1b;
+  --color-enlace: #acbd00;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -24,7 +28,7 @@ main {
   gap: 30px;
 }
 .omb-button {
-  background-color: var(--secundario-yellow);
+  background-color: var(--color-primario);
   width: 265px;
   height: 62px;
   border: none;
@@ -80,7 +84,7 @@ main {
 .omb-sidebar {
   width: 297px;
   height: auto;
-  background: var(--secundario-yellow);
+  background: var(--color-primario);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -153,9 +157,7 @@ main {
 
 .omb-card-tableros {
   width: 297px;
-  height: 354px;
   display: flex;
-  gap: 8px;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid transparent;
@@ -185,6 +187,7 @@ main {
   width: 100%;
   padding: 0px 16px;
   box-sizing: border-box;
+  margin: 4px 0;
 }
 
 .omb-card-tableros-tag {
@@ -212,25 +215,27 @@ main {
 }
 
 .omb-card-tableros h5 {
-  font-size: 18px;
+  min-height: 53px;
   font-weight: 600;
+  color: var();
   font-family: "Montserrat", sans-serif;
-  color: #1b1b1b;
+  text-decoration: underline;
+  font-size: 1.125rem;
   margin-top: 0;
   margin-bottom: 0.625rem;
-  min-height: 54px;
-  padding: 0px 16px;
-  text-decoration: underline;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-height: 1.688rem;
+  padding: 0px 16px;
+  transition: all 0.9s ease-in;
 }
 
 .omb-card-tableros p {
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Work sans", sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -238,9 +243,7 @@ main {
   -webkit-box-orient: vertical;
   margin: 0;
   line-height: 1.5rem;
-  margin: 0;
   padding: 0px 16px;
-  color: #4d4d4d;
-  font-family: "Work sans", sans-serif;
+  color: black;
   min-height: 72px;
 }
