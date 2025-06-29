@@ -202,13 +202,13 @@ a {
   align-items: center;
   gap: 8px;
 }
-.omb-paginacion-tematicas {
+.omb-paginacion-numerica {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.omb-paginacion-tematicas ul {
+.omb-paginacion-numerica ul {
   display: flex;
   list-style: none;
   gap: 20px;
