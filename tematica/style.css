@@ -124,7 +124,6 @@ a {
   font-size: 16px;
   color: var(--color-texto);
   display: flex;
-  justify-content: start;
   align-items: center;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -132,20 +131,21 @@ a {
   gap: 8px;
   padding: 8px 32px;
   box-sizing: border-box;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Work sans", sans-serif;
   transition: all 0.2s ease;
   background-color: #fff;
 }
 
 .omb-sidebar-tematicas-link:hover {
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--color-primario);
   transform: translateX(20px);
 }
 .omb-sidebar-tematicas-item--activo {
   background-color: var(--color-primario);
   transform: translateX(20px);
+  font-weight: 600;
   color: #000;
   order: -1;
 }
