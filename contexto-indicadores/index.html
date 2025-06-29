@@ -127,13 +127,13 @@
           </nav>
         </div>
       </section>
-      <section class="omb-card-contexto-section">
+      <section class="omb-section">
         <div class="omb-card-contexto-container">
           <div class="omb-card-contexto-content">
-            <div class="omb-descripcion">
-              <div class="omb-title-descripcion-container">
-                <div class="omb-container-icon">
-                  <span class="omb-icon-title-descripcion">
+            <div class="omb-texto-card-contexto">
+              <div class="omb-titulo-card-container">
+                <div class="omb-icono-container">
+                  <span class="omb-icon-card-contexto">
                     <svg
                       width="80"
                       height="73"
@@ -146,54 +146,52 @@
                     </svg>
                   </span>
                 </div>
-                <h2>Política pública del peatón</h2>
+                <h1 class="omb-titulo-card-contexto">
+                  Política pública del peatón
+                </h1>
               </div>
-              <div
-                class="omb-texto-descripcion-container"
-                id="descripcionContainer">
-                <p class="omb-texto-descripcion">
-                  La gestión de la seguridad vial pretende mitigar el riesgo de
-                  lesiones graves y fallecimientos en siniestros viales, a
-                  través de acciones integrales desde diversas áreas
-                  (infraestructura, comportamiento, vehículos, velocidades,
-                  atención a víctimas). En Bogotá, según el decreto 494 de 2023
-                  y por medio del cual se adopta el Plan Distrital de Seguridad
-                  Vial 2023-2032, se busca reducir en un 50% el número de
-                  víctimas fallecidas en siniestros viales para el año 2032,
-                  tomando como base la cifra definitiva del año 2022.
-                </p>
-              </div>
+              <p class="omb-parrafo-card-contexto">
+                La gestión de la seguridad vial pretende mitigar el riesgo de
+                lesiones graves y fallecimientos en siniestros viales, a través
+                de acciones integrales desde diversas áreas (infraestructura,
+                comportamiento, vehículos, velocidades, atención a víctimas). En
+                Bogotá, según el decreto 494 de 2023 y por medio del cual se
+                adopta el Plan Distrital de Seguridad Vial 2023-2032, se busca
+                reducir en un 50% el número de víctimas fallecidas en siniestros
+                viales para el año 2032, tomando como base la cifra definitiva
+                del año 2022.
+              </p>
             </div>
-            <div class="omb-img-container">
-              <img
-                src="http://149.130.178.89/media/130"
-                alt="imagen de politica motorizada" />
-            </div>
+            <img
+              class="omb-imgagen-card-contexto"
+              src="http://149.130.178.89/media/130"
+              alt="imagen de politica motorizada" />
           </div>
         </div>
       </section>
-      <section class="omb-fuentes-section">
+      <section class="omb-section">
         <div class="omb-fuentes-container">
           <div class="omb-fuentes-item">
-            <h3>Fuentes</h3>
-            <p>
+            <h3 class="omb-titulo-fuentes">Fuentes</h3>
+            <p class="omb-parrafo-fuentes">
               Sistema de Información Geográfico de Accidentes de Tránsito
               (SIGAT) - Secretaría Distrital de Movilidad
             </p>
           </div>
           <div class="omb-fuentes-content">
             <div class="omb-fuentes-item">
-              <h3>Prioridad de actualizacion</h3>
-              <p>Diari</p>
+              <h3 class="omb-titulo-fuentes">Prioridad de actualizacion</h3>
+              <p class="omb-parrafo-fuentes">Diari</p>
             </div>
             <div class="omb-fuentes-item">
-              <h3>Disponibilidad de los datos</h3>
-              <p>Desde el año 2017</p>
+              <h3 class="omb-titulo-fuentes">Disponibilidad de los datos</h3>
+              <p class="omb-parrafo-fuentes">Desde el año 2017</p>
             </div>
           </div>
-          <div class="omb-botom-container">
+          <div class="omb-botom-fuentes-container">
             <button
               type="button"
+              class="omb-boton omb-boton--primario omb-boton--con-icono"
               aria-label="Abrir ayuda para ver el tablero"
               title="Ayuda para ver el tablero">
               <span aria-hidden="true">
@@ -224,59 +222,61 @@
           </div>
         </div>
       </section>
-      <section class="omb-grafica-section">
-        <div class="omb-selectores-grafica-container">
-          <nav class="omb-nav-grafica">
-            <ul class="omb-lista-selectores-grafica">
-              <li class="omb-item-lista-selectores">
-                <button class="omb-botones-lista" type="button">
-                  <span>Fallecidos</span>
-                </button>
-              </li>
-              <li class="omb-item-lista-selectores">
-                <button class="omb-botones-lista" type="button">
-                  <span>Lesionados</span>
-                </button>
-              </li>
-              <li class="omb-item-lista-selectores">
-                <button class="omb-botones-lista" type="button">
-                  <span>Actor vial</span>
-                </button>
-              </li>
-              <li class="omb-item-lista-selectores">
-                <button class="omb-botones-lista" type="button">
-                  <span>Tasas</span>
-                </button>
-              </li>
-              <li class="omb-item-lista-selectores">
-                <button class="omb-botones-lista" type="button">
-                  <span>Hora</span>
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="omb-grafica-container" data-grafica="fallecidos">
-          <h2>Fallecidos</h2>
-        </div>
-        <div class="omb-grafica-container" data-grafica="lesionados">
-          <h2>Lesionados</h2>
-        </div>
-        <div class="omb-grafica-container" data-grafica="actor vial">
-          <h2>Actor vial</h2>
-        </div>
-        <div class="omb-grafica-container" data-grafica="tasas">
-          <h2>Tasas</h2>
-        </div>
-        <div class="omb-grafica-container" data-grafica="hora">
-          <h2>Hora</h2>
+      <section class="omb-section">
+        <div class="omb-grafica-container">
+          <div class="omb-selectores-grafica-container">
+            <nav class="omb-nav-grafica">
+              <ul class="omb-lista-selectores-grafica">
+                <li class="omb-item-lista-selectores">
+                  <button class="omb-botones-lista" type="button">
+                    <span>Fallecidos</span>
+                  </button>
+                </li>
+                <li class="omb-item-lista-selectores">
+                  <button class="omb-botones-lista" type="button">
+                    <span>Lesionados</span>
+                  </button>
+                </li>
+                <li class="omb-item-lista-selectores">
+                  <button class="omb-botones-lista" type="button">
+                    <span>Actor vial</span>
+                  </button>
+                </li>
+                <li class="omb-item-lista-selectores">
+                  <button class="omb-botones-lista" type="button">
+                    <span>Tasas</span>
+                  </button>
+                </li>
+                <li class="omb-item-lista-selectores">
+                  <button class="omb-botones-lista" type="button">
+                    <span>Hora</span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="omb-grafica" data-grafica="fallecidos">
+            <h2>Fallecidos</h2>
+          </div>
+          <div class="omb-grafica" data-grafica="lesionados">
+            <h2>Lesionados</h2>
+          </div>
+          <div class="omb-grafica" data-grafica="actor vial">
+            <h2>Actor vial</h2>
+          </div>
+          <div class="omb-grafica" data-grafica="tasas">
+            <h2>Tasas</h2>
+          </div>
+          <div class="omb-grafica" data-grafica="hora">
+            <h2>Hora</h2>
+          </div>
         </div>
       </section>
-      <section class="omb-compartir-section">
-        <div class="omb-compartir-content">
+      <section class="omb-section">
+        <div class="omb-compartir-container">
           <button
             type="button"
-            class="omb-bottom-descarga"
+            class="omb-boton omb-boton--primario omb-boton--con-icono"
             aria-label="Descargar ficha técnica"
             title="Descargar ficha técnica">
             <span aria-hidden="true">
@@ -293,9 +293,10 @@
             </span>
             DESCARGAR FICHA TÉCNICA
           </button>
-
           <div class="omb-redes-sociales">
-            <p>Comparte este contenido en tus redes</p>
+            <p class="omb-parrafo-card-informativa">
+              Comparte este contenido en tus redes
+            </p>
             <div class="omb-lista-redes">
               <a
                 href="https://www.facebook.com/"
@@ -390,39 +391,39 @@
           </div>
         </div>
       </section>
-      <section class="omb-contexto-section">
-        <div class="omb-contexto-content">
+
+      <section class="omb-section">
+        <div class="omb-contexto-container">
           <div class="omb-enlaces-container">
-            <h2>Enlaces</h2>
+            <h2 class="omb-titulos-contexto-container">Enlaces</h2>
             <div class="omb-lista-enlaces">
-              <p>
+              <p class="omb-parrafo-contexto-container">
                 Registro Distrital automotor - Secretaría Distrital de Movilidad
               </p>
-              <div class="omb-enlace">
-                <a
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Enlace"
-                  title="Enlace descarga">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none">
-                    <path
-                      d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
-                      fill="currentColor" />
-                  </svg>
-                  Enlace
-                </a>
-              </div>
+              <a
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enlace"
+                title="Enlace descarga"
+                class="omb-enlaces">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none">
+                  <path
+                    d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                    fill="currentColor" />
+                </svg>
+                Enlace
+              </a>
             </div>
           </div>
           <div class="omb-context-container">
-            <h2>Contexto</h2>
-            <p>
+            <h2 class="omb-titulos-contexto-container">Contexto</h2>
+            <p class="omb-parrafo-contexto-container">
               Para el año 2018 se registraron 18,996,286 viajes en total, con un
               tiempo de duración del viaje promedio de 51.53 minutos. La
               principal manera en que se movilizaron, o también llamado modo
@@ -434,7 +435,7 @@
               trabajo, e incluso, para los que aplican, con su lugar de estudio,
               ya que la opción más viable para ellos es el traslado a pie
             </p>
-            <p>
+            <p class="omb-parrafo-contexto-container">
               Los habitantes de Bogotá y la sabana se conocen por su hábito de
               empezar el día desde tempranas horas, y esto se ve reflejado en la
               hora de inicio del viaje, la hora más frecuente de movilidad es
@@ -445,7 +446,7 @@
               cuales en su mayoría salen de la casa a las 6 horas del día para
               sus actividades comunes.
             </p>
-            <p>
+            <p class="omb-parrafo-contexto-container">
               Por género, se observa que la cantidad de Viajes diarios para
               Mujer (10,036,139) fue mayor que Hombre (8,960,146). Esto debido a
               que el género Mujer cuenta para 52.83% de Viajes diarios. Por
@@ -464,7 +465,7 @@
               proporción es mayor en Media completa (10 y 11) con el 15.64% de
               participación que equivale a 3,168
             </p>
-            <p>
+            <p class="omb-parrafo-contexto-container">
               Cuando se analiza espacialmente la localidad de origen de los
               ciudadanos que se movilizan, principalmente son de Colombia,
               Bogotá, SUBA con 1,993,830 de viajes que equivale al 10.50 % del
@@ -475,17 +476,17 @@
           </div>
         </div>
       </section>
-      <section class="omb-otros-tableros-section">
-        <div class="omb-tableros-interes-container">
+      <section class="omb-section omb-section--de-interes">
+        <div class="omb-de-interes-container">
           <h2 class="omb-titulo-section">
-            Otros tableros que podrían ser de tu interés
+            Otros indicadores que podrían ser de tu interés
           </h2>
           <p class="omb-parrafo-descripcion-section">
             Explora nuestros publicaciones sobre movilidad en Bogotá, similares
             a esta
           </p>
           <div
-            class="omb-botom-control-carrousel-tableros-interes"
+            class="omb-botom-control-carrousel"
             id="controlCarrucelTablerosInteres">
             <button
               type="button"
@@ -507,436 +508,252 @@
               Pausar
             </button>
           </div>
-          <div
-            class="swiper-button-prev omb-button-tableros-interes-prev"></div>
-          <div
-            class="swiper-button-next omb-button-tableros-interes-next"></div>
-          <div class="swiper-pagination omb-paginacion-tableros-interes"></div>
-          <div class="swiper tablerosSwiper">
-            <div class="swiper-wrapper omb-swiper-wrapper-tableros-interes">
+          <div class="swiper-button-prev omb-boton-prev"></div>
+          <div class="swiper-button-next omb-boton-next"></div>
+          <div class="swiper-pagination omb-paginacion"></div>
+          <div class="swiper tablerosSwiper omb-swiper">
+            <div class="swiper-wrapper omb-swiper-wrapper">
               <!-- Slide 1 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href=""
-                  title="Día sin carro y sin moto"
-                  data-categoria="Movilidad sostenible">
+                  class="omb-card-enlace"
+                  title="ir a Vías en buen estado (%)"
+                  data-categoria="Infraestructura">
                   <div
-                    class="omb-card-tableros"
-                    data-categoria="Movilidad sostenible">
+                    class="omb-card-informativa omb-card-informativa--pequeña">
                     <img
-                      src="http://149.130.178.89/media/44"
-                      alt="imagen Día sin carro y sin moto"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
+                      src="http://149.130.178.89/media/133"
+                      alt="Imagen Vías en buen estado (%)"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Vías en buen estado (%)
+                    </h5>
+                    <div class="omb-tags-card-container">
+                      <div class="omb-tag-card">
                         <img
                           src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
+                          alt="Icono de tag"
+                          class="omb-tag-icono" />
+                        <span>Infraestructura</span>
                       </div>
                     </div>
-                    <h5>
-                      Día sin carro y sin moto, una oportunidad para transformar
-                      la movilidad urbana
-                    </h5>
-                    <p>
-                      ¿Sabías que en el día sin carro y sin moto se aumenta en
-                      un 90% los viajes en el sistema de bicicletas compartidas
-                      respecto a un día típico?
-                    </p>
                   </div>
                 </a>
               </div>
 
               <!-- Slide 2 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href=""
-                  title="Ciclista"
-                  data-categoria="Movilidad sostenible">
+                  class="omb-card-enlace"
+                  title="Ir a Vías primarias y secundarias en buen estado (%)"
+                  data-categoria="Transporte público">
                   <div
-                    class="omb-card-tableros"
-                    data-categoria="Movilidad sostenible">
+                    class="omb-card-informativa omb-card-informativa--pequeña">
                     <img
-                      src="http://149.130.178.89/media/46"
-                      alt="imagen Ciclista"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
+                      src="http://149.130.178.89/media/134"
+                      alt="Imagen Vías primarias y secundarias en buen estado (%)"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Vías primarias y secundarias en buen estado (%)
+                    </h5>
+                    <div class="omb-tags-card-container">
+                      <div class="omb-tag-card">
                         <img
                           src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
+                          alt="Icono de tag"
+                          class="omb-tag-icono" />
+                        <span>Transporte público</span>
                       </div>
                     </div>
-                    <h5>La cicloinfraestructura de Bogotá</h5>
-                    <p>
-                      ¿Sabías que en Bogotá hay más de 630 km de
-                      cicloinfraestructura?
-                    </p>
                   </div>
                 </a>
               </div>
 
               <!-- Slide 3-->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href=""
-                  title="Sistema Integrado de Transporte Público (SITP)"
-                  data-categoria="Transporte público">
+                  class="omb-card-enlace"
+                  title="Ir a Acciones implementadas para mitigar impactos en la movilidad en proyectos"
+                  data-categoria="Comportamiento en via">
                   <div
-                    class="omb-card-tableros"
-                    data-categoria="Transporte público">
+                    class="omb-card-informativa omb-card-informativa--pequeña">
                     <img
-                      src="http://149.130.178.89/media/47"
-                      alt="imagen Sistema Integrado de Transporte Público (SITP)"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
+                      src="http://149.130.178.89/media/135"
+                      alt="Imagen Acciones implementadas para mitigar impactos en la movilidad
+                  en proyectos"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Acciones implementadas para mitigar impactos en la
+                      movilidad en proyectos
+                    </h5>
+                    <div class="omb-tags-card-container">
+                      <div class="omb-tag-card">
                         <img
                           src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Transporte público</span>
+                          alt="Icono de tag"
+                          class="omb-tag-icono" />
+                        <span>Comportamiento en via</span>
                       </div>
                     </div>
-                    <h5>Sistema Integrado de Transporte Público (SITP)</h5>
-                    <p>
-                      ¿Sabías que el SITP moviliza aproximadamente a 4 millones
-                      de personas en un día típico?
-                    </p>
                   </div>
                 </a>
               </div>
 
               <!-- Slide 4 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href=""
-                  title="Transporte intermunicipal"
-                  data-categoria="Transporte público">
-                  <div
-                    class="omb-card-tableros"
-                    data-categoria="Transporte público">
-                    <img
-                      src="http://149.130.178.89/media/48"
-                      alt="imagen Transporte intermunicipal"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Transporte público</span>
-                      </div>
-                    </div>
-                    <h5>Transporte intermunicipal en Bogotá</h5>
-                    <p>
-                      ¿Sabías que se realizan 144.288 viajes diarios hacia
-                      Bogotá en transporte público provenientes de los
-                      municipios vecinos, con motivo trabajo o estudio?
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 5 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Transporte público individual (Taxi)"
-                  data-categoria="Transporte público">
-                  <div
-                    class="omb-card-tableros"
-                    data-categoria="Transporte público taxi">
-                    <img
-                      src="http://149.130.178.89/media/49"
-                      alt="imagen Transporte intermunicipal"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Transporte público</span>
-                      </div>
-                    </div>
-                    <h5>Transporte público individual (Taxi)</h5>
-                    <p>
-                      ¿Sabías que solo dos empresas, tienen la mitad del total
-                      de vehículos que prestan el servicio de Taxi en Bogotá?
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 6 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Comparendos"
-                  data-categoria="Comportamiento en vía">
-                  <div
-                    class="omb-card-tableros"
-                    data-categoria="Comportamiento en vía">
-                    <img
-                      src="http://149.130.178.89/media/50"
-                      alt="imagen Comparendos"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Comportamiento en vía</span>
-                      </div>
-                    </div>
-                    <h5>Comparendos por infracciones de tránsito</h5>
-                    <p>
-                      ¿Sabías que las infracciones de tránsito se clasifican por
-                      categorías que establecen el valor de las multas, ligado a
-                      la gravedad de la infracción
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 7 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Siniestralidad vial"
-                  data-categoria="Comportamiento en vía">
-                  <div
-                    class="omb-card-tableros"
-                    data-categoria="Comportamiento en vía">
-                    <img
-                      src="http://149.130.178.89/media/51"
-                      alt="imagen Siniestralidad vial"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Comportamiento en vía</span>
-                      </div>
-                    </div>
-                    <h5>Alta siniestralidad entre motociclistas</h5>
-                    <p>
-                      ¿Sabías que aproximadamente uno de cada tres lesionados en
-                      siniestro viales son motociclistas?
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 8 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Velocidades"
-                  data-categoria="Comportamiento en vía">
-                  <div
-                    class="omb-card-tableros"
-                    data-categoria="Comportamiento en vía">
-                    <img
-                      src="http://149.130.178.89/media/52"
-                      alt="imagen Velocidades"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Comportamiento en vía</span>
-                      </div>
-                    </div>
-                    <h5>Límite de velocidad urbana en Bogotá</h5>
-                    <p>
-                      ¿Sabías que el límite de velocidad en la zona urbana de
-                      Bogotá es de 50 kilómetros por hora?
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 9 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Volúmenes de carga"
+                  class="omb-card-enlace"
+                  title="Porcentaje del sistema de semaforización inteligente de la ciudad mantenido y..."
                   data-categoria="Viajes y volúmenes">
                   <div
-                    class="omb-card-tableros"
-                    data-categoria="Viajes y volúmenes">
+                    class="omb-card-informativa omb-card-informativa--pequeña">
                     <img
-                      src="http://149.130.178.89/media/53"
-                      alt="imagen Volúmenes de carga"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Viajes y volúmenes</span>
-                      </div>
-                    </div>
-                    <h5>Pico de vehículos de carga en Bogotá</h5>
-                    <p>
-                      ¿Sabías que el periodo máximo de flujo vehicular de carga
-                      en Bogotá es entre las 10 am y las 12 m?
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 10 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Encuestas de movilidad"
-                  data-categoria="Viajes y volúmenes">
-                  <div
-                    class="omb-card-tableros"
-                    data-categoria="Viajes y volúmenes">
-                    <img
-                      src="http://149.130.178.89/media/54"
-                      alt="imagen Encuestas de movilidad"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Viajes y volúmenes</span>
-                      </div>
-                    </div>
-                    <h5>Encuestas de movilidad en bogota</h5>
-                    <p>
-                      ¿Sabías que la primera Encuesta de Movilidad fue realizada
-                      en el año 1995 por el Instituto de Desarrollo Urbano IDU?
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 11 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Registro Distrital Automotor"
-                  data-grafica="Viajes y volúmenes">
-                  <div
-                    class="omb-card-tableros"
-                    data-categoria="Viajes y volúmenes">
-                    <img
-                      src="http://149.130.178.89/media/55"
-                      alt="imagen Registro Distrital Automotor"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Viajes y volúmenes</span>
-                      </div>
-                    </div>
-                    <h5>Registro Distrital de vehículos Automotor</h5>
-                    <p>
-                      ¿Sabías que el rango de edad en el que hay la mayor
-                      cantidad de vehículos registrados en Bogotá es entre 10 y
-                      20 años?
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 12 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Movilidad y mujer"
-                  data-categoria="Enfoque de género">
-                  <div
-                    class="omb-card-tableros"
-                    data-categoria="Enfoque de género">
-                    <img
-                      src="http://149.130.178.89/media/56"
-                      alt="imagen Movilidad y mujer"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Enfoque de género</span>
-                      </div>
-                    </div>
-                    <h5>Movilidad y mujer en bogota</h5>
-                    <p>
-                      ¿Sabías que el 42% de los viajes diarios de las mujeres se
-                      realizan a pie?
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Slide 13 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
-                <a
-                  href=""
-                  title="Participación ciudadana"
-                  data-categoria="Transparencia">
-                  <div class="omb-card-tableros" data-categoria="Transparencia">
-                    <img
-                      src="http://149.130.178.89/media/57"
-                      alt="imagen Participación ciudadana"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Transparencia</span>
-                      </div>
-                    </div>
-                    <h5>
-                      Participación ciudadana en la mejora de la movilidad
-                      urbana
+                      src="http://149.130.178.89/media/136"
+                      alt="Imagen Porcentaje del sistema de semaforización inteligente de la ciudad mantenido y..."
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Porcentaje del sistema de semaforización inteligente de la
+                      ciudad mantenido y...
                     </h5>
-                    <p>
-                      ¿Sabías que el Sistema de Semaforización Inteligente de
-                      Bogotá - SSIB actualmente cuenta con más de 1605 semáforos
-                      en intersecciones viales?
-                    </p>
+                    <div class="omb-tags-card-container">
+                      <div class="omb-tag-card">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag"
+                          class="omb-tag-icono" />
+                        <span>Etiqueta</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- Slide 1 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <a
+                  href=""
+                  class="omb-card-enlace"
+                  title="ir a Vías en buen estado (%)"
+                  data-categoria="Infraestructura">
+                  <div
+                    class="omb-card-informativa omb-card-informativa--pequeña">
+                    <img
+                      src="http://149.130.178.89/media/133"
+                      alt="Imagen Vías en buen estado (%)"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Vías en buen estado (%)
+                    </h5>
+                    <div class="omb-tags-card-container">
+                      <div class="omb-tag-card">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag"
+                          class="omb-tag-icono" />
+                        <span>Infraestructura</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
 
-              <!-- Slide 14 -->
-              <div class="swiper-slide omb-swiper-slide-tableros-interes">
+              <!-- Slide 2 -->
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href=""
-                  title="Ejecución presupuestal"
-                  data-categoria="transparencia">
-                  <div class="omb-card-tableros" data-categoria="Transparencia">
+                  class="omb-card-enlace"
+                  title="Ir a Vías primarias y secundarias en buen estado (%)"
+                  data-categoria="Transporte público">
+                  <div
+                    class="omb-card-informativa omb-card-informativa--pequeña">
                     <img
-                      src="http://149.130.178.89/media/58"
-                      alt="imagen Ejecución presupuestal"
-                      class="omb-card-tableros-img" />
-                    <div class="omb-card-tableros-tags-container">
-                      <div class="omb-card-tableros-tag">
+                      src="http://149.130.178.89/media/134"
+                      alt="Imagen Vías primarias y secundarias en buen estado (%)"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Vías primarias y secundarias en buen estado (%)
+                    </h5>
+                    <div class="omb-tags-card-container">
+                      <div class="omb-tag-card">
                         <img
                           src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Transparencia</span>
+                          alt="Icono de tag"
+                          class="omb-tag-icono" />
+                        <span>Transporte público</span>
                       </div>
                     </div>
-                    <h5>Ejecución del presupuesto de movilidad en Bogotá</h5>
-                    <p>
-                      ¿Quieres saber cómo se está ejecutando el presupuesto de
-                      la Secretaría de movilidad en Bogotá este 2025?
-                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 3-->
+              <div class="swiper-slide omb-swiper-slide">
+                <a
+                  href=""
+                  class="omb-card-enlace"
+                  title="Ir a Acciones implementadas para mitigar impactos en la movilidad en proyectos"
+                  data-categoria="Comportamiento en via">
+                  <div
+                    class="omb-card-informativa omb-card-informativa--pequeña">
+                    <img
+                      src="http://149.130.178.89/media/135"
+                      alt="Imagen Acciones implementadas para mitigar impactos en la movilidad
+                  en proyectos"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Acciones implementadas para mitigar impactos en la
+                      movilidad en proyectos
+                    </h5>
+                    <div class="omb-tags-card-container">
+                      <div class="omb-tag-card">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag"
+                          class="omb-tag-icono" />
+                        <span>Comportamiento en via</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <a
+                  href=""
+                  class="omb-card-enlace"
+                  title="Porcentaje del sistema de semaforización inteligente de la ciudad mantenido y..."
+                  data-categoria="Viajes y volúmenes">
+                  <div
+                    class="omb-card-informativa omb-card-informativa--pequeña">
+                    <img
+                      src="http://149.130.178.89/media/136"
+                      alt="Imagen Porcentaje del sistema de semaforización inteligente de la ciudad mantenido y..."
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Porcentaje del sistema de semaforización inteligente de la
+                      ciudad mantenido y...
+                    </h5>
+                    <div class="omb-tags-card-container">
+                      <div class="omb-tag-card">
+                        <img
+                          src="http://149.130.178.89/media/100"
+                          alt="Icono de tag"
+                          class="omb-tag-icono" />
+                        <span>Etiqueta</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>

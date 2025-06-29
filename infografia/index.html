@@ -8,7 +8,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
-    >
 
     <link rel="stylesheet" href="style.css" />
     <title>infografia</title>
@@ -16,24 +15,22 @@
   <body>
     <body>
       <main>
-        <section class="omb-infogracia-section">
-          <div class="omb-titulo-infografia-container">
-            <h2>Infografia</h2>
-            <p>
-              La sección de galería infográfica presenta de manera visual y
-              dinámica datos claves sobre la movilidad en Bogotá y la región.
-              Estas representaciones gráficas ofrecen una mirada rápida de la
-              movilidad, mostrando tendencias y estadísticas relevantes de forma
-              accesible y atractiva.
-            </p>
-          </div>
+        <section class="omb-section">
+          <h2 class="omb-titulo-section--centrado">Infografia</h2>
+          <p class="omb-parrafo-descripcion-section--centrado">
+            La sección de galería infográfica presenta de manera visual y
+            dinámica datos claves sobre la movilidad en Bogotá y la región.
+            Estas representaciones gráficas ofrecen una mirada rápida de la
+            movilidad, mostrando tendencias y estadísticas relevantes de forma
+            accesible y atractiva.
+          </p>
           <div class="omb-infografia-container">
             <div>
               <button
                 type="button"
-                class="omb-button omb-button__width"
+                class="omb-boton-sidebar--sin-icono omb-boton--width"
                 aria-label="Todos los tableros">
-                <span class="omb-text-button">Todas las infografia</span>
+                <span class="omb-text-button">Todas las infografias</span>
               </button>
               <div class="omb-sidebar">
                 <nav class="omb-sidebar-nav">
@@ -41,57 +38,60 @@
                     <li class="omb-sidebar-item">
                       <button
                         type="button"
-                        class="omb-button omb-button__secundario"
+                        class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
                         aria-label="Categoria 1">
-                        <span class="omb-text-button">Categoria uno (1)</span>
-                      </button>
-                    </li>
-                    <li class="omb-sidebar-item">
-                      <button
-                        type="button"
-                        class="omb-button omb-button__secundario"
-                        aria-label="Categoria 2">
-                        <span class="omb-text-button">Cateforia dos (2)</span>
-                      </button>
-                    </li>
-                    <li class="omb-sidebar-item">
-                      <button
-                        type="button"
-                        class="omb-button omb-button__secundario"
-                        aria-label="Categoria 3">
-                        <span class="omb-text-button">Categoria tres (3) </span>
-                      </button>
-                    </li>
-                    <li class="omb-sidebar-item">
-                      <button
-                        type="button"
-                        class="omb-button omb-button__secundario"
-                        aria-label="Categoria 4">
                         <span class="omb-text-button"
-                          >Categoria cuatro (4)</span
+                          >Movilidad sostenible</span
                         >
                       </button>
                     </li>
                     <li class="omb-sidebar-item">
                       <button
                         type="button"
-                        class="omb-button omb-button__secundario"
-                        aria-label="Categoria 5">
-                        <span class="omb-text-button">Categoria cinco (5)</span>
+                        class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
+                        aria-label="Categoria 2">
+                        <span class="omb-text-button">Transporte público</span>
                       </button>
                     </li>
                     <li class="omb-sidebar-item">
                       <button
                         type="button"
-                        class="omb-button omb-button__secundario"
-                        aria-label="Categoria 6">
-                        <span class="omb-text-button">Categoria seis (6)</span>
+                        class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
+                        aria-label="Categoria 3">
+                        <span class="omb-text-button"
+                          >Comportamiento en via</span
+                        >
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
+                        aria-label="Categoria 4">
+                        <span class="omb-text-button">Viajes y volúmenes</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
+                        aria-label="Categoria 4">
+                        <span class="omb-text-button">Enfoque de genero</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
+                        aria-label="Categoria 4">
+                        <span class="omb-text-button">Tranparecia</span>
                       </button>
                     </li>
                   </ul>
                 </nav>
               </div>
             </div>
+
             <div
               class="omb-cards-infogracia-container"
               id="ombInfografiaCardsContainer">
@@ -114,12 +114,6 @@
                           alt="Icono de tag" />
                         <span>Movilidad sostenible</span>
                       </div>
-                      <div class="omb-card-infografia-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Ciclista</span>
-                      </div>
                     </div>
                     <p>Ver infografia</p>
                   </div>
@@ -130,7 +124,7 @@
                 href=""
                 class="omb-card-enlace"
                 title="Tips Seguridad Vial Servicio de Transporte Público Individual -Taxi"
-                data-categoria="Movilidad sostenible">
+                data-categoria="Transporte público">
                 <div class="omb-card-infografia">
                   <img
                     src="http://149.130.178.89/media/122"
@@ -146,13 +140,7 @@
                         <img
                           src="http://149.130.178.89/media/100"
                           alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
-                      </div>
-                      <div class="omb-card-infografia-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Ciclista</span>
+                        <span>Transporte público</span>
                       </div>
                     </div>
                     <p>Ver infografia</p>
@@ -164,7 +152,7 @@
                 href=""
                 class="omb-card-enlace"
                 title="Siniestralidad Vial 2024"
-                data-categoria="Movilidad sostenible">
+                data-categoria="Comportamiento en via">
                 <div class="omb-card-infografia">
                   <img
                     src="http://149.130.178.89/media/123"
@@ -177,13 +165,7 @@
                         <img
                           src="http://149.130.178.89/media/100"
                           alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
-                      </div>
-                      <div class="omb-card-infografia-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Ciclista</span>
+                        <span>Comportamiento en via</span>
                       </div>
                     </div>
                     <p>Ver infografia</p>
@@ -195,7 +177,7 @@
                 href=""
                 class="omb-card-enlace"
                 title="Siniestralidad Vial 2024"
-                data-categoria="Movilidad sostenible">
+                data-categoria="Transporte público">
                 <div class="omb-card-infografia">
                   <img
                     src="http://149.130.178.89/media/124"
@@ -208,13 +190,7 @@
                         <img
                           src="http://149.130.178.89/media/100"
                           alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
-                      </div>
-                      <div class="omb-card-infografia-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Ciclista</span>
+                        <span>Transporte publico</span>
                       </div>
                     </div>
                     <p>Ver infografia</p>
@@ -257,7 +233,7 @@
                 href=""
                 class="omb-card-enlace"
                 title="Siniestralidad Vial 2024"
-                data-categoria="Movilidad sostenible">
+                data-categoria="Comportamiento en via">
                 <div class="omb-card-infografia">
                   <img
                     src="http://149.130.178.89/media/126"
@@ -270,13 +246,7 @@
                         <img
                           src="http://149.130.178.89/media/100"
                           alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
-                      </div>
-                      <div class="omb-card-infografia-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Ciclista</span>
+                        <span>Comportamiento en via</span>
                       </div>
                     </div>
                     <p>Ver infografia</p>
@@ -288,7 +258,7 @@
                 href=""
                 class="omb-card-enlace"
                 title="Siniestralidad Vial 2024"
-                data-categoria="Movilidad sostenible">
+                data-categoria="Enfoque de genero">
                 <div class="omb-card-infografia">
                   <img
                     src="http://149.130.178.89/media/127"
@@ -301,13 +271,7 @@
                         <img
                           src="http://149.130.178.89/media/100"
                           alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
-                      </div>
-                      <div class="omb-card-infografia-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Ciclista</span>
+                        <span>Enfoque de genero</span>
                       </div>
                     </div>
                     <p>Ver infografia</p>
@@ -319,7 +283,7 @@
                 href=""
                 class="omb-card-enlace"
                 title="Siniestralidad Vial 2024"
-                data-categoria="Movilidad sostenible">
+                data-categoria="Transporte publico">
                 <div class="omb-card-infografia">
                   <img
                     src="http://149.130.178.89/media/128"
@@ -332,13 +296,7 @@
                         <img
                           src="http://149.130.178.89/media/100"
                           alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
-                      </div>
-                      <div class="omb-card-infografia-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Ciclista</span>
+                        <span>Transporte público</span>
                       </div>
                     </div>
                     <p>Ver infografia</p>
@@ -350,7 +308,7 @@
                 href=""
                 class="omb-card-enlace"
                 title="Siniestralidad Vial 2024"
-                data-categoria="Movilidad sostenible">
+                data-categoria="transparencia">
                 <div class="omb-card-infografia">
                   <img
                     src="http://149.130.178.89/media/129"
@@ -363,13 +321,7 @@
                         <img
                           src="http://149.130.178.89/media/100"
                           alt="Icono de tag" />
-                        <span>Movilidad sostenible</span>
-                      </div>
-                      <div class="omb-card-infografia-tag">
-                        <img
-                          src="http://149.130.178.89/media/100"
-                          alt="Icono de tag" />
-                        <span>Ciclista</span>
+                        <span>transparencia</span>
                       </div>
                     </div>
                     <p>Ver infografia</p>

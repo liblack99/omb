@@ -1,6 +1,10 @@
 :root {
-  --primario-yellow: #f9ffbd;
-  --secundario-yellow: #dbf000;
+  --color-primario-soft: #f9ffbd;
+  --color-primario: #dbf000;
+  --color-secundario-hover: #8e9c00;
+  --color-texto: #1b1b1b;
+  --color-enlace: #acbd00;
+  --color-enlace-hover: #a5ad4a;
 }
 a {
   text-decoration: none;
@@ -12,55 +16,48 @@ body {
   margin: 0;
 }
 
-.omb-infogracia-section {
+.omb-section {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
 }
 
-.omb-titulo-infografia-container {
-  width: 1280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.omb-titulo-infografia-container h2 {
-  font-size: 32px;
+.omb-titulo-section--centrado {
   font-weight: 600;
+  font-size: 32px;
   line-height: 44px;
-  color: #000;
+  color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.omb-parrafo-descripcion-section--centrado {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-texto);
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  width: 800px;
   margin-top: 0;
 }
-.omb-titulo-infografia-container p {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  color: #000;
-  margin: 0;
-  text-align: center;
-  font-family: "Work Sans", sans-serif;
-  width: 880px;
-}
+
 .omb-infografia-container {
   width: 1280px;
   display: flex;
   gap: 30px;
 }
 
-.omb-button {
-  background-color: var(--primario-yellow);
-  width: 270px;
+.omb-boton-sidebar--sin-icono {
+  background-color: var(--color-primario-soft);
+  width: 265px;
   height: 62px;
   border: none;
   padding: 0;
   margin: 0;
   cursor: pointer;
   font-size: 16px;
-  color: #000;
+  color: var(--color-texto);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -73,47 +70,39 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.omb-button__width {
+.omb-boton--width {
   width: 297px;
 }
-.omb-button:hover {
-  background-color: var(--secundario-yellow);
-  color: black;
-  font-weight: 600;
+.omb-boton-sidebar--sin-icono:hover {
+  background-color: var(--color-primario);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
 }
 
-.omb-button__secundario {
-  background-color: var(--primario-yellow);
-  padding: 8px 16px;
+.omb-boton--sin-icono-secundario {
+  background-color: var(--color-primario-soft);
+  padding: 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
-.omb-content-button-active {
-  color: black;
-  background-color: var(--secundario-yellow);
+.omb-boton--active {
+  background-color: var(--color-primario);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.omb-content-button-active::before {
+.omb-boton--active::before {
   content: "";
   position: absolute;
   right: -12px;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
-  border-left: 14px solid var(--secundario-yellow);
+  border-left: 14px solid var(--color-primario);
   border-bottom: 8px solid transparent;
-}
-
-.omb-icon-button {
-  width: 46px;
-  height: 46px;
-  padding: 4px;
 }
 
 .omb-sidebar {
   width: 297px;
   height: auto;
-  background-color: #f9ffbd;
+  background: var(--color-primario-soft);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -121,7 +110,6 @@ body {
   padding: 16px;
   box-sizing: border-box;
   margin-top: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .omb-sidebar-list {
@@ -141,6 +129,14 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
+}
+
+.omb-cards-movilidad-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  width: 953px;
 }
 
 .omb-cards-infogracia-container {
@@ -241,6 +237,9 @@ body {
   margin: 0;
   padding: 0px 16px;
   font-family: "Work sans", sans-serif;
-  color: #7e8a00;
+  color: var(--color-enlace);
   text-decoration: underline;
+}
+.omb-card-infografia-content p:hover {
+  color: var(--color-enlace-hover);
 }

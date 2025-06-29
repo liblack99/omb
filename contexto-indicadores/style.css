@@ -2,6 +2,10 @@
   --color-primario-soft: #f9ffbd;
   --color-primario: #dbf000;
   --color-secundario-hover: #8e9c00;
+  --color-texto: #1b1b1b;
+  --color-enlace: #acbd00;
+  --color-enlace-hover: #a5ad4a;
+  --color-fondo-seccion-intreres: #f3f4f1;
 }
 a {
   text-decoration: none;
@@ -126,14 +130,16 @@ main {
   color: #000;
 }
 
-.omb-card-contexto-section {
+.omb-section {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
   padding-bottom: 40px;
 }
+.omb-section--de-interes {
+  background-color: var(--color-fondo-seccion-intreres);
+}
+
 .omb-card-contexto-container {
   width: 1280px;
   display: flex;
@@ -145,23 +151,40 @@ main {
   width: 90%;
 }
 
-.omb-descripcion {
+.omb-texto-card-contexto {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
   position: relative;
 }
-.omb-title-descripcion-container {
+.omb-titulo-card-contexto {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 44px;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
+}
+.omb-titulo-card-container {
   width: 100%;
-  height: auto;
   display: flex;
   justify-items: start;
   align-items: center;
   padding: 0px 16px 0px 16px;
-  gap: 16px;
+  gap: 8px;
   box-sizing: border-box;
 }
-.omb-container-icon {
+
+.omb-parrafo-card-contexto {
+  font-size: 16px;
+  padding: 16px;
+  font-weight: 400;
+  font-family: "Work sans", sans-serif;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #1b1b1b;
+  margin: 0;
+}
+.omb-icono-container {
   width: auto;
   height: auto;
   padding: 8px;
@@ -171,7 +194,7 @@ main {
   align-items: center;
   background-color: rgb(103, 108, 46, 0.1);
 }
-.omb-icon-title-descripcion {
+.omb-icon-card-contexto {
   width: auto;
   height: auto;
   padding: 20px;
@@ -181,48 +204,14 @@ main {
   justify-content: center;
   align-items: center;
 }
-.omb-title-descripcion-container h1 {
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 100%;
-  color: #1b1b1b;
-  margin: 0;
-}
 
-.omb-texto-descripcion-container {
-  height: auto;
-  width: 100%;
-  padding: 16px;
-  transition: all 0.3s ease-in;
-  box-sizing: border-box;
-}
-
-.omb-texto-descripcion {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Work sans", sans-serif;
-  line-height: 30px;
-  letter-spacing: 0;
-  color: #1b1b1b;
-  margin: 0;
-}
-.omb-img-container {
-  width: 544px;
-  height: 400px;
-}
-.omb-img-container img {
+.omb-imgagen-card-contexto {
   width: 544px;
   height: 400px;
   object-fit: cover;
   border-radius: 16px;
 }
-.omb-fuentes-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 40px;
-}
+
 .omb-fuentes-container {
   width: 1280px;
   height: 140px;
@@ -252,7 +241,7 @@ main {
   border: 1px solid #ffffff;
 }
 
-.omb-fuentes-item h3 {
+.omb-titulo-fuentes {
   font-weight: 600;
   font-size: 18px;
   line-height: 100%;
@@ -261,7 +250,7 @@ main {
   color: #1b1b1b;
   margin: 0;
 }
-.omb-fuentes-item p {
+.omb-parrafo-fuentes {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -271,7 +260,7 @@ main {
   margin: 0;
   font-family: "Work sans", sans-serif;
 }
-.omb-botom-container {
+.omb-botom-fuentes-container {
   flex: 1;
   height: 40px;
   display: flex;
@@ -279,56 +268,44 @@ main {
   align-items: center;
 }
 
-.omb-botom-container button {
-  height: 40px;
-  background-color: var(--color-primario);
-  font-family: "Work sans", sans-serif;
+.omb-boton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
   text-align: center;
-  width: auto;
-  border-radius: 32px;
-  padding-top: 8px;
-  padding-right: 24px;
-  padding-bottom: 8px;
-  padding-left: 24px;
-  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: "Work sans", sans-serif;
+  text-transform: uppercase;
+  border-width: 0.125rem;
+  border-style: solid;
+  color: var(--color-texto);
   cursor: pointer;
-  border: none;
-  transition: all 0.3s ease;
+}
+.omb-boton--primario {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+.omb-boton--con-icono {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 8px;
 }
 
-.omb-botom-container button:hover {
+.omb-boton:hover {
   background-color: var(--color-secundario-hover);
+  border-color: var(--color-texto);
   color: white;
 }
-.omb-botom-container button > span {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  width: auto;
-  height: auto;
-  position: relative;
-  bottom: 2px;
-  padding: 2px;
-}
-
-.omb-text-button-container {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-}
-.omb-grafica-section {
+.omb-grafica-container {
+  width: 1280px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 40px;
 }
+
 .omb-selectores-grafica-container {
   width: 1280px;
   height: 70px;
@@ -382,25 +359,19 @@ main {
   background-color: var(--color-primario);
   color: #212400;
 }
-.omb-grafica-container {
+.omb-grafica {
   width: 1280px;
   height: 600px;
   text-align: center;
 }
-.omb-compartir-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 40px;
-}
 
-.omb-compartir-content {
+.omb-compartir-container {
   width: 1280px;
   height: 116px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 52px;
   background-color: #e6e6e6;
   box-sizing: border-box;
@@ -470,23 +441,22 @@ main {
 .omb-contexto-section {
   display: flex;
   justify-content: center;
-  color: #4d4d4d;
   padding-bottom: 40px;
 }
-.omb-contexto-content {
+.omb-contexto-container {
   width: 1280px;
   display: flex;
   gap: 30px;
 }
 
-.omb-contexto-section h2 {
+.omb-titulos-contexto-container {
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
   color: #000;
   margin: 0;
 }
-.omb-contexto-section p {
+.omb-parrafo-contexto-container {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -509,7 +479,7 @@ main {
   flex-direction: column;
   gap: 30px;
 }
-.omb-context-container {
+.omb-parrafos-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -522,36 +492,27 @@ main {
   flex-direction: column;
   gap: 6px;
 }
-.omb-enlace {
-  display: flex;
-  align-items: center;
-}
 
-.omb-enlace a {
+.omb-enlaces {
+  gap: 4px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 28px;
+  line-height: 22px;
   letter-spacing: 0px;
   vertical-align: middle;
-  color: #acbd00;
   text-decoration: underline;
-  font-family: "Work sans", sans-serif;
+  color: var(--color-enlace);
 }
-.omb-enlace a:hover {
-  color: #a5ad4a;
+.omb-enlace:hover {
+  color: var(--color-enlace-hover);
 }
-.omb-otros-tableros-section {
-  width: 100%;
+
+.omb-de-interes-container {
+  width: 1280px;
   position: relative;
-  background-color: #f3f4f1;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 .omb-titulo-section {
   font-weight: 600;
@@ -567,13 +528,78 @@ main {
   color: black;
 }
 
-.omb-tableros-interes-container {
-  width: 1280px;
-  position: relative;
+.omb-swiper {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
 }
 
-.omb-button-tableros-interes-prev,
-.omb-button-tableros-interes-next {
+.omb-wrapper {
+  width: 100%;
+}
+
+.omb-swiper-slide {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.omb-paginacion {
+  position: absolute;
+  bottom: -32px !important;
+}
+
+.omb-paginacion > .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: white !important;
+  border: 2px solid #4b521d;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+/* Bullet activo */
+.omb-paginacion > .swiper-pagination-bullet-active {
+  background-color: #4b521d !important;
+  border-color: #4b521d;
+  transform: scale(1.2);
+}
+.omb-botom-control-carrousel {
+  position: absolute;
+  z-index: 20;
+  bottom: -40px;
+  min-width: 120px;
+  height: 34px;
+  width: auto;
+  cursor: pointer;
+}
+
+.omb-botom-control-carrousel button {
+  color: #565747;
+  border-radius: 8px;
+  font-family: "Worl sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.omb-boton-prev {
+  left: -100px;
+}
+.omb-boton-next {
+  right: -100px;
+}
+.omb-boton-prev,
+.omb-boton-next {
   color: #565747 !important;
   background-color: #f3f4f1cc;
   width: 53px;
@@ -583,158 +609,16 @@ main {
   transition: all 0.5s ease;
   border: 1px solid #d9e36e;
 }
-.omb-button-tableros-interes-prev:hover,
-.omb-button-tableros-interes-next:hover {
+.omb-boton-prev:hover,
+.omb-boton-next:hover {
   color: black !important;
   background-color: var(--color-primario);
 }
-.omb-button-tableros-interes-prev {
-  left: -100px;
-}
-.omb-button-tableros-interes-next {
-  right: -100px;
-}
-.omb-button-tableros-interes-prev::after,
-.omb-button-tableros-interes-next::after {
-  font-size: 32px !important;
-  font-weight: 900 !important;
-}
 
-.omb-swiper-wrapper-tableros-interes {
-  width: 100%;
-}
-
-.tablerosSwiper {
-  width: 100%;
-  padding: 4px;
-  box-sizing: border-box;
-}
-
-.omb-swiper-slide-tableros-interes {
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.omb-paginacion-tableros-interes {
-  bottom: -32px !important;
-}
-
-/* Estilo base de los bullets */
-.omb-paginacion-tableros-interes > .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: white !important;
-  border: 2px solid #4b521d;
-  border-radius: 50%;
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-/* Bullet activo */
-.omb-paginacion-tableros-interes > .swiper-pagination-bullet-active {
-  background-color: #4b521d !important;
-  border-color: #4b521d;
-  transform: scale(1.2);
-}
-
-.omb-card-tableros {
-  width: 297px;
-  height: 354px;
-  display: flex;
-  background-color: #ffffff;
-  border-radius: 16px;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
-  flex-direction: column;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  padding-bottom: 16px;
-}
-
-.omb-card-tableros:hover {
-  border: 1px solid black;
-  transform: scale(1.01);
-}
-
-.omb-card-tableros-img {
-  width: 100%;
-  height: 158px;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.omb-card-tableros-tags-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  width: 100%;
-  padding: 0px 16px;
-  box-sizing: border-box;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.omb-card-tableros-tag {
-  width: auto;
-  min-width: 150px;
-  height: 24px;
-  border-radius: 16px;
-  padding: 6px 12px 6px 12px;
-  background-color: #f3f4f1;
-  color: #71735e;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 0;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  box-sizing: border-box;
-  gap: 4px;
-  font-family: "Work-sans", sans-serif;
-}
-
-.omb-card-tableros-tag img {
-  width: 12px;
-  height: 12px;
-}
-
-.omb-card-tableros h5 {
-  min-height: 53px;
-  font-weight: 600;
-  color: #000;
-  font-family: "Montserrat", sans-serif;
-  text-decoration: underline;
-  font-size: 1.125rem;
-  margin-top: 0;
-  margin-bottom: 0.625rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  line-height: 1.688rem;
-  padding: 0px 16px;
-  transition: all 0.9s ease-in;
-}
-
-.omb-card-tableros p {
-  font-size: 1rem;
-  font-family: "Work sans", sans-serif;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  margin: 0;
-  line-height: 1.5rem;
-  padding: 0px 16px;
-  color: black;
-  min-height: 72px;
+.omb-boton-prev::after,
+.omb-boton-next::after {
+  font-size: 32px;
+  font-weight: 900;
 }
 .omb-botom-control-carrousel-tableros-interes {
   position: absolute;
@@ -760,4 +644,103 @@ main {
   align-items: center;
   border: none;
   background-color: inherit;
+}
+
+.omb-card-informativa {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding-bottom: 16px;
+}
+
+.omb-card-informativa--pequeña {
+  width: 297px;
+}
+.omb-card-informativa:hover {
+  border: 1px solid black;
+  transform: scale(1.01);
+}
+.omb-imagen-card-informativa {
+  width: 100%;
+}
+.omb-imagen-card-informativa--pequeña {
+  height: 158px;
+}
+.omb-tags-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 100%;
+  padding: 0px 16px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.omb-tag-card {
+  width: auto;
+  min-width: 150px;
+  height: 24px;
+  border-radius: 16px;
+  padding: 6px 12px 6px 12px;
+  background-color: #f3f4f1;
+  color: #71735e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 4px;
+  font-family: "Work-sans", sans-serif;
+}
+
+.omb-tag-icono {
+  width: 12px;
+  height: 12px;
+}
+
+.omb-titulo-card-informativa {
+  font-weight: 600;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.688rem;
+  padding: 0px 16px;
+  transition: all 0.9s ease-in;
+}
+
+.omb-titulo-card-informativa--dos-lineas {
+  height: 53px;
+}
+
+.omb-parrafo-card-informativa {
+  font-size: 1rem;
+  font-family: "Work sans", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  line-height: 1.5rem;
+  padding: 0px 16px;
+  color: black;
+  min-height: 72px;
 }

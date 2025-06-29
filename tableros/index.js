@@ -110,13 +110,13 @@ const articulos = [
   },
 ];
 
-const buttons = document.querySelectorAll(".omb-button");
+const buttons = document.querySelectorAll(".omb-boton-sidebar--con-icono");
 const cards = document.querySelectorAll(".omb-card-enlace");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    buttons.forEach((btn) => btn.classList.remove("omb-content-button-active"));
-    button.classList.add("omb-content-button-active");
+    buttons.forEach((btn) => btn.classList.remove("omb-boton--active"));
+    button.classList.add("omb-boton--active");
 
     const categoriaSeleccionada = button.textContent.trim();
 
@@ -127,7 +127,7 @@ buttons.forEach((button) => {
         categoriaSeleccionada === "Todos los tableros" ||
         categoriaCard === categoriaSeleccionada
       ) {
-        card.style.display = "flex"; // Mostrar
+        card.style.display = "block"; // Mostrar
       } else {
         card.style.display = "none"; // Ocultar
       }

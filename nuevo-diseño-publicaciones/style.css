@@ -1,6 +1,10 @@
 :root {
-  --primario-yellow: #f9ffbd;
-  --secundario-yellow: #dbf000;
+  --color-primario-soft: #f9ffbd;
+  --color-primario: #dbf000;
+  --color-secundario-hover: #8e9c00;
+  --color-texto: #1b1b1b;
+  --color-enlace: #acbd00;
+  --color-enlace-hover: #a5ad4a;
 }
 
 body {
@@ -277,38 +281,45 @@ body {
   text-decoration: none;
   color: inherit;
 }
-.omb-card-categoria-publicaciones {
+.omb-card-informativa--con-icono {
   width: 360px;
   height: 380px;
   padding: 24px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
   box-sizing: border-box;
-  transition: box-shadow 0.5s ease;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border: 1px solid transparent;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
-.omb-card-categoria-publicaciones:hover {
+.omb-card-informativa--con-icono:hover {
   border-color: black;
 }
 
-.card:focus {
-  border-color: black;
+.omb-card-informativa--con-icono:hover .omb-titulo-card-informativa {
+  color: var(--color-enlace);
 }
 
-.omb-card-categoria-publicaciones:hover h5 {
-  color: #acbd00;
-}
-.omb-icono-card-publicaciones-container {
-  width: 113px;
-}
-.omb-icono-content {
+.omb-icono-container {
   width: 113px;
   height: 113px;
-  border-radius: 57px;
+  padding: 8px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgb(103, 108, 46, 0.1);
+  overflow: hidden;
+}
+
+.omb-icono-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,50 +329,64 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 16px;
   flex: 1;
 }
-.omb-texto-card-publicaciones h5 {
+.omb-titulo-card-informativa {
   font-weight: 600;
-  margin: 0px;
-  transition: all 0.9 ease-in;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 700;
-  margin: 0;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-decoration: underline;
-  height: 40px;
+  line-height: 1.688rem;
+  padding: 0px 16px;
+  transition: all 0.3s ease-in;
 }
-.omb-texto-card-publicaciones p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 4; /* número de líneas visibles */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.omb-titulo-card-informativa--sin-padding {
+  padding: 0;
 }
 
-.omb-enlace-ver-articulo {
-  border: none;
-  background-color: inherit;
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 28px;
+.omb-titulo-card-informativa--dos-lineas {
+  height: 53px;
+}
+
+.omb-parrafo-card-informativa {
+  font-size: 1rem;
+  font-family: "Work sans", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  line-height: 1.5rem;
+  padding: 0px 16px;
+  color: black;
+  min-height: 72px;
+}
+.omb-parrafo-card-informativa--sin-padding {
+  padding: 0;
+}
+
+.omb-enlaces {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
   letter-spacing: 0px;
   vertical-align: middle;
-  color: #acbd00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  text-decoration: underline;
+  color: var(--color-enlace);
+}
+
+.omb-enlaces:hover {
+  color: var(--color-enlace-hover);
 }

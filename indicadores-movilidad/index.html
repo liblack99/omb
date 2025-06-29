@@ -15,15 +15,15 @@
   <body>
     <main>
       <section class="omb-movilidad-section">
-        <div class="omb-titulo-movilidad-container">
-          <h2>Movilidad</h2>
-          <p>Descripción indicadores Movilidad</p>
-        </div>
+        <h2 class="omb-titulo-section">Movilidad</h2>
+        <p class="omb-parrafo-descripcion-section">
+          Descripción indicadores Movilidad
+        </p>
         <div class="omb-movilidad-container">
           <div>
             <button
               type="button"
-              class="omb-button omb-button__width"
+              class="omb-boton-sidebar--sin-icono omb-boton--width"
               aria-label="Todos los tableros">
               <span class="omb-text-button">Todos los indicadores</span>
             </button>
@@ -33,49 +33,33 @@
                   <li class="omb-sidebar-item">
                     <button
                       type="button"
-                      class="omb-button omb-button__secundario"
+                      class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
                       aria-label="Categoria 1">
-                      <span class="omb-text-button">Categoria uno (1)</span>
+                      <span class="omb-text-button">Infraestructura</span>
                     </button>
                   </li>
                   <li class="omb-sidebar-item">
                     <button
                       type="button"
-                      class="omb-button omb-button__secundario"
+                      class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
                       aria-label="Categoria 2">
-                      <span class="omb-text-button">Cateforia dos (2)</span>
+                      <span class="omb-text-button">Transporte público</span>
                     </button>
                   </li>
                   <li class="omb-sidebar-item">
                     <button
                       type="button"
-                      class="omb-button omb-button__secundario"
+                      class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
                       aria-label="Categoria 3">
-                      <span class="omb-text-button">Categoria tres (3) </span>
+                      <span class="omb-text-button">Comportamiento en via</span>
                     </button>
                   </li>
                   <li class="omb-sidebar-item">
                     <button
                       type="button"
-                      class="omb-button omb-button__secundario"
+                      class="omb-boton-sidebar--sin-icono omb-boton--sin-icono-secundario"
                       aria-label="Categoria 4">
-                      <span class="omb-text-button">Categoria cuatro (4)</span>
-                    </button>
-                  </li>
-                  <li class="omb-sidebar-item">
-                    <button
-                      type="button"
-                      class="omb-button omb-button__secundario"
-                      aria-label="Categoria 5">
-                      <span class="omb-text-button">Categoria cinco (5)</span>
-                    </button>
-                  </li>
-                  <li class="omb-sidebar-item">
-                    <button
-                      type="button"
-                      class="omb-button omb-button__secundario"
-                      aria-label="Categoria 6">
-                      <span class="omb-text-button">Categoria seis (6)</span>
+                      <span class="omb-text-button">Viajes y volúmenes</span>
                     </button>
                   </li>
                 </ul>
@@ -84,49 +68,31 @@
           </div>
 
           <div class="omb-cards-movilidad-container">
-            <a
-              href=""
-              class="omb-card-enlace"
-              title="Política motorizada de cero y bajas emisiones"
-              data-categoria="Movilidad sostenible">
-              <div class="omb-card-tableros">
-                <img
-                  src="http://149.130.178.89/media/43"
-                  alt="imagen Política motorizada de cero y bajas emisiones"
-                  class="omb-card-img" />
-                <div class="omb-card-tableros-tags-container">
-                  <div class="omb-card-tableros-tag">
-                    <img
-                      src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Etiqueta</span>
-                  </div>
-                </div>
-                <h5>Vías en buen estado (%)</h5>
-              </div>
-            </a>
+            <!-- Slide 1 -->
 
             <a
               href=""
               class="omb-card-enlace"
-              title="Día sin carro y sin moto"
-              data-categoria="Movilidad sostenible">
-              <div
-                class="omb-card-tableros"
-                data-categoria="Movilidad sostenible">
+              title="ir a Vías en buen estado (%)"
+              data-categoria="Infraestructura">
+              <div class="omb-card-informativa omb-card-informativa--pequeña">
                 <img
-                  src="http://149.130.178.89/media/44"
-                  alt="imagen Día sin carro y sin moto"
-                  class="omb-card-tableros-img" />
-                <div class="omb-card-tableros-tags-container">
-                  <div class="omb-card-tableros-tag">
+                  src="http://149.130.178.89/media/133"
+                  alt="Imagen Vías en buen estado (%)"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  Vías en buen estado (%)
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
                     <img
                       src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Etiqueta</span>
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Infraestructura</span>
                   </div>
                 </div>
-                <h5>Vías primarias y secundarias en buen estado (%)</h5>
               </div>
             </a>
 
@@ -135,27 +101,26 @@
             <a
               href=""
               class="omb-card-enlace"
-              title="Ciclista"
-              data-categoria="Movilidad sostenible">
-              <div
-                class="omb-card-tableros"
-                data-categoria="Movilidad sostenible">
+              title="Ir a Vías primarias y secundarias en buen estado (%)"
+              data-categoria="Transporte público">
+              <div class="omb-card-informativa omb-card-informativa--pequeña">
                 <img
-                  src="http://149.130.178.89/media/46"
-                  alt="imagen Ciclista"
-                  class="omb-card-tableros-img" />
-                <div class="omb-card-tableros-tags-container">
-                  <div class="omb-card-tableros-tag">
+                  src="http://149.130.178.89/media/134"
+                  alt="Imagen Vías primarias y secundarias en buen estado (%)"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  Vías primarias y secundarias en buen estado (%)
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
                     <img
                       src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Etiqueta</span>
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
                   </div>
                 </div>
-                <h5>
-                  Acciones implementadas para mitigar impactos en la movilidad
-                  en proyectos...
-                </h5>
               </div>
             </a>
 
@@ -164,32 +129,63 @@
             <a
               href=""
               class="omb-card-enlace"
-              title="Sistema Integrado de Transporte Público (SITP)"
-              data-categoria="Transporte público">
-              <div
-                class="omb-card-tableros"
-                data-categoria="Transporte público">
+              title="Ir a Acciones implementadas para mitigar impactos en la movilidad en proyectos"
+              data-categoria="Comportamiento en via">
+              <div class="omb-card-informativa omb-card-informativa--pequeña">
                 <img
-                  src="http://149.130.178.89/media/47"
-                  alt="imagen Sistema Integrado de Transporte Público (SITP)"
-                  class="omb-card-tableros-img" />
-                <div class="omb-card-tableros-tags-container">
-                  <div class="omb-card-tableros-tag">
+                  src="http://149.130.178.89/media/135"
+                  alt="Imagen Acciones implementadas para mitigar impactos en la movilidad
+                  en proyectos"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  Acciones implementadas para mitigar impactos en la movilidad
+                  en proyectos
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
                     <img
                       src="http://149.130.178.89/media/100"
-                      alt="Icono de tag" />
-                    <span>Etiqueta</span>
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Comportamiento en via</span>
                   </div>
                 </div>
-                <h5>
+              </div>
+            </a>
+
+            <!-- Slide 4 -->
+
+            <a
+              href=""
+              class="omb-card-enlace"
+              title="Porcentaje del sistema de semaforización inteligente de la ciudad mantenido y..."
+              data-categoria="Viajes y volúmenes">
+              <div class="omb-card-informativa omb-card-informativa--pequeña">
+                <img
+                  src="http://149.130.178.89/media/136"
+                  alt="Imagen Porcentaje del sistema de semaforización inteligente de la ciudad mantenido y..."
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
                   Porcentaje del sistema de semaforización inteligente de la
                   ciudad mantenido y...
                 </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://149.130.178.89/media/100"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Etiqueta</span>
+                  </div>
+                </div>
               </div>
             </a>
           </div>
         </div>
       </section>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>

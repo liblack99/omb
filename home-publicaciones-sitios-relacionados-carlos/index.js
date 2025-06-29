@@ -6,7 +6,7 @@ const swiperSitosRelacionados = new Swiper(".sitiosRelacionadosSlideSwiper", {
     prevEl: ".omb-boton-sitios-relacionados-prev",
   },
   pagination: {
-    el: ".omb-pagination-sitios-relacionados",
+    el: ".omb-paginacion-sitios-relacionados",
     clickable: true,
   },
   loop: true,
@@ -78,11 +78,11 @@ const swiperPublicacionesSection = new Swiper(".publicacionesSectionSwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
-    nextEl: ".omb-boton-publicaciones-home-prev",
-    prevEl: ".omb-boton-publicaciones-home-next",
+    nextEl: ".omb-boton-next--publicaciones-home",
+    prevEl: ".omb-boton-prev--publicaciones-home",
   },
   pagination: {
-    el: ".omb-pagination-publicaciones-home",
+    el: ".omb-paginacion--publicaciones-home",
     clickable: true,
   },
   loop: true,

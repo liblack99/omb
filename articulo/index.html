@@ -18,9 +18,9 @@
   </head>
   <body>
     <main>
-      <section class="omb-articulo-section">
-        <div class="omb-info-articulo-container">
-          <div class="omb-info-articulo-content">
+      <section class="omb-section">
+        <div class="omb-articulo-container">
+          <div class="omb-texto-articulo-content">
             <img
               class="omb-img-principal-articulo"
               src="http://149.130.178.89/media/113"
@@ -34,7 +34,7 @@
                 width="16"
                 height="16"
                 viewBox="0 0 20 20"
-                fill="none"
+                fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M18.4548 13.7273H13.5244L11.8532 15.3985C11.4082 15.8435 10.8136 16.0909 10.1821 16.0909C9.55055 16.0909 8.95743 15.8451 8.51092 15.3985L6.83976 13.7273H1.90936C1.25677 13.7273 0.727539 14.2565 0.727539 14.9091V18.4546C0.727539 19.1072 1.25677 19.6364 1.90936 19.6364H18.4548C19.1074 19.6364 19.6366 19.1072 19.6366 18.4546V14.9091C19.6366 14.2554 19.1085 13.7273 18.4548 13.7273ZM16.6821 17.5682C16.1946 17.5682 15.7957 17.1693 15.7957 16.6818C15.7957 16.1943 16.1946 15.7955 16.6821 15.7955C17.1696 15.7955 17.5684 16.1943 17.5684 16.6818C17.5684 17.1693 17.1696 17.5682 16.6821 17.5682ZM9.34743 14.562C9.5764 14.7946 9.87924 14.9091 10.1821 14.9091C10.4849 14.9091 10.787 14.7937 11.0175 14.5629L15.7448 9.8356C16.206 9.37396 16.206 8.62609 15.7448 8.16444C15.2831 7.70279 14.5349 7.70279 14.0736 8.16444L11.3639 10.8762V1.90911C11.3639 1.25653 10.8347 0.727295 10.1821 0.727295C9.52839 0.727295 9.00027 1.25653 9.00027 1.90911V10.8762L6.28947 8.16536C5.82819 7.70372 5.07995 7.70372 4.61831 8.16536C4.15703 8.62701 4.15703 9.37488 4.61831 9.83653L9.34743 14.562Z"
@@ -48,7 +48,7 @@
                     y2="20.5777"
                     gradientUnits="userSpaceOnUse">
                     <stop stop-color="#DBF000" />
-                    <stop offset="1" stop-color="#ACBD00" />
+                    <stop offset="1" stop-color="currentColor" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -120,7 +120,7 @@
                       y2="20.5777"
                       gradientUnits="userSpaceOnUse">
                       <stop stop-color="#DBF000" />
-                      <stop offset="1" stop-color="#ACBD00" />
+                      <stop offset="1" stop-color="currentColor" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -153,7 +153,7 @@
                       y2="20.5777"
                       gradientUnits="userSpaceOnUse">
                       <stop stop-color="#DBF000" />
-                      <stop offset="1" stop-color="#ACBD00" />
+                      <stop offset="1" stop-color="currentColor" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -187,7 +187,7 @@
                       y2="20.5777"
                       gradientUnits="userSpaceOnUse">
                       <stop stop-color="#DBF000" />
-                      <stop offset="1" stop-color="#ACBD00" />
+                      <stop offset="1" stop-color="currentColor" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -225,7 +225,7 @@
                       y2="20.5777"
                       gradientUnits="userSpaceOnUse">
                       <stop stop-color="#DBF000" />
-                      <stop offset="1" stop-color="#ACBD00" />
+                      <stop offset="1" stop-color="currentColor" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -235,8 +235,8 @@
           </aside>
         </div>
       </section>
-      <section class="omb-explora-publicacion-interes-section">
-        <div class="omb-explora-publicaciones-interes-container">
+      <section class="omb-section omb-section--de-interes">
+        <div class="omb-de-interes-container">
           <h2 class="omb-titulo-section">
             Estas publicaciones también podrían ser de tu interés
           </h2>
@@ -245,7 +245,7 @@
             a esta
           </p>
           <div
-            class="omb-botom-control-carrousel-publicaciones-interes"
+            class="omb-botom-control-carrousel"
             id="controlCarrucelPublicaionesInteres">
             <button
               type="button"
@@ -267,46 +267,49 @@
               Pausar
             </button>
           </div>
-          <div
-            class="swiper-pagination omb-pagination-publicaciones-interes"></div>
-          <div
-            class="swiper-button-prev omb-boton-publicaciones-interes-prev"></div>
-          <div
-            class="swiper-button-next omb-boton-publicaciones-interes-next"></div>
-          <div class="swiper publicacionesInteresSlideSwiper">
-            <div class="swiper-wrapper omb-wrapper-publicaciones-interes">
-              <div class="swiper-slide omb-swiper-slide-publicaciones-interes">
+          <div class="swiper-pagination omb-paginacion"></div>
+          <div class="swiper-button-prev omb-boton-prev"></div>
+          <div class="swiper-button-next omb-boton-next"></div>
+          <div class="swiper omb-swiper publicacionesInteresSlideSwiper">
+            <div class="swiper-wrapper omb-wrapper">
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href="#"
                   title="Ir a actualización la caracterización socioeconómica"
                   class=""
                   target="_blank"
                   rel="noopener noreferrer">
-                  <div class="omb-card-publicaciones-interes">
+                  <div
+                    class="omb-card-informativa omb-card-informativa--mediana">
                     <img
-                      class="omb-img-card-publicaciones-interes"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--mediana"
                       src="http://149.130.178.89/media/91"
                       alt="Imagen Abecé plan distrital de desarrollo" />
 
-                    <h5>Actualización la caracterización socioeconómica</h5>
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Actualización la caracterización socioeconómica
+                    </h5>
                   </div>
                 </a>
               </div>
 
-              <div class="swiper-slide omb-swiper-slide-publicaciones-interes">
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href="#"
                   title="Ir a mejorando el diseño de rutas BRT a través del código: el
                         caso del sistema"
                   target="_blank"
                   rel="noopener noreferrer">
-                  <div class="omb-card-publicaciones-interes">
+                  <div
+                    class="omb-card-informativa omb-card-informativa--mediana">
                     <img
-                      class="omb-img-card-publicaciones-interes"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--mediana"
                       src="http://149.130.178.89/media/116"
                       alt="Imagen Plan de movilidad sostenible y segura" />
 
-                    <h5>
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
                       Mejorando el diseño de rutas BRT a través del código: el
                       caso del sistema
                     </h5>
@@ -314,19 +317,21 @@
                 </a>
               </div>
 
-              <div class="swiper-slide omb-swiper-slide-publicaciones-interes">
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href="#"
                   title="Ir a Herramientas para el monitoreo, caracterización de usuarios y sus aplicaciones"
                   target="_blank"
                   rel="noopener noreferrer">
-                  <div class="omb-card-publicaciones-interes">
+                  <div
+                    class="omb-card-informativa omb-card-informativa--mediana">
                     <img
-                      class="omb-img-card-publicaciones-interes"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--mediana"
                       src="http://149.130.178.89/media/117"
                       alt="Imagen política pública del peatón" />
 
-                    <h5>
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
                       Herramientas para el monitoreo, caracterización de
                       usuarios.
                     </h5>
@@ -334,19 +339,22 @@
                 </a>
               </div>
 
-              <div class="swiper-slide omb-swiper-slide-publicaciones-interes">
+              <div class="swiper-slide omb-swiper-slide">
                 <a
                   href="#"
                   title="Ir a Memorias MOVI-INNOVA 2022"
                   target="_blank"
                   rel="noopener noreferrer">
-                  <div class="omb-card-publicaciones-interes">
+                  <div
+                    class="omb-card-informativa omb-card-informativa--mediana">
                     <img
-                      class="omb-img-card-publicaciones-interes"
+                      class="omb-imagen-card-informativa omb-imagen-card-informativa--mediana"
                       src="http://149.130.178.89/media/118"
                       alt="Imagen Política de cero y bajas emisiones" />
-
-                    <h5>Memorias MOVI-INNOVA 2022</h5>
+                    <h5
+                      class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                      Memorias MOVI-INNOVA 2022
+                    </h5>
                   </div>
                 </a>
               </div>

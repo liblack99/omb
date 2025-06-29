@@ -1,6 +1,10 @@
 :root {
-  --primario-yellow: #f9ffbd;
-  --secundario-yellow: #dbf000;
+  --color-primario-soft: #f9ffbd;
+  --color-primario: #dbf000;
+  --color-secundario-hover: #8e9c00;
+  --color-texto: #1b1b1b;
+  --color-enlace: #acbd00;
+  --color-enlace-hover: #a5ad4a;
 }
 a {
   text-decoration: none;
@@ -44,7 +48,7 @@ body {
   transition: all 0.3s ease;
 }
 .omb-lista-nav li:hover {
-  background-color: var(--secundario-yellow);
+  background-color: var(--color-primario);
 }
 .omb-lista-nav li:first-child {
   border-left: none;
@@ -279,8 +283,8 @@ main {
 
 .omb-botom-container button {
   height: 40px;
-  background-color: var(--secundario-yellow);
-  font-family: "Work sans" sans-serif;
+  background-color: var(--color-primario);
+  font-family: "Work sans", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -298,11 +302,12 @@ main {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--color-texto);
 }
 
 .omb-botom-container button:hover {
-  background-color: #c4d600;
-  color: black;
+  background-color: var(--color-secundario-hover);
+  color: #fff;
 }
 .omb-botom-container button > span {
   display: flex;
@@ -330,7 +335,7 @@ main {
 .omb-selectores-grafica-container {
   width: 1280px;
   height: 70px;
-  border: 2px solid var(--secundario-yellow);
+  border: 2px solid var(--color-primario);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -371,13 +376,13 @@ main {
 .omb-botones-lista:hover {
   border: 1px solid transparent;
   color: #212400;
-  background: var(--secundario-yellow);
+  background: var(--color-primario);
 }
 
 .omb-botones-lista-seleccionado {
   border: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  background-color: var(--secundario-yellow);
+  background-color: var(--color-primario);
   color: #212400;
 }
 .omb-grafica-container {
@@ -406,8 +411,8 @@ main {
 
 .omb-bottom-descarga {
   height: 40px;
-  background-color: var(--secundario-yellow);
-  font-family: "Work sans" sans-serif;
+  background-color: var(--color-primario);
+  font-family: "Work sans", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -425,10 +430,11 @@ main {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--color-texto);
 }
 .omb-bottom-descarga:hover {
-  background-color: #c4d600;
-  color: #000;
+  background-color: var(--color-secundario-hover);
+  color: #fff;
 }
 .omb-bottom-descarga span {
   width: 23px;
@@ -449,6 +455,7 @@ main {
   letter-spacing: 0px;
   text-align: right;
   vertical-align: middle;
+  font-family: "Work sans", sans-serif;
 }
 .omb-lista-redes {
   display: flex;
@@ -590,7 +597,7 @@ main {
 .omb-button-tableros-interes-prev:hover,
 .omb-button-tableros-interes-next:hover {
   color: black !important;
-  background-color: var(--secundario-yellow);
+  background-color: var(--color-primario);
 }
 .omb-button-tableros-interes-prev {
   left: -150px;
@@ -608,22 +615,22 @@ main {
   width: 1280px;
 }
 
-.omb-titulo-otros-tableros-container h2 {
-  font-size: 32px;
+.omb-titulo-section {
   font-weight: 600;
-  color: #1b1b1b;
-  margin-top: 0;
-  font-family: "Montserrat";
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
 }
-.omb-titulo-otros-tableros-container p {
-  font-family: "Montserrat";
+.omb-parrafo-descripcion-section {
   font-weight: 500;
   font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  color: #1b1b1b;
-  margin: 0;
+  line-height: 30px;
+  color: var(--color-texto);
+  font-family: "Work Sans", sans-serif;
+  margin-top: 0;
 }
+
 .omb-tableros-interes-container {
   width: 1280px;
   position: relative;
