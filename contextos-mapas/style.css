@@ -156,7 +156,7 @@ main {
   margin: 0;
   font-family: "Work sans", sans-serif;
 }
-.omb-botom-fuentes-container {
+.omb-boton-fuentes-container {
   flex: 1;
   height: 40px;
   display: flex;
@@ -578,4 +578,7 @@ main {
   padding: 0px 16px;
   color: black;
   min-height: 72px;
+}
+.omb-parrafo-card-informativa--sin-limite {
+  display: inline;
 }

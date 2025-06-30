@@ -1,10 +1,10 @@
-const buttons = document.querySelectorAll(".omb-boton-sidebar--sin-icono");
+const buttons = document.querySelectorAll(".omb-boton-sidebar");
 const cards = document.querySelectorAll(".omb-card-enlace");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    buttons.forEach((btn) => btn.classList.remove("omb-boton--active"));
-    button.classList.add("omb-boton--active");
+    buttons.forEach((btn) => btn.classList.remove("omb-boton-sidebar--active"));
+    button.classList.add("omb-boton-sidebar--active");
 
     const categoriaSeleccionada = button.textContent.trim();
 

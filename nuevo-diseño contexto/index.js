@@ -74,7 +74,7 @@ if (pauseButtonTablerosInteres) {
   });
 }
 const buttons = document.querySelectorAll(".omb-botones-lista");
-const graficaContainers = document.querySelectorAll(".omb-grafica-container");
+const graficaContainers = document.querySelectorAll(".omb-grafica");
 // Mostrar solo "Fallecidos" por defecto
 const categoriaPorDefecto = "Fallecidos";
 

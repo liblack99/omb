@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const lista = document.querySelector(".omb-sidebar-tematicas-lista");
-  const areaArriba = document.querySelector(
-    ".omb-sidebar-tematicas > .omb-sidebar-tematicas-item"
-  );
+  const areaArriba = document.querySelector(".omb-tematica-selecionada");
 
   lista.addEventListener("click", function (e) {
     const clickedLink = e.target.closest(".omb-sidebar-tematicas-link");

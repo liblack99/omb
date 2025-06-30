@@ -59,30 +59,37 @@ body {
   letter-spacing: 0%;
   font-family: "Work sans", sans-serif;
 }
-.omb-texto-categoria button {
-  width: auto;
-  height: 32px;
-  border-radius: 20px;
-  border-width: 2px;
-  padding-top: 8px;
-  padding-right: 16px;
-  padding-bottom: 8px;
-  padding-left: 16px;
-  background-color: var(--color-primario);
-  border: none;
-  font-family: "Work sans", sans-serif;
+.omb-boton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  box-sizing: border-box;
+  text-align: center;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: "Work sans", sans-serif;
+  text-transform: uppercase;
+  border-width: 0.125rem;
+  border-style: solid;
+  color: var(--color-texto);
+  cursor: pointer;
+}
+.omb-boton--primario {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+.omb-boton--con-icono {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  gap: 8px;
 }
-.omb-texto-categoria button:hover {
+
+.omb-boton:hover {
   background-color: var(--color-secundario-hover);
-  color: #fff;
+  border-color: var(--color-texto);
+  color: white;
 }
 .omb-categorias-section {
   display: flex;

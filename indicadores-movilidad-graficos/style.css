@@ -139,13 +139,13 @@ main {
   background-color: var(--color-fondo-seccion-intreres);
 }
 
-.omb-imgagen-card-contexto {
+.omb-imagen-card-contexto {
   width: 544px;
   height: 400px;
   object-fit: cover;
   border-radius: 16px;
 }
-.omb-imgagen-card-contexto--menor-tamaño {
+.omb-imagen-card-contexto--menor-tamaño {
   height: 304px;
 }
 

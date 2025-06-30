@@ -105,13 +105,15 @@ a {
   margin-top: 8px;
   padding-bottom: 4px;
 }
-.omb-sidebar-tematicas-item {
+.omb-sidebar-tematicas-item,
+.omb-tematica-selecionada {
   width: 340px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--color-primario);
 }
+
 .omb-sidebar-tematicas-link {
   width: 340px;
   min-height: 80px;
@@ -150,9 +152,9 @@ a {
   order: -1;
 }
 .omb-tematicas-container {
-  flex: 1;
+  width: 770;
   border-radius: 24px;
-  padding: 20px 20px 0px 20px;
+  padding: 20px 24px 0px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 .omb-tematicas-items-container {
@@ -164,7 +166,7 @@ a {
 }
 .omb-card-tematica {
   width: 100%;
-  border-bottom: 1px solid #f0f1f2;
+  border-bottom: 4px solid #f0f1f2;
 }
 .omb-fecha-tematica {
   font-size: 1rem;
@@ -184,7 +186,7 @@ a {
   min-height: 53px;
   font-weight: 600;
   color: var();
-  font-family: "Montserrat", sans-serif;
+  font-family: "Work sans", sans-serif;
   text-decoration: underline;
   font-size: 1.125rem;
   margin-top: 0;
@@ -216,7 +218,7 @@ a {
 
 .omb-paginacion-enlace {
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Work sans", sans-serif;
   text-decoration: underline;
   font-size: 1.125rem;
   margin-top: 0;
