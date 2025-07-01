@@ -27,65 +27,68 @@ main {
   justify-content: center;
   gap: 30px;
 }
+.omb-sidebar-container {
+  width: 297px;
+  position: relative;
+}
+.omb-sidebar-content {
+  position: fixed;
+}
 
-.omb-boton-sidebar--con-icono {
-  background-color: var(--color-primario);
+.omb-boton-sidebar {
+  background-color: var(--color-primario-soft);
   width: 265px;
   height: 62px;
   border: none;
-  padding: 0px 0px 0px 16px;
+  padding: 0;
   margin: 0;
   cursor: pointer;
   font-size: 16px;
-  color: #000;
+  color: var(--color-texto);
   display: flex;
   justify-content: start;
   align-items: center;
   border-radius: 12px;
   position: relative;
+  gap: 8px;
+  padding: 8px 32px;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.omb-boton--width {
+.omb-boton-sidebar--width {
   width: 297px;
 }
-.omb-boton-sidebar--con-icono:hover {
-  background-color: #8e9c00;
-  color: white;
+.omb-boton-sidebar:hover {
+  background-color: var(--color-primario);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
 }
 
-.omb-boton--secundario {
-  background-color: #ffffff;
-  padding: 0px;
+.omb-boton-sidebar--secundario {
+  padding: 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
-.omb-boton--active {
-  color: white;
-  background-color: #8e9c00;
+.omb-boton-sidebar--active {
+  background-color: var(--color-primario);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.omb-boton--active::before {
+.omb-boton-sidebar--active::before {
   content: "";
   position: absolute;
   right: -12px;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
-  border-left: 14px solid #8e9c00;
+  border-left: 14px solid var(--color-primario);
   border-bottom: 8px solid transparent;
-}
-
-.omb-icon-boton-sidebar {
-  width: 46px;
-  height: 46px;
-  padding: 4px;
 }
 
 .omb-sidebar {
   width: 297px;
   height: auto;
-  background: var(--color-primario);
+  background: var(--color-primario-soft);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -149,7 +152,7 @@ main {
   padding: 6px 16px 6px 16px;
 }
 
-.omb-container {
+.omb-cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
