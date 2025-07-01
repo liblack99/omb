@@ -48,13 +48,6 @@ body {
   gap: 30px;
   position: relative;
 }
-.omb-sidebar-container {
-  width: 297px;
-  position: relative;
-}
-.omb-sidebar-content {
-  position: fixed;
-}
 
 .omb-boton-sidebar {
   background-color: var(--color-primario-soft);

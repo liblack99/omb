@@ -73,6 +73,7 @@ if (pauseButtonTablerosInteres) {
     isPlaying = !isPlaying;
   });
 }
+
 const buttons = document.querySelectorAll(".omb-botones-lista");
 const graficaContainers = document.querySelectorAll(".omb-grafica");
 // Mostrar solo "Fallecidos" por defecto
