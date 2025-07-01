@@ -152,8 +152,9 @@ a {
   order: -1;
 }
 .omb-tematicas-container {
-  width: 770;
+  width: 870px;
   border-radius: 24px;
+  box-sizing: border-box;
   padding: 20px 24px 0px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
@@ -161,7 +162,7 @@ a {
   display: flex;
   gap: 16px;
   flex-direction: column;
-  height: 940px;
+  height: 980px;
   overflow: hidden;
 }
 .omb-card-tematica {
@@ -183,9 +184,9 @@ a {
 }
 
 .omb-enlaces-tematicas {
-  min-height: 53px;
+  min-height: 56px;
   font-weight: 600;
-  color: var();
+  color: var(--color-enlace);
   font-family: "Work sans", sans-serif;
   text-decoration: underline;
   font-size: 1.125rem;
@@ -201,7 +202,6 @@ a {
   transition: all 0.9s ease-in;
   color: var(--color-enlace);
   display: flex;
-  align-items: center;
   gap: 8px;
 }
 .omb-paginacion-numerica {

@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll(".omb-boton-sidebar");
-const cards = document.querySelectorAll(".omb-card-enlace");
+const cards = document.querySelectorAll(".omb-card-infografia");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -15,7 +15,7 @@ buttons.forEach((button) => {
         categoriaSeleccionada === "Todas las infografias" ||
         categoriaCard === categoriaSeleccionada
       ) {
-        card.style.display = "block"; // Mostrar
+        card.style.display = "flex"; // Mostrar
       } else {
         card.style.display = "none"; // Ocultar
       }

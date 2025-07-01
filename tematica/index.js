@@ -1,3 +1,9 @@
+const buttonsSideBard = document.querySelectorAll(
+  ".omb-sidebar-tematicas-item"
+);
+const selectTematicas = document.getElementById("selectTematicas");
+const cardsTematica = document.querySelectorAll(".omb-card-tematica");
+
 document.addEventListener("DOMContentLoaded", function () {
   const lista = document.querySelector(".omb-sidebar-tematicas-lista");
   const areaArriba = document.querySelector(".omb-tematica-selecionada");
@@ -35,5 +41,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 5. Agregar clase activa al nuevo de arriba
     clickedLink.classList.add("omb-sidebar-tematicas-item--activo");
+  });
+});
+
+selectTematicas.addEventListener("change", (event) => {
+  const categoriaSeleccionada = event.target.value;
+
+  // Quitar clase activa de todos los botones
+  buttonsSideBard.forEach((btn) =>
+    btn.classList.remove("omb-boton-sidebar--active")
+  );
+
+  // Si el select tiene una opción que coincide con algún botón, puedes opcionalmente activar el botón correspondiente (si quieres)
+  buttonsSideBard.forEach((button) => {
+    if (button.textContent.trim() === categoriaSeleccionada) {
+      button.classList.add("omb-boton-sidebar--active");
+    }
+  });
+
+  // Mostrar/ocultar las tarjetas según la selección
+  cardsTematica.forEach((card) => {
+    const categoriaCard = card.dataset.tematica;
+
+    if (
+      categoriaSeleccionada === "Todas las infografias" ||
+      categoriaCard === categoriaSeleccionada
+    ) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+
+buttonsSideBard.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttonsSideBard.forEach((btn) =>
+      btn.classList.remove("omb-boton-sidebar--active")
+    );
+    button.classList.add("omb-boton-sidebar--active");
+
+    const categoriaSeleccionada = button.textContent.trim();
+
+    cardsTematica.forEach((card) => {
+      const categoriaCard = card.dataset.tematica;
+
+      if (
+        categoriaSeleccionada === "Todas las infografias" ||
+        categoriaCard === categoriaSeleccionada
+      ) {
+        card.style.display = "block"; // Mostrar
+      } else {
+        card.style.display = "none"; // Ocultar
+      }
+    });
   });
 });
