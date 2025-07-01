@@ -294,6 +294,10 @@ body {
   line-height: 1.688rem;
   padding: 0px;
   transition: all 0.9s ease-in;
+  padding: 0px 16px;
+}
+.omb-titulo-card-informativa--sin-padding {
+  padding: 0px;
 }
 
 .omb-titulo-card-informativa--dos-lineas {
