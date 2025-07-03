@@ -31,6 +31,9 @@ body {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
+.omb-decoracion-lineas {
+  margin-bottom: 20px;
+}
 .omb-titulo-section--centrado {
   text-align: center;
 }

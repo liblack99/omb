@@ -89,12 +89,12 @@ body {
 .omb-swiper-slide {
   padding: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end !important;
+  align-items: center !important;
   box-sizing: border-box;
 }
 .omb-swiper-slide--indicadores-home {
-  height: 240px;
+  height: 260px;
 }
 
 .omb-paginacion {
