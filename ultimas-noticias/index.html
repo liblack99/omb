@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ultimas noticias</title>
+  </head>
+  <body>
+    <main>
+      <section class="omb-section">
+        <h1 class="omb-titulo-section omb-titulo-section--centrado">
+          Últimas noticias de movilidad
+        </h1>
+        <div class="omb-card-container">
+          <a
+            href="#"
+            class="omb-card-link"
+            aria-label="Ver "
+            title="Ir a Bogotá avanza en su estrategia de gestión de velocidad con
+                  intervenciones que salvan vidas">
+            <div class="omb-card-informativa-hero">
+              <img
+                src="http://149.130.178.89/media/141"
+                alt="Imagen encuesta 2023"
+                class="omb-imagen-card-hero" />
+              <div class="omb-texto-card-informativa-hero">
+                <h3
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas omb-titulo-card-informativa--sin-padding">
+                  Bogotá avanza en su estrategia de gestión de velocidad con
+                  intervenciones que salvan vidas
+                </h3>
+                <p class="omb-fecha">25 may, 2025</p>
+                <p
+                  class="omb-parrafo-card-informativa omb-parrafo-card-informativa--sin-padding">
+                  Encontrarás que los habitantes de la Bogotá-Región se mueven
+                  mayoritariamente en modos sostenibles como la caminata, la
+                  bicicleta y el transporte público, confirmando la apuesta por
+                  consolidar un sistema de movilidad multimodal, sostenible y
+                  descarbonizado, desde lo regional a lo local.
+                </p>
+
+                <button
+                  class="omb-boton omb-boton--primario omb-boton--con-icono omb-boton--con-margen">
+                  Ver noticia
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="omb-section">
+        <div class="omb-buscador-container">
+          <label for="inputBusqueda">
+            <input
+              type="text"
+              class="omb-input-busqueda"
+              id="inputBusqueda"
+              placeholder="Buscar por nombre" />
+          </label>
+          <select name="ordenar" class="omb-ordenar-select">
+            <option value="value1">Ordenar por</option>
+            <option value="value2">Años</option>
+          </select>
+        </div>
+      </section>
+      <section class="omb-section">
+        <div class="omb-noticias-container">
+          <div class="omb-sidebar-container">
+            <div class="omb-sidebar-content">
+              <button
+                type="button"
+                class="omb-boton-sidebar omb-boton-sidebar--width"
+                aria-label="Todos los tableros">
+                <span class="omb-text-button">Todas las noticias</span>
+              </button>
+              <div class="omb-sidebar">
+                <nav class="omb-sidebar-nav">
+                  <ul class="omb-sidebar-list">
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        aria-label="Categoria 1">
+                        <span class="omb-text-button"
+                          >Movilidad sostenible</span
+                        >
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        aria-label="Categoria 2">
+                        <span class="omb-text-button">Transporte público</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        aria-label="Categoria 3">
+                        <span class="omb-text-button"
+                          >Comportamiento en via</span
+                        >
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        aria-label="Categoria 4">
+                        <span class="omb-text-button">Viajes y volúmenes</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        aria-label="Categoria 4">
+                        <span class="omb-text-button">Enfoque de genero</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        aria-label="Categoria 4">
+                        <span class="omb-text-button">Transparencia</span>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="omb-cards-noticias-container">
+              <div
+                class="omb-card-informativa omb-card-informativa--pequeña"
+                data-categoria="Movilidad sostenible">
+                <img
+                  src="http://149.130.178.89/media/137"
+                  alt="imagen Día sin carro y sin moto"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  Participa en la construcción del nuevo Plan de Movilidad
+                  Sostenible y Segura
+                </h5>
+                <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
+                <p class="omb-parrafo-card-informativa">
+                  Desde el 4 de septiembre, y hasta el lunes 11 de septiembre de
+                  2023, los ciudadanos pueden consultar el acto administrativo:
+                  “Por el cual se...
+                </p>
+
+                <p class="omb-enlaces omb-enlaces--centrado">Ver noticias</p>
+              </div>
+
+              <!-- Slide 2 -->
+
+              <div
+                class="omb-card-informativa omb-card-informativa--pequeña"
+                data-categoria="Movilidad sostenible">
+                <img
+                  src="http://149.130.178.89/media/138"
+                  alt="imagen Ciclista"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  Así aplica el pico y placa para vehículos particulares durante
+                  septiembre
+                </h5>
+                <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
+                <p class="omb-parrafo-card-informativa">
+                  Si conduces en Bogotá, debes tener presente que el pico y
+                  placa para vehículos particulares rige de lunes a viernes, de
+                  6:00 a.m. a 9:0...
+                </p>
+                <p class="omb-enlaces omb-enlaces--centrado">Ver noticias</p>
+              </div>
+
+              <!-- Slide 3-->
+
+              <div
+                class="omb-card-informativa omb-card-informativa--pequeña"
+                data-categoria="Transporte público">
+                <img
+                  src="http://149.130.178.89/media/139"
+                  alt="imagen Sistema Integrado de Transporte Público (SITP)"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  ¿Quieres trabajar en la obra del cable aéreo S. Cristóbal?
+                  Aplica a esta oferta
+                </h5>
+                <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
+                <p class="omb-parrafo-card-informativa">
+                  Si estás buscando trabajo en el sector de la construcción y
+                  vives en la localidad de San Cristóbal, únete al equipo de
+                  trabajo del cable...
+                </p>
+                <p class="omb-enlaces omb-enlaces--centrado">Ver noticia</p>
+              </div>
+
+              <!-- Slide 4 -->
+
+              <div
+                class="omb-card-informativa omb-card-informativa--pequeña"
+                data-categoria="Transporte público">
+                <img
+                  src="http://149.130.178.89/media/140"
+                  alt="imagen Transporte intermunicipal"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  ¡Ojo! Servicio 6-3 Sierra Morena cambia su punto de parada en
+                  el Portal Tunal
+                </h5>
+                <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
+                <p class="omb-parrafo-card-informativa">
+                  Desde el 9 de septiembre, el servicio alimentador 6-3 Sierra
+                  Morena cambia su punto de parada en el Portal Tunal.
+                </p>
+                <p class="omb-enlaces omb-enlaces--centrado">Ver noticia</p>
+              </div>
+
+              <div
+                class="omb-card-informativa omb-card-informativa--pequeña"
+                data-categoria="Movilidad sostenible">
+                <img
+                  src="http://149.130.178.89/media/137"
+                  alt="imagen Día sin carro y sin moto"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  Participa en la construcción del nuevo Plan de Movilidad
+                  Sostenible y Segura
+                </h5>
+                <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
+                <p class="omb-parrafo-card-informativa">
+                  Desde el 4 de septiembre, y hasta el lunes 11 de septiembre de
+                  2023, los ciudadanos pueden consultar el acto administrativo:
+                  “Por el cual se...
+                </p>
+
+                <p class="omb-enlaces omb-enlaces--centrado">Ver noticias</p>
+              </div>
+
+              <!-- Slide 2 -->
+
+              <div
+                class="omb-card-informativa omb-card-informativa--pequeña"
+                data-categoria="Movilidad sostenible">
+                <img
+                  src="http://149.130.178.89/media/138"
+                  alt="imagen Ciclista"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  Así aplica el pico y placa para vehículos particulares durante
+                  septiembre
+                </h5>
+                <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
+                <p class="omb-parrafo-card-informativa">
+                  Si conduces en Bogotá, debes tener presente que el pico y
+                  placa para vehículos particulares rige de lunes a viernes, de
+                  6:00 a.m. a 9:0...
+                </p>
+                <p class="omb-enlaces omb-enlaces--centrado">Ver noticias</p>
+              </div>
+
+              <!-- Slide 3-->
+
+              <div
+                class="omb-card-informativa omb-card-informativa--pequeña"
+                data-categoria="Transporte público">
+                <img
+                  src="http://149.130.178.89/media/139"
+                  alt="imagen Sistema Integrado de Transporte Público (SITP)"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  ¿Quieres trabajar en la obra del cable aéreo S. Cristóbal?
+                  Aplica a esta oferta
+                </h5>
+                <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
+                <p class="omb-parrafo-card-informativa">
+                  Si estás buscando trabajo en el sector de la construcción y
+                  vives en la localidad de San Cristóbal, únete al equipo de
+                  trabajo del cable...
+                </p>
+                <p class="omb-enlaces omb-enlaces--centrado">Ver noticia</p>
+              </div>
+
+              <!-- Slide 4 -->
+
+              <div
+                class="omb-card-informativa omb-card-informativa--pequeña"
+                data-categoria="Transporte público">
+                <img
+                  src="http://149.130.178.89/media/140"
+                  alt="imagen Transporte intermunicipal"
+                  class="omb-imagen-card-informativa omb-imagen-card-informativa--pequeña" />
+
+                <h5
+                  class="omb-titulo-card-informativa omb-titulo-card-informativa--dos-lineas">
+                  ¡Ojo! Servicio 6-3 Sierra Morena cambia su punto de parada en
+                  el Portal Tunal
+                </h5>
+                <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
+                <p class="omb-parrafo-card-informativa">
+                  Desde el 9 de septiembre, el servicio alimentador 6-3 Sierra
+                  Morena cambia su punto de parada en el Portal Tunal.
+                </p>
+                <p class="omb-enlaces omb-enlaces--centrado">Ver noticia</p>
+              </div>
+            </div>
+            <nav
+              class="omb-paginacion-numerica"
+              aria-label="Paginación de temáticas">
+              <ul>
+                <li><button class="omb-paginacion-enlace">Anterior</button></li>
+                <li>
+                  <button
+                    class="omb-paginacion-enlace omb-pagination-numero omb-paginacion-enlace--activo">
+                    1
+                  </button>
+                </li>
+                <li>
+                  <button class="omb-paginacion-enlace omb-pagination-numero">
+                    2
+                  </button>
+                </li>
+                <li>
+                  <button class="omb-paginacion-enlace omb-pagination-numero">
+                    3
+                  </button>
+                </li>
+                <li>
+                  <button class="omb-paginacion-enlace">Siguiente</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

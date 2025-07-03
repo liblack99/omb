@@ -25,16 +25,20 @@ a {
   padding-bottom: 40px;
 }
 
-.omb-titulo-section--centrado {
+.omb-titulo-section {
   font-size: 32px;
   font-weight: 600;
   line-height: 44px;
   color: #000;
   font-family: "Montserrat", sans-serif;
-  margin-top: 0;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.omb-titulo-section--centrado {
   text-align: center;
 }
-.omb-parrafo-descripcion-section--centrado {
+.omb-parrafo-descripcion-section {
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -43,6 +47,8 @@ a {
   text-align: center;
   font-family: "Work Sans", sans-serif;
   width: 880px;
+}
+.omb-parrafo-descripcion-section--centrado {
   text-align: center;
 }
 
@@ -112,7 +118,7 @@ a {
   font-family: "Montserrat", sans-serif;
   text-decoration: underline;
   font-size: 1.125rem;
-  margin-top: 0;
+  margin-top: 0.5rem;
   margin-bottom: 0.625rem;
   overflow: hidden;
   text-overflow: ellipsis;

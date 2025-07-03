@@ -23,12 +23,16 @@ body {
   flex-direction: column;
 }
 
-.omb-titulo-section--centrado {
+.omb-titulo-section {
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.omb-titulo-section--centrado {
   text-align: center;
 }
 .omb-parrafo-descripcion-section--centrado {
@@ -37,9 +41,11 @@ body {
   line-height: 30px;
   color: var(--color-texto);
   font-family: "Work Sans", sans-serif;
-  text-align: center;
   width: 800px;
   margin-top: 0;
+}
+.omb-parrafo-descripcion-section--centrad {
+  text-align: center;
 }
 
 .omb-infografia-container {
@@ -212,7 +218,7 @@ body {
   font-family: "Montserrat", sans-serif;
   text-decoration: underline;
   font-size: 1.125rem;
-  margin-top: 0;
+  margin-top: 0.5rem;
   margin-bottom: 0.625rem;
   overflow: hidden;
   text-overflow: ellipsis;

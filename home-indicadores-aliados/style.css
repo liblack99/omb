@@ -33,6 +33,8 @@ body {
   line-height: 44px;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 .omb-titulo-section--centrado {
   text-align: center;

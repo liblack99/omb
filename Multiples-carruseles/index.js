@@ -77,6 +77,46 @@ if (pauseButtonTablerosInteres) {
     isPlaying = !isPlaying;
   });
 }
+const swiperNoticiasInteres = new Swiper(".noticiasSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".omb-boton-tableros-next",
+    prevEl: ".omb-boton-tableros-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteration: false,
+  },
+  breakpoints: {
+    640: {slidesPerView: 2},
+    1024: {slidesPerView: 3},
+    1280: {slidesPerView: 4},
+  },
+});
+let isPlayingNoticias = true;
+const pauseButtonNoticiasInteres = document.getElementById(
+  "controlCarrucelTablerosInteres"
+);
+if (pauseButtonNoticiasInteres) {
+  pauseButtonNoticiasInteres.addEventListener("click", () => {
+    pauseButtonNoticiasInteres.innerHTML = "";
+    if (isPlayingNoticias) {
+      swiperNoticiasInteres.autoplay.stop();
+      pauseButtonNoticiasInteres.innerHTML = botonReproducir;
+    } else {
+      swiperNoticiasInteres.autoplay.start();
+      pauseButtonTablerosInteres.innerHTML = botonPausar;
+    }
+    isPlayingNoticias = !isPlayingNoticias;
+  });
+}
+
 const swiperRecursosInteres = new Swiper(".recursosInteresSwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
