@@ -235,7 +235,7 @@ main {
   font-weight: 900;
 }
 
-.omb-card-informativa {
+.omb-card {
   display: flex;
   background-color: #ffffff;
   border-radius: 16px;
@@ -247,21 +247,21 @@ main {
   overflow: hidden;
   padding-bottom: 16px;
 }
-.omb-card-informativa--mediana {
+.omb-card--mediana {
   width: 400px;
 }
-.omb-card-informativa:hover {
+.omb-card:hover {
   border: 1px solid black;
   transform: scale(1.01);
 }
-.omb-imagen-card-informativa {
+.omb-imagen-card {
   width: 100%;
 }
-.omb-imagen-card-informativa--mediana {
+.omb-imagen-card--mediana {
   height: 260px;
 }
 
-.omb-titulo-card-informativa {
+.omb-titulo-card {
   font-weight: 600;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
@@ -279,6 +279,6 @@ main {
   transition: all 0.9s ease-in;
 }
 
-.omb-titulo-card-informativa--dos-lineas {
+.omb-titulo-card--dos-lineas {
   height: 53px;
 }

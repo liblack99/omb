@@ -1,99 +1,92 @@
-const buttonsSideBard = document.querySelectorAll(
-  ".omb-sidebar-tematicas-item"
+const tituloResultadoContainer = document.getElementById(
+  "tituloResultadoContainer"
 );
-const selectTematicas = document.getElementById("selectTematicas");
-const cardsTematica = document.querySelectorAll(".omb-card-tematica");
+const tituloResultado = document.getElementById("tituloResultado");
+const tematicaContainer = document.getElementById("tematicaContainer");
+const resultadoContainer = document.getElementById("resultadosContainer");
+const tematicaCard = document.querySelectorAll(".omb-card-tematica");
+const resultadoCards = document.querySelectorAll("#resultadoCard");
+const selectTipoContenido = document.getElementById("selectTipoContenido");
+const paginacion = document.getElementById("paginacion");
+const filtros = document.getElementById("filtros");
+const btnVolver = document.getElementById("btnVolver");
+const sinResultados = document.getElementById("sinResultados");
+// Estado actual de los filtros
+let tematicaSeleccionada = null;
+let tipoContenidoSeleccionado = "";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const lista = document.querySelector(".omb-sidebar-tematicas-lista");
-  const areaArriba = document.querySelector(".omb-tematica-selecionada");
+btnVolver.addEventListener("click", () => {
+  // Reiniciar filtros
+  tematicaSeleccionada = null;
+  tipoContenidoSeleccionado = "";
 
-  lista.addEventListener("click", function (e) {
-    const clickedLink = e.target.closest(".omb-sidebar-tematicas-link");
-    if (!clickedLink) return;
+  // Resetear el select
+  selectTipoContenido.value = "";
 
-    e.preventDefault();
+  // Mostrar el contenedor de temáticas y ocultar lo demás
+  tematicaContainer.classList.remove("hidden");
+  resultadoContainer.classList.add("hidden");
+  paginacion.classList.add("hidden");
+  filtros.classList.add("hidden");
+  sinResultados.classList.add("hidden");
+  tituloResultadoContainer.classList.add("hidden");
 
-    const clickedItem = clickedLink.parentElement; // El <li> clickeado
-    const itemArribaActual = areaArriba.querySelector(
-      ".omb-sidebar-tematicas-link"
-    );
-
-    // 1. Mover el anterior que estaba arriba al final del ul
-    if (itemArribaActual) {
-      const nuevoLi = document.createElement("li");
-      nuevoLi.classList.add("omb-sidebar-tematicas-item");
-      nuevoLi.appendChild(itemArribaActual);
-      lista.appendChild(nuevoLi);
-    }
-
-    // 2. Mover el clickeado al área de arriba
-    areaArriba.innerHTML = ""; // Limpiar
-    areaArriba.appendChild(clickedLink);
-
-    // 3. Eliminar el li original de la lista
-    clickedItem.remove();
-
-    // 4. Quitar clases activas de todos
-    document.querySelectorAll(".omb-sidebar-tematicas-link").forEach((link) => {
-      link.classList.remove("omb-sidebar-tematicas-item--activo");
-    });
-
-    // 5. Agregar clase activa al nuevo de arriba
-    clickedLink.classList.add("omb-sidebar-tematicas-item--activo");
+  // Mostrar todas las cards si estaban ocultas por algún motivo
+  resultadoCards.forEach((card) => {
+    card.classList.remove("hidden");
   });
 });
 
-selectTematicas.addEventListener("change", (event) => {
-  const categoriaSeleccionada = event.target.value;
+// Función que aplica ambos filtros
 
-  // Quitar clase activa de todos los botones
-  buttonsSideBard.forEach((btn) =>
-    btn.classList.remove("omb-boton-sidebar--active")
-  );
+function filtrarResultados() {
+  let hayResultados = false;
 
-  // Si el select tiene una opción que coincide con algún botón, puedes opcionalmente activar el botón correspondiente (si quieres)
-  buttonsSideBard.forEach((button) => {
-    if (button.textContent.trim() === categoriaSeleccionada) {
-      button.classList.add("omb-boton-sidebar--active");
-    }
-  });
+  resultadoCards.forEach((card) => {
+    const tematica = card.dataset.tematica;
+    const tipo = card.dataset.tipo;
 
-  // Mostrar/ocultar las tarjetas según la selección
-  cardsTematica.forEach((card) => {
-    const categoriaCard = card.dataset.tematica;
+    const coincideTematica =
+      !tematicaSeleccionada || tematica === tematicaSeleccionada;
+    const coincideTipo =
+      !tipoContenidoSeleccionado || tipo === tipoContenidoSeleccionado;
 
-    if (
-      categoriaSeleccionada === "Todas las infografias" ||
-      categoriaCard === categoriaSeleccionada
-    ) {
-      card.style.display = "block";
+    if (coincideTematica && coincideTipo) {
+      card.classList.remove("hidden");
+      hayResultados = true;
     } else {
-      card.style.display = "none";
+      card.classList.add("hidden");
+      sinResultados.classList.remove("hidden");
     }
+  });
+
+  // Mostrar u ocultar el mensaje de "no resultados"
+  if (hayResultados) {
+    sinResultados.classList.add("hidden");
+  } else {
+    paginacion.classList.add("hidden");
+    resultadoContainer.classList.add("hidden");
+  }
+}
+
+// Al hacer clic en una tarjeta temática
+tematicaCard.forEach((card) => {
+  card.addEventListener("click", () => {
+    tematicaSeleccionada = card.dataset.tematica;
+
+    tituloResultado.textContent = `Resultado para: ${tematicaSeleccionada}`;
+    tematicaContainer.classList.add("hidden");
+    resultadoContainer.classList.remove("hidden");
+    paginacion.classList.remove("hidden");
+    filtros.classList.remove("hidden");
+    tituloResultadoContainer.classList.remove("hidden");
+
+    filtrarResultados();
   });
 });
 
-buttonsSideBard.forEach((button) => {
-  button.addEventListener("click", () => {
-    buttonsSideBard.forEach((btn) =>
-      btn.classList.remove("omb-boton-sidebar--active")
-    );
-    button.classList.add("omb-boton-sidebar--active");
-
-    const categoriaSeleccionada = button.textContent.trim();
-
-    cardsTematica.forEach((card) => {
-      const categoriaCard = card.dataset.tematica;
-
-      if (
-        categoriaSeleccionada === "Todas las infografias" ||
-        categoriaCard === categoriaSeleccionada
-      ) {
-        card.style.display = "block"; // Mostrar
-      } else {
-        card.style.display = "none"; // Ocultar
-      }
-    });
-  });
+// Al cambiar el select de tipo de contenido
+selectTipoContenido.addEventListener("change", (e) => {
+  tipoContenidoSeleccionado = e.target.value;
+  filtrarResultados();
 });

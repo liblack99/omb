@@ -45,7 +45,7 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
-.omb-card-informativa {
+.omb-card {
   width: 360px;
   background-color: #ffffff;
   display: flex;
@@ -64,7 +64,7 @@ body {
   transform: scale(1.01);
 }
 
-.omb-imagen-card-informativa {
+.omb-imagen-card {
   width: 100%;
   height: 216px;
 }
@@ -81,7 +81,7 @@ body {
   overflow: hidden;
 }
 
-.omb-titulo-card-informativa {
+.omb-titulo-card {
   font-weight: 600;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
@@ -99,11 +99,11 @@ body {
   transition: all 0.9s ease-in;
 }
 
-.omb-titulo-card-informativa--dos-lineas {
+.omb-titulo-card--dos-lineas {
   height: 53px;
 }
 
-.omb-parrafo-card-informativa {
+.omb-parrafo-card {
   font-size: 1rem;
   font-family: "Work sans", sans-serif;
   overflow: hidden;

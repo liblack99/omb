@@ -227,7 +227,7 @@ body {
   font-weight: 900;
 }
 
-.omb-card-informatica {
+.omb-card {
   display: flex;
   background-color: #ffffff;
   border-radius: 16px;
@@ -239,17 +239,17 @@ body {
   overflow: hidden;
   padding-bottom: 16px;
 }
-.omb-card-informativa--mediana {
+.omb-card--mediana {
   width: 400px;
 }
 .omb-imagen-card {
   width: 100%;
 }
-.omb-imagen-card-informativa--mediana {
+.omb-imagen-card--mediana {
   height: 260px;
 }
 
-.omb-card-informatica:hover {
+.omb-card:hover {
   border: 1px solid #000;
 }
 
@@ -258,7 +258,7 @@ body {
   flex-direction: column;
 }
 
-.omb-titulo-card-informativa {
+.omb-titulo-card {
   font-weight: 600;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
@@ -276,7 +276,7 @@ body {
   padding: 0px 16px;
 }
 
-.omb-titulo-card-informativa--dos-lineas {
+.omb-titulo-card--dos-lineas {
   height: 53px;
 }
 .omb-fecha {
@@ -305,7 +305,7 @@ body {
   padding: 0 16px;
 }
 
-.omb-parrafo-card-informativa {
+.omb-parrafo-card {
   font-size: 1rem;
   font-family: "Work sans", sans-serif;
   overflow: hidden;

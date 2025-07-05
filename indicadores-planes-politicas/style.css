@@ -62,7 +62,7 @@ a {
   padding-top: 40px;
 }
 
-.omb-card-informativa--con-icono {
+.omb-card--con-icono {
   width: 360px;
   height: 380px;
   padding: 24px;
@@ -76,11 +76,11 @@ a {
   border: 1px solid transparent;
   transition: all 0.3s ease;
 }
-.omb-card-informativa--con-icono:hover {
+.omb-card--con-icono:hover {
   border-color: black;
 }
 
-.omb-card-informativa--con-icono:hover .omb-titulo-card-informativa {
+.omb-card--con-icono:hover .omb-titulo-card {
   color: var(--color-enlace);
 }
 
@@ -112,7 +112,7 @@ a {
   align-items: start;
   flex: 1;
 }
-.omb-titulo-card-informativa {
+.omb-titulo-card {
   font-weight: 600;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
@@ -129,15 +129,15 @@ a {
   padding: 0px 16px;
   transition: all 0.3s ease-in;
 }
-.omb-titulo-card-informativa--sin-padding {
+.omb-titulo-card--sin-padding {
   padding: 0;
 }
 
-.omb-titulo-card-informativa--dos-lineas {
+.omb-titulo-card--dos-lineas {
   height: 53px;
 }
 
-.omb-parrafo-card-informativa {
+.omb-parrafo-card {
   font-size: 1rem;
   font-family: "Work sans", sans-serif;
   overflow: hidden;
@@ -151,7 +151,7 @@ a {
   color: black;
   min-height: 72px;
 }
-.omb-parrafo-card-informativa--sin-padding {
+.omb-parrafo-card--sin-padding {
   padding: 0;
 }
 

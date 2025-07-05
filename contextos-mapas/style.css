@@ -170,7 +170,6 @@ main {
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
-  text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
   font-family: "Work sans", sans-serif;
@@ -483,7 +482,7 @@ main {
   background-color: inherit;
 }
 
-.omb-card-informativa {
+.omb-card {
   display: flex;
   background-color: #ffffff;
   border-radius: 16px;
@@ -496,17 +495,17 @@ main {
   padding-bottom: 16px;
 }
 
-.omb-card-informativa--pequeña {
+.omb-card--pequeña {
   width: 297px;
 }
-.omb-card-informativa:hover {
+.omb-card:hover {
   border: 1px solid black;
   transform: scale(1.01);
 }
-.omb-imagen-card-informativa {
+.omb-imagen-card {
   width: 100%;
 }
-.omb-imagen-card-informativa--pequeña {
+.omb-imagen-card--pequeña {
   height: 158px;
 }
 .omb-tags-card-container {
@@ -545,7 +544,7 @@ main {
   height: 12px;
 }
 
-.omb-titulo-card-informativa {
+.omb-titulo-card {
   font-weight: 600;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
@@ -563,11 +562,11 @@ main {
   transition: all 0.9s ease-in;
 }
 
-.omb-titulo-card-informativa--dos-lineas {
+.omb-titulo-card--dos-lineas {
   height: 53px;
 }
 
-.omb-parrafo-card-informativa {
+.omb-parrafo-card {
   font-size: 1rem;
   font-family: "Work sans", sans-serif;
   overflow: hidden;
@@ -581,6 +580,6 @@ main {
   color: black;
   min-height: 72px;
 }
-.omb-parrafo-card-informativa--sin-limite {
+.omb-parrafo-card--sin-limite {
   display: inline;
 }

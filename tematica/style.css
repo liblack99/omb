@@ -20,15 +20,23 @@ a {
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
-  padding-top: 40px;
 }
 .omb-titulo-section {
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
   color: black;
-  margin-top: 0;
+
   font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.omb-parrafo-descripcion-section {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: black;
+  margin-top: 0;
 }
 
 .omb-section--de-interes {
@@ -45,7 +53,7 @@ a {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 64px;
+  border-radius: 16px;
   padding: 0px 64px;
   box-sizing: border-box;
 }
@@ -58,6 +66,7 @@ a {
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 500;
+  border: 1px solid var(--color-texto);
 }
 .omb-label {
   font-family: "Work sans", sans-serif;
@@ -68,16 +77,24 @@ a {
   gap: 8px;
   align-items: center;
 }
-.omb-select-tematica {
+.omb-select {
   border-radius: 8px;
-  height: 16px;
   padding-left: 16px;
   height: 40px;
   font-family: "Work sans", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 500;
+  width: 300px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("http://149.130.178.89/media/111");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
 }
+
 .omb-container {
   width: 1280px;
   display: flex;
@@ -152,12 +169,20 @@ a {
   color: #000;
   order: -1;
 }
+
 .omb-tematicas-container {
-  width: 870px;
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.omb-cards-tematicas-container {
+  width: 1280px;
   border-radius: 24px;
   box-sizing: border-box;
-  padding: 20px 24px 0px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .omb-tematicas-items-container {
   display: flex;
@@ -168,20 +193,14 @@ a {
 }
 .omb-card-tematica {
   width: 100%;
-  border-bottom: 4px solid #f0f1f2;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-enlace);
+  transition: all 0.3s ease;
 }
-.omb-fecha {
-  font-size: 1rem;
-  font-family: "Work sans", sans-serif;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  margin: 0;
-  line-height: 1.5rem;
-  padding: 0px 44px;
-  color: black;
+.omb-card-tematica:hover {
+  color: var(--color-enlace-hover);
 }
 
 .omb-enlaces-tematicas {
@@ -203,6 +222,7 @@ a {
   transition: all 0.9s ease-in;
   color: var(--color-enlace);
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 .omb-paginacion-numerica {
@@ -215,6 +235,7 @@ a {
   display: flex;
   list-style: none;
   gap: 20px;
+  align-items: center;
 }
 
 .omb-paginacion-enlace {
@@ -250,4 +271,183 @@ a {
 .omb-paginacion-enlace--activo {
   background-color: var(--color-primario);
   border-radius: 50%;
+}
+.omb-titulo-resultado-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.omb-boton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: "Work sans", sans-serif;
+  text-transform: uppercase;
+  border-width: 0.125rem;
+  border-style: solid;
+  color: var(--color-texto);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.omb-boton--primario {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+.omb-boton--con-icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.omb-boton:hover {
+  background-color: var(--color-secundario-hover);
+  border-color: var(--color-texto);
+  color: white;
+}
+.omb-sin-resultado {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.omb-cards-resultados-container {
+  display: flex;
+  width: 1280px;
+  height: 820px;
+  overflow: hidden;
+  gap: 16px;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+
+.omb-card-resultado {
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.omb-card-resultado:hover {
+  border: 1px solid black;
+  transform: scale(1.01);
+}
+.omb-card-tipo {
+  color: var(--color-enlace);
+  padding-left: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.omb-titulo-card {
+  font-weight: 600;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.625rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.688rem;
+  padding: 0px 16px;
+  transition: all 0.9s ease-in;
+}
+.omb-titulo-card--color {
+  color: var(--color-enlace);
+}
+.omb-titulo-card--color:hover {
+  color: var(--color-enlace-hover);
+}
+
+.omb-parrafo-card {
+  font-size: 1rem;
+  font-family: "Work sans", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  line-height: 1.5rem;
+  padding: 0px 16px;
+  color: black;
+}
+.omb-parrafo-card-informativa--sin-limite {
+  display: inline;
+}
+.omb-fecha {
+  font-size: 0.875rem;
+  font-family: "Work sans", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 8px;
+  color: #71735e;
+  padding-left: 16px;
+}
+.omb-fecha--padding {
+  padding: 0 16px;
+}
+.omb-tags-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 100%;
+  padding: 0px 16px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.omb-tag-card {
+  width: auto;
+  min-width: 150px;
+  height: 24px;
+  border-radius: 16px;
+  padding: 6px 12px 6px 12px;
+  background-color: #f3f4f1;
+  color: #71735e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 4px;
+  font-family: "Work-sans", sans-serif;
+}
+
+.omb-tag-icono {
+  width: 12px;
+  height: 12px;
+}
+.hidden {
+  display: none;
 }
