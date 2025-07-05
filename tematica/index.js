@@ -11,9 +11,11 @@ const paginacion = document.getElementById("paginacion");
 const filtros = document.getElementById("filtros");
 const btnVolver = document.getElementById("btnVolver");
 const sinResultados = document.getElementById("sinResultados");
+const selectFecha = document.getElementById("fecha");
 // Estado actual de los filtros
 let tematicaSeleccionada = null;
 let tipoContenidoSeleccionado = "";
+let fechaSeleccionada = "";
 
 btnVolver.addEventListener("click", () => {
   // Reiniciar filtros
@@ -45,13 +47,16 @@ function filtrarResultados() {
   resultadoCards.forEach((card) => {
     const tematica = card.dataset.tematica;
     const tipo = card.dataset.tipo;
+    const fecha = card.dataset.fecha;
+
+    const coincideFecha = !fechaSeleccionada || fecha === fechaSeleccionada;
 
     const coincideTematica =
       !tematicaSeleccionada || tematica === tematicaSeleccionada;
     const coincideTipo =
       !tipoContenidoSeleccionado || tipo === tipoContenidoSeleccionado;
 
-    if (coincideTematica && coincideTipo) {
+    if (coincideTematica && coincideTipo && coincideFecha) {
       card.classList.remove("hidden");
       hayResultados = true;
     } else {
@@ -63,6 +68,8 @@ function filtrarResultados() {
   // Mostrar u ocultar el mensaje de "no resultados"
   if (hayResultados) {
     sinResultados.classList.add("hidden");
+    resultadoContainer.classList.remove("hidden");
+    paginacion.classList.remove("hidden");
   } else {
     paginacion.classList.add("hidden");
     resultadoContainer.classList.add("hidden");
@@ -88,5 +95,10 @@ tematicaCard.forEach((card) => {
 // Al cambiar el select de tipo de contenido
 selectTipoContenido.addEventListener("change", (e) => {
   tipoContenidoSeleccionado = e.target.value;
+  filtrarResultados();
+});
+
+selectFecha.addEventListener("change", (e) => {
+  fechaSeleccionada = e.target.value;
   filtrarResultados();
 });
