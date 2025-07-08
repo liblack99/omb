@@ -23,6 +23,12 @@ let tematicaSeleccionada = null;
 let tipoContenidoSeleccionado = "";
 let fechaSeleccionada = "";
 
+const primerBoton = botonesAcordeon[0];
+const primerContenido = primerBoton.nextElementSibling;
+primerContenido.style.maxHeight = primerContenido.scrollHeight + "px";
+primerContenido.classList.add("abierto");
+primerBoton.classList.add("activo");
+
 botonesAcordeon.forEach((boton) => {
   boton.addEventListener("click", () => {
     const contenido = boton.nextElementSibling;

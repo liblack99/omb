@@ -16,7 +16,6 @@ main {
 .omb-suscripcion-section {
   width: 100%;
   height: 440px;
-  background: linear-gradient(180deg, #f1f3f7 0%, #fcffe0 100%);
   display: flex;
   align-items: center;
 }
