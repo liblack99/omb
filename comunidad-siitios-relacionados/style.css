@@ -1,0 +1,140 @@
+:root {
+  --color-primario-soft: #f9ffbd;
+  --color-primario: #dbf000;
+  --color-secundario-hover: #8e9c00;
+  --color-texto: #1b1b1b;
+  --color-enlace: #acbd00;
+  --color-enlace-hover: #a5ad4a;
+  --color-fondo-seccion-intreres: #f3f4f1;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.omb-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.omb-comunidad-container {
+  width: 1280px;
+}
+.omb-titulo-section {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.omb-parrafo-descripcion-section {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: black;
+}
+.omb-cards-comunidad-container {
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.omb-card {
+  width: 360px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid transparent;
+}
+
+.omb-card-publicaciones-interes:hover {
+  border: 1px solid black;
+  transform: scale(1.01);
+}
+
+.omb-imagen-card {
+  width: 100%;
+  height: 216px;
+}
+
+.omb-card-content-explorar-publicaciones {
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.omb-titulo-card {
+  font-weight: 600;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.625rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.688rem;
+  padding: 0px 16px;
+  transition: all 0.9s ease-in;
+}
+
+.omb-titulo-card--dos-lineas {
+  height: 53px;
+}
+
+.omb-parrafo-card {
+  font-size: 1rem;
+  font-family: "Work sans", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  line-height: 1.5rem;
+  padding: 0px 16px;
+  color: black;
+  min-height: 72px;
+}
+
+.omb-enlaces {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--color-enlace);
+  text-decoration: underline;
+}
+.omb-enlaces--con-padding {
+  padding-left: 16px;
+}
+
+.omb-enlaces:hover {
+  color: var(--color-enlace-hover);
+}
