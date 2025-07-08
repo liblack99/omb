@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll(".omb-boton-sidebar");
-const cards = document.querySelectorAll(".omb-card-informativa ");
+const cards = document.querySelectorAll(".omb-card ");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {

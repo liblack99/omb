@@ -176,7 +176,6 @@ body {
 .omb-card-infografia-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .omb-card-infografia-tags-container {
@@ -229,7 +228,9 @@ body {
   transition: all 0.9s ease-in;
   padding: 0px 16px;
 }
-
+.omb-titulo-card--sin-padding {
+  padding: 0;
+}
 .omb-titulo-card--dos-lineas {
   height: 53px;
 }
