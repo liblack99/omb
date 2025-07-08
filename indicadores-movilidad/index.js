@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll(".omb-boton-sidebar");
-const cards = document.querySelectorAll(".omb-card ");
+const cards = document.querySelectorAll(".omb-card");
+
+buttons[0].classList.add("omb-boton-sidebar--active");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
