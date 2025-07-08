@@ -14,22 +14,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 32px;
+  padding-left: 64px;
   box-sizing: border-box;
 }
 .omb-buscador {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  font-size: "Montserrat", "sans-serif";
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 1rem;
-  line-height: 100%;
-  letter-spacing: 5%;
-  text-align: center;
-  vertical-align: middle;
+  height: 132px;
+  justify-content: space-between;
   color: white;
-  margin-right: 32px;
+  padding-left: 120px;
+  padding-right: 120px;
+  box-sizing: border-box;
+}
+.omb-input-busqueda-home {
+  border-radius: 24px;
+  padding: 12px;
+  width: 300px;
+  font-family: "Work sans";
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("http://149.130.178.89/media/59");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
 }
