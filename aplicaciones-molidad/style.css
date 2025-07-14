@@ -197,7 +197,7 @@ body {
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
   .omb-comunidad-container {
-    max-width: 1140px;
+    max-width: 960px;
   }
   .omb-cards-aplicaciones-comunidad-container {
     grid-template-columns: 1fr 1fr;

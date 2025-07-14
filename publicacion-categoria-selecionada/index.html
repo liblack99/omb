@@ -18,20 +18,18 @@
   </head>
   <body>
     <main>
-      <section class="omb-info-categoria-section">
-        <h2>Resultados de encuestas de movilidad</h2>
-        <a
-          href="#"
-          class="omb-card-link"
-          aria-label="Ver encuesta de movilidad 2023"
-          title="Ver encuesta de movilidad 2023">
+      <section class="omb-section">
+        <div class="omb-card-info-container">
+          <h1 class="omb-titulo-section">
+            Resultados de encuestas de movilidad
+          </h1>
           <div class="omb-card-info-categoria">
             <img
               src="http://149.130.178.89/media/110"
               alt="Imagen encuesta 2023" />
             <div class="omb-texto-categoria">
-              <h3>Encuesta de movilidad 2023</h3>
-              <p>
+              <h3 class="omb-titulo-card">Encuesta de movilidad 2023</h3>
+              <p class="omb-parrafo-card">
                 Encontrarás que los habitantes de la Bogotá-Región se mueven
                 mayoritariamente en modos sostenibles como la caminata, la
                 bicicleta y el transporte público, confirmando la apuesta por
@@ -44,22 +42,40 @@
               </button>
             </div>
           </div>
-        </a>
+        </div>
       </section>
-      <section class="omb-categorias-section">
+      <section class="omb-section omb-categorias-section">
         <div class="omb-ordenar-control-container">
-          <select name="ordenar" class="omb-ordernar-select">
-            <option value="value1">Ordenar pos</option>
-            <option value="value2">Años</option>
-          </select>
+          <div class="omb-select omb-select--con-dos-elementos">
+            <div>
+              <div
+                class="omb-opcion-selecionada omb-opcion-selecionada--ordenar"
+                id="selectTipoContenido"
+                data-select="orden">
+                Ordenar por
+              </div>
+              <ul
+                class="omb-opciones omb-opciones--ordenar hidden"
+                data-select="orden">
+                <li data-select="orden" data-value="az">A-Z</li>
+                <li data-select="orden" data-value="za">Z-A</li>
+                <li data-select="orden" data-value="fecha-reciente">
+                  Por fecha recientes
+                </li>
+                <li data-select="orden" data-value="fecha-antigua">
+                  Por fecha antiguas
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="omb-cards-categorias-container">
-          <a
-            href="#"
-            class="omb-card-link"
-            aria-label="Ver encuesta de movilidad 2019"
-            title="Ver encuesta de movilidad 2019">
-            <div class="omb-card-categoria-selecionada">
+          <div class="omb-card-categoria-selecionada">
+            <a
+              href="#"
+              class="omb-card-link"
+              aria-label="Ver encuesta de movilidad 2019"
+              title="Ver encuesta de movilidad 2019">
               <img
                 src="http://149.130.178.89/media/107"
                 alt="Imagen encuesta 2019" />
@@ -70,15 +86,14 @@
                 consequuntur ad vero unde quibusdam ullam! Eaque quos quisquam
                 accusamus repellendus, commodi vero consequuntur.
               </p>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            class="omb-card-link"
-            aria-label="Ver encuesta de movilidad 2015"
-            title="Ver encuesta de movilidad 2015">
-            <div class="omb-card-categoria-selecionada">
+            </a>
+          </div>
+          <div class="omb-card-categoria-selecionada">
+            <a
+              href="#"
+              class="omb-card-link"
+              aria-label="Ver encuesta de movilidad 2015"
+              title="Ver encuesta de movilidad 2015">
               <img
                 src="http://149.130.178.89/media/108"
                 alt="Imagen encuesta 2015" />
@@ -89,15 +104,15 @@
                 consequuntur ad vero unde quibusdam ullam! Eaque quos quisquam
                 accusamus repellendus, commodi vero consequuntur.
               </p>
-            </div>
-          </a>
+            </a>
+          </div>
 
-          <a
-            href="#"
-            class="omb-card-link"
-            aria-label="Ver encuesta de movilidad 2011"
-            title="Ver encuesta de movilidad 2011">
-            <div class="omb-card-categoria-selecionada">
+          <div class="omb-card-categoria-selecionada">
+            <a
+              href="#"
+              class="omb-card-link"
+              aria-label="Ver encuesta de movilidad 2011"
+              title="Ver encuesta de movilidad 2011">
               <img
                 src="http://149.130.178.89/media/109"
                 alt="Imagen encuesta 2011" />
@@ -108,15 +123,15 @@
                 consequuntur ad vero unde quibusdam ullam! Eaque quos quisquam
                 accusamus repellendus, commodi vero consequuntur.
               </p>
-            </div>
-          </a>
+            </a>
+          </div>
 
-          <a
-            href="#"
-            class="omb-card-link"
-            aria-label="Ver encuesta de movilidad 2005"
-            title="Ver encuesta de movilidad 2005">
-            <div class="omb-card-categoria-selecionada">
+          <div class="omb-card-categoria-selecionada">
+            <a
+              href="#"
+              class="omb-card-link"
+              aria-label="Ver encuesta de movilidad 2005"
+              title="Ver encuesta de movilidad 2005">
               <img
                 src="http://149.130.178.89/media/112"
                 alt="Imagen encuesta 2005" />
@@ -127,8 +142,8 @@
                 consequuntur ad vero unde quibusdam ullam! Eaque quos quisquam
                 accusamus repellendus, commodi vero consequuntur.
               </p>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </section>
     </main>

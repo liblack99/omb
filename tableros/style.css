@@ -47,7 +47,6 @@ body {
   width: 297px;
   position: relative;
   display: none;
-  transform: translate();
   z-index: 1;
 }
 .omb-sidebar-container.activo {

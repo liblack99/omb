@@ -15,32 +15,34 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.omb-publicaciones-planes-politica-section {
+.omb-section {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding-bottom: 40px;
 }
 .omb-titulo-section {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
 }
 
 .omb-publicaciones-planes-politica-container {
-  width: 1280px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 .omb-cards-publicaciones-planes-politica-container {
-  width: 1280px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  padding-top: 40px;
 }
 .omb-card-publicaciones-interes {
   width: 360px;
@@ -139,4 +141,90 @@ a {
 
 .omb-enlaces:hover {
   color: var(--color-enlace-hover);
+}
+@media (min-width: 768px) {
+  .omb-comunidad-container {
+    width: 90%;
+  }
+  .omb-cards-aplicaciones-comunidad-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .omb-card-publicaciones-interes {
+    width: 330px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1139px) {
+  .omb-publicaciones-planes-politica-container {
+    max-width: 960px;
+  }
+  .omb-card-publicaciones-interes {
+    width: 280px;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 44px;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 30px;
+    color: var(--color-texto);
+    font-family: "Monstserrart", sans-serif;
+  }
+}
+
+@media (min-width: 1140px) and (max-width: 1359px) {
+  .omb-publicaciones-planes-politica-container {
+    max-width: 1140px;
+  }
+  .omb-card-publicaciones-interes {
+    width: 360px;
+  }
+
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 44px;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 30px;
+    color: var(--color-texto);
+    font-family: "Monstserrart", sans-serif;
+  }
+}
+@media (min-width: 1360px) {
+  .omb-publicaciones-planes-politica-container {
+    max-width: 1140px;
+  }
+  .omb-card-publicaciones-interes {
+    width: 360px;
+  }
+
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 44px;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 30px;
+    color: var(--color-texto);
+    font-family: "Monstserrart", sans-serif;
+  }
 }

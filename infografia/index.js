@@ -24,3 +24,11 @@ buttons.forEach((button) => {
     });
   });
 });
+
+const botonTablerosMobile = document.getElementById("botonTablerosMobile");
+
+const sidebar = document.querySelector(".omb-sidebar-container");
+
+botonTablerosMobile.addEventListener("click", () => {
+  sidebar.classList.toggle("activo");
+});

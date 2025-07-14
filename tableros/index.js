@@ -21,6 +21,7 @@ const botonTodosTableros = buttons.forEach((button) => {
 
       if (
         categoriaSeleccionada === "Todos los tableros" ||
+        categoriaSeleccionada === "Todos" ||
         categoriaCard === categoriaSeleccionada
       ) {
         card.style.display = "block"; // Mostrar

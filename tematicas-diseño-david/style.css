@@ -140,10 +140,6 @@ a {
 .omb-opciones li:hover {
   background-color: var(--color-primario);
 }
-.ombe-select option:hover {
-  border-radius: 16px;
-  background-color: var(--color-enlace-hover);
-}
 
 .omb-paginacion-numerica {
   width: 100%;
