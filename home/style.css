@@ -375,6 +375,8 @@ body {
 }
 .indicador-card:hover {
   border: 1px solid #000;
+  transform: scale(1.01);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
 }
 .icono-wrapper {
   width: 100%;

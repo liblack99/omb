@@ -287,6 +287,9 @@ body {
   padding-bottom: 16px;
   align-self: center;
 }
+.omb-card-tableros:hover h5 {
+  color: var(--color-enlace);
+}
 
 .omb-card-tableros:hover {
   border: 1px solid black;
@@ -350,7 +353,7 @@ body {
   -webkit-box-orient: vertical;
   line-height: 1.688rem;
   padding: 0px 16px;
-  transition: all 0.9s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .omb-card-tableros p {
