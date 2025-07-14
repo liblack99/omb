@@ -1,147 +1,109 @@
-const botonesAcordeon = document.querySelectorAll(".omb-acordion-boton");
+const opcionSeleccionada = document.querySelectorAll(".omb-opcion-selecionada");
+const listasDeOpciones = document.querySelectorAll(".omb-opciones");
 
-const tituloSection = document.getElementById("tituloSection");
-const parrafoDescripcion = document.getElementById("parrafoDescripcion");
-const botonVerResultados = document.querySelectorAll("#botonVerResultados");
-const tituloResultadoContainer = document.getElementById(
-  "tituloResultadoContainer"
-);
+// Al cambiar el select de tipo de contenido
 
-const tituloResultado = document.getElementById("tituloResultado");
-const acordion = document.getElementById("acordion");
-const resultadoContainer = document.getElementById("resultadosContainer");
-const tematicaCard = document.querySelectorAll(".omb-card-tematica");
-const resultadoCards = document.querySelectorAll("#resultadoCard");
-const selectTipoContenido = document.getElementById("selectTipoContenido");
-const paginacion = document.getElementById("paginacion");
-const filtros = document.getElementById("filtros");
-const btnVolver = document.getElementById("btnVolver");
-const sinResultados = document.getElementById("sinResultados");
-const selectFecha = document.getElementById("fecha");
-// Estado actual de los filtros
-let tematicaSeleccionada = null;
-let tipoContenidoSeleccionado = "";
-let fechaSeleccionada = "";
-
-const primerBoton = botonesAcordeon[0];
-const primerContenido = primerBoton.nextElementSibling;
-primerContenido.style.maxHeight = primerContenido.scrollHeight + "px";
-primerContenido.classList.add("abierto");
-primerBoton.classList.add("activo");
-
-botonesAcordeon.forEach((boton) => {
+opcionSeleccionada.forEach((boton) => {
   boton.addEventListener("click", () => {
-    const contenido = boton.nextElementSibling;
+    const valorSeleccionado = boton.dataset.select;
 
-    // Cerrar todos menos el actual
-    document.querySelectorAll(".omb-acordion-content").forEach((el) => {
-      if (el !== contenido) {
-        el.style.maxHeight = null;
-        el.classList.remove("abierto");
-        el.previousElementSibling.classList.remove("activo");
+    listasDeOpciones.forEach((lista) => {
+      if (lista.dataset.select === valorSeleccionado) {
+        // Toggle SOLO en la lista correspondiente
+        lista.classList.toggle("hidden");
+      } else {
+        // Oculta las otras listas
+        lista.classList.add("hidden");
       }
     });
-
-    // Alternar el actual
-    if (contenido.style.maxHeight) {
-      contenido.style.maxHeight = null;
-      contenido.classList.remove("abierto");
-      boton.classList.remove("activo");
-    } else {
-      contenido.style.maxHeight = contenido.scrollHeight + "px";
-      contenido.classList.add("abierto");
-      boton.classList.add("activo");
-    }
   });
 });
 
-btnVolver.addEventListener("click", () => {
-  // Reiniciar filtros
-  tematicaSeleccionada = null;
-  tipoContenidoSeleccionado = "";
+const tarjetas = document.querySelectorAll("#resultadoCard"); // Las cards que se deben filtrar
 
-  // Resetear el select
-  selectTipoContenido.value = "";
+listasDeOpciones.forEach((lista) => {
+  const opciones = lista.querySelectorAll("li");
 
-  // Mostrar el contenedor de temáticas y ocultar lo demás
-  acordion.classList.remove("hidden");
-  resultadoContainer.classList.add("hidden");
-  paginacion.classList.add("hidden");
-  filtros.classList.add("hidden");
-  sinResultados.classList.add("hidden");
-  tituloResultadoContainer.classList.add("hidden");
-  tituloSection.textContent = "Temáticas";
-  tituloSection.classList.remove("hidden");
-  parrafoDescripcion.classList.remove("hidden");
+  opciones.forEach((option) => {
+    option.addEventListener("click", () => {
+      const valorSelect = option.dataset.select;
+      const valorFiltro = option.dataset.value;
 
-  // Mostrar todas las cards si estaban ocultas por algún motivo
-  resultadoCards.forEach((card) => {
+      // Actualiza el texto del select visual
+      const select = [...opcionSeleccionada].find(
+        (el) => el.dataset.select === valorSelect
+      );
+
+      if (select) {
+        select.textContent = option.textContent;
+        select.dataset.value = valorFiltro;
+      }
+
+      lista.classList.add("hidden");
+
+      // 🔍 Leer valores de ambos filtros
+      const categoria = document.querySelector('[data-select="categoria"]')
+        .dataset.value;
+      const tipo = document.querySelector('[data-select="contenido"]').dataset
+        .value;
+
+      // ✅ Si ambos son "Todos" o están vacíos, mostrar todo
+      const mostrarTodo =
+        (!categoria || categoria === "Todos") && (!tipo || tipo === "Todos");
+
+      tarjetas.forEach((card) => {
+        const cardCategoria = card.dataset.tematica;
+        const cardTipo = card.dataset.tipo;
+
+        if (mostrarTodo) {
+          card.classList.remove("hidden");
+        } else {
+          const coincideCategoria =
+            !categoria || categoria === "Todos" || cardCategoria === categoria;
+          const coincideTipo = !tipo || tipo === "Todos" || cardTipo === tipo;
+
+          if (coincideCategoria && coincideTipo) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        }
+      });
+    });
+  });
+});
+const botonReset = document.getElementById("btnResetfiltros");
+
+botonReset.addEventListener("click", () => {
+  // 1. Resetear los selects visualmente
+  opcionSeleccionada.forEach((select) => {
+    if (select.dataset.select === "categoria") {
+      select.textContent = "Todas";
+      select.dataset.value = "Todos";
+    } else if (select.dataset.select === "contenido") {
+      select.textContent = "Todos";
+      select.dataset.value = "Todos";
+    }
+  });
+
+  // 2. Mostrar Todos las tarjetas
+  tarjetas.forEach((card) => {
     card.classList.remove("hidden");
   });
 });
+document.addEventListener("click", (e) => {
+  const hizoClickEnSelect = [...opcionSeleccionada].some((boton) =>
+    boton.contains(e.target)
+  );
 
-// Función que aplica ambos filtros
+  const hizoClickEnLista = [...listasDeOpciones].some((lista) =>
+    lista.contains(e.target)
+  );
 
-function filtrarResultados() {
-  let hayResultados = false;
-
-  resultadoCards.forEach((card) => {
-    const tematica = card.dataset.tematica;
-    const tipo = card.dataset.tipo;
-    const fecha = card.dataset.fecha;
-
-    const coincideFecha = !fechaSeleccionada || fecha === fechaSeleccionada;
-
-    const coincideTematica =
-      !tematicaSeleccionada || tematica === tematicaSeleccionada;
-    const coincideTipo =
-      !tipoContenidoSeleccionado || tipo === tipoContenidoSeleccionado;
-
-    if (coincideTematica && coincideTipo && coincideFecha) {
-      card.classList.remove("hidden");
-      hayResultados = true;
-    } else {
-      card.classList.add("hidden");
-      sinResultados.classList.remove("hidden");
-    }
-  });
-
-  // Mostrar u ocultar el mensaje de "no resultados"
-  if (hayResultados) {
-    sinResultados.classList.add("hidden");
-    resultadoContainer.classList.remove("hidden");
-    paginacion.classList.remove("hidden");
-  } else {
-    paginacion.classList.add("hidden");
-    resultadoContainer.classList.add("hidden");
+  // Si el clic fue FUERA de los botones y de las listas → oculta todas las listas
+  if (!hizoClickEnSelect && !hizoClickEnLista) {
+    listasDeOpciones.forEach((lista) => {
+      lista.classList.add("hidden");
+    });
   }
-}
-
-// Al hacer clic en una tarjeta temática
-botonVerResultados.forEach((card) => {
-  card.addEventListener("click", () => {
-    console.log("click");
-    tematicaSeleccionada = card.dataset.tematica;
-
-    tituloSection.classList.add("hidden");
-    acordion.classList.add("hidden");
-    resultadoContainer.classList.remove("hidden");
-    paginacion.classList.remove("hidden");
-    filtros.classList.remove("hidden");
-    tituloResultadoContainer.classList.remove("hidden");
-    parrafoDescripcion.classList.add("hidden");
-
-    filtrarResultados();
-  });
-});
-
-// Al cambiar el select de tipo de contenido
-selectTipoContenido.addEventListener("change", (e) => {
-  tipoContenidoSeleccionado = e.target.value;
-  filtrarResultados();
-});
-
-selectFecha.addEventListener("change", (e) => {
-  fechaSeleccionada = e.target.value;
-  filtrarResultados();
 });

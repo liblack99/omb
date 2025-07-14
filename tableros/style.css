@@ -12,27 +12,76 @@ a {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
-main {
-  max-width: 1280px;
-  margin-top: 40px;
-}
+
 .omb-section {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.omb-tableros-container {
+  width: 90%;
+}
+.omb-titulo-section {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
+}
+.omb-parrafo-descripcion-section {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: var(--color-texto);
+  font-family: "Montserrat", "sans-serif";
 }
 .omb-sidebar-container {
   width: 297px;
   position: relative;
+  display: none;
+  transform: translate();
+  z-index: 1;
 }
+.omb-sidebar-container.activo {
+  display: block;
+}
+
 .omb-sidebar-content {
   position: fixed;
+  background-color: #fff;
+}
+.omb-boton-sidebar-mobile {
+  background-color: var(--color-primario);
+  width: 265px;
+  height: 62px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--color-texto);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 12px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  position: relative;
+  gap: 8px;
+  padding: 8px 32px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px 0px;
+  width: 297px;
 }
 
 .omb-boton-sidebar {
@@ -51,7 +100,7 @@ main {
   border-radius: 12px;
   position: relative;
   gap: 8px;
-  padding: 8px 32px;
+  padding: 8px 24px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -59,6 +108,7 @@ main {
 
 .omb-boton-sidebar--width {
   width: 297px;
+  display: none;
 }
 .omb-boton-sidebar:hover {
   background-color: var(--color-primario);
@@ -67,7 +117,7 @@ main {
 }
 
 .omb-boton-sidebar--secundario {
-  padding: 16px;
+  padding: 16px 8px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .omb-boton-sidebar--active {
@@ -95,7 +145,6 @@ main {
   align-items: center;
   padding: 8px;
   box-sizing: border-box;
-  margin-top: 10px;
 }
 
 .omb-sidebar-list {
@@ -118,31 +167,26 @@ main {
 }
 
 .omb-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
-.omb-busqueda {
-  width: 953px;
-  height: 48px;
-  background-color: #f8f9f1;
-  padding: 0;
-  border: none;
-  border-radius: 32px;
+.omb-busqueda-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 8px;
+  width: 100%;
 }
 
 .omb-input-busqueda {
-  width: 383px;
-  height: 22px;
+  width: 90%;
+  height: 40px;
   background-color: #f8f9f1;
   border: none;
   padding: 0px 16px;
   font-size: 16px;
   color: #71735e;
+  border-radius: 32px;
 }
 .omb-input-busqueda:focus {
   outline: none;
@@ -151,16 +195,87 @@ main {
 .omb-icon-busqueda {
   padding: 6px 16px 6px 16px;
 }
+.omb-select {
+  position: relative;
+}
+
+.omb-boton-filtro-container {
+  height: 67px;
+  display: flex;
+  align-items: end;
+}
+
+.omb-select p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.omb-opcion-selecionada {
+  border-radius: 24px;
+  padding-left: 16px;
+  height: 40px;
+  font-family: "Work sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 500;
+  appearance: none;
+  border: 1px solid;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("http://149.130.178.89/media/111");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  color: var(--color-texto);
+  position: relative;
+}
+.omb-opcion-selecionada--ordenar {
+  width: 140px;
+}
+.omb-opciones {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border-radius: 16px;
+  padding: 16px 0px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  width: 140px;
+  background-color: #fff;
+  overflow: hidden;
+  top: 32px;
+  z-index: 1;
+}
+
+.omb-opciones li {
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.omb-opciones li:hover {
+  background-color: var(--color-primario);
+}
+.ombe-select option:hover {
+  border-radius: 16px;
+  background-color: var(--color-enlace-hover);
+}
 
 .omb-cards-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  grid-template-columns: 1fr;
   gap: 30px;
-  width: 953px;
+  width: 100%;
 }
 
 .omb-card-tableros {
-  width: 297px;
+  max-width: 100%;
   display: flex;
   background-color: #ffffff;
   border-radius: 16px;
@@ -171,6 +286,7 @@ main {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   padding-bottom: 16px;
+  align-self: center;
 }
 
 .omb-card-tableros:hover {
@@ -179,8 +295,9 @@ main {
 }
 
 .omb-card-tableros-img {
+  width: 100%;
   height: 158px;
-  border: 1px solid #d3d3ca;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
@@ -250,4 +367,153 @@ main {
   padding: 0px 16px;
   color: black;
   min-height: 72px;
+}
+.hidden {
+  display: none;
+}
+@media (min-width: 768px) {
+  .omb-cards-container {
+    place-items: start;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+  }
+  .omb-content {
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1139px) {
+  .omb-boton-sidebar-mobile {
+    display: none;
+  }
+  .omb-sidebar-container {
+    display: block;
+  }
+  .omb-boton-sidebar--width {
+    display: flex;
+  }
+  .omb-sidebar {
+    margin-top: 12px;
+  }
+  .omb-tableros-container {
+    max-width: 960px;
+  }
+  .omb-tableros-content {
+    display: flex;
+    gap: 30px;
+  }
+
+  .omb-content {
+    width: calc(100% - 297px - 30px);
+  }
+  .omb-cards-container {
+    place-items: start;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
+  }
+}
+
+@media (min-width: 1140px) and (max-width: 1359px) {
+  .omb-boton-sidebar-mobile {
+    display: none;
+  }
+  .omb-sidebar-container {
+    display: block;
+  }
+  .omb-boton-sidebar--width {
+    display: flex;
+  }
+  .omb-sidebar {
+    margin-top: 12px;
+  }
+  .omb-tableros-container {
+    max-width: 1140px;
+  }
+  .omb-tableros-content {
+    display: flex;
+    gap: 30px;
+  }
+
+  .omb-content {
+    width: calc(100% - 297px - 30px);
+  }
+  .omb-cards-container {
+    place-items: start;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
+  }
+}
+@media (min-width: 1360px) {
+  .omb-boton-sidebar-mobile {
+    display: none;
+  }
+  .omb-sidebar-container {
+    display: block;
+  }
+  .omb-boton-sidebar--width {
+    display: flex;
+  }
+  .omb-sidebar {
+    margin-top: 12px;
+  }
+  .omb-tableros-container {
+    max-width: 1280px;
+  }
+  .omb-tableros-content {
+    display: flex;
+    gap: 30px;
+  }
+
+  .omb-content {
+    width: calc(100% - 297px - 30px);
+  }
+  .omb-cards-container {
+    place-items: start;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
+  }
 }
