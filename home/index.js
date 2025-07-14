@@ -105,8 +105,8 @@ const swiperPublicacionesSection = new Swiper(".publicacionesSectionSwiper", {
       slidesPerView: 2,
       spaceBetween: 0,
     },
-    1024: {slidesPerView: 3, spaceBetween: 16},
-    1360: {slidesPerView: 3},
+    1024: {slidesPerView: 4, spaceBetween: 30},
+    1360: {slidesPerView: 4},
   },
 });
 let isPlayingSectionPublicacion = true;
