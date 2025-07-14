@@ -5,6 +5,7 @@
   --color-texto: #1b1b1b;
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
+  --color-fondo-seccion-intreres: #f3f4f1;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -21,14 +22,18 @@ a {
   justify-content: center;
   padding-bottom: 40px;
 }
+.omb-section--de-interes {
+  background-color: var(--color-fondo-seccion-intreres);
+}
+
 .omb-titulo-section {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
-  color: black;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 32px;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
 }
 .omb-titulo-section--color {
   color: var(--color-enlace);
@@ -39,10 +44,13 @@ a {
 }
 .omb-parrafo-descripcion-section {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  color: black;
-  margin-top: 0;
+  font-size: 1.125rem;
+  line-height: 26px;
+  color: var(--color-texto);
+  font-family: "Montserrat", "sans-serif";
+}
+.omb-parrafo-descripcion-section--color {
+  color: var(--color-enlace);
 }
 
 .omb-section--de-interes {
@@ -50,29 +58,30 @@ a {
 }
 
 .omb-filtro-tematica-container {
-  width: 1280px;
+  width: 90%;
 }
 .omb-filtros {
   width: 100%;
   display: flex;
-
   flex-direction: column;
+  margin-bottom: 40px;
 }
 .omb-filtros-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   width: 100%;
-  height: 140px;
-  padding: 0px 64px;
+  min-height: 140px;
+  padding: 16px;
   box-sizing: border-box;
-  margin-top: 24px;
+  gap: 8px;
 }
 
 .omb-input-busqueda {
-  width: 500px;
+  width: 100%;
   height: 40px;
   padding-left: 16px;
   border-radius: 8px;
@@ -96,8 +105,32 @@ a {
   gap: 8px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .omb-select {
+  position: relative;
+  width: 100%;
+}
+.omb-select--con-dos-elementos {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 4px;
+}
+.omb-boton-filtro-container {
+  height: 67px;
+  display: flex;
+  align-items: end;
+}
+
+.omb-select p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.omb-opcion-selecionada {
+  width: 300px;
   border-radius: 8px;
   padding-left: 16px;
   height: 40px;
@@ -105,8 +138,12 @@ a {
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 500;
-  width: 300px;
+  width: 100%;
   appearance: none;
+  border: 1px solid;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url("http://149.130.178.89/media/111");
@@ -114,11 +151,34 @@ a {
   background-position: right 16px center;
   background-size: 12px;
   color: var(--color-texto);
+  position: relative;
+  background-color: #fff;
 }
-.ombe-select option:hover {
+.omb-opciones {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
   border-radius: 16px;
-  background-color: var(--color-enlace-hover);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  width: 300px;
+  background-color: #fff;
+  overflow: hidden;
+  top: 52px;
+  z-index: 1;
+  padding: 0;
 }
+
+.omb-opciones li {
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.omb-opciones li:hover {
+  background-color: var(--color-secundario-hover);
+}
+
 .omb-container {
   width: 1280px;
   display: flex;
@@ -126,10 +186,10 @@ a {
 }
 
 .omb-tematicas-container {
-  width: 1280px;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 .omb-acordeon {
   width: 100%;
@@ -293,7 +353,7 @@ a {
 }
 .omb-cards-resultados-container {
   display: flex;
-  width: 1280px;
+  width: 100%;
   height: 1020px;
   overflow: hidden;
   gap: 16px;
@@ -306,7 +366,6 @@ a {
 }
 
 .omb-card-resultado {
-  width: 616px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   padding: 16px;
@@ -422,6 +481,10 @@ a {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+.omb-tags-card-container--gap {
+  gap: 12px;
+  padding: 0;
+}
 .omb-tags-card-container--padding {
   padding-left: 28px;
 }
@@ -443,6 +506,16 @@ a {
   box-sizing: border-box;
   gap: 4px;
   font-family: "Work-sans", sans-serif;
+}
+.omb-tag-card--variante-font-size {
+  font-size: 1rem;
+  min-width: auto;
+  padding: 16px 16px 16px 16px;
+  cursor: pointer;
+}
+.omb-tag-card.activo {
+  background-color: var(--color-secundario-hover);
+  color: white;
 }
 
 .omb-tag-icono {
@@ -477,4 +550,271 @@ a {
   background-color: inherit;
   margin: 8px 0px;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .omb-filtros-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+  .omb-select {
+    width: 320px;
+  }
+  .omb-opcion-selecionada--ordenar {
+    width: 240px;
+  }
+  .omb-opciones {
+    width: 320px;
+  }
+  .omb-boton-filtro-container {
+    height: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 320px;
+  }
+  .omb-boton {
+    width: 100%;
+  }
+  .omb-opciones--ordenar {
+    width: 240px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1139px) {
+  .omb-filtros,
+  .omb-filtros-container,
+  .omb-filtro-tematica-container {
+    max-width: 960px;
+  }
+  .omb-filtros-container {
+    justify-content: start;
+    gap: 40px;
+  }
+  .omb-label {
+    width: 328px;
+  }
+  .omb-boton-filtro-container {
+    max-width: 960px;
+  }
+  .omb-tematicas-container {
+    max-width: 960px;
+  }
+  .omb-titulo-resultado-container {
+    width: 100%;
+  }
+  .omb-cards-resultados-container {
+    width: 100%;
+  }
+  .omb-select {
+    width: 240px;
+  }
+  .omb-opciones {
+    width: 280px;
+  }
+  .omb-boton-filtro-container {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    width: 280px;
+  }
+  .omb-boton {
+    width: 100%;
+  }
+  .omb-opciones--ordenar {
+    width: 240px;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
+  }
+}
+
+@media (min-width: 1140px) and (max-width: 1359px) {
+  .omb-filtros,
+  .omb-filtros-container,
+  .omb-filtro-tematica-container {
+    max-width: 1140px;
+  }
+  .omb-filtros-container {
+    justify-content: space-evenly;
+  }
+  .omb-boton-filtro-container {
+    max-width: 1140px;
+  }
+  .omb-tematicas-container {
+    max-width: 1140px;
+  }
+  .omb-titulo-resultado-container {
+    width: 100%;
+  }
+  .omb-cards-resultados-container {
+    width: 100%;
+  }
+  .omb-select {
+    width: 380px;
+  }
+  .omb-opciones {
+    width: 280px;
+  }
+  .omb-label {
+    width: 380px;
+  }
+  .omb-boton-filtro-container {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    width: 280px;
+    height: 67px;
+    align-items: end;
+  }
+  .omb-boton {
+    width: 100%;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
+  }
+  .omb-opciones--ordenar {
+    width: 240px;
+  }
+}
+@media (min-width: 1360px) {
+  .omb-filtros,
+  .omb-filtros-container,
+  .omb-filtro-tematica-container {
+    max-width: 1280px;
+  }
+  .omb-filtros-container {
+    justify-content: space-evenly;
+  }
+  .omb-boton-filtro-container {
+    max-width: 1280px;
+  }
+  .omb-tematicas-container {
+    max-width: 1280px;
+  }
+  .omb-titulo-resultado-container {
+    width: 100%;
+  }
+  .omb-cards-resultados-container {
+    width: 100%;
+  }
+  .omb-select {
+    width: 280px;
+  }
+  .omb-opciones {
+    width: 280px;
+  }
+  .omb-label {
+    width: 380px;
+  }
+  .omb-boton-filtro-container {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    width: 280px;
+  }
+  .omb-boton {
+    width: 100%;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
+  }
+  .omb-opciones--ordenar {
+    width: 240px;
+  }
+}
+@media (min-width: 1440px) {
+  .omb-filtros,
+  .omb-filtros-container,
+  .omb-filtro-tematica-container {
+    max-width: 1280px;
+  }
+  .omb-filtros-container {
+    justify-content: space-evenly;
+  }
+  .omb-boton-filtro-container {
+    max-width: 1280px;
+  }
+  .omb-tematicas-container {
+    max-width: 1280px;
+  }
+  .omb-titulo-resultado-container {
+    width: 100%;
+  }
+  .omb-cards-resultados-container {
+    width: 100%;
+  }
+  .omb-select {
+    width: 320px;
+  }
+  .omb-opciones {
+    width: 320px;
+  }
+  .omb-label {
+    width: 380px;
+  }
+  .omb-boton-filtro-container {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    width: 280px;
+    height: 67px;
+    align-items: end;
+  }
+  .omb-boton {
+    width: 100%;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
+  }
+  .omb-opciones--ordenar {
+    width: 240px;
+  }
 }
