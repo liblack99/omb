@@ -54,6 +54,7 @@ a {
   color: var(--color-texto);
   font-family: "Montserrat", "sans-serif";
 }
+
 .omb-logo-libro-mapa {
   display: flex;
   align-items: center;
