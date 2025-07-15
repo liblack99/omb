@@ -47,30 +47,38 @@ body {
   width: 265px;
   height: 62px;
   border: none;
-  padding: 0;
-  margin: 0;
   cursor: pointer;
   font-size: 16px;
   color: var(--color-texto);
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   border-radius: 12px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   position: relative;
   gap: 8px;
-  padding: 8px 32px;
-  font-weight: 500;
+  padding: 8px 36px;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px 0px;
   width: 297px;
 }
+.icono-flecha {
+  transition: all 0.3s ease;
+}
+.icono-flecha.activo {
+  transform: rotate(-90deg);
+}
+.omb-text-button {
+  display: flex;
+  align-items: center;
+}
 
 .omb-sidebar-container {
   width: 297px;
-  position: relative;
+  position: absolute;
   display: none;
   z-index: 1;
 }
@@ -271,12 +279,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px;
 }
 .omb-paginacion-numerica ul {
   display: flex;
   list-style: none;
   gap: 20px;
+  padding-left: 0;
   align-items: center;
 }
 
@@ -293,8 +301,8 @@ body {
   -webkit-box-orient: vertical;
   line-height: 1.688rem;
   padding: 0px 16px;
-  transition: all 0.9s ease-in;
-  color: var(--color-enlace);
+  transition: all 0.3s ease-in;
+  color: var(--color-enlace-hover);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -302,17 +310,20 @@ body {
   border: none;
   background-color: inherit;
 }
+
 .omb-pagination-numero {
   width: 40px;
   height: 40px;
   padding: 0px;
   border: none;
   background-color: inherit;
+  text-decoration: none;
 }
 
 .omb-paginacion-enlace--activo {
   background-color: var(--color-primario);
-  border-radius: 50%;
+  border-radius: 8px;
+  color: var(--color-texto);
 }
 @media (min-width: 768px) {
   .omb-cards-infogracia-container {
@@ -339,6 +350,7 @@ body {
   }
   .omb-sidebar-container {
     display: block;
+    position: relative;
   }
   .omb-boton-sidebar--width {
     display: flex;
@@ -380,6 +392,7 @@ body {
     display: none;
   }
   .omb-sidebar-container {
+    position: relative;
     display: block;
   }
   .omb-boton-sidebar--width {
@@ -427,6 +440,7 @@ body {
   }
   .omb-sidebar-container {
     display: block;
+    position: relative;
   }
   .omb-boton-sidebar--width {
     display: flex;

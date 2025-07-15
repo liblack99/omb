@@ -281,7 +281,9 @@ body {
   position: absolute;
   bottom: -32px !important;
 }
-
+.omb-paginacion-sitios-relacionados {
+  bottom: 60px !important;
+}
 .omb-paginacion > .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
@@ -300,14 +302,14 @@ body {
 .omb-boton-control-carrusel {
   position: absolute;
   z-index: 20;
-  bottom: -40px;
+  bottom: -36px;
   min-width: 120px;
   height: 34px;
   width: auto;
   cursor: pointer;
 }
 .omb-boton-control-carrusel--variante {
-  left: 60px;
+  bottom: 54px;
 }
 
 .omb-boton-control-carrusel button {
