@@ -298,7 +298,7 @@ body {
   border-color: #4b521d;
   transform: scale(1.2);
 }
-.omb-botom-control-carrousel {
+.omb-boton-control-carrusel {
   position: absolute;
   z-index: 20;
   bottom: -40px;
@@ -307,8 +307,11 @@ body {
   width: auto;
   cursor: pointer;
 }
+.omb-boton-control-carrusel--variante {
+  left: 60px;
+}
 
-.omb-botom-control-carrousel button {
+.omb-boton-control-carrusel button {
   color: #565747;
   border-radius: 8px;
   font-family: "Worl sans", sans-serif;
@@ -374,9 +377,12 @@ body {
   padding: 0px 8px;
 }
 .indicador-card:hover {
-  border: 1px solid #000;
+  border-color: #000;
   transform: scale(1.01);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+}
+.indicador-card:hover .valor {
+  color: var(--color-enlace);
 }
 .icono-wrapper {
   width: 100%;
@@ -419,7 +425,6 @@ body {
   line-height: 2rem;
   letter-spacing: 0%;
   text-align: center;
-  color: #000000;
 }
 .omb-texto-indicadores {
   font-family: "Montserrat", sans-serif;
@@ -471,7 +476,6 @@ body {
 }
 
 /* observarotio*/
-
 .omb-parrafo-descripcion-section {
   font-weight: 500;
   font-size: 1.125rem;
@@ -726,6 +730,13 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
   border: 1px solid black;
   transform: scale(1.01);
+}
+.omb-button-container-sitios-relacionados {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
 }
 
 /*formulario de suscripcion */
@@ -1045,6 +1056,9 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .omb-titulo-hero {
+    font-size: 2.625rem;
+  }
   .omb-buscador {
     width: 90%;
   }
@@ -1115,6 +1129,9 @@ footer {
   .omb-publicaciones-container,
   .omb-sitios-relacionados-container {
     max-width: 960px;
+  }
+  .omb-titulo-hero {
+    font-size: 2.625rem;
   }
   .omb-carrusel-container {
     width: 100%;
@@ -1283,6 +1300,9 @@ footer {
 }
 
 @media (min-width: 1140px) and (max-width: 1359px) {
+  .omb-titulo-hero {
+    font-size: 2.625rem;
+  }
   .omb-buscador {
     max-width: 1140px;
   }
@@ -1460,6 +1480,9 @@ footer {
   }
 }
 @media (min-width: 1360px) {
+  .omb-titulo-hero {
+    font-size: 2.625rem;
+  }
   header {
     display: flex;
     justify-content: center;
@@ -1663,6 +1686,9 @@ footer {
   }
 }
 @media (min-width: 1440px) {
+  .omb-titulo-hero {
+    font-size: 2.625rem;
+  }
   header {
     display: flex;
     justify-content: center;

@@ -119,7 +119,7 @@
           <div
             class="swiper-pagination omb-paginacion omb-paginacion-indicadores"></div>
           <div
-            class="omb-botom-control-carrousel"
+            class="omb-boton-control-carrusel"
             id="controlCarrucelIndicadores">
             <button
               type="button"
@@ -751,7 +751,7 @@
           <div
             class="swiper-pagination omb-paginacion omb-paginacion--publicaciones-home"></div>
           <div
-            class="omb-botom-control-carrousel"
+            class="omb-boton-control-carrusel"
             id="controlCarrucelSectionPublicacion">
             <button
               type="button"
@@ -925,38 +925,51 @@
             class="omb-parrafo-descripcion-section omb-parrafo-descripcion-section--center">
             Texto descriptivo de Sitios relacionados
           </p>
-          <div
-            class="swiper-pagination omb-paginacion omb-paginacion-sitios-relacionados"></div>
-          <div
-            class="omb-botom-control-carrousel"
-            id="controlCarrucelSitiosRelacionados">
-            <button
-              type="button"
-              aria-label="Pausar contenido"
-              title="Pausar contenido">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width="16"
-                height="16"
-                fill="currentColor"
-                aria-hidden="true"
-                focusable="false">
-                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                <path
-                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
-              </svg>
 
-              Pausar
-            </button>
-          </div>
           <div class="omb-carrusel-container">
+            <div
+              class="swiper-pagination omb-paginacion omb-paginacion-sitios-relacionados"></div>
+            <div
+              class="omb-boton-control-carrusel omb-boton-control-carrusel--variante"
+              id="controlCarrucelSitiosRelacionados">
+              <button
+                type="button"
+                aria-label="Pausar contenido"
+                title="Pausar contenido">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false">
+                  <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                  <path
+                    d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+                </svg>
+
+                Pausar
+              </button>
+            </div>
             <div
               class="swiper-button-prev omb-boton-prev omb-boton-sitios-relacionados-prev"></div>
             <div
               class="swiper-button-next omb-boton-next omb-boton-sitios-relacionados-next"></div>
             <div class="swiper sitiosRelacionadosSlideSwiper omb-swiper">
               <div class="swiper-wrapper omb-wrapper">
+                <div class="swiper-slide omb-swiper-slide">
+                  <div class="omb-card-sitios-relacionados">
+                    <a
+                      href=""
+                      title="Ir al sitio web de libos de mapas"
+                      target="_blank">
+                      <img
+                        src="http://149.130.178.89/media/103"
+                        alt="Logo libro mapas" />
+                    </a>
+                  </div>
+                </div>
                 <div class="swiper-slide omb-swiper-slide">
                   <div class="omb-card-sitios-relacionados">
                     <a
@@ -994,6 +1007,11 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="omb-button-container-sitios-relacionados">
+            <button class="omb-boton omb-boton--primario">
+              Ver todos los Sitios relacionados
+            </button>
           </div>
         </div>
       </section>
