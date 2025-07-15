@@ -43,19 +43,19 @@ main {
   flex-direction: column;
 }
 
-.omb-card-info-categoria {
+.omb-card-info {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.omb-card-info-categoria img {
+.omb-card-info img {
   width: 100%;
   height: 250px;
   border-radius: 8px;
   object-fit: cover;
 }
-.omb-texto-categoria {
+.omb-texto {
   width: 100%;
 }
 .omb-titulo-card-hero {
@@ -74,6 +74,35 @@ main {
   -webkit-box-orient: vertical;
   padding: 0px;
   transition: all 0.3s ease-in;
+}
+.omb-enlaces-hero-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.omb-enlaces {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--color-enlace);
+  text-decoration: underline;
+  margin: 8px 0px;
+  margin-bottom: 8px;
+}
+.omb-enlaces span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.omb-enlaces:hover {
+  color: var(--color-enlace-hover);
 }
 
 .omb-titulo-card {
@@ -126,7 +155,7 @@ main {
   border-color: var(--color-texto);
   color: white;
 }
-.omb-categorias-section {
+.omb-section--color-fondo {
   background-color: #f1f3f7;
 }
 
@@ -289,9 +318,6 @@ main {
   text-decoration: underline;
 }
 
-a {
-  text-decoration: none;
-}
 .hidden {
   display: none;
 }
@@ -311,10 +337,7 @@ a {
   .omb-cards-categorias-container {
     max-width: 960px;
   }
-  .omb-titulo-card-hero {
-    font-size: 1.5rem;
-    line-height: 1.625rem;
-  }
+
   .omb-card-categoria-selecionada {
     width: 284px;
   }
@@ -351,10 +374,6 @@ a {
   .omb-cards-categorias-container {
     max-width: 1140px;
   }
-  .omb-titulo-card-hero {
-    font-size: 1.5rem;
-    line-height: 1.625rem;
-  }
   .omb-card-categoria-selecionada {
     width: 360px;
   }
@@ -389,10 +408,6 @@ a {
   .omb-cards-categorias-container {
     max-width: 1140px;
   }
-  .omb-titulo-card-hero {
-    font-size: 1.5rem;
-    line-height: 1.625rem;
-  }
   .omb-card-categoria-selecionada {
     width: 360px;
   }
@@ -426,10 +441,6 @@ a {
   .omb-encuestas-container,
   .omb-cards-categorias-container {
     max-width: 1280px;
-  }
-  .omb-titulo-card-hero {
-    font-size: 1.5rem;
-    line-height: 1.625rem;
   }
   .omb-card-categoria-selecionada {
     width: 360px;
