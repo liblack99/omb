@@ -35,6 +35,7 @@ const botonTodosTableros = buttons.forEach((button) => {
 });
 const opcionSeleccionada = document.querySelectorAll(".omb-opcion-selecionada");
 const listasDeOpciones = document.querySelectorAll(".omb-opciones");
+const flechaSelect = document.querySelector(".icono-flecha-select");
 
 // Al cambiar el select de tipo de contenido
 
@@ -46,6 +47,7 @@ opcionSeleccionada.forEach((boton) => {
       if (lista.dataset.select === valorSeleccionado) {
         // Toggle SOLO en la lista correspondiente
         lista.classList.toggle("hidden");
+        flechaSelect.classList.toggle("activo");
       } else {
         // Oculta las otras listas
         lista.classList.add("hidden");

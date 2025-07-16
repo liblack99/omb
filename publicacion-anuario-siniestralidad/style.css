@@ -80,6 +80,13 @@ main {
   align-items: center;
   gap: 16px;
 }
+.omb-enlaces-hero-container--variante {
+  padding: 0px 16px;
+  gap: 8px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
 .omb-enlaces {
   gap: 4px;
   display: flex;
@@ -159,7 +166,7 @@ main {
   background-color: #f1f3f7;
 }
 
-.omb-encuestas-container {
+.omb-siniestralidad-container {
   width: 90%;
   padding: 40px 0px;
   display: flex;
@@ -238,9 +245,15 @@ main {
   background-color: var(--color-primario);
 }
 
-.omb-cards-categorias-container {
+.omb-siniestralidad-container {
   width: 90%;
   display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.omb-cards-categorias-container {
+  display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -317,6 +330,57 @@ main {
   vertical-align: middle;
   text-decoration: underline;
 }
+.omb-paginacion-numerica {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.omb-paginacion-numerica ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding-left: 0;
+  align-items: center;
+}
+
+.omb-paginacion-enlace {
+  font-weight: 600;
+  font-family: "Work sans", sans-serif;
+  text-decoration: underline;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.688rem;
+  padding: 0px 16px;
+  transition: all 0.3s ease-in;
+  color: var(--color-enlace-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  background-color: inherit;
+}
+
+.omb-pagination-numero {
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  border: none;
+  background-color: inherit;
+  text-decoration: none;
+}
+
+.omb-paginacion-enlace--activo {
+  background-color: var(--color-primario);
+  border-radius: 8px;
+  color: var(--color-texto);
+}
 
 .hidden {
   display: none;
@@ -327,19 +391,24 @@ main {
   }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
-  .omb-card-info-categoria {
+  .omb-card-info {
     display: flex;
     flex-direction: row;
     gap: 30px;
   }
   .omb-card-info-container,
   .omb-encuestas-container,
-  .omb-cards-categorias-container {
+  .omb-siniestralidad-container {
     max-width: 960px;
   }
-
+  .omb-cards-categorias-container {
+    justify-content: center;
+  }
   .omb-card-categoria-selecionada {
-    width: 284px;
+    width: 360px;
+  }
+  .omb-enlaces-hero-container--variante {
+    gap: 16px;
   }
 
   .omb-titulo-section {
@@ -364,19 +433,23 @@ main {
 }
 
 @media (min-width: 1140px) and (max-width: 1359px) {
-  .omb-card-info-categoria {
+  .omb-card-info {
     display: flex;
     flex-direction: row;
     gap: 30px;
   }
   .omb-card-info-container,
   .omb-encuestas-container,
-  .omb-cards-categorias-container {
+  .omb-siniestralidad-container {
     max-width: 1140px;
   }
   .omb-card-categoria-selecionada {
     width: 360px;
   }
+  .omb-enlaces-hero-container--variante {
+    gap: 16px;
+  }
+
   .omb-titulo-section {
     font-weight: 600;
     font-size: 2rem;
@@ -398,19 +471,23 @@ main {
   }
 }
 @media (min-width: 1360px) {
-  .omb-card-info-categoria {
+  .omb-card-info {
     display: flex;
     flex-direction: row;
     gap: 30px;
   }
   .omb-card-info-container,
   .omb-encuestas-container,
-  .omb-cards-categorias-container {
+  .omb-siniestralidad-container {
     max-width: 1140px;
   }
   .omb-card-categoria-selecionada {
     width: 360px;
   }
+  .omb-enlaces-hero-container--variante {
+    gap: 16px;
+  }
+
   .omb-titulo-section {
     font-weight: 600;
     font-size: 2rem;
@@ -432,19 +509,23 @@ main {
   }
 }
 @media (min-width: 1440px) {
-  .omb-card-info-categoria {
+  .omb-card-info {
     display: flex;
     flex-direction: row;
     gap: 30px;
   }
   .omb-card-info-container,
   .omb-encuestas-container,
-  .omb-cards-categorias-container {
+  .omb-siniestralidad-container {
     max-width: 1280px;
   }
   .omb-card-categoria-selecionada {
     width: 360px;
   }
+  .omb-enlaces-hero-container--variante {
+    gap: 16px;
+  }
+
   .omb-titulo-section {
     font-weight: 600;
     font-size: 2rem;

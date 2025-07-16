@@ -33,12 +33,17 @@ body {
   justify-content: center;
 }
 .omb-logo-govco-container-top {
-  width: 1280px;
-  height: 80px;
+  width: 90%;
+  height: 3rem;
   display: flex;
   align-items: center;
   box-sizing: border-box;
 }
+.omb-logo-govco-container-top img {
+  height: 1.875rem;
+  width: 8.5rem;
+}
+
 .omb-buscador-container {
   width: 100%;
   display: flex;
@@ -46,7 +51,7 @@ body {
 }
 
 .omb-buscador {
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   height: 96px;
@@ -57,14 +62,14 @@ body {
 }
 .omb-input-busqueda-home {
   border-radius: 24px;
-  padding: 12px;
+  padding: 12px 16px;
   width: 300px;
   font-family: "Work sans";
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("http://149.130.178.89/media/59");
+  background-image: url("http://101.44.24.97/sites/default/files/2025-07/icono-busqueda.png");
   background-repeat: no-repeat;
-  background-position: right 0px center;
+  background-position: right 16px center;
 }
 .omb-buscador-container {
   display: flex;
@@ -138,12 +143,7 @@ body {
 .omb-sitios-realacionados-section {
   padding-bottom: 80px;
 }
-.omb-section--inidicadores-home {
-  background-image: url("http://149.130.178.89/sites/default/files/2025-06/edificios.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .omb-titulo-section {
   font-weight: 600;
   font-size: 1.5rem;
@@ -155,6 +155,9 @@ body {
 }
 .omb-titulo-section--centrado {
   text-align: center;
+}
+.omb-titulo-section--sin-margin {
+  margin-top: 0px;
 }
 .omb-parrafo-descripcion-section {
   font-weight: 500;
@@ -249,10 +252,30 @@ body {
 }
 
 /* aliados */
+.omb-section--inidicadores-home {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.omb-imagen-edificios-indicadores {
+  width: 100%;
+}
+.omb-imagen-edificios-indicadores img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
 
 .omb-indicadores-destacados-container {
   width: 90%;
-  padding-top: 80px;
+  position: relative;
+}
+.omb-fondo-indicadores-home {
+  width: 100%;
+  background: linear-gradient(to bottom, #f2f4f8 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -438,13 +461,23 @@ body {
 }
 
 .omb-section--aliados-home {
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  height: 400px;
-  overflow: visible;
 }
+
 .omb-aliados-container {
   width: 90%;
-  padding-top: 80px;
+}
+.omb-fondo-montañas-aliados {
+  width: 100%;
+}
+.omb-fondo-montañas-aliados img {
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+  z-index: -10;
+  top: -40px;
 }
 
 .aliados-logos-container {
@@ -469,11 +502,10 @@ body {
 }
 .omb-fondo-aliados {
   width: 100%;
-  z-index: -1;
-  position: absolute;
 }
 .omb-fondo-aliados img {
   width: 100%;
+  object-fit: cover;
 }
 
 /* observarotio*/
@@ -539,9 +571,8 @@ body {
   align-items: center;
   gap: 16px;
 }
-.omb-icono-titulo-acordion {
+.omb-icono-titulo-acordion img {
   width: 40px;
-  height: 40px;
 }
 
 .omb-acordion-content-home {
@@ -685,8 +716,6 @@ body {
   box-sizing: border-box;
   z-index: 1;
 }
-.omb-sitios-relacionados-container {
-}
 
 .omb-fondo-sitios-relacionados {
   position: absolute;
@@ -720,6 +749,7 @@ body {
   background-color: #fff;
   transition: all 0.5s ease;
   box-sizing: border-box;
+  padding: 16px;
 }
 .omb-card-sitios-relacionados img {
   width: 100%;
@@ -744,21 +774,14 @@ body {
 
 .omb-suscripcion-section {
   width: 100%;
-  min-height: 200px;
-  background-image: url("http://149.130.178.89/media/132");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 140px;
+  height: 400px;
 }
 .omb-fondo-suscripcion-section {
-  position: absolute;
   width: 100%;
-  top: 112px;
-  left: -32px;
-  z-index: 1;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
 }
 .omb-suscripcion-container {
   width: 90%;
@@ -803,7 +826,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .omb-input-container input {
   width: 100%;
@@ -1001,6 +1024,10 @@ footer {
   position: absolute;
   bottom: 0px;
 }
+.omb-logo-govco-container img {
+  height: 1.875rem;
+  width: 8.5rem;
+}
 .hidden {
   display: none;
 }
@@ -1069,13 +1096,7 @@ footer {
   .omb-obervatorio-section-tabs {
     display: none;
   }
-  .omb-fondo-suscripcion-section {
-    position: absolute;
-    width: 100%;
-    top: 60px;
-    left: -32px;
-    z-index: 1;
-  }
+
   .omb-redes-sociales-footer-container {
     justify-content: center;
   }
@@ -1178,6 +1199,9 @@ footer {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+  .omb-titulo-section--sin-margin {
+    margin-top: 0px;
+  }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
     font-size: 1.25rem;
@@ -1185,7 +1209,12 @@ footer {
     color: var(--color-texto);
   }
   .aliados-logos-container {
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .aliados-logos-container img {
+    width: 140px;
+    height: 120px;
   }
   .omb-card--pequeña {
     width: 100%;
@@ -1218,19 +1247,14 @@ footer {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+  .omb-titulo-section--sin-margin {
+    margin-top: 0px;
+  }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 30px;
     font-family: "Monstserrart", sans-serif;
-  }
-  .omb-fondo-suscripcion-section {
-    position: absolute;
-    width: 100%;
-    object-fit: none;
-    top: 20px;
-    right: 10px;
-    z-index: 1;
   }
 
   .omb-suscripcion-container {
@@ -1272,8 +1296,7 @@ footer {
   }
   .omb-input-container input {
     min-width: 280px;
-    max-width: 450px;
-    width: 280px;
+    width: 450px;
     height: 40px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
@@ -1364,6 +1387,9 @@ footer {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+  .omb-titulo-section--sin-margin {
+    margin-top: 0px;
+  }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
     font-size: 1.25rem;
@@ -1374,7 +1400,8 @@ footer {
     flex-direction: row;
   }
   .omb-section--aliados-home {
-    height: 500px;
+    flex-direction: column;
+    align-items: center;
   }
   .omb-obervatorio-section-acordion {
     display: none;
@@ -1397,14 +1424,6 @@ footer {
   }
   .omb-boton-next {
     right: 0px;
-  }
-  .omb-fondo-suscripcion-section {
-    position: absolute;
-    width: 100%;
-    object-fit: none;
-    top: 80px;
-    right: 10px;
-    z-index: 1;
   }
 
   .omb-suscripcion-container {
@@ -1447,8 +1466,7 @@ footer {
   }
   .omb-input-container input {
     min-width: 280px;
-    max-width: 450px;
-    width: 280px;
+    width: 450px;
     height: 40px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
@@ -1528,6 +1546,9 @@ footer {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+  .omb-titulo-section--sin-margin {
+    margin-top: 0px;
+  }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
     font-size: 1.25rem;
@@ -1557,15 +1578,14 @@ footer {
     height: 640px;
     justify-content: center;
   }
-  .omb-aliados-container {
-    padding-top: 200px;
-  }
+
   .aliados-logos-container {
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 20px;
   }
   .aliados-logos-container img {
-    width: 120px;
-    height: 100px;
+    width: 140px;
+    height: 120px;
   }
   .omb-obervatorio-section-acordion {
     display: none;
@@ -1601,19 +1621,11 @@ footer {
   .omb-suscripcion-section {
     height: 280px;
   }
-  .omb-fondo-suscripcion-section {
-    position: absolute;
-    width: 100%;
-    object-fit: none;
-    top: 60px;
-    right: 10px;
-    z-index: 1;
-  }
 
   .omb-suscripcion-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 90px;
     align-items: center;
     z-index: 2;
@@ -1652,8 +1664,7 @@ footer {
   }
   .omb-input-container input {
     min-width: 280px;
-    max-width: 450px;
-    width: 280px;
+    width: 450px;
     height: 40px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
@@ -1734,6 +1745,9 @@ footer {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+  .omb-titulo-section--sin-margin {
+    margin-top: 0px;
+  }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
     font-size: 1.25rem;
@@ -1762,15 +1776,13 @@ footer {
     height: 640px;
     justify-content: center;
   }
-  .omb-aliados-container {
-    padding-top: 200px;
-  }
+
   .aliados-logos-container {
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .aliados-logos-container img {
-    width: 120px;
-    height: 100px;
+    width: 140px;
+    height: 120px;
   }
   .omb-obervatorio-section-acordion {
     display: none;
@@ -1806,19 +1818,11 @@ footer {
   .omb-suscripcion-section {
     height: 280px;
   }
-  .omb-fondo-suscripcion-section {
-    position: absolute;
-    width: 100%;
-    object-fit: none;
-    top: 60px;
-    right: 10px;
-    z-index: 1;
-  }
 
   .omb-suscripcion-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 90px;
     align-items: center;
     z-index: 2;
@@ -1857,8 +1861,7 @@ footer {
   }
   .omb-input-container input {
     min-width: 280px;
-    max-width: 450px;
-    width: 280px;
+    width: 450px;
     height: 40px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;

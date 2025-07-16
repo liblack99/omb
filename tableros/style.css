@@ -48,7 +48,7 @@ body {
   width: 297px;
   position: relative;
   display: none;
-  z-index: 1;
+  z-index: 50;
 }
 .omb-sidebar-container.activo {
   display: block;
@@ -245,6 +245,17 @@ body {
 }
 .omb-opcion-selecionada--ordenar {
   width: 140px;
+  gap: 8px;
+}
+.icono-flecha-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  transition: all 0.3s ease;
+}
+.icono-flecha-select.activo {
+  transform: rotate(-90deg);
 }
 .omb-opciones {
   display: flex;

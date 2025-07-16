@@ -40,7 +40,7 @@ const botonPausar = `  <button
 
 const swiperIndicadores = new Swiper(".indicadoresSwiper", {
   slidesPerView: 1,
-  spaceBetween: 68,
+  spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
