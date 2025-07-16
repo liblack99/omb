@@ -285,6 +285,13 @@ body {
   border-radius: 16px;
   background-color: var(--color-enlace-hover);
 }
+.omb-div {
+  height: 1100px;
+  overflow-x: visible;
+  overflow-y: hidden;
+  padding: 4px;
+  box-sizing: border-box;
+}
 
 .omb-cards-container {
   display: grid;
