@@ -4,6 +4,7 @@
   --color-secundario-hover: #8e9c00;
   --color-texto: #1b1b1b;
   --color-enlace: #acbd00;
+  --color-enlace-hover: #a5ad4a;
 }
 
 body {
@@ -51,9 +52,7 @@ main {
 
 .omb-card-info img {
   width: 100%;
-  height: 250px;
-  border-radius: 8px;
-  object-fit: cover;
+  border-radius: 16px;
 }
 .omb-texto {
   width: 100%;
@@ -65,7 +64,7 @@ main {
   text-decoration: underline;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0rem;
   margin-bottom: 0.625rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -251,11 +250,15 @@ main {
   flex-direction: column;
   gap: 30px;
 }
-.omb-cards-categorias-container {
+.omb-cards-anuario-container {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  min-height: 848px;
+  overflow: hidden;
   gap: 30px;
+  padding: 4px;
+  box-sizing: border-box;
 }
 
 .omb-card-categoria-selecionada {
@@ -396,12 +399,18 @@ main {
     flex-direction: row;
     gap: 30px;
   }
+  .omb-card-info img {
+    width: 495px;
+    height: 250px;
+    border-radius: 8px;
+  }
+
   .omb-card-info-container,
   .omb-encuestas-container,
   .omb-siniestralidad-container {
     max-width: 960px;
   }
-  .omb-cards-categorias-container {
+  .omb-cards-anuario-container {
     justify-content: center;
   }
   .omb-card-categoria-selecionada {
@@ -409,6 +418,10 @@ main {
   }
   .omb-enlaces-hero-container--variante {
     gap: 16px;
+  }
+  .omb-titulo-card-hero {
+    font-size: 1.5rem;
+    line-height: 1.625rem;
   }
 
   .omb-titulo-section {
@@ -438,6 +451,7 @@ main {
     flex-direction: row;
     gap: 30px;
   }
+
   .omb-card-info-container,
   .omb-encuestas-container,
   .omb-siniestralidad-container {
@@ -448,6 +462,10 @@ main {
   }
   .omb-enlaces-hero-container--variante {
     gap: 16px;
+  }
+  .omb-titulo-card-hero {
+    font-size: 1.5rem;
+    line-height: 1.625rem;
   }
 
   .omb-titulo-section {
@@ -486,6 +504,10 @@ main {
   }
   .omb-enlaces-hero-container--variante {
     gap: 16px;
+  }
+  .omb-titulo-card-hero {
+    font-size: 1.5rem;
+    line-height: 1.625rem;
   }
 
   .omb-titulo-section {

@@ -217,12 +217,6 @@ botonMenu.addEventListener("click", () => {
   }
 });
 
-const primerTab = botonesTab[0];
-primerTab.classList.add("activo");
-
-const primeraCard = cardsObservatorio[0];
-primeraCard.classList.remove("hidden");
-
 botonesTab.forEach((boton) => {
   boton.addEventListener("click", () => {
     const tabSeleccionado = boton.dataset.tab;

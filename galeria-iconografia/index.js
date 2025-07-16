@@ -1,28 +1,29 @@
-const swiperPublicacionesInteres = new Swiper(
-  ".publicacionesInteresSlideSwiper",
-  {
-    slidesPerView: 1,
-    spaceBetween: 32,
-    navigation: {
-      nextEl: ".omb-boton-publicaciones-interes-next",
-      prevEl: ".omb-boton-publicaciones-interes-prev",
+const swiperPublicacionesInteres = new Swiper(".infografiasSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 32,
+  navigation: {
+    nextEl: ".omb-button-infografia-next",
+    prevEl: ".omb-button-infografia-prev",
+  },
+  pagination: {
+    el: ".omb-paginacion",
+    clickable: true,
+  },
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteration: false,
+  },
+  breakpoints: {
+    480: {slidesPerView: 1, spaceBetween: 20},
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 24,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteration: false,
-    },
-    breakpoints: {
-      640: {slidesPerView: 2},
-      1024: {slidesPerView: 3},
-      1280: {slidesPerView: 3},
-    },
-  }
-);
+    1024: {slidesPerView: 2},
+    1440: {slidesPerView: 3},
+  },
+});
 
 let isPlayingPublicacionesInteres = true;
 const pauseButtonPublicacionesInteres = document.getElementById(

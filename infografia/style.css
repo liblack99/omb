@@ -177,6 +177,7 @@ body {
   grid-template-columns: 1fr;
   gap: 30px;
   width: 100%;
+  min-height: 1040px;
 }
 
 .omb-card-infografia {
@@ -193,6 +194,7 @@ body {
 }
 .omb-card-infografia:hover {
   border: 1px solid #000;
+  transform: scale(1.01);
 }
 
 .omb-card-infografia-content {
@@ -361,8 +363,10 @@ body {
   .omb-sidebar-list li:first-child {
     display: none;
   }
-  .omb-cards-infogracia-container {
+  .omb-contenedor-derecho {
     width: calc(100% - 297px - 30px);
+  }
+  .omb-cards-infogracia-container {
     place-items: start;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -412,8 +416,10 @@ body {
     gap: 30px;
   }
 
-  .omb-cards-infogracia-container {
+  .omb-contenedor-derecho {
     width: calc(100% - 297px - 30px);
+  }
+  .omb-cards-infogracia-container {
     place-items: start;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -458,8 +464,10 @@ body {
     display: flex;
     gap: 30px;
   }
-  .omb-cards-infogracia-container {
+  .omb-contenedor-derecho {
     width: calc(100% - 297px - 30px);
+  }
+  .omb-cards-infogracia-container {
     place-items: start;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
