@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ".omb-descripcion-container"
   );
 
-  console.log("Descripción:", firstDescription);
-
   // Por defecto: el contenedor de descripción del primer card está .omb-descripcion-container-alzado
 
   cards.forEach((card) => {
@@ -32,8 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .forEach((desc) => {
           desc.classList.remove("omb-descripcion-container-alzado");
         });
-
-      firstDescription.classList.add("omb-descripcion-container-alzado");
     });
   });
 });
