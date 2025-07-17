@@ -21,186 +21,6 @@ body {
   justify-content: center;
   padding-bottom: 40px;
 }
-.omb-section--top-bar {
-  display: block;
-  padding: 0;
-}
-
-.omb-logo-container--top {
-  width: 100%;
-  background-color: #3266b1;
-  display: flex;
-  justify-content: center;
-}
-.omb-logo-govco-container-top {
-  width: 90%;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-}
-.omb-logo-govco-container-top img {
-  height: 1.875rem;
-  width: 8.5rem;
-}
-
-.omb-buscador-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.omb-buscador {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  height: 96px;
-  justify-content: space-between;
-  gap: 16px;
-  color: white;
-  box-sizing: border-box;
-}
-.omb-input-busqueda-home {
-  border-radius: 24px;
-  padding: 12px 16px;
-  width: 300px;
-  font-family: "Work sans";
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("http://101.44.24.97/sites/default/files/2025-07/icono-busqueda.png");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-}
-.omb-buscador-container {
-  display: flex;
-  align-items: center;
-}
-.omb-header {
-  width: 100%;
-  height: 75px;
-  background-color: #e6e6e6;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-.omb-icono-menu-container {
-  padding: 8px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-.omb-icono-menu-container:hover {
-  transform: scale(1.01);
-}
-.omb-icono-menu-container:hover .omb-nav {
-  display: flex;
-}
-.omb-nav {
-  width: 240px;
-  background-color: #e6e6e6;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 75px;
-  border-bottom-right-radius: 16px;
-}
-.omb-lista-nav {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  margin: 0;
-}
-.omb-lista-nav li {
-  height: 100%;
-  width: auto;
-  box-sizing: border-box;
-  border-top: 1px solid #bbbcae;
-  border-right: 1px solid transparent;
-  transition: all 0.3s ease;
-}
-.omb-lista-nav li:hover {
-  transform: scale(1.01);
-}
-.omb-lista-nav li:hover {
-  background-color: var(--color-primario);
-}
-.omb-lista-nav li:last-child {
-  border-right: none;
-}
-
-.omb-lista-nav li a {
-  text-decoration: none;
-  color: #1b1b1b;
-  font-family: "Work sans", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.omb-breadcrumb-section {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.omb-breadcrumb-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 16px 0px;
-  margin: 20px 0px;
-}
-
-.omb-breadcrumb-lista {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  list-style: none;
-  color: #bbbcae;
-  height: 25px;
-  border-radius: 16px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-.omb-breadcrumb-lista span {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 100%;
-  color: #4c4c4c;
-}
-.omb-breadcrumb-lista li {
-  display: flex;
-  align-items: center;
-  padding: 0.3rem 0.4rem 0.3rem 0.8rem;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
-  vertical-align: middle;
-  font-family: "Work sans", sans-serif;
-}
-.omb-breadcrumb-lista li a {
-  color: #4c4c4c;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
-  vertical-align: middle;
-  font-family: "Work sans", sans-serif;
-}
-.omb-breadcrumb-lista li:not(:last-child)::after {
-  float: left;
-  padding-left: 0.8rem;
-  color: #282c34;
-  content: var(--bs-breadcrumb-divider, ">");
-  font-weight: 500; /* No existe 'medium' como valor válido, usa 500 */
-}
-.omb-breadcrumb-lista li a:hover {
-  color: #000;
-}
 
 .omb-section--de-interes {
   background-color: var(--color-fondo-seccion-intreres);
@@ -241,6 +61,7 @@ body {
   box-sizing: border-box;
   position: relative;
   margin: 16px 0px;
+  gap: 8px;
 }
 
 .omb-parrafo-card-contexto {
@@ -997,6 +818,13 @@ body {
     width: 52px;
     height: 52px;
   }
+  .omb-section--de-interes {
+    padding-bottom: 40px;
+  }
+  .omb-paginacion {
+    position: absolute;
+    bottom: -32px !important;
+  }
 }
 
 @media (min-width: 1140px) and (max-width: 1359px) {
@@ -1112,6 +940,13 @@ body {
   .omb-boton-next {
     width: 52px;
     height: 52px;
+  }
+  .omb-section--de-interes {
+    padding-bottom: 40px;
+  }
+  .omb-paginacion {
+    position: absolute;
+    bottom: -32px !important;
   }
 }
 @media (min-width: 1360px) {
@@ -1243,5 +1078,12 @@ body {
   .omb-boton-next {
     width: 52px;
     height: 52px;
+  }
+  .omb-section--de-interes {
+    padding-bottom: 40px;
+  }
+  .omb-paginacion {
+    position: absolute;
+    bottom: -32px !important;
   }
 }
