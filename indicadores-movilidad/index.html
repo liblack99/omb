@@ -15,22 +15,51 @@
   <body>
     <main>
       <section class="omb-section">
-        <h2 class="omb-titulo-section">Movilidad</h2>
-        <p class="omb-parrafo-descripcion-section">
-          Descripción indicadores Movilidad
-        </p>
+        <div class="omb-titullo-movilidad-container">
+          <h2 class="omb-titulo-section">Movilidad</h2>
+          <p class="omb-parrafo-descripcion-section">
+            Descripción indicadores Movilidad
+          </p>
+          <button
+            type="button"
+            class="omb-boton-sidebar-mobile"
+            id="botonTablerosMobile"
+            aria-label="Todos los tableros">
+            <span class="omb-text-button">Todos los indicadores</span>
+            <span class="icono-flecha">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 512"
+                width="16">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+              </svg>
+            </span>
+          </button>
+        </div>
         <div class="omb-movilidad-container">
           <div class="omb-sidebar-container">
-            <div class="omb-sidebar-content">
+            <div class="omb-sidebar-content" id="sidebar">
               <button
                 type="button"
-                class="omb-boton-sidebar omb-boton-sidebar--width"
+                class="omb-boton-sidebar omb-boton-sidebar--width omb-boton-sidebar--activo"
                 aria-label="Todos los tableros">
                 <span class="omb-text-button">Todos los indicadores</span>
               </button>
               <div class="omb-sidebar">
                 <nav class="omb-sidebar-nav">
                   <ul class="omb-sidebar-list">
+                    <li class="omb-sidebar-item">
+                      <button
+                        type="button"
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario omb-boton-sidebar--activo"
+                        aria-label="Categoria 1">
+                        <span class="omb-text-button"
+                          >Todos los indicadores</span
+                        >
+                      </button>
+                    </li>
                     <li class="omb-sidebar-item">
                       <button
                         type="button"
@@ -71,472 +100,503 @@
             </div>
           </div>
 
-          <div class="omb-cards-movilidad-container">
-            <!-- Slide 1 -->
+          <div class="omb-contenedor-derecho">
+            <div class="omb-cards-movilidad-container">
+              <!-- Slide 1 -->
 
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Infraestructura">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-06/01-vias-buen-estado.jpg"
-                alt="Imagen Vías en buen estado (%)"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Vías en buen estado (%)
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Infraestructura</span>
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Infraestructura">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-06/01-vias-buen-estado.jpg"
+                  alt="Imagen Vías en buen estado (%)"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Vías en buen estado (%)
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Infraestructura</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Infraestructura">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-06/02-vias-primarias-secundarias-buen%20estado.jpg"
+                  alt="Imagen Vías primarias y secundarias en buen estado (%)"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Vías primarias y secundarias en buen estado (%)
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Infraestructura</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Infraestructura">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-06/03-acciones-implementadas-mitigar-impactos.jpg"
+                  alt="Imagen Acciones implementadas para mitigar impactos en la movilidad en
+                  proyectos urbanísticos aprobados tales como planes parciales u
+                  otros."
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Acciones implementadas para mitigar impactos en la movilidad
+                  en proyectos urbanísticos aprobados tales como planes
+                  parciales u otros.
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Infraestructura</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Infraestructura">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/04-porcentaje-semaforizacio%CC%81n-min.jpg"
+                  alt="Imagen Porcentaje del sistema de semaforización inteligente de la
+                  ciudad mantenido y optimizado"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Porcentaje del sistema de semaforización inteligente de la
+                  ciudad mantenido y optimizado
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Infraestructura</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/01-velocidad-promedio-transporte-publico-min.jpg"
+                  alt="Imagen Velocidad promedio transporte público (Km/hr)"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Velocidad promedio transporte público (Km/hr)
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/02-edad-promedio-vehiculos-trans-publico-min.jpg"
+                  alt="Imagen Edad Promedio de los vehículos de transporte Público según
+                  componente"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Edad Promedio de los vehículos de transporte Público según
+                  componente
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/03-indice-pasajeros-km-min.jpg"
+                  alt="Imagen Índice de pasajeros por kilómetro según componente"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Índice de pasajeros por kilómetro según componente
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/04-pasajeros-an%CC%83o-terminal-min.jpg"
+                  alt="Imagen Pasajeros al año en Terminal de Transporte"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Pasajeros al año en Terminal de Transporte
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/05-cables-construidos-min.jpg"
+                  alt="Imagen Cables construidos"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Cables construidos
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/08-porcentaje-avance-estructuracion-sistema-inoperable-recaudo-min.jpg"
+                  alt="Imagen  Pasajeros al porcentaje de avance de la PLMB tramo terminal de
+                  transporte"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Pasajeros al porcentaje de avance de la PLMB tramo terminal de
+                  transporte
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/06-porcentaje-avance-plmb-tramo-1-min.jpg"
+                  alt="Imagen Porcentaje de avance de la PLMB Tramo I"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Porcentaje de avance de la PLMB Tramo I
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/08-porcentaje-avance-estructuracion-sistema-inoperable-recaudo-min.jpg"
+                  alt="Imagen Porcentaje de avance en la estructuración del Sistema
+                  Interoperable de Recaudo (SIR)"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Porcentaje de avance en la estructuración del Sistema
+                  Interoperable de Recaudo (SIR)
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Transporte público">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/09-porcentaje-usuarios-tm-satisfechos-min.jpg"
+                  alt="Imagen Porcentaje de usuarios de TransMilenio satisfechos"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Porcentaje de usuarios de TransMilenio satisfechos
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Transporte público</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3-->
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Comportamiento en via">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/01-tasa-morbilidad-accidentes-cada10mil-vehiculos-registrados-min.jpg"
+                  alt="Imagen Tasa de morbilidad en accidentes de tránsito por cada 10 mil
+                  vehículos registrados"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Tasa de mortalidad en accidentes de tránsito por cada 10 mil
+                  vehículos registrados
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Comportamiento en via</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Comportamiento en via">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/02-tasa-mortalidad-accidentes-cada10mil-vehiculos-registrados-min.jpg"
+                  alt="Imagen Tasa de mortalidad en accidentes de tránsito por cada 10 mil
+                  vehículos registrados"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Tasa de mortalidad en accidentes de tránsito por cada 10 mil
+                  vehículos registrados
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Comportamiento en via</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Comportamiento en via">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/03-porcentaje-evasion-medido-componente-troncal-min.jpg"
+                  alt="Imagen Porcentaje de evasión medido en el componente troncal"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Porcentaje de evasión medido en el componente troncal
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Comportamiento en via</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Viajes y volúmenes">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/01-tiempos-viajes-minutos-min.jpg"
+                  alt="Imagen Tiempos de viajes por (minutos)"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Tiempos de viajes por (minutos)
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Viajes y volúmenes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Viajes y volúmenes">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/05-particion-modal-viajes-min.jpg"
+                  alt="Imagen Partición Modal de Viajes"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Partición Modal de Viajes
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Viajes y volúmenes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Viajes y volúmenes">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/02-tiempo-promedio-desplazamiento-personas-ciudad-bitcarrier-min.jpg"
+                  alt="Imagen Tiempo promedio de desplazamiento de las personas en la ciudad (minutos/Km) BITCARRIER"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Tiempo promedio de desplazamiento de las personas en la ciudad
+                  (minutos/Km) BITCARRIER
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Viajes y volúmenes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Viajes y volúmenes">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/03-velocidad-promedio-ponderada-min.jpg"
+                  alt="Imagen Velocidad promedio ponderada general (Km/hr)"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Velocidad promedio ponderada general (Km/hr)
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Viajes y volúmenes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
+                data-categoria="Viajes y volúmenes">
+                <img
+                  src="http://101.44.24.97/sites/default/files/2025-07/04-velocidad-promedio-modos-motorizados-min.jpg"
+                  alt="Imagen Velocidad promedio para modos motorizados"
+                  class="omb-imagen-card omb-imagen-card--pequeña" />
+                <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                  Velocidad promedio para modos motorizados
+                </h5>
+                <div class="omb-tags-card-container">
+                  <div class="omb-tag-card">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                      alt="Icono de tag"
+                      class="omb-tag-icono" />
+                    <span>Viajes y volúmenes</span>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Infraestructura">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-06/02-vias-primarias-secundarias-buen%20estado.jpg"
-                alt="Imagen Vías primarias y secundarias en buen estado (%)"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Vías primarias y secundarias en buen estado (%)
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Infraestructura</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Infraestructura">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-06/03-acciones-implementadas-mitigar-impactos.jpg"
-                alt="Imagen Acciones implementadas para mitigar impactos en la movilidad en
-                proyectos urbanísticos aprobados tales como planes parciales u
-                otros."
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Acciones implementadas para mitigar impactos en la movilidad en
-                proyectos urbanísticos aprobados tales como planes parciales u
-                otros.
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Infraestructura</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Infraestructura">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/04-porcentaje-semaforizacio%CC%81n-min.jpg"
-                alt="Imagen Porcentaje del sistema de semaforización inteligente de la
-                ciudad mantenido y optimizado"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Porcentaje del sistema de semaforización inteligente de la
-                ciudad mantenido y optimizado
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Infraestructura</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/01-velocidad-promedio-transporte-publico-min.jpg"
-                alt="Imagen Velocidad promedio transporte público (Km/hr)"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Velocidad promedio transporte público (Km/hr)
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/02-edad-promedio-vehiculos-trans-publico-min.jpg"
-                alt="Imagen Edad Promedio de los vehículos de transporte Público según
-                componente"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Edad Promedio de los vehículos de transporte Público según
-                componente
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/03-indice-pasajeros-km-min.jpg"
-                alt="Imagen Índice de pasajeros por kilómetro según componente"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Índice de pasajeros por kilómetro según componente
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/04-pasajeros-an%CC%83o-terminal-min.jpg"
-                alt="Imagen Pasajeros al año en Terminal de Transporte"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Pasajeros al año en Terminal de Transporte
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/05-cables-construidos-min.jpg"
-                alt="Imagen Cables construidos"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Cables construidos
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/08-porcentaje-avance-estructuracion-sistema-inoperable-recaudo-min.jpg"
-                alt="Imagen  Pasajeros al porcentaje de avance de la PLMB tramo terminal de
-                transporte"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Pasajeros al porcentaje de avance de la PLMB tramo terminal de
-                transporte
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/06-porcentaje-avance-plmb-tramo-1-min.jpg"
-                alt="Imagen Porcentaje de avance de la PLMB Tramo I"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Porcentaje de avance de la PLMB Tramo I
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/08-porcentaje-avance-estructuracion-sistema-inoperable-recaudo-min.jpg"
-                alt="Imagen Porcentaje de avance en la estructuración del Sistema
-                Interoperable de Recaudo (SIR)"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Porcentaje de avance en la estructuración del Sistema
-                Interoperable de Recaudo (SIR)
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Transporte público">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/09-porcentaje-usuarios-tm-satisfechos-min.jpg"
-                alt="Imagen Porcentaje de usuarios de TransMilenio satisfechos"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Porcentaje de usuarios de TransMilenio satisfechos
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Transporte público</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3-->
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Comportamiento en via">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/01-tasa-morbilidad-accidentes-cada10mil-vehiculos-registrados-min.jpg"
-                alt="Imagen Tasa de morbilidad en accidentes de tránsito por cada 10 mil
-                vehículos registrados"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Tasa de mortalidad en accidentes de tránsito por cada 10 mil
-                vehículos registrados
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Comportamiento en via</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Comportamiento en via">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/02-tasa-mortalidad-accidentes-cada10mil-vehiculos-registrados-min.jpg"
-                alt="Imagen Tasa de mortalidad en accidentes de tránsito por cada 10 mil
-                vehículos registrados"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Tasa de mortalidad en accidentes de tránsito por cada 10 mil
-                vehículos registrados
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Comportamiento en via</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Comportamiento en via">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/03-porcentaje-evasion-medido-componente-troncal-min.jpg"
-                alt="Imagen Porcentaje de evasión medido en el componente troncal"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Porcentaje de evasión medido en el componente troncal
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Comportamiento en via</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 4 -->
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Viajes y volúmenes">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/01-tiempos-viajes-minutos-min.jpg"
-                alt="Imagen Tiempos de viajes por (minutos)"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Tiempos de viajes por (minutos)
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Viajes y volúmenes</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Viajes y volúmenes">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/05-particion-modal-viajes-min.jpg"
-                alt="Imagen Partición Modal de Viajes"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Partición Modal de Viajes
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Viajes y volúmenes</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Viajes y volúmenes">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/02-tiempo-promedio-desplazamiento-personas-ciudad-bitcarrier-min.jpg"
-                alt="Imagen Tiempo promedio de desplazamiento de las personas en la ciudad (minutos/Km) BITCARRIER"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Tiempo promedio de desplazamiento de las personas en la ciudad
-                (minutos/Km) BITCARRIER
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Viajes y volúmenes</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Viajes y volúmenes">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/03-velocidad-promedio-ponderada-min.jpg"
-                alt="Imagen Velocidad promedio ponderada general (Km/hr)"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Velocidad promedio ponderada general (Km/hr)
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Viajes y volúmenes</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="omb-card omb-card--pequeña omb-card--pequeña-sin-parrafo"
-              data-categoria="Viajes y volúmenes">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/04-velocidad-promedio-modos-motorizados-min.jpg"
-                alt="Imagen Velocidad promedio para modos motorizados"
-                class="omb-imagen-card omb-imagen-card--pequeña" />
-              <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-                Velocidad promedio para modos motorizados
-              </h5>
-              <div class="omb-tags-card-container">
-                <div class="omb-tag-card">
-                  <img
-                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
-                    alt="Icono de tag"
-                    class="omb-tag-icono" />
-                  <span>Viajes y volúmenes</span>
-                </div>
-              </div>
-            </div>
+            <nav
+              class="omb-paginacion-numerica"
+              id="paginacion"
+              aria-label="Paginación de temáticas">
+              <ul>
+                <li>
+                  <button class="omb-paginacion-enlace">Anterior</button>
+                </li>
+                <li>
+                  <button
+                    class="omb-paginacion-enlace omb-pagination-numero omb-paginacion-enlace--activo">
+                    1
+                  </button>
+                </li>
+                <li>
+                  <button class="omb-paginacion-enlace omb-pagination-numero">
+                    2
+                  </button>
+                </li>
+                <li>
+                  <button class="omb-paginacion-enlace omb-pagination-numero">
+                    3
+                  </button>
+                </li>
+                <li>
+                  <button class="omb-paginacion-enlace">Siguiente</button>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </section>

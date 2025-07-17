@@ -86,7 +86,8 @@ body {
   display: block;
 }
 .omb-sidebar-content {
-  position: fixed;
+  position: absolute;
+  border-radius: 16px;
   background-color: #fff;
 }
 
