@@ -322,6 +322,7 @@ body {
 }
 .omb-imagen-card {
   width: 100%;
+  object-fit: cover;
 }
 .omb-imagen-card--pequeña {
   height: 158px;

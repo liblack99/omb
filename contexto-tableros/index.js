@@ -15,9 +15,15 @@ const swiperTablerosInteres = new Swiper(".tablerosSwiper", {
     disableOnInteration: false,
   },
   breakpoints: {
-    640: {slidesPerView: 2},
+    480: {slidesPerView: 1, spaceBetween: 20},
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
     1024: {slidesPerView: 3},
-    1280: {slidesPerView: 4},
+    1140: {
+      slidesPerView: 4,
+    },
   },
 });
 let isPlaying = true;

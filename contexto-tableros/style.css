@@ -204,6 +204,7 @@ body {
 
 .omb-section--de-interes {
   background-color: var(--color-fondo-seccion-intreres);
+  padding-bottom: 80px;
 }
 
 .omb-card-contexto-container {
@@ -635,7 +636,7 @@ body {
 }
 
 .omb-de-interes-container {
-  width: 1280px;
+  width: 90%;
   position: relative;
 }
 .omb-titulo-section {
@@ -654,8 +655,13 @@ body {
   color: black;
 }
 
-.omb-swiper {
+.omb-carrusel-container {
+  position: relative;
   width: 100%;
+}
+
+.omb-swiper {
+  width: 90%;
   padding: 4px;
   box-sizing: border-box;
 }
@@ -673,7 +679,7 @@ body {
 }
 .omb-paginacion {
   position: absolute;
-  bottom: -32px !important;
+  bottom: -60px !important;
 }
 
 .omb-paginacion > .swiper-pagination-bullet {
@@ -719,17 +725,17 @@ body {
 }
 
 .omb-boton-prev {
-  left: -100px;
+  left: -12px;
 }
 .omb-boton-next {
-  right: -100px;
+  right: -12px;
 }
 .omb-boton-prev,
 .omb-boton-next {
   color: #565747 !important;
   background-color: #f3f4f1cc;
-  width: 53px;
-  height: 53px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   border-width: 1px;
   transition: all 0.5s ease;
@@ -746,6 +752,7 @@ body {
   font-size: 32px;
   font-weight: 900;
 }
+
 .omb-botom-control-carrousel-tableros-interes {
   position: absolute;
   z-index: 20;
@@ -786,7 +793,7 @@ body {
 }
 
 .omb-card--pequeña {
-  width: 297px;
+  width: 100%;
 }
 .omb-card:hover {
   border: 1px solid black;
@@ -920,7 +927,8 @@ body {
   .omb-card-contexto-container,
   .omb-breadcrumb-container,
   .omb-fuentes-container,
-  .omb-contexto-container {
+  .omb-contexto-container,
+  .omb-de-interes-container {
     max-width: 960px;
   }
   .omb-compartir-container {
@@ -983,6 +991,11 @@ body {
   .omb-parrafos-container {
     width: 50%;
   }
+  .omb-boton-prev,
+  .omb-boton-next {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 @media (min-width: 1140px) and (max-width: 1359px) {
@@ -1027,7 +1040,8 @@ body {
 
   .omb-breadcrumb-container,
   .omb-fuentes-container,
-  .omb-contexto-container {
+  .omb-contexto-container,
+  .omb-de-interes-container {
     max-width: 1140px;
   }
   .omb-card-contexto-container {
@@ -1093,6 +1107,11 @@ body {
   .omb-parrafos-container {
     width: 50%;
   }
+  .omb-boton-prev,
+  .omb-boton-next {
+    width: 52px;
+    height: 52px;
+  }
 }
 @media (min-width: 1360px) {
   .omb-buscador {
@@ -1155,7 +1174,8 @@ body {
   .omb-fuentes-container,
   .omb-compartir-container,
   .omb-contexto-container,
-  .omb-grafica-container {
+  .omb-grafica-container,
+  .omb-de-interes-container {
     max-width: 1280px;
   }
   .omb-card-contexto-container {
@@ -1217,5 +1237,10 @@ body {
   }
   .omb-parrafos-container {
     width: 50%;
+  }
+  .omb-boton-prev,
+  .omb-boton-next {
+    width: 52px;
+    height: 52px;
   }
 }
