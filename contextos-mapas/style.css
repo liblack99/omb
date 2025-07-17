@@ -7,134 +7,138 @@
   --color-enlace-hover: #a5ad4a;
   --color-fondo-seccion-intreres: #f3f4f1;
 }
-
 a {
   text-decoration: none;
-  color: inherit;
 }
 body {
-  display: flex;
-  justify-content: center;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
-main {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto 0;
-  width: 100%;
-  margin-top: 40px;
-}
 
-.omb-breadcrumb-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-  border: 1px solid #d3d3ca;
-  box-shadow: 0px 2px 10px 0px #0000001f;
-  background-color: #f8f9f1;
-  box-sizing: border-box;
-}
-
-.omb-breadcrumb-lista {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 12px;
-  color: #bbbcae;
-  max-width: auto;
-  min-width: 324px;
-  height: 25px;
-  border-radius: 16px;
-  padding: 4px 16px 4px 16px;
-  gap: 14px;
-  margin-left: 294px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
-}
-.omb-breadcrumb-lista span {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 100%;
-  color: #9ea453;
-}
-.omb-breadcrumb-lista li a {
-  color: #9ea453;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
-  text-align: center;
-  vertical-align: middle;
-}
-.omb-breadcrumb-lista li a:hover {
-  color: #acbd00;
-}
 .omb-section {
   width: 100%;
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
 }
+
 .omb-section--de-interes {
   background-color: var(--color-fondo-seccion-intreres);
+  padding-bottom: 80px;
+}
+.omb-texto-container {
+  width: 90%;
 }
 
-.omb-texto-container {
-  width: 1280px;
-  height: auto;
+.omb-card-contexto-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+.omb-card-contexto-content {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  width: 90%;
+}
+
+.omb-texto-card-contexto {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  position: relative;
+}
+
 .omb-titulo-card-contexto {
   font-weight: 600;
-  font-size: 28px;
-  line-height: 44px;
+  font-size: 2rem;
+  line-height: 2.75rem;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
-.omb-parrafos-contexto-container {
+.omb-titulo-card-container {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  margin: 16px 0px;
 }
+
 .omb-parrafo-card-contexto {
-  font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
-  margin: 0;
-  height: auto;
-  width: 600px;
+  font-weight: 400;
   font-family: "Work sans", sans-serif;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #1b1b1b;
+  margin: 0;
 }
+.omb-icono-container {
+  width: auto;
+  height: auto;
+  padding: 8px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(103, 108, 46, 0.1);
+}
+.omb-icon-card-contexto {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  background: #dbf000;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.omb-imagen-card-contexto {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
 .omb-fuentes-container {
-  width: 1280px;
-  height: 140px;
-  background-color: #e6e6e6;
+  width: 90%;
+
   border-radius: 24px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 .omb-fuentes-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 100%;
   height: 100%;
+  border-radius: 16px;
+  background-color: #e6e6e6;
+}
+.omb-fuente-doble {
+  display: flex;
+  flex-direction: column;
 }
 .omb-fuentes-item {
-  width: 332px;
+  padding: 16px;
+  width: 100%;
   height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 4px;
   border-left-width: 1px;
   border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+.omb-boton-fuentes-container {
+  background-color: #fff;
 }
 
 .omb-titulo-fuentes {
@@ -157,11 +161,10 @@ main {
   font-family: "Work sans", sans-serif;
 }
 .omb-boton-fuentes-container {
-  flex: 1;
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
 }
 
 .omb-boton {
@@ -169,6 +172,7 @@ main {
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 500;
+  text-align: center;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -195,7 +199,6 @@ main {
   border-color: var(--color-texto);
   color: white;
 }
-
 .omb-mapa-section {
   width: 100%;
   display: flex;
@@ -206,13 +209,14 @@ main {
 }
 .omb-mapa-container {
   overflow: hidden;
-  width: 1280px;
+  width: 90%;
   height: 808px;
   border-radius: 16px;
   position: relative;
 }
 .omb-mapa-container img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -221,30 +225,29 @@ main {
   border: 1px solid #bbbcae;
   border-radius: 16px 0px 0px 16px;
   border-right: 4px solid var(--color-primario);
-  width: 455px;
+  width: 384px;
   height: 232px;
   opacity: 0.7;
   gap: 8px;
   padding: 32px;
-  right: 10px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  background-color: #fff;
 }
 
 .omb-compartir-container {
-  width: 1280px;
-  height: 116px;
+  width: 90%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
   border-radius: 24px;
-  padding: 52px;
+  padding: 12px;
   background-color: #e6e6e6;
   box-sizing: border-box;
-}
-.omb-compartir-container--variante {
-  justify-content: end;
 }
 
 .omb-redes-sociales {
@@ -253,19 +256,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 26px;
+  gap: 8px;
 }
 .omb-redes-sociales p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 22px;
   letter-spacing: 0px;
   text-align: right;
   vertical-align: middle;
+  margin: 0;
 }
 .omb-lista-redes {
   display: flex;
-  gap: 28px;
+  gap: 8px;
 }
 .omb-lista-redes a {
   width: 32px;
@@ -277,10 +281,20 @@ main {
   border-radius: 50%;
   padding: 8px;
 }
+.omb-de-interes-container {
+  width: 90%;
+  position: relative;
+}
 
-.omb-contexto-container {
-  width: 1280px;
+.omb-contexto-section {
   display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.omb-contexto-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -298,16 +312,6 @@ main {
   margin: 0;
   font-family: "Work sans", sans-serif;
 }
-.omb-contexto-section ul {
-  padding: 0px 0px 0px 20px;
-}
-.omb-contexto-section ul li {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  margin: 0;
-  font-family: "Work sans", sans-serif;
-}
 
 .omb-enlaces-container {
   display: flex;
@@ -319,9 +323,19 @@ main {
   flex-direction: column;
   gap: 30px;
 }
+.omb-parrafos-container ul {
+  padding: 0px 0px 0px 20px;
+}
+.omb-parrafos-container ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  font-family: "Work sans", sans-serif;
+}
 
 .omb-lista-enlaces {
-  width: 545px;
+  width: 100%;
   height: 90px;
   display: flex;
   flex-direction: column;
@@ -331,6 +345,7 @@ main {
 .omb-enlaces {
   gap: 4px;
   display: flex;
+  align-items: center;
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -345,17 +360,17 @@ main {
 }
 
 .omb-de-interes-container {
-  width: 1280px;
+  width: 90%;
   position: relative;
 }
 .omb-titulo-section {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
-  color: black;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
 }
 .omb-parrafo-descripcion-section {
   font-weight: 500;
@@ -364,8 +379,13 @@ main {
   color: black;
 }
 
-.omb-swiper {
+.omb-carrusel-container {
+  position: relative;
   width: 100%;
+}
+
+.omb-swiper {
+  width: 90%;
   padding: 4px;
   box-sizing: border-box;
 }
@@ -383,7 +403,7 @@ main {
 }
 .omb-paginacion {
   position: absolute;
-  bottom: -32px !important;
+  bottom: -60px !important;
 }
 
 .omb-paginacion > .swiper-pagination-bullet {
@@ -429,17 +449,17 @@ main {
 }
 
 .omb-boton-prev {
-  left: -100px;
+  left: -12px;
 }
 .omb-boton-next {
-  right: -100px;
+  right: -12px;
 }
 .omb-boton-prev,
 .omb-boton-next {
   color: #565747 !important;
   background-color: #f3f4f1cc;
-  width: 53px;
-  height: 53px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   border-width: 1px;
   transition: all 0.5s ease;
@@ -456,6 +476,7 @@ main {
   font-size: 32px;
   font-weight: 900;
 }
+
 .omb-botom-control-carrousel-tableros-interes {
   position: absolute;
   z-index: 20;
@@ -496,7 +517,7 @@ main {
 }
 
 .omb-card--pequeña {
-  width: 297px;
+  width: 100%;
 }
 .omb-card:hover {
   border: 1px solid black;
@@ -543,6 +564,9 @@ main {
   width: 12px;
   height: 12px;
 }
+.hidden {
+  display: none;
+}
 
 .omb-titulo-card {
   font-weight: 600;
@@ -580,6 +604,319 @@ main {
   color: black;
   min-height: 72px;
 }
-.omb-parrafo-card--sin-limite {
-  display: inline;
+
+@media (min-width: 768px) {
+  .omb-parrafos-contexto-container {
+    display: flex;
+    gap: 30px;
+  }
+  .omb-titulo-card-container {
+    margin: 16px 0px;
+  }
+  .omb-titulo-card-contexto {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1139px) {
+  .omb-parrafos-contexto-container {
+    display: flex;
+    gap: 30px;
+  }
+  .omb-texto-card-contexto {
+    width: 50%;
+  }
+  .omb-titulo-card-contexto {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-mapa-container,
+  .omb-texto-container,
+  .omb-fuentes-container,
+  .omb-contexto-container,
+  .omb-compartir-container,
+  .omb-de-interes-container {
+    max-width: 960px;
+  }
+  .omb-compartir-container {
+    justify-content: end;
+  }
+  .omb-card-contexto-content {
+    flex-direction: row;
+    justify-content: start;
+    gap: 30px;
+    width: 100%;
+  }
+  .omb-imagen-card-contexto {
+    width: 50%;
+    height: 316px;
+  }
+  .omb-titulo-card-container {
+    margin: 16px 0px;
+  }
+  .omb-fuentes-container {
+    flex-direction: row;
+  }
+  .omb-fuentes-content {
+    flex-direction: row;
+    justify-content: start;
+    width: 600px;
+  }
+  .omb-fuentes-item {
+    width: 300px;
+  }
+  .omb-boton-fuentes-container {
+    background-color: #e6e6e6;
+    flex: 1;
+  }
+  .omb-boton-fuentes-container {
+    background-color: #e6e6e6;
+  }
+  .omb-fuentes-container {
+    justify-content: start;
+    background-color: #e6e6e6;
+    overflow: hidden;
+  }
+  .omb-grafica-section-mobile {
+    display: none;
+  }
+  .omb-grafica-section {
+    display: flex;
+  }
+  .omb-selectores-grafica-container {
+    width: 100%;
+  }
+  .omb-nav-grafica {
+    width: 100%;
+  }
+  .omb-contexto-container {
+    flex-direction: row;
+  }
+  .omb-enlaces-container {
+    width: 50%;
+  }
+  .omb-parrafos-container {
+    width: 50%;
+  }
+  .omb-boton-prev,
+  .omb-boton-next {
+    width: 52px;
+    height: 52px;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 1140px) and (max-width: 1359px) {
+  .omb-texto-card-contexto {
+    width: 50%;
+  }
+  .omb-titulo-card-contexto {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .omb-mapa-container,
+  .omb-texto-container,
+  .omb-fuentes-container,
+  .omb-contexto-container,
+  .omb-compartir-container,
+  .omb-de-interes-container {
+    max-width: 1140px;
+  }
+
+  .omb-compartir-container {
+    justify-content: end;
+  }
+  .omb-card-contexto-content {
+    flex-direction: row;
+    justify-content: start;
+    gap: 30px;
+    width: 100%;
+  }
+  .omb-imagen-card-contexto {
+    width: 50%;
+    height: 316px;
+  }
+  .omb-titulo-card-container {
+    margin: 16px 0px;
+  }
+  .omb-fuentes-container {
+    flex-direction: row;
+  }
+  .omb-fuentes-content {
+    flex-direction: row;
+    justify-content: start;
+    width: 700px;
+  }
+  .omb-fuentes-item {
+    width: 360px;
+  }
+  .omb-boton-fuentes-container {
+    background-color: #e6e6e6;
+    flex: 1;
+  }
+  .omb-boton-fuentes-container {
+    background-color: #e6e6e6;
+  }
+  .omb-fuentes-container {
+    justify-content: start;
+    background-color: #e6e6e6;
+    overflow: hidden;
+  }
+  .omb-grafica-section-mobile {
+    display: none;
+  }
+  .omb-grafica-section {
+    display: flex;
+  }
+  .omb-selectores-grafica-container {
+    width: 100%;
+  }
+  .omb-nav-grafica {
+    width: 100%;
+  }
+  .omb-contexto-container {
+    flex-direction: row;
+  }
+  .omb-enlaces-container {
+    width: 50%;
+  }
+  .omb-parrafos-container {
+    width: 50%;
+  }
+  .omb-boton-prev,
+  .omb-boton-next {
+    width: 52px;
+    height: 52px;
+  }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 1360px) {
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .omb-compartir-container {
+    justify-content: end;
+  }
+  .omb-texto-card-contexto {
+    width: 50%;
+  }
+  .omb-titulo-card-contexto {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .omb-mapa-container,
+  .omb-texto-container,
+  .omb-fuentes-container,
+  .omb-contexto-container,
+  .omb-compartir-container,
+  .omb-de-interes-container {
+    max-width: 1280px;
+  }
+  .omb-card-contexto-container {
+    width: 1280px;
+  }
+
+  .omb-card-contexto-content {
+    flex-direction: row;
+    justify-content: start;
+    gap: 30px;
+    width: 100%;
+  }
+  .omb-imagen-card-contexto {
+    width: 50%;
+    height: 316px;
+  }
+  .omb-titulo-card-container {
+    margin: 16px 0px;
+  }
+  .omb-fuentes-container {
+    flex-direction: row;
+  }
+  .omb-fuentes-content {
+    flex-direction: row;
+    justify-content: start;
+    width: 900px;
+  }
+  .omb-fuentes-item {
+    width: 460px;
+  }
+  .omb-boton-fuentes-container {
+    background-color: #e6e6e6;
+    flex: 1;
+  }
+  .omb-fuentes-container {
+    justify-content: start;
+    background-color: #e6e6e6;
+    overflow: hidden;
+  }
+  .omb-grafica-section-mobile {
+    display: none;
+  }
+  .omb-grafica-section {
+    display: flex;
+  }
+  .omb-selectores-grafica-container {
+    width: 100%;
+  }
+  .omb-nav-grafica {
+    width: 100%;
+  }
+  .omb-contexto-container {
+    flex-direction: row;
+  }
+  .omb-enlaces-container {
+    width: 50%;
+  }
+  .omb-parrafos-container {
+    width: 50%;
+  }
+  .omb-boton-prev,
+  .omb-boton-next {
+    width: 52px;
+    height: 52px;
+  }
 }
