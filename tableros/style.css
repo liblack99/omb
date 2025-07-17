@@ -281,10 +281,7 @@ body {
 .omb-opciones li:hover {
   background-color: var(--color-primario);
 }
-.ombe-select option:hover {
-  border-radius: 16px;
-  background-color: var(--color-enlace-hover);
-}
+
 .omb-div {
   height: 1100px;
   overflow-x: visible;
