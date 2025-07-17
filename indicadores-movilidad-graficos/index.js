@@ -74,12 +74,12 @@ if (pauseButtonTablerosInteres) {
   });
 }
 const buttons = document.querySelectorAll(".omb-botones-lista");
-const graficaContainers = document.querySelectorAll(".omb-grafica-container");
+const graficaContainers = document.querySelectorAll(".omb-grafica");
 // Mostrar solo "Fallecidos" por defecto
-const categoriaPorDefecto = "GRAFICAS";
+const categoriaPorDefecto = "GRÁFICAS";
 
 buttons.forEach((button) => {
-  const categoria = button.textContent.trim();
+  const categoria = button.textContent.trim().toLocaleLowerCase();
 
   if (categoria === categoriaPorDefecto) {
     button.classList.add("omb-botones-lista-seleccionado");

@@ -34,7 +34,7 @@ body {
 }
 .omb-card-contexto-content {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   width: 90%;
 }
@@ -51,7 +51,7 @@ body {
   line-height: 44px;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
-  margin: 16px 0;
+  margin: 8px 0;
 }
 .omb-titulo-card-container {
   width: 100%;
@@ -267,13 +267,13 @@ body {
 }
 
 .omb-grafica-container {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .omb-selectores-grafica-container {
-  width: 90%;
+  width: 100%;
   height: 70px;
   border: 2px solid var(--color-primario);
   border-top: none;
@@ -325,12 +325,12 @@ body {
   color: #212400;
 }
 .omb-grafica-mobile {
-  width: 90%;
+  width: 100%;
   height: 600px;
   text-align: center;
 }
 .omb-grafica {
-  width: 90%;
+  width: 100%;
   height: 600px;
   text-align: center;
 }
@@ -707,39 +707,15 @@ body {
   .omb-titulo-card-container {
     margin: 16px 0px;
   }
+  .omb-paginacion {
+    position: absolute;
+    bottom: -32px !important;
+  }
+  .omb-section--de-interes {
+    padding-bottom: 40px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
-  .omb-buscador {
-    max-width: 960px;
-  }
-  .omb-icono-menu-container {
-    display: none;
-  }
-  .omb-nav {
-    position: relative;
-    display: flex;
-    top: 0;
-    border-radius: 0px;
-    justify-content: start;
-    padding-left: 10px;
-    width: 100%;
-  }
-  .omb-lista-nav {
-    max-width: 100%;
-    flex-direction: row;
-  }
-  .omb-lista-nav li {
-    max-width: 160px;
-    border-top: 1px solid transparent;
-    border-right-color: #bbbcae;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .omb-lista-nav li a {
-    padding: 16px;
-  }
   .omb-card-contexto-container {
     justify-content: start;
   }
@@ -828,38 +804,6 @@ body {
 }
 
 @media (min-width: 1140px) and (max-width: 1359px) {
-  .omb-buscador {
-    max-width: 1140px;
-  }
-  .omb-icono-menu-container {
-    display: none;
-  }
-  .omb-nav {
-    position: relative;
-    display: flex;
-    top: 0;
-    border-radius: 0px;
-    justify-content: start;
-    padding-left: 40px;
-    width: 1140px;
-  }
-  .omb-lista-nav {
-    max-width: 100%;
-    flex-direction: row;
-  }
-  .omb-lista-nav li {
-    max-width: 160px;
-    border-top: 1px solid transparent;
-    border-right-color: #bbbcae;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .omb-lista-nav li a {
-    padding: 16px;
-  }
-
   .omb-card-contexto-container {
     justify-content: start;
   }
@@ -944,51 +888,13 @@ body {
   .omb-section--de-interes {
     padding-bottom: 40px;
   }
+
   .omb-paginacion {
     position: absolute;
     bottom: -32px !important;
   }
 }
 @media (min-width: 1360px) {
-  .omb-buscador {
-    max-width: 1140px;
-  }
-
-  header {
-    display: flex;
-    justify-content: center;
-  }
-  .omb-buscador {
-    max-width: 1280px;
-  }
-  .omb-icono-menu-container {
-    display: none;
-  }
-  .omb-nav {
-    position: relative;
-    display: flex;
-    top: 0;
-    border-radius: 0px;
-    justify-content: start;
-    padding-left: 10px;
-    width: 1280px;
-  }
-  .omb-lista-nav {
-    max-width: 1280px;
-    flex-direction: row;
-  }
-  .omb-lista-nav li {
-    max-width: 160px;
-    border-top: 1px solid transparent;
-    border-right-color: #bbbcae;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .omb-lista-nav li a {
-    padding: 16px;
-  }
   .omb-titulo-section {
     font-weight: 600;
     font-size: 2rem;
