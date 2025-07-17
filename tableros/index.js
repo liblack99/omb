@@ -59,19 +59,28 @@ opcionSeleccionada.forEach((boton) => {
 const sidebarContent = document.getElementById("sidebar");
 
 function handleScroll() {
-  const scrollLimit = 150;
+  const scrollStart = 150;
+  const scrollEnd = 740;
 
   if (window.innerWidth >= 1024) {
-    if (window.scrollY >= scrollLimit) {
+    if (window.scrollY >= scrollStart && window.scrollY < scrollEnd) {
       sidebarContent.style.position = "fixed";
       sidebarContent.style.top = "20px";
+    } else if (window.scrollY >= scrollEnd) {
+      sidebarContent.style.position = "relative";
+      sidebarContent.style.top = `${scrollEnd - scrollStart + 20}px`; // Ajusta para que se quede en el lugar
     } else {
       sidebarContent.style.position = "static";
+      sidebarContent.style.top = "";
     }
   } else {
     sidebarContent.style.position = "static";
+    sidebarContent.style.top = "";
   }
 }
 
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("resize", handleScroll);
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY); // Número de píxeles desplazados verticalmente
+});

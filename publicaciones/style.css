@@ -96,7 +96,7 @@ body {
 }
 
 .omb-swiper {
-  width: 92%;
+  width: 85%;
   padding: 4px;
   box-sizing: border-box;
 }
@@ -160,10 +160,10 @@ body {
 }
 
 .omb-boton-prev {
-  left: 0px;
+  left: -10px;
 }
 .omb-boton-next {
-  right: 0px;
+  right: -10px;
 }
 .omb-boton-prev,
 .omb-boton-next {
@@ -193,6 +193,10 @@ body {
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+.omb-card-explorar-publicaciones:hover {
+  transform: scale(1.01);
 }
 .omb-imagen-card-explorar-publicaciones {
   border-radius: 16px;

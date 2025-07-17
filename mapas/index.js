@@ -1,25 +1,35 @@
-const buttons = document.querySelectorAll(".omb-button");
-const cards = document.querySelectorAll(".omb-map-card");
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".omb-map-card");
+  const firstCard = cards[0];
+  const firstDescription = firstCard.querySelector(
+    ".omb-descripcion-container"
+  );
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    buttons.forEach((btn) => btn.classList.remove("omb-content-button-active"));
-    button.classList.add("omb-content-button-active");
+  // Por defecto: el contenedor de descripción del primer card está .omb-descripcion-container-alzado
 
-    const categoriaSeleccionada = button.textContent.trim().toLocaleLowerCase();
-    console.log(categoriaSeleccionada);
+  cards.forEach((card) => {
+    const description = card.querySelector(".omb-descripcion-container");
 
-    cards.forEach((card) => {
-      const categoriaCard = card.dataset.categoria.toLocaleLowerCase();
+    card.addEventListener("mouseenter", function () {
+      // Bajar todas las descripciones
+      console.log("Alzando descripción");
+      document
+        .querySelectorAll(".omb-descripcion-container")
+        .forEach((desc) => {
+          desc.classList.remove("omb-descripcion-container-alzado");
+        });
 
-      if (
-        categoriaSeleccionada === "todos los mapas" ||
-        categoriaCard === categoriaSeleccionada
-      ) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+      // Alzar solo la del hovered
+      description.classList.add("omb-descripcion-container-alzado");
+    });
+
+    card.addEventListener("mouseleave", function () {
+      // Al salir del hover, solo se vuelve a alzar la del primer card
+      document
+        .querySelectorAll(".omb-descripcion-container")
+        .forEach((desc) => {
+          desc.classList.remove("omb-descripcion-container-alzado");
+        });
     });
   });
 });

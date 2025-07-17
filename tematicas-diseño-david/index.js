@@ -6,6 +6,7 @@ const listasDeOpciones = document.querySelectorAll(".omb-opciones");
 opcionSeleccionada.forEach((boton) => {
   boton.addEventListener("click", () => {
     const valorSeleccionado = boton.dataset.select;
+    boton.classList.toggle("activo");
 
     listasDeOpciones.forEach((lista) => {
       if (lista.dataset.select === valorSeleccionado) {

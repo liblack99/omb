@@ -114,3 +114,31 @@ graficaContainers.forEach((card) => {
       ? "flex"
       : "none";
 });
+
+const botonesAcordeon = document.querySelectorAll(".omb-acordion-boton--home");
+
+botonesAcordeon.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const contenido = boton.nextElementSibling;
+
+    // Cerrar todos menos el actual
+    document.querySelectorAll(".omb-acordion-content-home").forEach((el) => {
+      if (el !== contenido) {
+        el.style.maxHeight = null;
+        el.classList.remove("abierto");
+        el.previousElementSibling.classList.remove("activo");
+      }
+    });
+
+    // Alternar el actual
+    if (contenido.style.maxHeight) {
+      contenido.style.maxHeight = null;
+      contenido.classList.remove("abierto");
+      boton.classList.remove("activo");
+    } else {
+      contenido.style.maxHeight = contenido.scrollHeight + "px";
+      contenido.classList.add("abierto");
+      boton.classList.add("activo");
+    }
+  });
+});

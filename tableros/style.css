@@ -46,7 +46,7 @@ body {
 }
 .omb-sidebar-container {
   width: 297px;
-  position: relative;
+  position: absolute;
   display: none;
   z-index: 50;
 }
@@ -524,6 +524,7 @@ body {
   }
   .omb-sidebar-container {
     display: block;
+    position: relative;
   }
   .omb-boton-sidebar--width {
     display: flex;
@@ -572,6 +573,7 @@ body {
   }
   .omb-sidebar-container {
     display: block;
+    position: relative;
   }
   .omb-boton-sidebar--width {
     display: flex;

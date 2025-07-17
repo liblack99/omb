@@ -171,17 +171,12 @@ if (pauseButtonSitiosRelacionados) {
     isPlayingSitiosRelacionados = !isPlayingSitiosRelacionados;
   });
 }
-const botonesAcordeon = document.querySelectorAll(".omb-acordion-boton--home");
 const botonMenu = document.getElementById("botonMenu");
 const botonesTab = document.querySelectorAll(".omb-tabs-boton--home");
 const cardsObservatorio = document.querySelectorAll(".omb-card-observatorio");
 const nav = document.querySelector(".omb-nav");
 
-const primerBoton = botonesAcordeon[0];
-const primerContenido = primerBoton.nextElementSibling;
-primerContenido.style.maxHeight = primerContenido.scrollHeight + "px";
-primerContenido.classList.add("abierto");
-primerBoton.classList.add("activo");
+const botonesAcordeon = document.querySelectorAll(".omb-acordion-boton--home");
 
 botonesAcordeon.forEach((boton) => {
   boton.addEventListener("click", () => {
