@@ -240,6 +240,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   position: relative;
+  margin: 16px 0px;
 }
 
 .omb-parrafo-card-contexto {
