@@ -396,6 +396,9 @@ body {
 .omb-opciones li:hover {
   background-color: var(--color-primario);
 }
+.omb-contenedor-derecho {
+  width: 100%;
+}
 .omb-cards-noticias-container {
   display: grid;
   place-items: center;
