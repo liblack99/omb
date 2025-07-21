@@ -2,7 +2,7 @@
   --color-primario-soft: #f9ffbd;
   --color-primario: #dbf000;
   --color-secundario-hover: #8e9c00;
-  --color-texto: #1b1b1b;
+  --color-texto: #000000;
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
   --color-fondo-seccion-intreres: #f3f4f1;
@@ -26,18 +26,19 @@ body {
 }
 .omb-titulo-section {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
-  color: black;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--color-texto);
+  font-family: "Montserrat", sans-serif;
 }
 .omb-parrafo-descripcion-section {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  color: black;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: var(--color-texto);
+  font-family: "Montserrat", "sans-serif";
 }
 .omb-cards-aplicaciones-comunidad-container {
   width: 100%;

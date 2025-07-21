@@ -2,7 +2,7 @@
   --color-primario-soft: #f9ffbd;
   --color-primario: #dbf000;
   --color-secundario-hover: #8e9c00;
-  --color-texto: #1b1b1b;
+  --color-texto: #000000;
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
   --color-fondo-seccion-intreres: #f3f4f1;
@@ -379,6 +379,12 @@ body {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
+  }
   .omb-boton-prev,
   .omb-boton-next {
     width: 44px;
@@ -405,6 +411,12 @@ body {
     font-family: "Montserrat", sans-serif;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
   }
   .omb-boton-prev,
   .omb-boton-next {
@@ -433,6 +445,12 @@ body {
     font-family: "Montserrat", sans-serif;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
+  }
+  .omb-parrafo-descripcion-section {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--color-texto);
   }
   .omb-boton-prev,
   .omb-boton-next {

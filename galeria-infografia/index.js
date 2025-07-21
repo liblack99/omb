@@ -1,6 +1,6 @@
 const swiperPublicacionesInteres = new Swiper(".infografiasSwiper", {
   slidesPerView: 1,
-  spaceBetween: 32,
+  spaceBetween: 30,
   navigation: {
     nextEl: ".omb-button-infografia-next",
     prevEl: ".omb-button-infografia-prev",
