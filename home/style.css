@@ -6,6 +6,7 @@
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
   --color-fondo-seccion-intreres: #f3f4f1;
+  --color-strong: #c4d600;
 }
 a {
   text-decoration: none;
@@ -23,7 +24,6 @@ body {
   padding-bottom: 40px;
 }
 .omb-section--top-bar {
-  display: block;
   padding: 0;
 }
 
@@ -40,18 +40,12 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
-.omb-logo-govco-container-top img {
+.omb-logo-govco {
   width: 8.438rem;
   height: 1.688rem;
 }
 
-.omb-buscador-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.omb-buscador {
+.omb-logo-omb-container {
   width: 90%;
   display: flex;
   align-items: center;
@@ -61,7 +55,7 @@ body {
   color: white;
   box-sizing: border-box;
 }
-.omb-input-busqueda-home {
+.omb-buscador-container {
   border-radius: 8px;
   width: 280px;
   height: 40px;
@@ -74,8 +68,11 @@ body {
   padding-right: 4px;
   background-color: #fff;
 }
+.omb-buscador-container--escritorio {
+  display: none;
+}
 
-.omb-input-busqueda-home input {
+.omb-input-buscar {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
@@ -87,10 +84,10 @@ body {
   outline: none;
 }
 
-.omb-input-busqueda-home:focus-within {
+.omb-buscador-container:focus-within {
   border: 2px solid #000;
 }
-.omb-input-busqueda-home button {
+.omb-boton-buscar {
   background-color: var(--color-primario);
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -108,18 +105,12 @@ body {
   color: #fff;
   background-color: var(--color-secundario-hover);
 }
-.omb-input-busqueda-home--escritorio {
-  display: none;
-}
 
-.omb-buscador-container {
-  display: flex;
-  align-items: center;
-}
 .omb-header {
   width: 100%;
   background-color: #e6e6e6;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: sticky;
   top: 0;
@@ -184,11 +175,7 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
-
-.omb-sitios-realacionados-section {
-  padding-bottom: 80px;
-}
-
+/* hero */
 .omb-titulo-section {
   font-weight: 600;
   font-size: 1.5rem;
@@ -237,7 +224,7 @@ body {
   margin-bottom: 1rem;
 }
 .omb-texto-hero span {
-  color: var(--color-primario);
+  color: var(--color-strong);
 }
 .omb-parrafo-hero {
   font-family: "Montserrat", sans-serif;
@@ -273,7 +260,7 @@ body {
 }
 .omb-boton--primario {
   background-color: var(--color-primario);
-  border-color: var(--color-primario);
+  border: 1px solid var(--color-primario);
 }
 .omb-botton--tamano-fijo {
   min-width: 364px;
@@ -289,11 +276,15 @@ body {
   align-items: center;
   gap: 8px;
 }
-
-.omb-boton:hover {
+.omb-boton--primario:hover {
   background-color: var(--color-secundario-hover);
-  border-color: var(--color-texto);
   color: white;
+  border-color: var(--color-enlace-hover);
+}
+
+.omb-boton--secundario:hover {
+  background-color: var(--color-primario);
+  color: black;
 }
 
 /* aliados */
@@ -361,7 +352,7 @@ body {
   opacity: 1;
   transition: all 0.3s ease;
 }
-/* Bullet activo */
+
 .omb-paginacion > .swiper-pagination-bullet-active {
   background-color: #4b521d !important;
   border-color: #4b521d;
@@ -509,6 +500,8 @@ body {
   align-items: center;
   position: relative;
 }
+
+/*Aliados */
 
 .omb-aliados-container {
   width: 90%;
@@ -762,13 +755,6 @@ body {
   z-index: 1;
 }
 
-.omb-fondo-sitios-relacionados {
-  position: absolute;
-  top: -258px;
-  z-index: -1;
-  width: 100%;
-}
-
 .omb-sitios-relacionados-container {
   width: 90%;
   position: relative;
@@ -923,7 +909,7 @@ footer {
   position: relative;
 }
 .omb-footer-container {
-  width: 90%;
+  width: 80%;
   background-color: #fff;
   padding: 32px;
   box-sizing: border-box;
@@ -1193,7 +1179,7 @@ footer {
   .omb-buscador-nav-mobile {
     display: none;
   }
-  .omb-input-busqueda-home--escritorio {
+  .omb-buscador-container--escritorio {
     display: flex;
   }
 
@@ -1428,7 +1414,7 @@ footer {
   .omb-buscador-nav-mobile {
     display: none;
   }
-  .omb-input-busqueda-home--escritorio {
+  .omb-buscador-container--escritorio {
     display: flex;
   }
 
@@ -1628,7 +1614,7 @@ footer {
   .omb-buscador-nav-mobile {
     display: none;
   }
-  .omb-input-busqueda-home--escritorio {
+  .omb-buscador-container--escritorio {
     display: flex;
   }
 
@@ -1639,6 +1625,7 @@ footer {
     justify-content: center;
     width: 100%;
     flex-direction: row;
+    top: 0;
   }
   .omb-lista-nav {
     max-width: 1140px;

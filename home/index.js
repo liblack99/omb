@@ -244,15 +244,16 @@ function handleScroll() {
   if (window.innerWidth >= 1024) {
     if (window.scrollY >= scrollStart) {
       nav.style.position = "fixed";
+      nav.style.zIndez = "50";
       nav.style.top = "0";
       nav.style.width = "100%"; // Opcional si quieres que no se deforme
     } else {
       nav.style.position = "static";
       nav.style.top = "";
+      nav.style.display = "flex";
     }
   } else {
     nav.style.position = "absolute";
-    nav.style.top = "";
   }
 }
 
