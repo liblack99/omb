@@ -203,8 +203,17 @@ botonesAcordeon.forEach((boton) => {
 botonMenu.addEventListener("click", () => {
   if (nav.style.display === "flex") {
     nav.style.display = "none";
+    botonMenu.innerHTML = `    <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="32">
+              <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+              <path
+                d="M432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z" />
+            </svg>`;
   } else {
     nav.style.display = "flex";
+    botonMenu.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" width="32"><!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>`;
   }
 });
 
@@ -227,4 +236,28 @@ botonesTab.forEach((boton) => {
       }
     });
   });
+});
+
+function handleScroll() {
+  const scrollStart = 144;
+
+  if (window.innerWidth >= 1024) {
+    if (window.scrollY >= scrollStart) {
+      nav.style.position = "fixed";
+      nav.style.top = "0";
+      nav.style.width = "100%"; // Opcional si quieres que no se deforme
+    } else {
+      nav.style.position = "static";
+      nav.style.top = "";
+    }
+  } else {
+    nav.style.position = "absolute";
+    nav.style.top = "";
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("resize", handleScroll);
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY); // Número de píxeles desplazados verticalmente
 });
