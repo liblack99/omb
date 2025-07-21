@@ -40,8 +40,8 @@ body {
   box-sizing: border-box;
 }
 .omb-logo-govco-container-top img {
-  height: 1.875rem;
-  width: 8.5rem;
+  width: 8.438rem;
+  height: 1.688rem;
 }
 
 .omb-buscador-container {
@@ -281,7 +281,7 @@ body {
 }
 
 .omb-swiper {
-  width: 100%;
+  width: 85%;
   padding: 4px;
   box-sizing: border-box;
 }
@@ -293,7 +293,7 @@ body {
 .omb-swiper-slide {
   padding: 8px;
   display: flex;
-  justify-content: end !important;
+  justify-content: center !important;
   align-items: center !important;
   box-sizing: border-box;
 }
@@ -326,26 +326,26 @@ body {
 .omb-boton-control-carrusel {
   position: absolute;
   z-index: 20;
-  bottom: -36px;
+  left: 0;
+  bottom: -44px;
   min-width: 120px;
   height: 34px;
   width: auto;
   cursor: pointer;
+  padding: 0;
 }
 .omb-boton-control-carrusel--variante {
-  bottom: 54px;
+  bottom: 46px;
 }
 
 .omb-boton-control-carrusel button {
   color: #565747;
-  border-radius: 8px;
   font-family: "Worl sans", sans-serif;
-  font-size: 16px;
+  font-size: 0.875rem;
   font-weight: 500;
   width: auto;
   display: flex;
-  padding: 8px;
-  gap: 8px;
+  gap: 4px;
   justify-content: center;
   align-items: center;
   border: none;
@@ -354,22 +354,21 @@ body {
 }
 
 .omb-boton-prev {
-  left: -100px;
+  left: 0;
 }
 .omb-boton-next {
-  right: -100px;
+  right: 0;
 }
 .omb-boton-prev,
 .omb-boton-next {
   color: #565747 !important;
   background-color: #f3f4f1cc;
-  width: 53px;
-  height: 53px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   border-width: 1px;
   transition: all 0.5s ease;
   border: 1px solid #d9e36e;
-  display: none;
 }
 .omb-boton-prev:hover,
 .omb-boton-next:hover {
@@ -654,7 +653,7 @@ body {
 }
 
 .omb-card--pequeña {
-  max-width: 290px;
+  max-width: 80%;
 }
 .omb-card:hover {
   border: 1px solid black;
@@ -703,7 +702,7 @@ body {
   color: black;
   min-height: 72px;
 }
-.omb-swiper-slide--publicaiones-home {
+.omb-swiper-slide--publicaciones-home {
   display: flex;
   justify-content: center !important;
 }
@@ -737,7 +736,7 @@ body {
 }
 
 .omb-card-sitios-relacionados {
-  width: 100%;
+  width: 90%;
   height: 158px;
   border-radius: 16px;
   overflow: hidden;
@@ -750,7 +749,7 @@ body {
   background-color: #fff;
   transition: all 0.5s ease;
   box-sizing: border-box;
-  padding: 16px;
+  padding: 8px;
 }
 .omb-card-sitios-relacionados img {
   width: 100%;
@@ -776,7 +775,7 @@ body {
 .omb-suscripcion-section {
   width: 100%;
   position: relative;
-  height: 400px;
+  height: 300px;
 }
 .omb-fondo-suscripcion-section {
   width: 100%;
@@ -817,7 +816,6 @@ body {
 
 .omb-suscripcion-decoracion {
   display: flex;
-  display: none;
 }
 .omb-parrafo-descripcion-section--sin-margin {
   margin-top: 0;
@@ -831,7 +829,6 @@ body {
 }
 .omb-input-container input {
   width: 100%;
-  height: 40px;
   padding-top: 8px;
   padding-right: 16px;
   padding-bottom: 8px;
@@ -878,7 +875,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 1140px;
   position: relative;
 }
 .omb-footer-container {
@@ -886,13 +882,21 @@ footer {
   background-color: #fff;
   padding: 32px;
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   top: -80px;
+  margin-bottom: 40px;
 }
 .omb-info-footer-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.omb-footer-header {
+  display: flex;
+  flex-direction: column;
+}
+.omb-info-footer {
+  width: 100%;
 }
 .omb-info-footer h2 {
   font-weight: 600;
@@ -937,8 +941,7 @@ footer {
   line-height: 1.5rem;
 }
 .omb-logos-footer img {
-  width: 100%;
-  object-fit: contain;
+  height: 50px;
 }
 
 .omb-redes-sociales-footer-container {
@@ -995,6 +998,14 @@ footer {
   gap: 16px;
   margin-bottom: 32px;
 }
+.omb-enlaces {
+  color: var(--color-enlace);
+}
+.omb-enlaces:hover {
+  color: var(--color-enlace-hover);
+  text-decoration: underline;
+}
+
 .omb-enlaces-footer-container a {
   display: flex;
   justify-content: center;
@@ -1012,7 +1023,9 @@ footer {
 }
 .omb-enlaces-footer-container a:hover {
   color: var(--color-enlace-hover);
+  text-decoration: underline;
 }
+
 .omb-logo-govco-container {
   width: 100%;
   height: 80px;
@@ -1103,6 +1116,9 @@ footer {
   }
   footer {
     height: 836px;
+  }
+  .omb-footer-header {
+    flex-direction: row;
   }
   .omb-footer-container {
     padding: 40px;
@@ -1499,7 +1515,7 @@ footer {
     gap: 32px;
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-titulo-hero {
     font-size: 2.625rem;
   }
@@ -1508,7 +1524,7 @@ footer {
     justify-content: center;
   }
   .omb-buscador {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-icono-menu-container {
     display: none;
@@ -1562,7 +1578,7 @@ footer {
   .omb-indicadores-destacados-container,
   .omb-publicaciones-container,
   .omb-suscripcion-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-suscripcion-container {
     justify-content: space-between;
@@ -1570,7 +1586,7 @@ footer {
   .omb-indicadores-destacados-container,
   .omb-publicaciones-container,
   .omb-sitios-relacionados-container {
-    width: 1280px;
+    width: 1140px;
   }
   .omb-card-hero {
     flex-direction: row;
@@ -1604,7 +1620,7 @@ footer {
     position: relative;
   }
   .omb-swiper {
-    width: 90%;
+    width: 85%;
   }
 
   .omb-boton-prev,
@@ -1614,207 +1630,10 @@ footer {
     display: flex;
   }
   .omb-boton-prev {
-    left: -60px;
+    left: -0px;
   }
   .omb-boton-next {
-    right: -60px;
-  }
-  .omb-suscripcion-section {
-    height: 280px;
-  }
-
-  .omb-suscripcion-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 90px;
-    align-items: center;
-    z-index: 2;
-  }
-  .omb-texto {
-    width: 380px;
-    max-width: 400px;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    color: white;
-    padding-left: 20px;
-  }
-  .omb-titulo-section--blanco {
-    color: white;
-  }
-  .omb-parrafo-descripcion-section--blanco {
-    color: white;
-    margin: 0;
-    text-align: start;
-  }
-
-  .omb-suscripcion-decoracion {
-    display: flex;
-    display: none;
-  }
-  .omb-parrafo-descripcion-section--sin-margin {
-    margin-top: 0;
-  }
-  .omb-input-container {
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-    margin-top: 40px;
-  }
-  .omb-input-container input {
-    min-width: 280px;
-    width: 450px;
-    height: 40px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-  }
-  .omb-input-container button {
-    width: 158px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-  .omb-input-container button:hover {
-    border: 1px solid black;
-  }
-  .omb-input-container button:hover {
-    background-color: #ecff24;
-  }
-  footer {
-    height: 820px;
-  }
-  .omb-footer-container {
-    padding: 80px;
-  }
-
-  .omb-info-footer-content {
-    flex-direction: row;
-  }
-  .omb-redes-sociales-footer-container {
-    justify-content: space-evenly;
-  }
-  .omb-enlaces-footer-container {
-    gap: 32px;
-  }
-}
-@media (min-width: 1440px) {
-  .omb-titulo-hero {
-    font-size: 2.625rem;
-  }
-  header {
-    display: flex;
-    justify-content: center;
-  }
-  .omb-buscador {
-    max-width: 1280px;
-  }
-  .omb-icono-menu-container {
-    display: none;
-  }
-  .omb-nav {
-    position: relative;
-    display: flex;
-    top: 0;
-    border-radius: 0px;
-    justify-content: start;
-    padding-left: 10px;
-    width: 1280px;
-  }
-  .omb-lista-nav {
-    max-width: 1280px;
-    flex-direction: row;
-  }
-  .omb-lista-nav li {
-    max-width: 160px;
-    border-top: 1px solid transparent;
-    border-right-color: #bbbcae;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .omb-lista-nav li a {
-    padding: 16px;
-  }
-  .omb-titulo-section {
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 2.75rem;
-    color: var(--color-texto);
-    font-family: "Montserrat", sans-serif;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .omb-titulo-section--sin-margin {
-    margin-top: 0px;
-  }
-  .omb-parrafo-descripcion-section {
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    color: var(--color-texto);
-  }
-  .omb-hero-container,
-  .omb-aliados-container,
-  .omb-observatorio-container,
-  .omb-indicadores-destacados-container,
-  .omb-publicaciones-container,
-  .omb-suscripcion-container,
-  .omb-indicadores-destacados-container,
-  .omb-publicaciones-container,
-  .omb-sitios-relacionados-container {
-    max-width: 1280px;
-  }
-  .omb-suscripcion-container {
-    justify-content: space-between;
-  }
-
-  .omb-card-hero {
-    flex-direction: row;
-  }
-  .omb-section--aliados-home {
-    height: 640px;
-    justify-content: center;
-  }
-
-  .aliados-logos-container {
-    justify-content: space-between;
-  }
-  .aliados-logos-container img {
-    width: 140px;
-    height: 120px;
-  }
-  .omb-obervatorio-section-acordion {
-    display: none;
-  }
-  .omb-obervatorio-section-tabs {
-    display: flex;
-  }
-  .omb-imagen-card-acordion {
-    height: 395px;
-  }
-
-  .omb-carrusel-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  .omb-swiper {
-    width: 90%;
-  }
-  .omb-boton-prev,
-  .omb-boton-next {
-    width: 52px;
-    height: 52px;
-    display: flex;
-  }
-  .omb-boton-prev {
-    left: 0px;
-  }
-  .omb-boton-next {
-    right: 0px;
+    right: -0px;
   }
   .omb-suscripcion-section {
     height: 280px;

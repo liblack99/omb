@@ -35,12 +35,11 @@ const botonPausar = `  <button
                   d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
               </svg>
 
-              Pausar
+              Detener
             </button>`;
 
 const swiperIndicadores = new Swiper(".indicadoresSwiper", {
   slidesPerView: 1,
-  spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -55,14 +54,12 @@ const swiperIndicadores = new Swiper(".indicadoresSwiper", {
     disableOnInteration: false,
   },
   breakpoints: {
-    320: {slidesPerView: 2, spaceBetween: 8},
-
-    480: {slidesPerView: 4, spaceBetween: 20},
+    480: {slidesPerView: 2, spaceBetween: 20},
     768: {
       slidesPerView: 3,
       spaceBetween: 24,
     },
-    1024: {slidesPerView: 4, spaceBetween: 24},
+    1024: {slidesPerView: 4, spaceBetween: 32},
     1360: {slidesPerView: 5},
   },
 });
@@ -103,10 +100,9 @@ const swiperPublicacionesSection = new Swiper(".publicacionesSectionSwiper", {
     480: {slidesPerView: 1, spaceBetween: 20},
     768: {
       slidesPerView: 2,
-      spaceBetween: 0,
+      spaceBetween: 30,
     },
-    1024: {slidesPerView: 4, spaceBetween: 30},
-    1360: {slidesPerView: 4},
+    1024: {slidesPerView: 4, spaceBetween: 20},
   },
 });
 let isPlayingSectionPublicacion = true;
