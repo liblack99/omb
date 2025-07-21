@@ -70,6 +70,7 @@ body {
   background-image: url("http://101.44.24.97/sites/default/files/2025-07/icono-busqueda.png");
   background-repeat: no-repeat;
   background-position: right 8px center;
+  background-size: 16px 16px;
   box-sizing: border-box;
 }
 .omb-buscador-container {
@@ -892,6 +893,7 @@ footer {
   justify-content: space-between;
 }
 .omb-footer-header {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -1114,17 +1116,20 @@ footer {
   .omb-redes-sociales-footer-container {
     justify-content: center;
   }
-  footer {
-    height: 836px;
-  }
+
   .omb-footer-header {
     flex-direction: row;
+    justify-content: space-between;
   }
   .omb-footer-container {
-    padding: 40px;
+    padding: 32px 40px;
   }
   .omb-info-footer-content {
     flex-direction: row;
+  }
+  .omb-card--pequeña {
+    width: 100%;
+    max-width: none;
   }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
@@ -1277,7 +1282,6 @@ footer {
   .omb-suscripcion-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     z-index: 2;
   }
@@ -1329,11 +1333,13 @@ footer {
   .omb-input-container button:hover {
     background-color: #ecff24;
   }
-  footer {
-    height: 1040px;
+  .omb-footer-header {
+    flex-direction: row;
+    justify-content: space-between;
   }
+
   .omb-footer-container {
-    padding: 80px;
+    padding: 40px 80px;
   }
   .omb-info-footer-content {
     flex-direction: row;
@@ -1446,7 +1452,6 @@ footer {
   .omb-suscripcion-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 60px;
     z-index: 2;
@@ -1466,7 +1471,10 @@ footer {
     margin: 0;
     text-align: start;
   }
-
+  .omb-card--pequeña {
+    width: 100%;
+    max-width: none;
+  }
   .omb-suscripcion-decoracion {
     display: flex;
     display: none;
@@ -1499,11 +1507,12 @@ footer {
   .omb-input-container button:hover {
     background-color: #ecff24;
   }
-  footer {
-    height: 1040px;
+  .omb-footer-header {
+    flex-direction: row;
+    justify-content: space-between;
   }
   .omb-footer-container {
-    padding: 80px;
+    padding: 40px 80px;
   }
   .omb-info-footer-content {
     flex-direction: row;
@@ -1579,6 +1588,10 @@ footer {
   .omb-publicaciones-container,
   .omb-suscripcion-container {
     max-width: 1140px;
+  }
+  .omb-card--pequeña {
+    width: 100%;
+    max-width: none;
   }
   .omb-suscripcion-container {
     justify-content: space-between;
@@ -1697,11 +1710,12 @@ footer {
   .omb-input-container button:hover {
     background-color: #ecff24;
   }
-  footer {
-    height: 820px;
+  .omb-footer-header {
+    flex-direction: row;
+    justify-content: space-between;
   }
   .omb-footer-container {
-    padding: 80px;
+    padding: 40px 80px;
   }
 
   .omb-info-footer-content {
