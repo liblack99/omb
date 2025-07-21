@@ -1163,7 +1163,7 @@ footer {
   }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
-  .omb-buscador {
+  .omb-logo-omb-container {
     max-width: 960px;
   }
   .omb-header {
@@ -1395,7 +1395,7 @@ footer {
   .omb-titulo-hero {
     font-size: 2.625rem;
   }
-  .omb-buscador {
+  .omb-logo-omb-container {
     max-width: 1140px;
   }
   .omb-icono-menu-container {
@@ -1591,7 +1591,7 @@ footer {
   .omb-titulo-hero {
     font-size: 2.625rem;
   }
-  .omb-buscador {
+  .omb-logo-omb-container {
     max-width: 1140px;
   }
   .omb-icono-menu-container {
