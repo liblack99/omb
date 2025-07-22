@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+    }
+
+    .omb-cards-planes-politica-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .omb-card--con-icono {
+      width: 360px;
+      padding: 24px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-sizing: border-box;
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .omb-card--con-icono:hover {
+      border-color: black;
+    }
+
+    .omb-card--con-icono:hover .omb-titulo-card {
+      color: var(--color-enlace);
+    }
+
+    .omb-icono-container {
+      width: 113px;
+      height: 113px;
+      padding: 8px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      background-color: rgb(103, 108, 46, 0.1);
+      overflow: hidden;
+    }
+
+    .omb-icono-content {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(222.15deg, #f0ff57 0%, #c4d600 100.91%);
+    }
+    .omb-texto-card-publicaciones {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      flex: 1;
+    }
+    .omb-titulo-card {
+      font-weight: 600;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      text-decoration: underline;
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.625rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.688rem;
+      padding: 0px 16px;
+      transition: all 0.3s ease-in;
+    }
+    .omb-titulo-card--sin-padding {
+      padding: 0;
+    }
+
+    .omb-titulo-card--dos-lineas {
+      height: 53px;
+    }
+
+    .omb-parrafo-card {
+      font-size: 1rem;
+      font-family: "Work sans", sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 0;
+      line-height: 1.5rem;
+      padding: 0px 16px;
+      color: black;
+      min-height: 72px;
+    }
+
+    .omb-parrafo-card--sin-padding {
+      padding: 0;
+    }
+    .omb-parrafo-card--variante-card-icono {
+      padding: 0;
+      -webkit-line-clamp: 7;
+      min-height: 168px;
+    }
+
+    .omb-enlaces {
+      gap: 4px;
+      display: flex;
+      align-items: center;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      color: var(--color-enlace);
+      text-decoration: underline;
+    }
+
+    .omb-enlaces:hover {
+      color: var(--color-enlace-hover);
+    }
+  </style>
+  <body>
+    <div class="omb-card--con-icono">
+      <div class="omb-icono-card-container">
+        <div class="omb-icono-container">
+          <div class="omb-icono-content">
+            <img
+              src="http://101.44.24.97/sites/default/files/2025-07/politica-publica.svg"
+              alt="Icono Política pública del peatón" />
+          </div>
+        </div>
+      </div>
+      <div class="omb-texto-card-publicaciones">
+        <h5
+          class="omb-titulo-card omb-titulo-card--dos-lineas omb-titulo-card--sin-padding">
+          Política pública del peatón
+        </h5>
+        <p
+          class="omb-parrafo-card omb-parrafo-card--sin-padding omb-parrafo-card--variante-card-icono">
+          ¿Se está creando una ciudad más caminable? Evalúe aquí el progreso de
+          las acciones para proteger y priorizar al peatón con indicadores de
+          infraestructura y seguridad.
+        </p>
+        <p class="omb-enlaces">
+          Ver articulo
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/flecha-enlace.svg"
+            alt="icono flecha" />
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
