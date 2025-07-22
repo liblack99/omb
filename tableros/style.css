@@ -44,21 +44,7 @@ body {
   color: var(--color-texto);
   font-family: "Montserrat", "sans-serif";
 }
-.omb-sidebar-container {
-  width: 297px;
-  position: absolute;
-  display: none;
-  z-index: 50;
-}
-.omb-sidebar-container.activo {
-  display: block;
-}
 
-.omb-sidebar-content {
-  position: absolute;
-  border-radius: 16px;
-  background-color: #fff;
-}
 .omb-boton-sidebar-mobile {
   background-color: var(--color-primario);
   width: 265px;
@@ -91,6 +77,21 @@ body {
 .omb-text-button {
   display: flex;
   align-items: center;
+}
+.omb-sidebar-container {
+  width: 297px;
+  position: absolute;
+  display: none;
+  z-index: 50;
+}
+.omb-sidebar-container.activo {
+  display: block;
+}
+
+.omb-sidebar-content {
+  position: absolute;
+  border-radius: 16px;
+  background-color: #fff;
 }
 
 .omb-boton-sidebar {
@@ -277,29 +278,36 @@ body {
   box-sizing: border-box;
   width: 100%;
   transition: all 0.3s ease;
+  font-family: "Work sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 500;
 }
 .omb-opciones li:hover {
   background-color: var(--color-primario);
 }
 
-.omb-div {
-  height: 1100px;
+.omb-contenedor-derecho {
+  height: 1090px;
   overflow-x: visible;
   overflow-y: hidden;
   padding: 4px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .omb-cards-container {
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
   width: 100%;
 }
 
 .omb-card-tableros {
-  max-width: 100%;
+  max-width: 285px;
   display: flex;
   background-color: #ffffff;
   border-radius: 16px;
@@ -433,8 +441,8 @@ body {
 }
 
 .omb-pagination-numero {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   padding: 0px;
   border: none;
   background-color: inherit;
@@ -450,9 +458,12 @@ body {
   display: none;
 }
 @media (min-width: 768px) {
+  .omb-contenedor-derecho {
+    display: flex;
+    justify-content: center;
+  }
   .omb-cards-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
     width: 90%;
   }
   .omb-content {
@@ -494,9 +505,11 @@ body {
     width: calc(100% - 297px - 30px);
   }
   .omb-cards-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr;
     width: 100%;
+    justify-content: start;
+  }
+  .omb-card-tableros {
+    width: 278px;
   }
   .omb-titulo-section {
     font-weight: 600;
@@ -564,7 +577,7 @@ body {
     color: var(--color-texto);
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-boton-sidebar-mobile {
     display: none;
   }
@@ -582,20 +595,23 @@ body {
     display: none;
   }
   .omb-tableros-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-tableros-content {
     display: flex;
-    gap: 30px;
+    gap: 20px;
   }
 
   .omb-content {
-    width: calc(100% - 297px - 30px);
+    width: calc(100% - 297px - 20px);
+  }
+  .omb-card-tableros {
+    width: 258px;
   }
   .omb-cards-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
+    justify-content: start;
+    gap: 20px;
   }
   .omb-titulo-section {
     font-weight: 600;
