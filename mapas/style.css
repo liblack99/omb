@@ -21,6 +21,7 @@ a {
   justify-content: center;
   padding-bottom: 40px;
 }
+/* seccion logo y texto*/
 .omb-section--logo {
   height: 149px;
   align-items: center;
@@ -30,7 +31,7 @@ a {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 .omb-titulo-libro-mapa-container {
   width: 90%;
@@ -67,9 +68,7 @@ a {
   height: 85px;
   gap: 16px;
   border-right-width: 1px;
-
-  padding-right: 24px;
-
+  padding-right: 20px;
   box-sizing: border-box;
 }
 .omb-logo-libro-mapa img {
@@ -81,19 +80,13 @@ a {
   line-height: 18px;
   color: var(--color-texto);
   margin: 0;
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
 }
 .omb-logo-libro-mapa h2 {
   width: 152px;
   height: 56px;
 }
-.omb-cards-mapa-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  width: 100%;
-}
+
 .omb-libro-mapas-section {
   width: 100%;
   display: flex;
@@ -106,12 +99,13 @@ a {
   position: relative;
   background-color: #eaedf5;
   padding-bottom: 40px;
+  box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.5);
 }
 .omb-decoracion {
   position: absolute;
   height: 32px;
   width: 100px;
-  top: -4px;
+  top: 0px;
 }
 .omb-decoracion-abajo {
   position: absolute;
@@ -120,7 +114,7 @@ a {
   bottom: -32px;
 }
 .omb-decoracion img {
-  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
 }
 .omb-mapa-container {
   width: 90%;
@@ -140,12 +134,19 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 2.75rem;
   border-left: 4px solid var(--color-primario);
   border-radius: 0 8px 8px 0;
+}
+.omb-cards-mapa-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
 }
 
 .omb-map-card {
@@ -189,22 +190,19 @@ a {
   display: flex;
   width: 100%;
   position: absolute;
-  transform: translateY(-36px);
+  transform: translateY(-46px);
   transition: all 0.3s ease;
   left: 0;
-  padding-top: 20px;
   padding-right: 16px;
   padding-bottom: 20px;
-  padding-left: 32px;
-  gap: 24px;
+  padding-left: 16px;
   box-sizing: border-box;
   border-top: 4px solid transparent;
 }
 .omb-descripcion-container-alzado {
-  transform: translateY(-120px);
-  border-top: 4px solid var(--color-primario);
+  transform: translateY(-132px);
+  border-color: var(--color-primario);
 }
-
 .omb-map-card:hover .omb-descripcion-container-variante {
   background-color: var(--color-primario);
 }
@@ -213,6 +211,7 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
+  height: 62px;
 }
 .omb-titulo-container h5 {
   font-size: 18px;
@@ -230,9 +229,10 @@ a {
   text-decoration: underline;
 }
 .omb-descripcion-number {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 120%;
   display: flex;
@@ -298,7 +298,7 @@ a {
   flex-wrap: wrap;
 }
 .omb-card-recursos {
-  width: 297px;
+  width: 260px;
   padding-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -310,6 +310,9 @@ a {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border: 1px solid transparent;
   cursor: pointer;
+}
+.omb-card-recursos:hover h5 {
+  color: var(--color-enlace);
 }
 .omb-card-recursos:hover {
   border: 1px solid black;
@@ -359,6 +362,13 @@ a {
   .omb-map-card {
     width: 330px;
   }
+  .omb-descripcion-container {
+    transform: translateY(-0px);
+  }
+  .omb-descripcion-container-alzado {
+    transform: translateY(-90px);
+    border-color: var(--color-primario);
+  }
   .omb-logo-libro-mapa img {
     width: 256px;
   }
@@ -386,6 +396,14 @@ a {
   }
   .omb-map-card {
     width: 400px;
+  }
+
+  .omb-descripcion-container {
+    transform: translateY(-44px);
+  }
+  .omb-descripcion-container-alzado {
+    transform: translateY(-132px);
+    border-color: var(--color-primario);
   }
   .omb-titulo-container-recuros {
     width: 880px;
@@ -434,6 +452,13 @@ a {
   .omb-map-card {
     width: 400px;
   }
+  .omb-descripcion-container {
+    transform: translateY(-40px);
+  }
+  .omb-descripcion-container-alzado {
+    transform: translateY(-132px);
+    border-color: var(--color-primario);
+  }
   .omb-titulo-container-recuros {
     width: 880px;
   }
@@ -461,54 +486,11 @@ a {
     color: var(--color-texto);
   }
 }
-@media (min-width: 1360px) {
-  .omb-titulo-libro-mapa-container,
-  .omb-mapa-container,
-  .omb-recursos-containerr {
-    max-width: 1280px;
-  }
-  .omb-logo-container {
-    max-width: 853px;
-  }
-  .omb-titulo-container-mapas {
-    width: 544px;
-    border-radius: 0px 16px 16px 0px;
-  }
-  .omb-titulo-container-recuros {
-    width: 880px;
-  }
-  .omb-map-card {
-    width: 400px;
-  }
-  .omb-parrafo-descripcion-logo {
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    color: var(--color-texto);
-    margin: 0;
-    font-family: "Montserrat", "sans-serif";
-  }
-  .omb-titulo-section {
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 2.75rem;
-    color: var(--color-texto);
-    font-family: "Montserrat", sans-serif;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .omb-parrafo-descripcion-section {
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    color: var(--color-texto);
-  }
-}
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .omb-titulo-libro-mapa-container,
   .omb-mapa-container,
   .omb-recursos-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-logo-container {
     max-width: 853px;
@@ -521,7 +503,14 @@ a {
     width: 880px;
   }
   .omb-map-card {
-    width: 400px;
+    width: 360px;
+  }
+  .omb-descripcion-container {
+    transform: translateY(-20px);
+  }
+  .omb-descripcion-container-alzado {
+    transform: translateY(-110px);
+    border-color: var(--color-primario);
   }
   .omb-parrafo-descripcion-logo {
     font-weight: 500;

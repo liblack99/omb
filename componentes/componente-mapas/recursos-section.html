@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .omb-section-recursos {
+      padding-top: 40px;
+    }
+    .omb-recursos-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+    }
+    .omb-titulo-section {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-parrafo-descripcion-section {
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .omb-titulo-container-recursos p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #1a1a1a;
+      text-align: center;
+      margin-top: 0;
+    }
+    .omb-card-recursos-container {
+      width: 100%;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .omb-card-recursos {
+      width: 260px;
+      padding-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .omb-card-recursos:hover h5 {
+      color: var(--color-enlace);
+    }
+    .omb-card-recursos:hover {
+      border: 1px solid black;
+      transform: scale(1.01);
+    }
+    .omb-card-recursos img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+    }
+    .omb-card-recursos h5 {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif;
+      color: var(--color-texto);
+      margin: 0;
+      min-height: 54px;
+      padding: 0px 16px;
+      text-decoration: underline;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.688rem;
+    }
+    .omb-card-recursos p {
+      font-size: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 0;
+      line-height: 1.5rem;
+      margin: 0;
+      padding: 0px 16px;
+      color: #4d4d4d;
+      font-family: "Work sans", sans-serif;
+      min-height: 72px;
+      color: var(--color-texto);
+    }
+  </style>
+  <body>
+    <section class="omb-section omb-section-recursos">
+      <div class="omb-recursos-container">
+        <div class="omb-titulo-container-recuros">
+          <h2 class="omb-titulo-section">Más recursos cartográficos</h2>
+          <p class="omb-parrafo-descripcion-section">
+            Visualice, explore y analice los datos georreferenciados del sector.
+            Nuestros mapas interactivos son herramientas esenciales para la
+            planeación y gestión de la movilidad en Bogotá.
+          </p>
+        </div>
+
+        <div class="omb-card-recursos-container">
+          <!-- Card Recurso 1 -->
+          <div class="omb-card-recursos">
+            <img
+              src="http://101.44.24.97/sites/default/files/2025-07/ldm-recursos-cartograficos-01-visor-volumenes.jpg"
+              alt="Mapa ilustrativo visor de volúmenes" />
+            <h5>Visor de volúmenes</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              quisquam veritatis molestiae harum? Dolore cumque perferendis vero
+              accusantium earum delectus, perspiciatis dolorem eum, ullam
+              reiciendis qui. Facere voluptatibus quisquam aliquam!
+            </p>
+          </div>
+
+          <!-- Recurso 2 -->
+
+          <!-- Recurso 3 -->
+
+          <!-- Recurso 4 -->
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ".omb-descripcion-container"
   );
 
-  // Por defecto: el contenedor de descripción del primer card está .omb-descripcion-container-alzado
-
   cards.forEach((card) => {
     const description = card.querySelector(".omb-descripcion-container");
 
