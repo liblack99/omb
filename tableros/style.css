@@ -288,10 +288,7 @@ body {
 }
 
 .omb-contenedor-derecho {
-  height: 1090px;
   overflow-x: visible;
-  overflow-y: hidden;
-  padding: 4px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;

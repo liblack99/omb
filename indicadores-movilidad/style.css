@@ -29,20 +29,19 @@ body {
 
 .omb-titulo-section {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
 }
 .omb-parrafo-descripcion-section {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
   color: var(--color-texto);
-  font-family: "Work Sans", sans-serif;
-  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .omb-boton-sidebar-mobile {
@@ -96,7 +95,7 @@ body {
 .omb-movilidad-container {
   width: 90%;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   position: relative;
 }
 
@@ -136,11 +135,11 @@ body {
   padding: 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
-.omb-boton-sidebar--active {
+.omb-boton-sidebar--activo {
   background-color: var(--color-primario);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.omb-boton-sidebar--active::before {
+.omb-boton-sidebar--activo::before {
   content: "";
   position: absolute;
   right: -12px;
@@ -187,15 +186,10 @@ body {
   box-sizing: border-box;
 }
 .omb-cards-movilidad-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 275px;
-  place-items: center;
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   width: 100%;
-  height: 900px;
-  overflow: hidden;
-  padding: 8px;
 }
 
 .omb-card {
@@ -203,6 +197,7 @@ body {
   border-radius: 16px;
   border: 1px solid transparent;
   transition: all 0.3s ease;
+  display: flex;
   flex-direction: column;
   box-sizing: border-box;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -214,7 +209,7 @@ body {
   width: 297px;
 }
 .omb-card--pequeña-sin-parrafo {
-  height: 275px;
+  max-height: 280px;
 }
 
 .omb-card:hover {
@@ -337,8 +332,8 @@ body {
 }
 
 .omb-pagination-numero {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   padding: 0px;
   border: none;
   background-color: inherit;
@@ -352,8 +347,6 @@ body {
 }
 @media (min-width: 768px) {
   .omb-cards-movilidad-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr;
     width: 100%;
   }
 
@@ -396,11 +389,10 @@ body {
   }
 
   .omb-contenedor-derecho {
-    width: calc(100% - 297px - 30px);
+    width: calc(100% - 297px - 20px);
   }
+
   .omb-cards-movilidad-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
 
@@ -444,15 +436,14 @@ body {
   }
 
   .omb-contenedor-derecho {
-    width: calc(100% - 297px - 30px);
+    width: calc(100% - 297px - 20px);
   }
   .omb-cards-movilidad-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
   }
+
   .omb-card--pequeña {
-    width: 100%;
+    width: 277px;
   }
 
   .omb-titulo-section {
@@ -471,7 +462,7 @@ body {
     color: var(--color-texto);
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-boton-sidebar-mobile {
     display: none;
   }
@@ -490,16 +481,18 @@ body {
   }
   .omb-movilidad-container,
   .omb-titullo-movilidad-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
 
   .omb-contenedor-derecho {
     width: calc(100% - 297px - 30px);
   }
   .omb-cards-movilidad-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
+    justify-content: start;
+  }
+  .omb-card--pequeña {
+    width: 255px;
   }
 
   .omb-titulo-section {

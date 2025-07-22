@@ -17,7 +17,7 @@ buttons.forEach((button) => {
         categoriaSeleccionada === "Todos los indicadores" ||
         categoriaCard === categoriaSeleccionada
       ) {
-        card.style.display = "block"; // Mostrar
+        card.style.display = "flex"; // Mostrar
       } else {
         card.style.display = "none"; // Ocultar
       }
