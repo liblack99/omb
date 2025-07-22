@@ -459,6 +459,9 @@ body {
   .omb-categorias-publicaciones-container {
     max-width: 1140px;
   }
+  .omb-card-explorar-publicaciones {
+    width: 100%;
+  }
   .omb-card--con-icono {
     width: 360px;
   }
@@ -495,9 +498,13 @@ body {
   .omb-categorias-publicaciones-container {
     max-width: 1140px;
   }
+  .omb-card-explorar-publicaciones {
+    width: 100%;
+  }
   .omb-card--con-icono {
     width: 360px;
   }
+
   .omb-swiper {
     width: 92%;
     padding: 4px;
