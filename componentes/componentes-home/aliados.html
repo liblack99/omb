@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aliados</title>
+    <style>
+      .omb-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+      }
+      .omb-section--aliados-home {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      .omb-titulo-section {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 32px;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+      }
+      .omb-titulo-section--centrado {
+        text-align: center;
+      }
+      .omb-titulo-section--sin-margin {
+        margin-top: 0px;
+      }
+
+      .omb-aliados-container {
+        width: 90%;
+      }
+      .omb-fondo-montañas-aliados {
+        width: 100%;
+      }
+      .omb-fondo-montañas-aliados img {
+        width: 100%;
+        object-fit: contain;
+        position: absolute;
+        z-index: -10;
+        top: -40px;
+      }
+
+      .aliados-logos-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .aliados-logos-container img {
+        width: 100px;
+        height: 94px;
+        object-fit: contain;
+        opacity: 0.85;
+        transition: filter 0.3s ease, opacity 0.3s ease;
+      }
+      .aliados-logos img:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+      .omb-fondo-aliados {
+        width: 100%;
+      }
+      .omb-fondo-aliados img {
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="omb-section omb-section--aliados-home">
+      <div class="omb-fondo-montañas-aliados">
+        <img
+          src="http://101.44.24.97/sites/default/files/2025-07/fondo-montañas.webp"
+          alt="" />
+      </div>
+      <div class="omb-aliados-container">
+        <h2
+          class="omb-titulo-section omb-titulo-section--centrado omb-titulo-section--sin-margin">
+          Nuestros aliados
+        </h2>
+        <div class="aliados-logos-container">
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/logo-umv.webp"
+            alt="UMV" />
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/logo-laterminal.webp"
+            alt="La Terminal" />
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/logo-metro-bogota.webp"
+            alt="Metro de Bogotá" />
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/logo-transmilenio.webp"
+            alt="TransMilenio" />
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/logo-idu.webp"
+            alt="IDU" />
+        </div>
+      </div>
+      <div class="omb-fondo-aliados">
+        <img
+          src="http://101.44.24.97/sites/default/files/2025-07/fondo-buses-aliados.webp"
+          alt="Fondo buses" />
+        <img
+          src="http://101.44.24.97/sites/default/files/2025-07/fondo-carretera-aliados.webp"
+          alt="Fondo carretera" />
+      </div>
+    </section>
+  </body>
+</html>
+s

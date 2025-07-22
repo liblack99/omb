@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hero-home</title>
+    <style>
+      :root {
+        --color-primario-soft: #f9ffbd;
+        --color-primario: #dbf000;
+        --color-secundario-hover: #8e9c00;
+        --color-texto: #000000;
+        --color-enlace: #acbd00;
+        --color-enlace-hover: #a5ad4a;
+        --color-fondo-seccion-intreres: #f3f4f1;
+        --color-strong: #c4d600;
+      }
+      .omb-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+      }
+      .omb-section--hero {
+        padding-top: 40px;
+      }
+      .omb-hero-container {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+      }
+      .omb-card-hero {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+      .omb-titulo-hero {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.75rem;
+        line-height: 113.99999999999999%;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .omb-texto-hero span {
+        color: var(--color-strong);
+      }
+      .omb-parrafo-hero {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 32px;
+        letter-spacing: 0%;
+      }
+      .omb-section--de-interes {
+        background-color: var(--color-fondo-seccion-intreres);
+      }
+      .omb-botones-contenedor-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+      .omb-boton {
+        padding: 0.5rem 1.5rem;
+        border-radius: 999px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        font-family: "Work sans", sans-serif;
+        text-transform: uppercase;
+        border-width: 0.125rem;
+        border-style: solid;
+        color: var(--color-texto);
+        cursor: pointer;
+      }
+      .omb-boton--primario {
+        background-color: var(--color-primario);
+        border: 1px solid var(--color-primario);
+      }
+      .omb-botton--tamano-fijo {
+        min-width: 364px;
+      }
+      .omb-boton--secundario {
+        background-color: #fff;
+        border-color: var(--color-primario);
+      }
+
+      .omb-boton--con-icono {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+      .omb-boton--primario:hover {
+        background-color: var(--color-secundario-hover);
+        color: white;
+        border-color: var(--color-enlace-hover);
+      }
+
+      .omb-boton--secundario:hover {
+        background-color: var(--color-primario);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="omb-section omb-section--hero">
+        <div class="omb-hero-container">
+          <div class="omb-card-hero">
+            <div class="omb-texto-hero">
+              <h1 class="omb-titulo-hero">
+                <span>Toda la información de la </span>
+                Movilidad de Bogotá <span>en un solo lugar</span>
+              </h1>
+              <div class="omb-decoracion-hero">
+                <svg
+                  width="50"
+                  height="2"
+                  viewBox="0 0 50 2"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <line
+                    y1="1"
+                    x2="50"
+                    y2="1"
+                    stroke="#DBF000"
+                    stroke-width="2" />
+                </svg>
+              </div>
+              <p class="omb-parrafo-hero">
+                Accede a herramientas interactivas como tableros dinámicos,
+                geovisores e infografías diseñadas para entender cómo se
+                transportan las personas en la ciudad de Bogotá.
+              </p>
+              <div class="omb-botones-contenedor-hero">
+                <button
+                  type="button"
+                  class="omb-boton omb-boton--primario omb-botton--tamano-fijo">
+                  Ver tablero de Siniestralidad vial
+                </button>
+                <button
+                  type="button"
+                  class="omb-boton omb-boton--secundario omb-botton--tamano-fijo">
+                  Consultar otros tableros
+                </button>
+              </div>
+            </div>
+            <img
+              class="omb-imagen-hero"
+              src="http://101.44.24.97/sites/default/files/2025-07/imgen-baner-home.png"
+              alt="Imagen hero" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

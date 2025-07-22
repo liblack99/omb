@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+      --color-strong: #c4d600;
+    }
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-section--home-sitios-relacionados {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+      height: 380px;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+    .omb-titulo-section {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 32px;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-titulo-section--centrado {
+      text-align: center;
+    }
+    .omb-parrafo-descripcion-section {
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 26px;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-parrafo-descripcion-section--center {
+      text-align: center;
+    }
+    .omb-sitios-relacionados-container {
+      width: 90%;
+      position: relative;
+    }
+
+    .omb-decoracion-lineas-sitios-relacionados {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .omb-swiper {
+      width: 85%;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+
+    .omb-wrapper {
+      width: 100%;
+    }
+
+    .omb-swiper-slide {
+      padding: 8px;
+      display: flex;
+      justify-content: center !important;
+      align-items: center !important;
+      box-sizing: border-box;
+    }
+    .omb-swiper-slide--indicadores-home {
+      height: 308px;
+    }
+
+    .omb-paginacion {
+      position: absolute;
+      bottom: -32px !important;
+    }
+    .omb-paginacion-sitios-relacionados {
+      bottom: 60px !important;
+    }
+    .omb-paginacion > .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: white !important;
+      border: 2px solid #4b521d;
+      border-radius: 50%;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+
+    .omb-paginacion > .swiper-pagination-bullet-active {
+      background-color: #4b521d !important;
+      border-color: #4b521d;
+      transform: scale(1.2);
+    }
+    .omb-boton-control-carrusel {
+      position: absolute;
+      z-index: 20;
+      left: 0;
+      bottom: -46px;
+      min-width: 120px;
+      height: 34px;
+      width: auto;
+      cursor: pointer;
+      padding: 0;
+    }
+    .omb-boton-control-carrusel--variante {
+      bottom: 46px;
+    }
+
+    .omb-boton-control-carrusel button {
+      color: #565747;
+      font-family: "Worl sans", sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      width: auto;
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+
+    .omb-boton-prev {
+      left: 0;
+    }
+    .omb-boton-next {
+      right: 0;
+    }
+    .omb-boton-prev,
+    .omb-boton-next {
+      color: #565747 !important;
+      background-color: #f3f4f1cc;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      border-width: 1px;
+      transition: all 0.5s ease;
+      border: 1px solid #d9e36e;
+    }
+    .omb-boton-prev:hover,
+    .omb-boton-next:hover {
+      color: black !important;
+      background-color: var(--color-primario);
+    }
+
+    .omb-boton-prev::after,
+    .omb-boton-next::after {
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .omb-card-sitios-relacionados {
+      width: 90%;
+      height: 158px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      border: 1px solid transparent;
+      background-color: #fff;
+      transition: all 0.5s ease;
+      box-sizing: border-box;
+      padding: 8px;
+    }
+    .omb-card-sitios-relacionados img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .omb-card-sitios-relacionados:hover {
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+      border: 1px solid black;
+      transform: scale(1.01);
+    }
+    .omb-button-container-sitios-relacionados {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 52px;
+    }
+    .omb-boton {
+      padding: 0.5rem 1.5rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: "Work sans", sans-serif;
+      text-transform: uppercase;
+      border-width: 0.125rem;
+      border-style: solid;
+      color: var(--color-texto);
+      cursor: pointer;
+    }
+    .omb-boton--primario {
+      background-color: var(--color-primario);
+      border: 1px solid var(--color-primario);
+    }
+    .omb-boton--primario:hover {
+      background-color: var(--color-secundario-hover);
+      color: white;
+      border-color: var(--color-enlace-hover);
+    }
+  </style>
+  <body>
+    <section class="omb-section omb-sitios-realacionados-section">
+      <div class="omb-sitios-relacionados-container">
+        <h2 class="omb-titulo-section omb-titulo-section--centrado">
+          Sitios relacionados
+        </h2>
+        <div class="omb-decoracion-lineas-sitios-relacionados">
+          <svg
+            width="256"
+            height="6"
+            viewBox="0 0 256 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.85705 6L0 0H57.2937L63.1507 6H5.85705ZM102.276 6L96.4188 0H153.712L159.57 6H102.276ZM198.706 6L192.849 0H250.143L256 6H198.706Z"
+              fill="#DBF000" />
+          </svg>
+        </div>
+        <p
+          class="omb-parrafo-descripcion-section omb-parrafo-descripcion-section--center">
+          Texto descriptivo de Sitios relacionados
+        </p>
+
+        <div
+          class="swiper-pagination omb-paginacion omb-paginacion-sitios-relacionados"></div>
+        <div
+          class="omb-boton-control-carrusel omb-boton-control-carrusel--variante"
+          id="controlCarrucelSitiosRelacionados">
+          <button
+            type="button"
+            aria-label="Detener contenido"
+            title="Detener contenido">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="16"
+              height="16"
+              fill="currentColor"
+              aria-hidden="true"
+              focusable="false">
+              <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+              <path
+                d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+            </svg>
+
+            Detener
+          </button>
+        </div>
+        <div class="omb-carrusel-container">
+          <div
+            class="swiper-button-prev omb-boton-prev omb-boton-sitios-relacionados-prev"></div>
+          <div
+            class="swiper-button-next omb-boton-next omb-boton-sitios-relacionados-next"></div>
+          <div class="swiper sitiosRelacionadosSlideSwiper omb-swiper">
+            <div class="swiper-wrapper omb-wrapper">
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card-sitios-relacionados">
+                  <a
+                    href=""
+                    title="Ir al sitio web de libos de mapas"
+                    target="_blank">
+                    <img
+                      src="http://101.44.24.97/sites/default/files/2025-07/libro-digital-mapas-logotipo.webp"
+                      alt="Logo libro mapas" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="omb-button-container-sitios-relacionados">
+          <button class="omb-boton omb-boton--primario">
+            Ver todos los Sitios relacionados
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

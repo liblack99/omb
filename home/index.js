@@ -246,7 +246,7 @@ function handleScroll() {
       nav.style.position = "fixed";
       nav.style.zIndez = "50";
       nav.style.top = "0";
-      nav.style.width = "100%"; // Opcional si quieres que no se deforme
+      nav.style.width = "100%";
     } else {
       nav.style.position = "static";
       nav.style.top = "";
@@ -260,5 +260,5 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("resize", handleScroll);
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY); // Número de píxeles desplazados verticalmente
+  console.log(window.scrollY);
 });

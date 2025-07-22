@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+      --color-strong: #c4d600;
+    }
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-suscripcion-section {
+      width: 100%;
+      position: relative;
+      height: 300px;
+    }
+    .omb-titulo-section {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 32px;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-titulo-section--centrado {
+      text-align: center;
+    }
+
+    .omb-parrafo-descripcion-section {
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 26px;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-fondo-suscripcion-section {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+    .omb-suscripcion-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .omb-suscripcion-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .omb-texto {
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .omb-titulo-section--blanco {
+      color: white;
+    }
+    .omb-parrafo-descripcion-section--blanco {
+      color: white;
+      margin: 0;
+      text-align: center;
+    }
+
+    .omb-suscripcion-decoracion {
+      display: flex;
+    }
+    .omb-parrafo-descripcion-section--sin-margin {
+      margin-top: 0;
+    }
+    .omb-input-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .omb-input-container input {
+      width: 100%;
+      padding-top: 8px;
+      padding-right: 16px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      border-radius: 20px;
+      border: 1px solid #d3d3ca;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      vertical-align: middle;
+    }
+    .omb-input-container button {
+      width: 100%;
+      padding-top: 8px;
+      padding-right: 24px;
+      padding-bottom: 8px;
+      padding-left: 24px;
+      border-radius: 20px;
+      background-color: var(--color-primario);
+      color: black;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      vertical-align: middle;
+      transition: all 0.3s ease-in;
+      border: 1px solid var(--color-primario);
+    }
+    .omb-input-container button:hover {
+      border: 1px solid black;
+    }
+    .omb-input-container button:hover {
+      background-color: #ecff24;
+    }
+  </style>
+  <body>
+    <section class="omb-section omb-suscripcion-section">
+      <img
+        src="http://101.44.24.97/sites/default/files/2025-07/fondo-suscripcion.webp"
+        alt="fondo suscripcion"
+        class="omb-fondo-suscripcion-section" />
+      <div class="omb-suscripcion-container">
+        <div class="omb-texto">
+          <h2 class="omb-titulo-section omb-titulo-section--blanco">
+            Suscríbete al boletín
+          </h2>
+          <p
+            class="omb-parrafo-descripcion-section omb-parrafo-descripcion-section--blanco">
+            Mantenete al tanto de todas las noticias y las últimas publícaciones
+          </p>
+        </div>
+        <div class="omb-input-container">
+          <label for="inputSuscribir">
+            <input
+              type="text"
+              placeholder="Ingresar tu correo"
+              id="inputSuscribir" />
+          </label>
+          <button type="text">SUSCRIBIRME</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

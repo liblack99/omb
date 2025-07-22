@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-section--inidicadores-home {
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .omb-titulo-section {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 32px;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-titulo-section--centrado {
+      text-align: center;
+    }
+    .omb-titulo-section--sin-margin {
+      margin-top: 0px;
+    }
+    .omb-imagen-edificios-indicadores {
+      width: 100%;
+    }
+    .omb-imagen-edificios-indicadores img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .omb-indicadores-destacados-container {
+      width: 90%;
+      position: relative;
+    }
+    .omb-fondo-indicadores-home {
+      width: 100%;
+      background: linear-gradient(to bottom, #f2f4f8 0%, #ffffff 100%);
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+      position: relative;
+    }
+    .omb-carrusel-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .omb-swiper {
+      width: 85%;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+
+    .omb-wrapper {
+      width: 100%;
+    }
+
+    .omb-swiper-slide {
+      padding: 8px;
+      display: flex;
+      justify-content: center !important;
+      align-items: center !important;
+      box-sizing: border-box;
+    }
+    .omb-swiper-slide--indicadores-home {
+      height: 308px;
+    }
+
+    .omb-paginacion {
+      position: absolute;
+      bottom: -32px !important;
+    }
+    .omb-paginacion-sitios-relacionados {
+      bottom: 60px !important;
+    }
+    .omb-paginacion > .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: white !important;
+      border: 2px solid #4b521d;
+      border-radius: 50%;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+
+    .omb-paginacion > .swiper-pagination-bullet-active {
+      background-color: #4b521d !important;
+      border-color: #4b521d;
+      transform: scale(1.2);
+    }
+    .omb-boton-control-carrusel {
+      position: absolute;
+      z-index: 20;
+      left: 0;
+      bottom: -46px;
+      min-width: 120px;
+      height: 34px;
+      width: auto;
+      cursor: pointer;
+      padding: 0;
+    }
+    .omb-boton-control-carrusel button {
+      color: #565747;
+      font-family: "Worl sans", sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      width: auto;
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+
+    .omb-boton-prev {
+      left: 0;
+    }
+    .omb-boton-next {
+      right: 0;
+    }
+    .omb-boton-prev,
+    .omb-boton-next {
+      color: #565747 !important;
+      background-color: #f3f4f1cc;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      border-width: 1px;
+      transition: all 0.5s ease;
+      border: 1px solid #d9e36e;
+    }
+    .omb-boton-prev:hover,
+    .omb-boton-next:hover {
+      color: black !important;
+      background-color: var(--color-primario);
+    }
+
+    .omb-boton-prev::after,
+    .omb-boton-next::after {
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .indicador-card {
+      border: 1px solid #eaeae6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      background: white;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      overflow: visible;
+      min-width: 175px;
+      max-width: 200px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+      padding: 0px 8px;
+    }
+    .indicador-card:hover {
+      border-color: #000;
+      transform: scale(1.01);
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    }
+    .indicador-card:hover .valor {
+      color: var(--color-enlace);
+    }
+    .icono-wrapper {
+      width: 100%;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .icono-fondo {
+      width: 80px;
+      height: 80px;
+      top: -28px;
+      position: relative;
+      border-radius: 50%;
+      background-color: #dcef00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+      border: 6px solid white;
+    }
+    .icono-fondo img {
+      width: 60px;
+      height: auto;
+    }
+    .valor {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 2rem;
+      font-family: "Montserrat", sans-serif;
+      color: #000000;
+      min-height: 64px;
+    }
+    .valor span {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+    .omb-texto-indicadores {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.063rem;
+      text-align: center;
+      margin: 8px 0px;
+      min-height: 88px;
+    }
+  </style>
+  <body>
+    <section class="omb-section omb-section--inidicadores-home">
+      <div class="omb-imagen-edificios-indicadores">
+        <img
+          src="http://101.44.24.97/sites/default/files/2025-07/fondo-edificio-indicadores-home.webp"
+          alt="fondo indicadores" />
+      </div>
+      <div class="omb-fondo-indicadores-home">
+        <div class="omb-indicadores-destacados-container">
+          <h2
+            class="omb-titulo-section omb-titulo-section--centrado omb-titulo-section--sin-margin">
+            Indicadores destacados
+          </h2>
+
+          <div
+            class="swiper-pagination omb-paginacion omb-paginacion-indicadores"></div>
+          <div
+            class="omb-boton-control-carrusel"
+            id="controlCarrucelIndicadores">
+            <button
+              type="button"
+              aria-label="Detener contenido"
+              title="Detener contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                >
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+              </svg>
+
+              Detener
+            </button>
+          </div>
+          <div class="omb-carrusel-container">
+            <div class="swiper-button-prev omb-boton-prev"></div>
+            <div class="swiper-button-next omb-boton-next"></div>
+            <div class="swiper indicadoresSwiper omb-swiper">
+              <div class="swiper-wrapper omb-wrapper omb-wrapper--altura">
+                <div
+                  class="swiper-slide omb-swiper-slide omb-swiper-slide--indicadores-home">
+                  <div class="indicador-card">
+                    <div class="icono-wrapper">
+                      <div class="icono-fondo">
+                        <img
+                          src="http://101.44.24.97/sites/default/files/2025-07/omb-icon-destacados-1.webp"
+                          alt="Icono Tiempo promedio de viajes en Bogotá Región"
+                          width="150"
+                          height="150" />
+                      </div>
+                    </div>
+                    <div class="valor">54 <span>minutos</span></div>
+                    <div class="omb-texto-indicadores">
+                      Tiempo promedio de viajes en Bogotá Región, año 2023
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

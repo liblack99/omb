@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>acordion</title>
+    <style>
+      :root {
+        --color-primario-soft: #f9ffbd;
+        --color-primario: #dbf000;
+        --color-secundario-hover: #8e9c00;
+        --color-texto: #000000;
+        --color-enlace: #acbd00;
+        --color-enlace-hover: #a5ad4a;
+        --color-fondo-seccion-intreres: #f3f4f1;
+        --color-strong: #c4d600;
+      }
+      .omb-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+      }
+      .omb-titulo-section {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 32px;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+      }
+      .omb-titulo-section--centrado {
+        text-align: center;
+      }
+      .omb-parrafo-descripcion-section {
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 26px;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+      }
+      .omb-parrafo-descripcion-section--center {
+        text-align: center;
+      }
+
+      .omb-observatorio-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .omb-tabs-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .omb-acordion-home {
+        width: 100%;
+      }
+      .omb-acordion-boton--home {
+        width: 100%;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        background-color: #fff;
+        border: 0;
+        min-height: 4.375rem;
+        padding: 0 1rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-bottom-right-radius: 16px;
+        border-top-right-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+        border-left: 4px solid transparent;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+      }
+      .omb-flecha-acordion {
+        transform: rotate(90deg);
+        transition: all 0.3s ease;
+      }
+      .omb-acordion-boton--home.activo .omb-flecha-acordion {
+        transform: rotate(0deg);
+      }
+      .omb-acordion-boton--home.activo {
+        border-left: 1px solid var(--color-secundario-hover);
+      }
+      .omb-acordion-boton--home:hover {
+        border-left: 4px solid var(--color-secundario-hover);
+        background-color: var(--color-primario);
+      }
+      .omb-acordion-boton--home.activo {
+        border-left: 4px solid var(--color-secundario-hover);
+        background-color: var(--color-primario);
+      }
+      .omb-titulo-botton-acordeon {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .omb-icono-titulo-acordion img {
+        width: 40px;
+      }
+
+      .omb-acordion-content-home {
+        max-height: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-sizing: border-box;
+        padding: 1rem 0px;
+      }
+      .omb-acordion-contenido--home.abierto {
+        padding: 1rem 0px;
+      }
+      .omb-card-acordion {
+        margin-top: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .omb-imagen-card-acordion {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+      }
+      .omb-parrafo-card-acorderon {
+        font-size: 1rem;
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        line-height: 1.5rem;
+        color: #666;
+        min-height: 96px;
+      }
+
+      .omb-boton {
+        padding: 0.5rem 1.5rem;
+        border-radius: 999px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        font-family: "Work sans", sans-serif;
+        text-transform: uppercase;
+        border-width: 0.125rem;
+        border-style: solid;
+        color: var(--color-texto);
+        cursor: pointer;
+      }
+      .omb-boton--primario {
+        background-color: var(--color-primario);
+        border: 1px solid var(--color-primario);
+      }
+      .omb-boton--primario:hover {
+        background-color: var(--color-secundario-hover);
+        color: white;
+        border-color: var(--color-enlace-hover);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="omb-section omb-obervatorio-section-acordion">
+      <div class="omb-observatorio-container">
+        <div class="omb-tabs-header">
+          <h2 class="omb-titulo-section omb-titulo-section--centrado">
+            En el Observatorio de Movilidad puedes encontrar
+          </h2>
+          <div class="separador">
+            <svg
+              width="256"
+              height="6"
+              viewBox="0 0 256 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.85705 6L0 0H57.2937L63.1507 6H5.85705ZM102.276 6L96.4188 0H153.712L159.57 6H102.276ZM198.706 6L192.849 0H250.143L256 6H198.706Z"
+                fill="#DBF000" />
+            </svg>
+          </div>
+          <p
+            class="omb-parrafo-descripcion-section omb-parrafo-descripcion-section--center">
+            Reportes, análisis, indicadores y estadísticas sobre la movilidad
+          </p>
+        </div>
+        <div class="omb-acordion-home" id="acordionHome">
+          <div class="omb-acordion-item">
+            <button class="omb-acordion-boton--home">
+              <h2 class="omb-titulo-botton-acordeon">
+                <span class="omb-icono-titulo-acordion activo">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/icono-tableros-home_0.webp"
+                    alt="Icono Tableros" />
+                </span>
+                Tableros
+              </h2>
+              <span class="omb-flecha-acordion"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  fill="currentColor"
+                  viewBox="0 0 320 512">
+                  <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+                </svg>
+              </span>
+            </button>
+            <div class="omb-acordion-content-home abierto">
+              <div class="omb-card-acordion">
+                <img
+                  class="omb-imagen-card-acordion"
+                  src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-tableros.webp"
+                  alt="Imagen tableros" />
+                <p class="omb-parrafo-card-acorderon">
+                  Nuestros tableros de control interactivos le dan el poder de
+                  analizar la evidencia por sí mismo. Cree las visualizaciones
+                  que necesita, exporte los datos y acceda a una comprensión más
+                  profunda de cómo se mueve Bogotá.
+                </p>
+                <button type="button" class="omb-boton omb-boton--primario">
+                  Explorar Tableros Ahora
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
