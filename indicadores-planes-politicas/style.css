@@ -180,9 +180,10 @@ a {
 
 @media (min-width: 768px) {
   .omb-cards-movilidad-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr;
     width: 100%;
+  }
+  .omb-card--con-icono {
+    width: 320px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
@@ -227,9 +228,9 @@ a {
   }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1260px) {
   .omb-indicadores-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-titulo-section {
     font-weight: 600;
