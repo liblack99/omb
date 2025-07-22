@@ -5,6 +5,7 @@
   --color-texto: #000000;
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
+  --color-fondo-seccion-intreres: #f3f4f1;
 }
 
 body {
@@ -12,48 +13,20 @@ body {
   margin: 0;
 }
 
-.omb-fondo-explorar-publicaciones-slide {
-  width: 100%;
-  position: absolute;
-}
 .omb-section {
   width: 100%;
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
 }
-
-.omb-explora-publicacion-section {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  padding-bottom: 40px;
-}
-.omb-fondo-explorar-publicaciones-slide {
-  width: 100%;
-  position: absolute;
-
-  transform: rotate(180deg);
-  z-index: -1;
+.omb-section--fondo-gris {
+  background-color: var(--color-fondo-seccion-intreres);
 }
 
 .omb-explora-publicaciones-container {
   width: 90%;
   position: relative;
 }
-.omb-wrapper-publicaciones-explorar {
-  padding: 4px;
-}
-.omb-swiper-slide-publicaciones-explorar {
-  width: 406px !important;
-  height: 330px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .omb-explora-texto-container {
   display: flex;
   flex-direction: column;
@@ -80,14 +53,14 @@ body {
   font-size: 1.125rem;
   line-height: 26px;
   color: var(--color-texto);
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
 }
 .omb-titulo-publicaciones {
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;
   color: var(--color-texto);
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 .omb-carrusel-container {
@@ -96,7 +69,7 @@ body {
 }
 
 .omb-swiper {
-  width: 85%;
+  width: 80%;
   padding: 4px;
   box-sizing: border-box;
 }
@@ -160,10 +133,10 @@ body {
 }
 
 .omb-boton-prev {
-  left: -10px;
+  left: 0px;
 }
 .omb-boton-next {
-  right: -10px;
+  right: 0px;
 }
 .omb-boton-prev,
 .omb-boton-next {
@@ -194,6 +167,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
+  width: 273px;
 }
 .omb-card-explorar-publicaciones:hover {
   transform: scale(1.01);
@@ -249,6 +223,7 @@ body {
   padding: 0px;
   transition: all 0.9s ease-in;
 }
+
 .omb-ver-documentos-section {
   width: 100%;
   display: flex;
@@ -290,15 +265,6 @@ body {
   color: white;
 }
 
-.omb-categoria-publicaciones-section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 40px;
-  background-color: #f1f3f7;
-}
 .omb-categorias-publicaciones-container {
   width: 90%;
   display: flex;
@@ -331,6 +297,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border: 1px solid transparent;
   transition: all 0.3s ease;
+  background-color: #fff;
 }
 .omb-card--con-icono:hover {
   border-color: black;
@@ -459,7 +426,7 @@ body {
     width: 360px;
   }
   .omb-swiper {
-    width: 92%;
+    width: 90%;
     padding: 4px;
     box-sizing: border-box;
   }
@@ -496,7 +463,7 @@ body {
     width: 360px;
   }
   .omb-swiper {
-    width: 92%;
+    width: 90%;
     padding: 4px;
     box-sizing: border-box;
   }
@@ -523,10 +490,10 @@ body {
     font-size: 1rem;
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-explora-publicaciones-container,
   .omb-categorias-publicaciones-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-card--con-icono {
     width: 360px;
@@ -535,34 +502,6 @@ body {
     width: 92%;
     padding: 4px;
     box-sizing: border-box;
-  }
-  .omb-titulo-section {
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 2.75rem;
-    color: var(--color-texto);
-    font-family: "Montserrat", sans-serif;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .omb-parrafo-descripcion-section {
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    color: var(--color-texto);
-  }
-  .omb-titulo-publicaciones {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-@media (min-width: 1440px) {
-  .omb-explora-publicaciones-container,
-  .omb-categorias-publicaciones-container {
-    max-width: 1280px;
-  }
-  .omb-card--con-icono {
-    width: 360px;
   }
   .omb-titulo-section {
     font-weight: 600;

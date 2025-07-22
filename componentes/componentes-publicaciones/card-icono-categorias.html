@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+    .omb-card--con-icono {
+      width: 360px;
+      padding: 24px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-sizing: border-box;
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      background-color: #fff;
+    }
+    .omb-card--con-icono:hover {
+      border-color: black;
+    }
+
+    .omb-card--con-icono:hover .omb-titulo-card {
+      color: var(--color-enlace);
+    }
+
+    .omb-icono-container {
+      width: 113px;
+      height: 113px;
+      padding: 8px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      background-color: rgb(103, 108, 46, 0.1);
+      overflow: hidden;
+    }
+
+    .omb-icono-content {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(222.15deg, #f0ff57 0%, #c4d600 100.91%);
+    }
+    .omb-texto-card-publicaciones {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      flex: 1;
+    }
+    .omb-titulo-card {
+      font-weight: 600;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      text-decoration: underline;
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.625rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.688rem;
+      padding: 0px 16px;
+      transition: all 0.3s ease-in;
+    }
+    .omb-titulo-card--sin-padding {
+      padding: 0;
+    }
+
+    .omb-titulo-card--dos-lineas {
+      height: 53px;
+    }
+
+    .omb-parrafo-card {
+      font-size: 1rem;
+      font-family: "Work sans", sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 0;
+      line-height: 1.5rem;
+      padding: 0px 16px;
+      color: black;
+      min-height: 72px;
+    }
+    .omb-parrafo-card--variante-card-icono {
+      padding: 0;
+      -webkit-line-clamp: 7;
+      min-height: 168px;
+    }
+
+    .omb-enlaces {
+      gap: 8px;
+      display: flex;
+      align-items: center;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      color: var(--color-enlace);
+      text-decoration: underline;
+    }
+
+    .omb-enlaces:hover {
+      color: var(--color-enlace-hover);
+    }
+  </style>
+  <body>
+    <div class="omb-card--con-icono">
+      <div class="omb-icono-card-publicaciones-container">
+        <div class="omb-icono-container">
+          <div class="omb-icono-content">
+            <svg
+              width="48"
+              height="65"
+              viewBox="0 0 48 65"
+              fill="#acbd00"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M40.3638 10.5208H39.2184C38.9639 8.26347 37.0707 6.49895 34.7481 6.49895H32.505C31.3437 2.74735 27.8279 0.108521 23.819 0.108521C19.8101 0.108521 16.3102 2.74735 15.133 6.49895H12.8899C10.5673 6.49895 8.67414 8.26347 8.41961 10.5208H7.2742C3.29708 10.5208 0.0517578 13.7637 0.0517578 17.7378V56.8116C0.0517578 60.7858 3.29708 64.0287 7.2742 64.0287H40.3479C44.325 64.0287 47.5703 60.7858 47.5703 56.8116V17.7378C47.5703 13.7637 44.325 10.5208 40.3479 10.5208H40.3638ZM10.6786 11.0295C10.6786 9.80544 11.6808 8.80395 12.9058 8.80395H16.0398C16.5806 8.80395 17.0579 8.42244 17.1693 7.88195C17.7897 4.71853 20.5896 2.41353 23.8349 2.41353C27.0802 2.41353 29.8801 4.71853 30.5005 7.88195C30.6119 8.42244 31.0733 8.80395 31.6301 8.80395H34.764C35.989 8.80395 36.9912 9.80544 36.9912 11.0295V15.7031C36.9912 16.1482 36.6094 16.5297 36.164 16.5297H11.5058C11.0445 16.5297 10.6786 16.1641 10.6786 15.7031V11.0295ZM45.2954 56.7957C45.2954 59.5141 43.0841 61.7237 40.3638 61.7237H7.29011C4.56976 61.7237 2.35848 59.5141 2.35848 56.7957V17.7378C2.35848 15.0195 4.56976 12.8099 7.29011 12.8099H8.38779V15.7031C8.38779 17.4199 9.78773 18.8188 11.5058 18.8188H36.1481C37.8662 18.8188 39.2661 17.4199 39.2661 15.7031V12.8099H40.3638C43.0841 12.8099 45.2954 15.0195 45.2954 17.7378V56.8116V56.7957ZM21.8463 9.47161C21.8463 8.37475 22.7372 7.48454 23.8349 7.48454C24.9326 7.48454 25.8235 8.37475 25.8235 9.47161C25.8235 10.5685 24.9326 11.4587 23.8349 11.4587C22.7372 11.4587 21.8463 10.5685 21.8463 9.47161ZM34.08 47.1783C34.08 47.5598 33.7777 47.8619 33.3959 47.8619H14.258C13.8762 47.8619 13.5739 47.5598 13.5739 47.1783C13.5739 46.7968 13.8762 46.5107 14.2421 46.4948H33.38C33.7459 46.4948 34.0481 46.7968 34.0481 47.1783H34.08ZM27.8757 34.3339H19.7782L21.4486 29.6921C21.6873 29.0244 22.3395 28.5634 23.0554 28.5634H24.6144C25.3303 28.5634 25.9825 29.0244 26.2212 29.6921L27.8916 34.3339H27.8757ZM29.8165 39.7546H17.8215L19.2851 35.6851H28.3529L29.8165 39.7546ZM31.7573 45.1436H15.8966L17.3443 41.1058H30.3096L31.7573 45.1436Z"
+                fill="#212400" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="omb-texto-card-publicaciones">
+        <h5
+          class="omb-titulo-card omb-titulo-card--sin-padding omb-titulo-card--dos-lineas">
+          Resultados Encuestas de Movilidad
+        </h5>
+        <p class="omb-parrafo-card omb-parrafo-card--variante-card-icono">
+          Estas encuestas proporcionan información crucial para comprender los
+          patrones de movilidad de la población, los medios de transporte
+          utilizados, las distancias recorridas y los motivos de los viajes.
+        </p>
+        <p class="omb-enlaces">
+          Ver resultados
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="14"
+            fill="#acbd00">
+            <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+            <path
+              d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
+          </svg>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

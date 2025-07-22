@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+    }
+    .omb-card-explorar-publicaciones {
+      border-radius: 8px;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      width: 273px;
+    }
+    .omb-card-explorar-publicaciones:hover {
+      transform: scale(1.01);
+    }
+    .omb-imagen-card-explorar-publicaciones {
+      border-radius: 16px;
+      overflow: hidden;
+      display: block;
+    }
+    .omb-imagen-card-explorar-publicaciones img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      transition: all 0.5s ease;
+    }
+    .omb-imagen-card-explorar-publicaciones:hover img {
+      transform: scale(0.99);
+    }
+
+    .omb-card-content-explorar-publicaciones {
+      border-radius: 8px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-sizing: border-box;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+    .omb-texto-card-content {
+      display: flex;
+      gap: 8px;
+      box-sizing: border-box;
+      width: 100%;
+      align-items: center;
+    }
+
+    .omb-texto-card-content h5 {
+      font-weight: 600;
+      color: var(--color-enlace);
+      font-family: "Montserrat", sans-serif;
+      text-decoration: underline;
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.625rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.688rem;
+      padding: 0px;
+      transition: all 0.9s ease-in;
+    }
+  </style>
+  <body>
+    <div class="omb-card-explorar-publicaciones">
+      <div class="omb-imagen-card-explorar-publicaciones">
+        <img
+          src="http://101.44.24.97/sites/default/files/2025-07/omb-publicaciones-abece-plan-distrital-desarrollo-2024_0.jpg"
+          alt="Imagen Abecé plan distrital de desarrollo" />
+      </div>
+      <div class="omb-card-content-explorar-publicaciones">
+        <div class="omb-texto-card-content">
+          <div class="svg-descarga">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 56 56"
+              fill="#acbd00"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M52.4374 38.4732H37.8731L32.9365 43.4098C31.6218 44.7244 29.8654 45.4553 27.9999 45.4553C26.1343 45.4553 24.3822 44.7292 23.0633 43.4098L18.1267 38.4732H3.56236C1.63463 38.4732 0.0712891 40.0365 0.0712891 41.9643V52.4375C0.0712891 54.3652 1.63463 55.9286 3.56236 55.9286H52.4374C54.3651 55.9286 55.9284 54.3652 55.9284 52.4375V41.9643C55.9284 40.0333 54.3684 38.4732 52.4374 38.4732ZM47.2008 49.8192C45.7607 49.8192 44.5825 48.6409 44.5825 47.2009C44.5825 45.7608 45.7607 44.5826 47.2008 44.5826C48.6408 44.5826 49.8191 45.7608 49.8191 47.2009C49.8191 48.6409 48.6408 49.8192 47.2008 49.8192ZM25.5343 40.9388C26.2107 41.6261 27.1053 41.9643 27.9999 41.9643C28.8944 41.9643 29.7869 41.6233 30.4676 40.9415L44.4319 26.9772C45.7945 25.6135 45.7945 23.4043 44.4319 22.0406C43.0682 20.6769 40.8579 20.6769 39.4953 22.0406L31.4909 30.051V3.56248C31.4909 1.63476 29.9276 0.0714111 27.9999 0.0714111C26.0689 0.0714111 24.5088 1.63476 24.5088 3.56248V30.051L16.5011 22.0433C15.1385 20.6796 12.9283 20.6796 11.5646 22.0433C10.2019 23.407 10.2019 25.6162 11.5646 26.9799L25.5343 40.9388Z"
+                fill="#acbd00" />
+            </svg>
+          </div>
+          <h5>
+            Descargar PDF Abecé plan distrital de desarrollo "Bogotá camina
+            segura"
+          </h5>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
