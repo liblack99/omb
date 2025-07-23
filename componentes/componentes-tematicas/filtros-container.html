@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+    .omb-titulo-section {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 32px;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-titulo-section--color {
+      color: var(--color-enlace);
+    }
+    .omb-titulo-section--padding {
+      padding-left: 16px;
+      margin: 0;
+    }
+    .omb-parrafo-descripcion-section {
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 26px;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-filtro-tematica-container {
+      width: 90%;
+    }
+    .omb-filtros {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .omb-filtros-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 16px;
+      box-shadow: 0px 0px 10px rgba(134, 129, 129, 0.25);
+      border-radius: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 24px;
+      padding: 16px;
+    }
+    .omb-select {
+      position: relative;
+    }
+    .omb-select--con-dos-elementos {
+      position: relative;
+      display: flex;
+      width: 100%;
+      gap: 4px;
+    }
+    .omb-boton-filtro-container {
+      height: 67px;
+      display: flex;
+      align-items: end;
+    }
+
+    .omb-select p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    .omb-opcion-selecionada {
+      width: 354px;
+      border-radius: 24px;
+      padding: 0px 16px;
+      height: 40px;
+      font-family: "Work sans", sans-serif;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      font-weight: 500;
+      appearance: none;
+      border: 1px solid;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("http://149.130.178.89/media/111");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 12px;
+      color: var(--color-texto);
+      position: relative;
+      background-color: var(--color-fondo-seccion-intreres);
+      justify-content: space-between;
+    }
+    .omb-opcion-selecionada > span {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      transition: all 0.3s ease;
+    }
+    .omb-opcion-selecionada.activo > span {
+      transform: rotate(-90deg);
+    }
+    .omb-opcion-selecionada--ordenar {
+      width: 272px;
+    }
+    .omb-opciones {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      border-radius: 16px;
+      padding: 16px 0px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+      position: absolute;
+      width: 356px;
+      background-color: #fff;
+      overflow: hidden;
+      top: 52px;
+      z-index: 1;
+    }
+
+    .omb-opciones li {
+      padding: 16px;
+      box-sizing: border-box;
+      width: 100%;
+      font-family: "Work sans", sans-serif;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .omb-opciones li:hover {
+      background-color: var(--color-primario);
+    }
+
+    .omb-opciones--ordenar {
+      width: 272px;
+    }
+
+    .omb-boton {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: "Work sans", sans-serif;
+      text-transform: uppercase;
+      border-width: 0.125rem;
+      border-style: solid;
+      color: var(--color-texto);
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    .omb-boton--primario {
+      background-color: var(--color-primario);
+      border-color: var(--color-primario);
+    }
+    .omb-boton--con-icono {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .omb-boton--filtro {
+      padding: 4px 1rem;
+    }
+    .omb-boton:hover {
+      background-color: var(--color-secundario-hover);
+      border-color: var(--color-secundario-hover);
+    }
+  </style>
+  <body>
+    <div class="omb-filtro-tematica-container">
+      <h1 class="omb-titulo-section" id="tituloSection">Temáticas</h1>
+      <div class="omb-filtros" id="filtros">
+        <h2 class="omb-parrafo-descripcion-section">
+          Filtra por tipo de contenido, palabra clave y fecha
+        </h2>
+        <div class="omb-inputs-container">
+          <!--select tipo contenido-->
+          <div class="omb-select">
+            <p id="labelTipoContenido">Tipo de contenido</p>
+            <div
+              class="omb-opcion-selecionada"
+              id="selectTipoContenido"
+              role="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-labelledby="labelTipoContenido"
+              tabindex="0"
+              data-select="contenido">
+              Todos
+              <span class="icono-flecha-select" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 512"
+                  width="12">
+                  <path
+                    d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                </svg>
+              </span>
+            </div>
+
+            <ul
+              class="omb-opciones hidden"
+              id="listboxTipoContenido"
+              role="listbox"
+              aria-labelledby="labelTipoContenido"
+              data-select="contenido">
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Todos"
+                data-select="contenido">
+                Todos
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Tableros"
+                data-select="contenido">
+                Tableros
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Noticias y Blogs"
+                data-select="contenido">
+                Noticias y Blogs
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Mapas"
+                data-select="contenido">
+                Mapas
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Publicaciones"
+                data-select="contenido">
+                Publicaciones
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Infografías"
+                data-select="contenido">
+                Infografías
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Indicadores"
+                data-select="contenido">
+                Indicadores
+              </li>
+            </ul>
+          </div>
+          <!--select categoria-->
+          <div class="omb-select">
+            <p id="labelCategoria">Categoría</p>
+            <div
+              class="omb-opcion-selecionada"
+              id="selectCategoria"
+              role="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-labelledby="labelCategoria"
+              tabindex="0"
+              data-select="categoria">
+              Todas
+              <span class="icono-flecha-select" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 512"
+                  width="12">
+                  <path
+                    d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                </svg>
+              </span>
+            </div>
+
+            <ul
+              class="omb-opciones hidden"
+              id="listboxCategoria"
+              role="listbox"
+              aria-labelledby="labelCategoria"
+              data-select="categoria">
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Todos"
+                data-select="categoria">
+                Todas
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Movilidad sostenible"
+                data-select="categoria">
+                Movilidad sostenible
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Transporte público"
+                data-select="categoria">
+                Transporte público
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Mapas"
+                data-select="categoria">
+                Mapas
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Publicaciones"
+                data-select="categoria">
+                Publicaciones
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Infografías"
+                data-select="categoria">
+                Infografías
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Indicadores"
+                data-select="categoria">
+                Indicadores
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-value="Infraestructura"
+                data-select="categoria">
+                Infraestructura
+              </li>
+            </ul>
+          </div>
+          <!--select ordenar por mas boton reiniciar filtro-->
+          <div class="omb-select omb-select--con-dos-elementos">
+            <div>
+              <p>Odenar por</p>
+              <div
+                class="omb-opcion-selecionada omb-opcion-selecionada--ordenar"
+                id="selectTipoContenido"
+                role="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                tabindex="0"
+                data-select="orden">
+                Selecciona una opción
+                <span class="icono-flecha-select">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 512"
+                    width="12">
+                    <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                    <path
+                      d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                  </svg>
+                </span>
+              </div>
+              <ul
+                class="omb-opciones omb-opciones--ordenar hidden"
+                role="listbox"
+                id="listbox-orden"
+                aria-labelledby="selectTipoContenido"
+                data-select="orden">
+                <li
+                  role="option"
+                  tabindex="0"
+                  data-select="orden"
+                  data-value="az">
+                  A-Z
+                </li>
+                <li
+                  role="option"
+                  tabindex="0"
+                  data-select="orden"
+                  data-value="za">
+                  Z-A
+                </li>
+                <li
+                  role="option"
+                  tabindex="0"
+                  data-select="orden"
+                  data-value="fecha-reciente">
+                  Por fecha recientes
+                </li>
+                <li
+                  role="option"
+                  tabindex="0"
+                  data-select="orden"
+                  data-value="fecha-antigua">
+                  Por fecha antiguas
+                </li>
+              </ul>
+            </div>
+            <div class="omb-boton-filtro-container">
+              <button
+                class="omb-boton omb-boton--primario omb-boton--filtro"
+                arial-label="Reiniciar el filtro"
+                id="btnResetfiltros">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#000000"
+                  width="24px"
+                  height="24px"
+                  viewBox="0 0 32 32"
+                  id="icon">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                      }
+                    </style>
+                  </defs>
+                  <path
+                    d="M22.5,9A7.4522,7.4522,0,0,0,16,12.792V8H14v8h8V14H17.6167A5.4941,5.4941,0,1,1,22.5,22H22v2h.5a7.5,7.5,0,0,0,0-15Z" />
+                  <path
+                    d="M26,6H4V9.171l7.4142,7.4143L12,17.171V26h4V24h2v2a2,2,0,0,1-2,2H12a2,2,0,0,1-2-2V18L2.5858,10.5853A2,2,0,0,1,2,9.171V6A2,2,0,0,1,4,4H26Z" />
+                  <rect
+                    id="_Transparent_Rectangle_"
+                    data-name="&lt;Transparent Rectangle&gt;"
+                    class="cls-1"
+                    width="32"
+                    height="32" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 :root {
   --color-primario-soft: #f9ffbd;
   --color-primario: #dbf000;
-  --color-secundario-hover: #8e9c00;
+  --color-secundario-hover: #ecff24;
   --color-texto: #000000;
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
@@ -43,9 +43,9 @@ body {
 
 .omb-cards-comunidad-container {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: 1fr;
   gap: 30px;
 }
 .omb-card {
@@ -58,6 +58,7 @@ body {
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border: 1px solid transparent;
+  width: 360px;
 }
 
 .omb-card-publicaciones-interes:hover {
@@ -149,7 +150,10 @@ body {
     width: 80%;
   }
   .omb-cards-comunidad-container {
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+  .omb-card {
+    width: 320px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
@@ -157,7 +161,10 @@ body {
     max-width: 1140px;
   }
   .omb-cards-comunidad-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+  .omb-card {
+    width: 380px;
   }
   .omb-titulo-section {
     font-weight: 600;
@@ -201,12 +208,15 @@ body {
     font-family: "Montserrat", "sans-serif";
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-comunidad-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-cards-comunidad-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: start;
+  }
+  .omb-card {
+    width: 360px;
   }
   .omb-titulo-section {
     font-weight: 600;

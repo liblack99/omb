@@ -21,95 +21,187 @@
               class="omb-parrafo-descripcion-section omb-titulo-section--color">
               Filtra por tipo de contenido, palabra clave y fecha
             </h2>
-            <div class="omb-filtros-container">
+            <div class="omb-inputs-container">
               <div class="omb-select">
-                <p>Tipo de contenido</p>
+                <p id="labelTipoContenido">Tipo de contenido</p>
                 <div
                   class="omb-opcion-selecionada"
                   id="selectTipoContenido"
+                  role="button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-labelledby="labelTipoContenido"
+                  tabindex="0"
                   data-select="contenido">
                   Todos
-                  <span class="icono-flecha-select">
+                  <span class="icono-flecha-select" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 256 512"
                       width="12">
-                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
                       <path
                         d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
                     </svg>
                   </span>
                 </div>
-                <ul class="omb-opciones hidden" data-select="contenido">
-                  <li data-value="Todos" data-select="contenido">Todos</li>
-                  <li data-value="Tableros" data-select="contenido">
+
+                <ul
+                  class="omb-opciones hidden"
+                  id="listboxTipoContenido"
+                  role="listbox"
+                  aria-labelledby="labelTipoContenido"
+                  data-select="contenido">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Todos"
+                    data-select="contenido">
+                    Todos
+                  </li>
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Tableros"
+                    data-select="contenido">
                     Tableros
                   </li>
-                  <li data-value="Noticias y Blogs" data-select="contenido">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Noticias y Blogs"
+                    data-select="contenido">
                     Noticias y Blogs
                   </li>
-                  <li data-value="Mapas" data-select="contenido">Mapas</li>
-                  <li data-value="Publicaciones" data-select="contenido">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Mapas"
+                    data-select="contenido">
+                    Mapas
+                  </li>
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Publicaciones"
+                    data-select="contenido">
                     Publicaciones
                   </li>
-                  <li data-value="Infografías" data-select="contenido">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Infografías"
+                    data-select="contenido">
                     Infografías
                   </li>
-                  <li data-value="Indicadores" data-select="contenido">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Indicadores"
+                    data-select="contenido">
                     Indicadores
                   </li>
                 </ul>
               </div>
               <div class="omb-select">
-                <p>Categoria</p>
+                <p id="labelCategoria">Categoría</p>
                 <div
                   class="omb-opcion-selecionada"
-                  id="selectTipoContenido"
+                  id="selectCategoria"
+                  role="button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-labelledby="labelCategoria"
+                  tabindex="0"
                   data-select="categoria">
                   Todas
-                  <span class="icono-flecha-select">
+                  <span class="icono-flecha-select" aria-hidden="true">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 256 512"
                       width="12">
-                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
                       <path
                         d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
                     </svg>
                   </span>
                 </div>
-                <ul class="omb-opciones hidden" data-select="categoria">
-                  <li data-value="Todos" data-select="categoria">Todas</li>
-                  <li data-value="Movilidad sostenible" data-select="categoria">
+
+                <ul
+                  class="omb-opciones hidden"
+                  id="listboxCategoria"
+                  role="listbox"
+                  aria-labelledby="labelCategoria"
+                  data-select="categoria">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Todos"
+                    data-select="categoria">
+                    Todas
+                  </li>
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Movilidad sostenible"
+                    data-select="categoria">
                     Movilidad sostenible
                   </li>
-                  <li data-value="Transporte público" data-select="categoria">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Transporte público"
+                    data-select="categoria">
                     Transporte público
                   </li>
-                  <li data-value="Mapas" data-select="categoria">Mapas</li>
-                  <li data-value="Publicaciones" data-select="categoria">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Mapas"
+                    data-select="categoria">
+                    Mapas
+                  </li>
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Publicaciones"
+                    data-select="categoria">
                     Publicaciones
                   </li>
-                  <li data-value="Infografías" data-select="categoria">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Infografías"
+                    data-select="categoria">
                     Infografías
                   </li>
-                  <li data-value="Indicadores" data-select="categoria">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Indicadores"
+                    data-select="categoria">
                     Indicadores
                   </li>
-                  <li data-value="Infraestructura" data-select="categoria">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-value="Infraestructura"
+                    data-select="categoria">
                     Infraestructura
                   </li>
                 </ul>
               </div>
+
               <div class="omb-select omb-select--con-dos-elementos">
                 <div>
                   <p>Odenar por</p>
                   <div
                     class="omb-opcion-selecionada omb-opcion-selecionada--ordenar"
                     id="selectTipoContenido"
+                    role="button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    tabindex="0"
                     data-select="orden">
                     Selecciona una opción
-
                     <span class="icono-flecha-select">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -123,13 +215,36 @@
                   </div>
                   <ul
                     class="omb-opciones omb-opciones--ordenar hidden"
+                    role="listbox"
+                    id="listbox-orden"
+                    aria-labelledby="selectTipoContenido"
                     data-select="orden">
-                    <li data-select="orden" data-value="az">A-Z</li>
-                    <li data-select="orden" data-value="za">Z-A</li>
-                    <li data-select="orden" data-value="fecha-reciente">
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="orden"
+                      data-value="az">
+                      A-Z
+                    </li>
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="orden"
+                      data-value="za">
+                      Z-A
+                    </li>
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="orden"
+                      data-value="fecha-reciente">
                       Por fecha recientes
                     </li>
-                    <li data-select="orden" data-value="fecha-antigua">
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="orden"
+                      data-value="fecha-antigua">
                       Por fecha antiguas
                     </li>
                   </ul>
@@ -137,6 +252,7 @@
                 <div class="omb-boton-filtro-container">
                   <button
                     class="omb-boton omb-boton--primario omb-boton--filtro"
+                    arial-label="Reiniciar el filtro"
                     id="btnResetfiltros">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +295,7 @@
               data-tematica="Movilidad sostenible"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -206,7 +322,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad sostenible</span>
@@ -220,7 +336,7 @@
               data-tematica="Movilidad sostenible"
               data-tipo="Tableros"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -247,7 +363,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad sostenible</span>
@@ -261,7 +377,7 @@
               data-tematica="Movilidad sostenible"
               data-tipo="Mapas"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -288,7 +404,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad sostenible</span>
@@ -302,7 +418,7 @@
               data-tematica="Movilidad sostenible"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -329,7 +445,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad sostenible</span>
@@ -343,7 +459,7 @@
               data-tematica="Transporte público"
               data-tipo="Tableros"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -371,7 +487,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte público</span>
@@ -385,7 +501,7 @@
               data-tematica="Transporte público"
               data-tipo="Tableros"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -412,7 +528,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte público</span>
@@ -426,7 +542,7 @@
               data-tematica="Transporte público"
               data-tipo="Tableros"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -453,7 +569,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte público</span>
@@ -467,7 +583,7 @@
               data-tematica="Transporte público"
               data-tipo="Noticias y Blogs"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -494,7 +610,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte público</span>
@@ -509,7 +625,7 @@
               data-tematica="Publicaciones"
               data-tipo="Indicadores"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Indicadores</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -537,7 +653,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Publicaciones</span>
@@ -552,7 +668,7 @@
               data-tematica="Publicaciones"
               data-tipo="Indicadores"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Indicadores</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -579,7 +695,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Publicaciones</span>
@@ -594,7 +710,7 @@
               data-tematica="Publicaciones"
               data-tipo="Tableros"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
                 </p>
@@ -621,7 +737,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Publicaciones</span>
@@ -636,7 +752,7 @@
               data-tematica="Transporte público individual - Taxi"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -664,7 +780,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte público individual - Taxi</span>
@@ -680,7 +796,7 @@
               data-tematica="Transporte público individual - Taxi"
               data-tipo="Mapas"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -707,7 +823,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte público individual - Taxi</span>
@@ -722,7 +838,7 @@
               data-tematica="Transporte público individual - Taxi"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -749,7 +865,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte público individual - Taxi</span>
@@ -764,7 +880,7 @@
               data-tematica="Transporte intermunicipal"
               data-tipo="Noticia y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -791,7 +907,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte intermunicipal</span>
@@ -806,7 +922,7 @@
               data-tematica="Transporte intermunicipal"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -834,7 +950,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte intermunicipal</span>
@@ -849,7 +965,7 @@
               data-tematica="Transporte intermunicipal"
               data-tipo="Indicadores"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Indicadores</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -876,7 +992,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte intermunicipal</span>
@@ -891,7 +1007,7 @@
               data-tematica="Transporte intermunicipal"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -918,7 +1034,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte intermunicipal</span>
@@ -933,7 +1049,7 @@
               data-tematica="Participación ciudadana"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -961,7 +1077,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Participación ciudadana</span>
@@ -976,7 +1092,7 @@
               data-tematica="Participación ciudadana"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1003,7 +1119,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Participación ciudadana</span>
@@ -1018,7 +1134,7 @@
               data-tematica="Participación ciudadana"
               data-tipo="Mapas"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1045,7 +1161,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Participación ciudadana</span>
@@ -1060,7 +1176,7 @@
               data-tematica="Participación ciudadana"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1087,7 +1203,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Participación ciudadana</span>
@@ -1102,7 +1218,7 @@
               data-tematica="Velocidad"
               data-tipo="Noticias y Blogs"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -1129,14 +1245,14 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Velocidad</span>
                   </div>
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Publicaciones</span>
@@ -1151,7 +1267,7 @@
               data-tematica="Velocidad"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1177,7 +1293,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Velocidad</span>
@@ -1192,7 +1308,7 @@
               data-tematica="Velocidad"
               data-tipo="Tableros"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1219,7 +1335,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Velocidad</span>
@@ -1234,7 +1350,7 @@
               data-tematica="Velocidad"
               data-tipo="NoticiaS y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1261,7 +1377,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Velocidad</span>
@@ -1276,7 +1392,7 @@
               data-tematica="Movilidad peatonal"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -1304,7 +1420,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad peatonal</span>
@@ -1319,7 +1435,7 @@
               data-tematica="Movilidad peatonal"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1346,7 +1462,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad peatonal</span>
@@ -1361,7 +1477,7 @@
               data-tematica="Movilidad peatonal"
               data-tipo="Tableros"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1388,7 +1504,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad peatonal</span>
@@ -1402,7 +1518,7 @@
               data-tematica="Movilidad peatonal"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1429,7 +1545,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad peatonal</span>
@@ -1444,7 +1560,7 @@
               data-tematica="Micromovilidad: Bicicletas y patinetas"
               data-tipo="Mapas"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -1471,7 +1587,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Micromovilidad: Bicicletas y patinetas</span>
@@ -1486,7 +1602,7 @@
               data-tematica="Micromovilidad: Bicicletas y patinetas"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1513,7 +1629,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Micromovilidad: Bicicletas y patinetas</span>
@@ -1528,7 +1644,7 @@
               data-tematica="Micromovilidad: Bicicletas y patinetas"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -1555,7 +1671,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Micromovilidad: Bicicletas y patinetas</span>
@@ -1569,7 +1685,7 @@
               data-tematica="Micromovilidad: Bicicletas y patinetas"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticia Y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1596,7 +1712,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Micromovilidad: Bicicletas y patinetas</span>
@@ -1611,7 +1727,7 @@
               data-tematica="Transporte privado motorizado"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -1638,7 +1754,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte privado motorizado</span>
@@ -1653,7 +1769,7 @@
               data-tematica="Transporte privado motorizado"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1680,7 +1796,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte privado motorizado</span>
@@ -1695,7 +1811,7 @@
               data-tematica="Transporte privado motorizado"
               data-tipo="Publicacione"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1722,7 +1838,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte privado motorizado</span>
@@ -1736,7 +1852,7 @@
               data-tematica="Transporte privado motorizado"
               data-tipo="Noticias y Blogs"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -1763,7 +1879,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Transporte privado motorizado</span>
@@ -1778,7 +1894,7 @@
               data-tematica="Sistema de estacionamientos"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -1805,7 +1921,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Sistema de estacionamientos</span>
@@ -1820,7 +1936,7 @@
               data-tematica="Sistema de estacionamientos"
               data-tipo="Tableros"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1847,7 +1963,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Sistema de estacionamientos</span>
@@ -1862,7 +1978,7 @@
               data-tematica="Sistema de estacionamientos"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1889,7 +2005,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Sistema de estacionamientos</span>
@@ -1903,7 +2019,7 @@
               data-tematica="Sistema de estacionamientos"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -1930,7 +2046,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Sistema de estacionamientos</span>
@@ -1945,7 +2061,7 @@
               data-tematica="Comportamiento ciudadano"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -1972,7 +2088,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Comportamiento ciudadano</span>
@@ -1987,7 +2103,7 @@
               data-tematica="Comportamiento ciudadano"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2014,7 +2130,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Comportamiento ciudadano</span>
@@ -2029,7 +2145,7 @@
               data-tematica="Comportamiento ciudadano"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2056,7 +2172,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Comportamiento ciudadano</span>
@@ -2071,7 +2187,7 @@
               data-tematica="Comportamiento ciudadano"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2098,7 +2214,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Comportamiento ciudadano</span>
@@ -2113,7 +2229,7 @@
               data-tematica="Vías primarias y secundarias en buen estado (%)"
               data-tipo="Tableros"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2139,7 +2255,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Infraestructura</span>
@@ -2154,7 +2270,7 @@
               data-tematica="Infraestructura"
               data-tipo="Tableros"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2181,7 +2297,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Infraestructura</span>
@@ -2196,7 +2312,7 @@
               data-tematica="Infraestructura"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2225,7 +2341,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Infraestructura</span>
@@ -2240,7 +2356,7 @@
               data-tematica="Infraestructura"
               data-tipo="Mapas"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2267,7 +2383,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Infraestructura</span>
@@ -2282,7 +2398,7 @@
               data-tematica="Externalidades ambientales"
               data-tipo="Indicadores"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Indicadores</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2309,7 +2425,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Externalidades ambientales</span>
@@ -2324,7 +2440,7 @@
               data-tematica="Externalidades ambientales"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2351,7 +2467,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Externalidades ambientales</span>
@@ -2366,7 +2482,7 @@
               data-tematica="Externalidades ambientales"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2393,7 +2509,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Externalidades ambientales</span>
@@ -2408,7 +2524,7 @@
               data-tematica="Externalidades ambientales"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2435,7 +2551,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Externalidades ambientales</span>
@@ -2450,7 +2566,7 @@
               data-tematica="Seguimiento a Planes y políticas"
               data-tipo="Mapas"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2477,7 +2593,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Seguimiento a Planes y políticas</span>
@@ -2492,7 +2608,7 @@
               data-tematica="Seguimiento a Planes y políticas"
               data-tipo="Infografias"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Infografias</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2519,7 +2635,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Seguimiento a Planes y políticas</span>
@@ -2534,7 +2650,7 @@
               data-tematica="Seguimiento a Planes y políticas"
               data-tipo="Tableros"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2561,7 +2677,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Seguimiento a Planes y políticas</span>
@@ -2576,7 +2692,7 @@
               data-tematica="Seguimiento a Planes y políticas"
               data-tipo="Mapas"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2603,7 +2719,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Seguimiento a Planes y políticas</span>
@@ -2618,7 +2734,7 @@
               data-tematica="Movilidad y mujer"
               data-tipo="Tableros"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2645,7 +2761,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad y mujer</span>
@@ -2660,7 +2776,7 @@
               data-tematica="Movilidad y mujer"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2687,7 +2803,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad y mujer</span>
@@ -2702,7 +2818,7 @@
               data-tematica="Movilidad y mujer"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2729,7 +2845,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad y mujer</span>
@@ -2744,7 +2860,7 @@
               data-tematica="Movilidad y mujer"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2771,7 +2887,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Movilidad y mujer</span>
@@ -2786,7 +2902,7 @@
               data-tematica="Planeación y Regulación del Tránsito"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2813,7 +2929,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Planeación y Regulación del Tránsito</span>
@@ -2828,7 +2944,7 @@
               data-tematica="Planeación y Regulación del Tránsito"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2855,7 +2971,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Planeación y Regulación del Tránsito</span>
@@ -2870,7 +2986,7 @@
               data-tematica="Planeación y Regulación del Tránsito"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2897,7 +3013,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Planeación y Regulación del Tránsito</span>
@@ -2912,7 +3028,7 @@
               data-tematica="Planeación y Regulación del Tránsito"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -2939,7 +3055,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Planeación y Regulación del Tránsito</span>
@@ -2954,7 +3070,7 @@
               data-tematica="Semaforizacion"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -2981,7 +3097,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Semaforizacion</span>
@@ -2996,7 +3112,7 @@
               data-tematica="Semaforizacion"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -3023,7 +3139,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Semaforizacion</span>
@@ -3038,7 +3154,7 @@
               data-tematica="Semaforizacion"
               data-tipo="Mapas"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3065,7 +3181,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Semaforizacion</span>
@@ -3080,7 +3196,7 @@
               data-tematica="Semaforizacion"
               data-tipo="Mapas"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3107,7 +3223,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Semaforizacion</span>
@@ -3122,7 +3238,7 @@
               data-tematica="Registro Distrital Automotor"
               data-tipo="indicadores"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Indicadores</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3149,7 +3265,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Registro Distrital Automotor</span>
@@ -3164,7 +3280,7 @@
               data-tematica="Registro Distrital Automotor"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3191,7 +3307,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Registro Distrital Automotor</span>
@@ -3206,7 +3322,7 @@
               data-tematica="Registro Distrital Automotor"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3233,7 +3349,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Registro Distrital Automotor</span>
@@ -3248,7 +3364,7 @@
               data-tematica="Registro Distrital Automotor"
               data-tipo="Noticias y Blogs"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3275,7 +3391,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Registro Distrital Automotor</span>
@@ -3290,7 +3406,7 @@
               data-tematica="Recaudo de rentas e ingresos del Sector Movilidad"
               data-tipo="Tableros"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Tableros</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3317,7 +3433,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span
@@ -3334,7 +3450,7 @@
               data-tematica="Recaudo de rentas e ingresos del Sector Movilidad"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -3361,7 +3477,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span
@@ -3378,7 +3494,7 @@
               data-tematica="Recaudo de rentas e ingresos del Sector Movilidad"
               data-tipo="Mapas"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Mapas</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -3405,7 +3521,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span
@@ -3422,7 +3538,7 @@
               data-tematica="Recaudo de rentas e ingresos del Sector Movilidad"
               data-tipo="Noticias y Blogs"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3449,7 +3565,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span
@@ -3466,7 +3582,7 @@
               data-tematica="Volúmenes de Tráfico"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3493,7 +3609,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Volúmenes de Tráfico</span>
@@ -3508,7 +3624,7 @@
               data-tematica="Volúmenes de Tráfico"
               data-tipo="Publicaciones"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -3535,7 +3651,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Volúmenes de Tráfico</span>
@@ -3550,7 +3666,7 @@
               data-tematica="Volúmenes de Tráfico"
               data-tipo="Publicaciones"
               data-fecha="2025">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Publicaciones</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2025
@@ -3577,7 +3693,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Volúmenes de Tráfico</span>
@@ -3591,7 +3707,7 @@
               data-tematica="Volúmenes de Tráfico"
               data-tipo="Noticias y Blogs"
               data-fecha="2024">
-              <div class="omb-card-resultado omb-card-relados--full-width">
+              <div class="omb-card-resultado">
                 <div class="omb-card-tipo">Noticias y Blogs</div>
                 <p class="omb-fecha omb-fecha--padding">
                   Publicado: marzo 2024
@@ -3618,7 +3734,7 @@
                   class="omb-tags-card-container omb-tags-card-container--padding">
                   <div class="omb-tag-card">
                     <img
-                      src="http://149.130.178.89/media/100"
+                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
                       alt="Icono de tag"
                       class="omb-tag-icono" />
                     <span>Volúmenes de Tráfico</span>

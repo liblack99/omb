@@ -198,6 +198,9 @@ a {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+  .omb-card--con-icono {
+    width: 360px;
+  }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
     font-size: 1.25rem;
@@ -219,6 +222,9 @@ a {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+  .omb-card--con-icono {
+    width: 360px;
+  }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
     font-size: 1.25rem;
@@ -239,6 +245,9 @@ a {
     font-family: "Montserrat", sans-serif;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
+  }
+  .omb-card--con-icono {
+    width: 360px;
   }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
