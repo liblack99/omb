@@ -187,6 +187,7 @@ body {
 }
 .omb-cards-movilidad-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   width: 100%;
@@ -347,6 +348,7 @@ body {
 }
 @media (min-width: 768px) {
   .omb-cards-movilidad-container {
+    justify-content: center;
     width: 100%;
   }
 
@@ -393,6 +395,7 @@ body {
   }
 
   .omb-cards-movilidad-container {
+    justify-content: start;
     gap: 30px;
   }
 
@@ -439,6 +442,7 @@ body {
     width: calc(100% - 297px - 20px);
   }
   .omb-cards-movilidad-container {
+    justify-content: start;
     gap: 20px;
   }
 

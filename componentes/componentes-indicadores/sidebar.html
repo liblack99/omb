@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+    }
+    .omb-sidebar-container {
+      width: 297px;
+      position: absolute;
+      display: none; /*cambiar a flex para ver ya que esta en first mobile */
+      z-index: 50;
+    }
+    .omb-sidebar-container.activo {
+      display: block;
+    }
+    .omb-sidebar-content {
+      position: absolute;
+      border-radius: 16px;
+      background-color: #fff;
+    }
+
+    .omb-boton-sidebar {
+      background-color: var(--color-primario-soft);
+      width: 265px;
+      height: 62px;
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      font-size: 16px;
+      color: var(--color-texto);
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border-radius: 12px;
+      position: relative;
+      gap: 8px;
+      padding: 8px 24px;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .omb-boton-sidebar--width {
+      width: 297px;
+      display: none; /*cambiar a flex para ver ya que esta en first mobile */
+    }
+    .omb-boton-sidebar:hover {
+      background-color: var(--color-primario);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-weight: 600;
+    }
+
+    .omb-boton-sidebar--secundario {
+      padding: 16px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .omb-boton-sidebar--activo {
+      background-color: var(--color-primario);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .omb-boton-sidebar--activo::before {
+      content: "";
+      position: absolute;
+      right: -12px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-left: 14px solid var(--color-primario);
+      border-bottom: 8px solid transparent;
+    }
+
+    .omb-sidebar {
+      width: 297px;
+      height: auto;
+      background: var(--color-primario-soft);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .omb-sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: start;
+      gap: 16px;
+    }
+    .omb-sidebar-list-item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+  </style>
+  <body>
+    <div class="omb-sidebar-container">
+      <div class="omb-sidebar-content" id="sidebar">
+        <button
+          type="button"
+          class="omb-boton-sidebar omb-boton-sidebar--width omb-boton-sidebar--activo"
+          aria-label="Todos los tableros">
+          <span class="omb-text-button">Todos los indicadores</span>
+        </button>
+        <div class="omb-sidebar">
+          <nav class="omb-sidebar-nav">
+            <ul class="omb-sidebar-list">
+              <li class="omb-sidebar-item">
+                <button
+                  type="button"
+                  class="omb-boton-sidebar omb-boton-sidebar--secundario omb-boton-sidebar--activo"
+                  aria-label="Categoria 1">
+                  <span class="omb-text-button">Todos los indicadores</span>
+                </button>
+              </li>
+              <li class="omb-sidebar-item">
+                <button
+                  type="button"
+                  class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                  aria-label="Categoria 1">
+                  <span class="omb-text-button">Infraestructura</span>
+                </button>
+              </li>
+              <li class="omb-sidebar-item">
+                <button
+                  type="button"
+                  class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                  aria-label="Categoria 2">
+                  <span class="omb-text-button">Transporte público</span>
+                </button>
+              </li>
+              <li class="omb-sidebar-item">
+                <button
+                  type="button"
+                  class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                  aria-label="Categoria 3">
+                  <span class="omb-text-button">Comportamiento en via</span>
+                </button>
+              </li>
+              <li class="omb-sidebar-item">
+                <button
+                  type="button"
+                  class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                  aria-label="Categoria 4">
+                  <span class="omb-text-button">Viajes y volúmenes</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Card-publicaciones</title>
+    <title>Document</title>
   </head>
   <style>
     :root {
@@ -14,7 +14,6 @@
       --color-enlace: #acbd00;
       --color-enlace-hover: #a5ad4a;
       --color-fondo-seccion-intreres: #f3f4f1;
-      --color-strong: #c4d600;
     }
     .omb-card {
       display: flex;
@@ -26,16 +25,26 @@
       box-sizing: border-box;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
       overflow: hidden;
-      padding-bottom: 16px;
+      padding-bottom: 0px;
+      cursor: pointer;
+    }
+    .omb-card--pequeña {
+      width: 297px;
+      height: 389px;
     }
 
-    .omb-card--pequeña {
-      max-width: 80%;
-    }
     .omb-card:hover {
       border: 1px solid black;
       transform: scale(1.01);
     }
+
+    .omb-imagen-card {
+      width: 100%;
+    }
+    .omb-imagen-card--mediana {
+      height: 260px;
+    }
+
     .omb-imagen-card {
       width: 100%;
       object-fit: cover;
@@ -43,7 +52,6 @@
     .omb-imagen-card--pequeña {
       height: 158px;
     }
-
     .omb-titulo-card {
       font-weight: 600;
       color: var(--color-texto);
@@ -65,7 +73,27 @@
     .omb-titulo-card--dos-lineas {
       height: 53px;
     }
-
+    .omb-titulo-card--sin-padding {
+      padding: 0;
+    }
+    .omb-fecha {
+      font-size: 0.875rem;
+      font-family: "Work sans", sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      line-height: 1.5rem;
+      color: black;
+      display: flex;
+      align-items: center;
+      margin: 0px 0px 8px;
+      color: #71735e;
+    }
+    .omb-fecha--padding {
+      padding: 0 16px;
+    }
     .omb-parrafo-card {
       font-size: 1rem;
       font-family: "Work sans", sans-serif;
@@ -80,24 +108,48 @@
       color: black;
       min-height: 72px;
     }
+    .omb-parrafo-card--sin-padding {
+      padding: 0;
+    }
+    .omb-enlaces {
+      gap: 4px;
+      display: flex;
+      align-items: center;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      text-align: center;
+      color: var(--color-enlace);
+      text-decoration: underline;
+    }
+    .omb-enlaces--centrado {
+      width: 100%;
+      justify-content: center;
+    }
   </style>
   <body>
-    <div class="omb-card omb-card--pequeña">
+    <div
+      class="omb-card omb-card--pequeña"
+      data-categoria="Movilidad sostenible">
       <img
-        class="omb-imagen-card omb-imagen-card--pequeña"
-        src="http://101.44.24.97/sites/default/files/2025-07/omb-encuesta-2023.png"
-        alt="Imagen Abecé plan distrital de desarrollo" />
+        src="http://101.44.24.97/sites/default/files/styles/medium/public/2025-07/pico-placa-noticias.jpg.webp"
+        alt="imagen Así aplica el pico y placa para vehículos particulares durante
+                  septiembre"
+        class="omb-imagen-card omb-imagen-card--pequeña" />
 
       <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
-        Encuesta de movilidad 2023
+        Así aplica el pico y placa para vehículos particulares durante
+        septiembre
       </h5>
+      <p class="omb-fecha omb-fecha--padding">25 may, 2025</p>
       <p class="omb-parrafo-card">
-        Encontrarás que los habitantes de la Bogotá-Región se mueven
-        mayoritariamente en modos sostenibles como la caminata, la bicicleta y
-        el transporte público, confirmando la apuesta por consolidar un sistema
-        de movilidad multimodal, sostenible y descarbonizado, desde lo regional
-        a lo local.
+        Si conduces en Bogotá, debes tener presente que el pico y placa para
+        vehículos particulares rige de lunes a viernes, de 6:00 a.m. a 9:0...
       </p>
+      <p class="omb-enlaces omb-enlaces--centrado">Ver noticias</p>
     </div>
   </body>
 </html>

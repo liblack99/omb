@@ -42,7 +42,7 @@ a {
   font-size: 1.125rem;
   line-height: 1.625rem;
   color: var(--color-texto);
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
 }
 
 .omb-titulo-section--centrado {

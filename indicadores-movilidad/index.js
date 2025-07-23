@@ -35,18 +35,29 @@ botonTablerosMobile.addEventListener("click", () => {
   iconoFlecha.classList.toggle("activo");
 });
 const sidebarContent = document.getElementById("sidebar");
+const contenedorPadre = document.querySelector(".omb-movilidad-container");
 
 function handleScroll() {
-  const scrollStart = 150;
-  const scrollEnd = 620;
+  const sidebarOffsetTop = 20; // margen desde arriba cuando está fixed
+  const finalOffset = 74; // margen desde el final del contenedor
+
+  const windowTop = window.scrollY;
+  const containerTop = contenedorPadre.offsetTop;
+  const containerHeight = contenedorPadre.offsetHeight;
+
+  // Punto máximo hasta donde el sidebar puede estar fijo
+  const maxScroll =
+    containerTop + containerHeight - sidebarContent.offsetHeight - finalOffset;
 
   if (window.innerWidth >= 1024) {
-    if (window.scrollY >= scrollStart && window.scrollY < scrollEnd) {
+    if (windowTop >= containerTop && windowTop < maxScroll) {
       sidebarContent.style.position = "fixed";
-      sidebarContent.style.top = "20px";
-    } else if (window.scrollY >= scrollEnd) {
-      sidebarContent.style.position = "relative";
-      sidebarContent.style.top = `${scrollEnd - scrollStart + 20}px`; // Ajusta para que se quede en el lugar
+      sidebarContent.style.top = `${sidebarOffsetTop}px`;
+    } else if (windowTop >= maxScroll) {
+      sidebarContent.style.position = "absolute";
+      sidebarContent.style.top = `${
+        containerHeight - sidebarContent.offsetHeight - finalOffset
+      }px`;
     } else {
       sidebarContent.style.position = "static";
       sidebarContent.style.top = "";
@@ -56,5 +67,6 @@ function handleScroll() {
     sidebarContent.style.top = "";
   }
 }
+
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("resize", handleScroll);

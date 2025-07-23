@@ -13,8 +13,8 @@ botonTablerosMobile.addEventListener("click", () => {
 
 const botonTodosTableros = buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    buttons.forEach((btn) => btn.classList.remove("omb-boton-sidebar--active"));
-    button.classList.add("omb-boton-sidebar--active");
+    buttons.forEach((btn) => btn.classList.remove("omb-boton-sidebar--activo"));
+    button.classList.add("omb-boton-sidebar--activo");
 
     const categoriaSeleccionada = button.textContent.trim();
 
@@ -58,17 +58,29 @@ opcionSeleccionada.forEach((boton) => {
 
 const sidebarContent = document.getElementById("sidebar");
 
+const contenedorPadre = document.querySelector(".omb-noticias-container");
+
 function handleScroll() {
-  const scrollStart = 563;
-  const scrollEnd = 900;
+  const sidebarOffsetTop = 20; // margen desde arriba cuando está fixed
+  const finalOffset = 74; // margen desde el final del contenedor
+
+  const windowTop = window.scrollY;
+  const containerTop = contenedorPadre.offsetTop;
+  const containerHeight = contenedorPadre.offsetHeight;
+
+  // Punto máximo hasta donde el sidebar puede estar fijo
+  const maxScroll =
+    containerTop + containerHeight - sidebarContent.offsetHeight - finalOffset;
 
   if (window.innerWidth >= 1024) {
-    if (window.scrollY >= scrollStart && window.scrollY < scrollEnd) {
+    if (windowTop >= containerTop && windowTop < maxScroll) {
       sidebarContent.style.position = "fixed";
-      sidebarContent.style.top = "20px";
-    } else if (window.scrollY >= scrollEnd) {
-      sidebarContent.style.position = "relative";
-      sidebarContent.style.top = `${scrollEnd - scrollStart + 20}px`; // Ajusta para que se quede en el lugar
+      sidebarContent.style.top = `${sidebarOffsetTop}px`;
+    } else if (windowTop >= maxScroll) {
+      sidebarContent.style.position = "absolute";
+      sidebarContent.style.top = `${
+        containerHeight - sidebarContent.offsetHeight - finalOffset
+      }px`;
     } else {
       sidebarContent.style.position = "static";
       sidebarContent.style.top = "";
