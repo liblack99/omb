@@ -87,15 +87,17 @@
       top: 0;
       z-index: 50;
     }
-    .omb-icono-menu-container {
+    .omb-icono-menu-boton {
       padding: 8px;
       box-sizing: border-box;
       cursor: pointer;
+      border: none;
+      background-color: inherit;
     }
-    .omb-icono-menu-container:hover {
+    .omb-icono-menu-boton:hover {
       transform: scale(1.01);
     }
-    .omb-icono-menu-container:hover .omb-nav {
+    .omb-icono-menu-boton:hover .omb-nav {
       display: flex;
     }
     .omb-buscador-nav-mobile {
@@ -171,7 +173,10 @@
             </svg>
           </button>
         </div>
-        <div class="omb-icono-menu-container" id="botonMenu">
+        <button
+          class="omb-icono-menu-boton"
+          id="botonMenu"
+          aria-label="boton para abrir el menu de navegacion">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -180,7 +185,7 @@
             <path
               d="M432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z" />
           </svg>
-        </div>
+        </button>
       </div>
 
       <nav class="omb-nav" id="nav">

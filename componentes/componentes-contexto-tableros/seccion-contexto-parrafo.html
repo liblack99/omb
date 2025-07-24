@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-contexto-section {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-contexto-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .omb-titulos-contexto-container {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      color: #000;
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-parrafo-contexto-container {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      margin: 0;
+      font-family: "Work sans", sans-serif;
+    }
+
+    .omb-enlaces-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .omb-parrafos-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .omb-parrafos-container ul {
+      padding: 0px 0px 0px 20px;
+    }
+    .omb-parrafos-container ul li {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      margin: 0;
+      font-family: "Work sans", sans-serif;
+    }
+
+    .omb-lista-enlaces {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .omb-enlaces {
+      gap: 4px;
+      display: flex;
+      align-items: center;
+      font-family: "Work Sans", sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.375rem;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      text-decoration: underline;
+      color: var(--color-enlace);
+    }
+    .omb-enlace:hover {
+      color: var(--color-enlace-hover);
+    }
+  </style>
+  <body>
+    <section class="omb-section">
+      <div class="omb-contexto-container">
+        <div class="omb-enlaces-container">
+          <h2 class="omb-titulos-contexto-container">Enlaces</h2>
+          <div class="omb-lista-enlaces">
+            <p class="omb-parrafo-contexto-container">
+              Conoce la apuesta de Bogotá por la Movilidad Motorizada de Cero y
+              Bajas Emisiones
+            </p>
+            <a
+              href="/https://www.movilidadbogota.gov.co/web/cero_y_bajas_emisiones"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace"
+              class="omb-enlaces"
+              title="Ir a Movilidad de cero y bajas emisiones">
+              <img
+                src="http://101.44.24.97/sites/default/files/2025-07/icono-enlaces.svg"
+                alt="Icono enlace" />
+              Movilidad de cero y bajas emisiones
+            </a>
+
+            <p class="omb-parrafo-contexto-container">
+              Conoce la política púiblica de Movilidad de Cero y Bajas Emisiones
+              2023 -2040 en el libro digital de mapas de Bogotá, donde
+              encontrarás recursos con temas como contaminantes del transporte,
+              vehículos eléctricos e híbridos, infraestructura de recarga para
+              vehículos eléctricos, Zonas Urbanas por un Mejor Aire - ZUMA,
+              entre otros.
+            </p>
+            <a
+              href="/https://experience.arcgis.com/template/141b974f29a948ce8386ebf9f135a455/page/Cero-y-Bajas-Emisiones/?draft=true&views=ACB-2022%2CTotal-2022"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace"
+              class="omb-enlaces"
+              title="Ir a Movilidad de cero y bajas emisiones">
+              <img
+                src="http://101.44.24.97/sites/default/files/2025-07/icono-enlaces.svg"
+                alt="Icono enlace" />
+              Recorre a Bogotá en Mapas, Cero y Bajas Emisiones
+            </a>
+          </div>
+        </div>
+        <div class="omb-parrafos-container">
+          <h2 class="omb-titulos-contexto-container">Contexto</h2>
+          <p class="omb-parrafo-contexto-container">
+            Entre los años 2012 y 2015 la tasa de crecimiento de los vehículos
+            de cero y bajas emisiones era bastante alta a pesar de que aún
+            hubiese pocos vehículos de este tipo en la flota de la ciudad. Este
+            comportamiento es normal en la etapa inicial de adopción de las
+            nuevas tecnologías, comúnmente se le denomina “innovadores” a ese
+            pequeño grupo de personas a quienes les gusta explorar novedades del
+            mercado.
+          </p>
+          <p class="omb-parrafo-contexto-container">
+            Posteriormente, entre 2016 y 2018 el crecimiento fue más lento,
+            probablemente debido a los escasos incentivos vigentes en ese
+            momento. Luego, a partir de 2019 y hasta la fecha 2023 ha habido un
+            crecimiento lento pero constante, se le conoce como la etapa de
+            “early adopters”, son quienes impulsan la adopción de la innovación,
+            a pesar de que aún haya ciertas incertidumbres. Este crecimiento se
+            ha visto claramente impactado por políticas nacionales y distritales
+            que han brindado suficientes incentivos para este grupo poblacional,
+            especialmente a partir de 2019. Entre los beneficios implementados
+            se destacan:
+          </p>
+          <ul class="omb-lista-parrafo-contexto">
+            <li>
+              Exención de la restricción de circulación vehicular a los
+              vehículos particulares cero emisiones (a partir de 2019) e
+              híbridos (a partir de 2020) por parte de la administración
+              distrital.
+            </li>
+            <li>
+              Descuento del 40%, 60% y 70% en el impuesto vehicular para los
+              vehículos híbridos, eléctricos y taxis eléctricos,
+              respectivamente, por un periodo de 5 años, este beneficio fue
+              aprobado por el artículo 25 del Acuerdo Distrital 315 de 2020.
+            </li>
+            <li>
+              Beneficios tributarios para los vehículos eléctricos al definir un
+              valor máximo al impuesto sobre estos vehículos, de 1% del valor
+              comercial del vehículo (artículo 3 ley 1964 de 2019).
+            </li>
+            <li>
+              Parqueaderos preferenciales para vehículos eléctricos (artículo 7
+              ley 1964 de 2019) en entidades públicas y establecimientos
+              comerciales que ofrezcan al público sitios de parqueo.
+            </li>
+            <li>
+              Menor valor en el arancel para los vehículos híbridos (5%) y
+              eléctricos (0%) Decreto 2051 de 2019.
+            </li>
+            <li>
+              Descuento del 30% en la revisión técnico mecánica para los
+              vehículos eléctricos (RESOLUCIÓN CONJUNTA 20213040039485 DE 2021).
+            </li>
+            <li>
+              Descuento del 10% en la tarifa del SOAT (artículo 4 de la ley 1964
+              de 2019).
+            </li>
+          </ul>
+          <p class="omb-parrafo-contexto-container">
+            Según el Inventario de Emisiones de Bogotá - Contaminantes
+            Atmosféricos se destaca lo siguiente: En 2021 se generaron 6.903
+            Toneladas de PM2,5, menor a las condiciones pre-pandemia. En este
+            año, las fuentes móviles representaron el 22% de las emisiones y las
+            fuentes de material resuspendido asociadas al sector representaron
+            el 62% de las emisiones totales. Es decir, del total de las
+            emisiones anuales el sector de transporte contribuyó en un 84%.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

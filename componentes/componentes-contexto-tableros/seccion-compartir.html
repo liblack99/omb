@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-compartir-container {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      border-radius: 24px;
+      padding: 12px;
+      background-color: #e6e6e6;
+      box-sizing: border-box;
+    }
+
+    .omb-boton {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: "Work sans", sans-serif;
+      text-transform: uppercase;
+      border-width: 0.125rem;
+      border-style: solid;
+      color: var(--color-texto);
+      cursor: pointer;
+    }
+    .omb-boton--primario {
+      background-color: var(--color-primario);
+      border: 1px solid var(--color-primario);
+    }
+    .omb-boton--primario:hover {
+      background-color: var(--color-secundario-hover);
+      border-color: var(--color-secundario-hover);
+    }
+    .omb-boton--con-icono {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    .omb-redes-sociales {
+      width: 424px;
+      height: 76px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .omb-redes-sociales p {
+      font-weight: 400;
+      font-size: 1rem;
+      font-family: "Montserrat", sans-serif;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: right;
+      vertical-align: middle;
+      margin: 0;
+    }
+    .omb-lista-redes {
+      display: flex;
+      gap: 8px;
+    }
+    .omb-lista-redes a {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4c531e;
+      border-radius: 50%;
+      padding: 8px;
+    }
+  </style>
+  <body>
+    <section class="omb-section">
+      <div class="omb-compartir-container">
+        <button
+          type="button"
+          class="omb-boton omb-boton--primario omb-boton--con-icono"
+          aria-label="Descargar ficha técnica"
+          title="Descargar ficha técnica">
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/icono-descargar-negro.svg"
+            alt="icono descarga" />
+          DESCARGAR FICHA TÉCNICA
+        </button>
+        <div class="omb-redes-sociales">
+          <p>Comparte este contenido en tus redes</p>
+          <div class="omb-lista-redes">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ir a facebook"
+              aria-label="Ir a facebook">
+              <img
+                src="http://101.44.24.97/sites/default/files/2025-07/icono-facebook.svg"
+                alt="Icono Facebook" />
+            </a>
+
+            <a
+              href="https://www.twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ir a twitter"
+              aria-label=" IR A twitter">
+              <img
+                src="http://101.44.24.97/sites/default/files/2025-07/icono-twitter.svg"
+                alt="Icono Twitter" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ir a instagram"
+              aria-label="Ir a instagram">
+              <img
+                src="http://101.44.24.97/sites/default/files/2025-07/icono-instagram.svg"
+                alt="Icono instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -59,8 +59,8 @@ const swiperIndicadores = new Swiper(".indicadoresSwiper", {
       slidesPerView: 3,
       spaceBetween: 24,
     },
-    1024: {slidesPerView: 4, spaceBetween: 32},
-    1360: {slidesPerView: 5},
+    1024: {slidesPerView: 4, spaceBetween: 30},
+    1360: {slidesPerView: 5, spaceBetween: 30},
   },
 });
 
@@ -102,7 +102,8 @@ const swiperPublicacionesSection = new Swiper(".publicacionesSectionSwiper", {
       slidesPerView: 2,
       spaceBetween: 30,
     },
-    1024: {slidesPerView: 4, spaceBetween: 20},
+    1024: {slidesPerView: 3, spaceBetween: 30},
+    1280: {slidesPerView: 4, spaceBetween: 30},
   },
 });
 let isPlayingSectionPublicacion = true;

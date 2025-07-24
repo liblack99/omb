@@ -1,3 +1,15 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const breadcrumbLinks = document.querySelectorAll(".omb-breadcrumb-lista li");
+
+  breadcrumbLinks.forEach((link) => {
+    const text = link.textContent.trim();
+    const words = text.split(" ");
+    if (words.length > 3) {
+      link.textContent = words.slice(0, 3).join(" ") + "…";
+    }
+  });
+});
+
 const swiperTablerosInteres = new Swiper(".tablerosSwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -18,10 +30,10 @@ const swiperTablerosInteres = new Swiper(".tablerosSwiper", {
     480: {slidesPerView: 1, spaceBetween: 20},
     768: {
       slidesPerView: 2,
-      spaceBetween: 24,
+      spaceBetween: 30,
     },
     1024: {slidesPerView: 3},
-    1140: {
+    1280: {
       slidesPerView: 4,
     },
   },
@@ -73,7 +85,7 @@ if (pauseButtonTablerosInteres) {
                   d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
               </svg>
 
-              Pausar
+            Detener
             </button>`;
     }
     isPlaying = !isPlaying;

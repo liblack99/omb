@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-card-contexto-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .omb-card-contexto-content {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      width: 90%;
+    }
+
+    .omb-texto-card-contexto {
+      display: flex;
+      flex-direction: column;
+      border-radius: 16px;
+      position: relative;
+    }
+    .omb-titulo-card-contexto {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      margin: 16px 0;
+    }
+    .omb-titulo-card-container {
+      width: 100%;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      box-sizing: border-box;
+      position: relative;
+      margin: 16px 0px;
+      gap: 8px;
+    }
+
+    .omb-parrafo-card-contexto {
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Work sans", sans-serif;
+      line-height: 30px;
+      letter-spacing: 0;
+      color: #1b1b1b;
+      margin: 0;
+    }
+    .omb-icono-container {
+      width: auto;
+      height: auto;
+      padding: 8px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(103, 108, 46, 0.1);
+    }
+    .omb-icon-card-contexto {
+      width: auto;
+      height: auto;
+      padding: 20px;
+      background: #dbf000;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .omb-imagen-card-contexto {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  </style>
+  <body>
+    <section class="omb-section">
+      <div class="omb-card-contexto-container">
+        <div class="omb-card-contexto-content">
+          <div class="omb-texto-card-contexto">
+            <div class="omb-titulo-card-container">
+              <div class="omb-icono-container">
+                <span class="omb-icon-card-contexto">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 78 65"
+                    fill="#4c531e"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M24.2339 24.0419L30.3778 27.6815L28.7111 30.2645L23.0084 25.9036L24.2339 24.0419ZM22.8777 23.2368L19.8711 21.459L18.9887 22.8343L21.7665 24.9644L22.8777 23.2368ZM17.5017 28.7046C16.9625 27.866 15.9331 27.5473 15.018 27.8995L5.62241 31.5727L11.2108 22.8846C11.7173 22.0963 11.6683 21.09 11.0964 20.352L4.74004 12.2342L14.5115 15.0016C15.4102 15.2532 16.3252 14.8842 16.8318 14.1127L22.3875 5.40782L22.8287 15.7228C22.8777 16.7124 23.564 17.551 24.528 17.7355L35.8845 19.983C36.5708 20.1004 37.2407 19.6476 37.3714 18.9431C37.5022 18.2387 37.0446 17.551 36.3583 17.4168L25.3614 15.3035L24.7568 1.24828C24.7405 0.678015 24.3646 0.191617 23.8254 0.0406655C23.2862 -0.0935133 22.7306 0.107755 22.4201 0.594153L14.9363 12.4187L1.61906 8.62811C1.07983 8.47716 0.524264 8.6952 0.2138 9.1816C-0.0966643 9.65123 -0.0639839 10.2718 0.279161 10.7247L8.93947 21.677L1.32493 33.5183C1.01447 33.9879 1.04715 34.6085 1.39029 35.0613C1.73344 35.4974 2.32169 35.6651 2.84457 35.4639L15.5573 30.4322L21.8973 39.9924C22.1424 40.3446 22.5345 40.5627 22.943 40.5627C23.2045 40.5627 23.4496 40.4788 23.662 40.3446C24.2339 39.9421 24.3973 39.1203 24.0051 38.5332L17.5017 28.7046ZM69.2022 41.8374C67.8132 41.4516 66.3753 42.2902 65.9995 43.7159C65.8197 44.4035 65.9014 45.1248 66.2609 45.7453C66.6041 46.3659 67.176 46.8188 67.8459 47.0033C68.0747 47.0704 68.3035 47.1039 68.5322 47.1039C69.676 47.1039 70.7382 46.3156 71.0486 45.1248C71.4081 43.6991 70.5911 42.2231 69.2022 41.8374ZM77.6174 48.0767L73.9408 61.981C73.467 63.7588 71.8983 65 70.1009 65C69.7577 65 69.4146 64.9497 69.0551 64.8658L66.8165 64.2285C65.7871 63.9433 64.9374 63.2557 64.4145 62.3164C63.8916 61.3772 63.7445 60.2702 64.0223 59.2135L65.0027 55.4901L36.4564 47.5232L35.476 51.2299C35.0021 53.0078 33.4334 54.2322 31.636 54.2322C31.2929 54.2322 30.9334 54.1818 30.6066 54.098L28.3516 53.4774C27.3222 53.1923 26.4725 52.5046 25.9496 51.5653C25.4267 50.6261 25.2797 49.5191 25.5575 48.4625L29.234 34.5582C30.2961 30.5664 33.3844 27.5809 37.3388 26.7087L42.7474 16.8298C44.4794 13.6766 48.0743 12.1335 51.473 13.0728L69.0224 17.9703C72.4375 18.9263 74.7742 22.1131 74.7088 25.7527L74.4964 37.1076C75.3788 37.9294 76.0651 38.7848 76.5716 39.7073C78.0095 42.2902 78.369 45.2422 77.6174 48.0767ZM29.0216 45.4602L28.0412 49.1669C27.8288 49.9384 28.2863 50.7603 29.0379 50.9615L31.2929 51.5821C32.0609 51.7834 32.8289 51.3305 33.0413 50.559L34.0217 46.8355L29.0216 45.4602ZM74.3657 41.0323C73.2872 39.0867 71.5388 37.6946 69.4309 37.1076L41.7179 29.3755C37.3714 28.1679 32.8942 30.8012 31.7177 35.2626L29.6915 42.9276L73.1402 55.054L75.1663 47.389C75.7383 45.2422 75.4605 42.9779 74.3657 41.0323ZM44.986 18.1548L40.4761 26.4068C40.8356 26.4571 41.2114 26.541 41.5709 26.6416L70.9669 34.8433C71.3264 34.9439 71.6859 35.0613 72.0127 35.1955L72.1924 25.7359C72.2414 23.3039 70.6728 21.1738 68.3852 20.5365L50.8194 15.639C48.5318 15.0016 46.1298 16.0247 44.986 18.1548ZM67.4701 56.1945L66.4897 59.918C66.2936 60.6895 66.7348 61.4946 67.4864 61.7126L69.7414 62.3332C70.493 62.5345 71.2774 62.0816 71.4898 61.3101L72.4702 57.5866L67.4701 56.1945ZM15.1651 19.9159L18.4658 22.4318L19.3155 21.1235L15.786 19.027L15.1651 19.9159ZM39.5937 33.5686C38.2048 33.1828 36.7669 34.0215 36.391 35.4471C36.0152 36.8728 36.8322 38.3487 38.2211 38.7345C38.4499 38.8016 38.6787 38.8351 38.9074 38.8351C40.0676 38.8351 41.1133 38.0468 41.4238 36.856C41.6036 36.1683 41.5219 35.4471 41.1624 34.8265C40.8356 34.206 40.28 33.7699 39.5937 33.5686Z"
+                      fill="url(#paint0_linear_10625_1059)" />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_10625_1059"
+                        x1="39"
+                        y1="0"
+                        x2="39"
+                        y2="65"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4c531e" />
+                        <stop offset="1" stop-color="#4c531e" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+              </div>
+              <h1 class="omb-titulo-card-contexto">
+                Política motorizada de cero y bajas emisiones
+              </h1>
+            </div>
+            <p class="omb-parrafo-card-contexto">
+              La Política Pública de Movilidad Motorizada de Cero y Bajas
+              Emisiones - PCBE (CONPES D.C. 30 de 2023), es la hoja de ruta al
+              año 2040 para promover la utilización de tecnologías de cero y
+              bajas emisiones en todos los segmentos del transporte de la
+              ciudad, para consolidar todos los temas que aportan al desarrollo
+              de este tipo de movilidad. A continuación, se presenta el
+              histórico de los vehículos registrados en Bogotá, de tecnologías
+              cero y bajas emisiones por año, clase de vehículo y tipo de
+              combustible.
+            </p>
+          </div>
+
+          <img
+            class="omb-imagen-card-contexto"
+            src="http://101.44.24.97/sites/default/files/2025-07/omb-movilidadcifras-tablero-siniestralidad-vial.png"
+            alt="imagen de politica motorizada" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

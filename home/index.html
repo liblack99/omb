@@ -51,7 +51,10 @@
             </svg>
           </button>
         </div>
-        <div class="omb-icono-menu-container" id="botonMenu">
+        <button
+          class="omb-icono-menu-boton"
+          id="botonMenu"
+          aria-label="boton para abrir el menu de navegacion">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -60,7 +63,7 @@
             <path
               d="M432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z" />
           </svg>
-        </div>
+        </button>
       </div>
 
       <nav class="omb-nav" id="nav">
@@ -157,33 +160,6 @@
               class="omb-titulo-section omb-titulo-section--centrado omb-titulo-section--sin-margin">
               Indicadores destacados
             </h2>
-
-            <div
-              class="swiper-pagination omb-paginacion omb-paginacion-indicadores"></div>
-            <div
-              class="omb-boton-control-carrusel"
-              id="controlCarrucelIndicadores">
-              <button
-                type="button"
-                aria-label="Detener contenido"
-                title="Detener contenido">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  focusable="false">
-                  >
-                  <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                  <path
-                    d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
-                </svg>
-
-                Detener
-              </button>
-            </div>
             <div class="omb-carrusel-container">
               <div class="swiper-button-prev omb-boton-prev"></div>
               <div class="swiper-button-next omb-boton-next"></div>
@@ -360,6 +336,32 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="swiper-pagination omb-paginacion omb-paginacion-indicadores"></div>
+            <div
+              class="omb-boton-control-carrusel"
+              id="controlCarrucelIndicadores">
+              <button
+                type="button"
+                aria-label="Detener contenido"
+                title="Detener contenido">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false">
+                  >
+                  <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                  <path
+                    d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+                </svg>
+
+                Detener
+              </button>
             </div>
           </div>
         </div>
@@ -809,31 +811,7 @@
           <h2 class="omb-titulo-section omb-titulo-section--centrado">
             Ultimas publicaciones
           </h2>
-          <div
-            class="swiper-pagination omb-paginacion omb-paginacion--publicaciones-home"></div>
-          <div
-            class="omb-boton-control-carrusel"
-            id="controlCarrucelSectionPublicacion">
-            <button
-              type="button"
-              aria-label="Detener contenido"
-              title="Detener contenido">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width="16"
-                height="16"
-                fill="currentColor"
-                aria-hidden="true"
-                focusable="false">
-                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                <path
-                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
-              </svg>
 
-              Detener
-            </button>
-          </div>
           <div
             class="swiper-button-prev omb-boton-prev omb-boton-prev--publicaciones-home"></div>
           <div
@@ -963,6 +941,31 @@
               </div>
             </div>
           </div>
+          <div
+            class="swiper-pagination omb-paginacion omb-paginacion--publicaciones-home"></div>
+          <div
+            class="omb-boton-control-carrusel"
+            id="controlCarrucelSectionPublicacion">
+            <button
+              type="button"
+              aria-label="Detener contenido"
+              title="Detener contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+              </svg>
+
+              Detener
+            </button>
+          </div>
         </div>
         <div
           class="omb-button-container"
@@ -993,31 +996,6 @@
             Texto descriptivo de Sitios relacionados
           </p>
 
-          <div
-            class="swiper-pagination omb-paginacion omb-paginacion-sitios-relacionados"></div>
-          <div
-            class="omb-boton-control-carrusel omb-boton-control-carrusel--variante"
-            id="controlCarrucelSitiosRelacionados">
-            <button
-              type="button"
-              aria-label="Detener contenido"
-              title="Detener contenido">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width="16"
-                height="16"
-                fill="currentColor"
-                aria-hidden="true"
-                focusable="false">
-                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                <path
-                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
-              </svg>
-
-              Detener
-            </button>
-          </div>
           <div class="omb-carrusel-container">
             <div
               class="swiper-button-prev omb-boton-prev omb-boton-sitios-relacionados-prev"></div>
@@ -1059,8 +1037,67 @@
                     </a>
                   </div>
                 </div>
+                <div class="swiper-slide omb-swiper-slide">
+                  <div class="omb-card-sitios-relacionados">
+                    <a
+                      href=""
+                      title="Ir al sitio web de libos de mapas"
+                      target="_blank">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/libro-digital-mapas-logotipo.webp"
+                        alt="Logo libro mapas" />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide omb-swiper-slide">
+                  <div class="omb-card-sitios-relacionados">
+                    <a
+                      href=""
+                      title="Ir al sitio web de libos de mapas"
+                      target="_blank">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/movilidad-cero-bajas-emisiones-logotipo.webp"
+                        alt="Logo movilidad cero bajas emisiones" />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide omb-swiper-slide">
+                  <div class="omb-card-sitios-relacionados">
+                    <a href="" title="Ir a sitio web SIMUR" target="_blank">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/simur-logotipo.webp"
+                        alt="Logo de sistema integrado de informacion sobre movilidad Urbana regional (SIMUR)" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+          <div
+            class="swiper-pagination omb-paginacion omb-paginacion-sitios-relacionados"></div>
+          <div
+            class="omb-boton-control-carrusel omb-boton-control-carrusel--variante"
+            id="controlCarrucelSitiosRelacionados">
+            <button
+              type="button"
+              aria-label="Detener contenido"
+              title="Detener contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+              </svg>
+
+              Detener
+            </button>
           </div>
           <div class="omb-button-container-sitios-relacionados">
             <button class="omb-boton omb-boton--primario">

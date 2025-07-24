@@ -463,6 +463,9 @@ body {
     justify-content: start;
     width: 90%;
   }
+  .omb-card-tableros {
+    width: 290px;
+  }
   .omb-content {
     align-items: center;
   }
@@ -596,19 +599,19 @@ body {
   }
   .omb-tableros-content {
     display: flex;
-    gap: 20px;
+    gap: 30px;
   }
 
   .omb-content {
-    width: calc(100% - 297px - 20px);
+    width: calc(100% - 297px - 30px);
   }
   .omb-card-tableros {
-    width: 260px;
+    width: 250px;
   }
   .omb-cards-container {
     width: 100%;
     justify-content: start;
-    gap: 20px;
+    gap: 30px;
   }
   .omb-titulo-section {
     font-weight: 600;

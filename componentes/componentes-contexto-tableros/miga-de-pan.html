@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-breadcrumb-section {
+      width: 100%;
+      padding: 0;
+    }
+    .omb-breadcrumb-container {
+      width: 90%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 16px 0px;
+      margin: 20px 0px;
+    }
+
+    .omb-breadcrumb-lista {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      list-style: none;
+      color: #bbbcae;
+      height: 25px;
+      border-radius: 16px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    .omb-breadcrumb-lista span {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 100%;
+      color: #4c4c4c;
+    }
+    .omb-breadcrumb-lista li {
+      display: flex;
+      align-items: center;
+      padding: 0.3rem 0.4rem 0.3rem 0.8rem;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      vertical-align: middle;
+      font-family: "Work sans", sans-serif;
+    }
+    .omb-breadcrumb-lista li a {
+      color: #4c4c4c;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      vertical-align: middle;
+      font-family: "Work sans", sans-serif;
+    }
+    .omb-breadcrumb-lista li:not(:last-child)::after {
+      float: left;
+      padding-left: 0.8rem;
+      color: #282c34;
+      content: var(--bs-breadcrumb-divider, ">");
+      font-weight: 500; /* No existe 'medium' como valor válido, usa 500 */
+    }
+    .omb-breadcrumb-lista li a:hover {
+      color: #000;
+    }
+  </style>
+  <body>
+    <section class="omb-section omb-breadcrumb-section">
+      <div class="omb-breadcrumb-container">
+        <nav aria-label="Migaja de pan">
+          <ol class="omb-breadcrumb-lista">
+            <li><a href="/" title="Ir a inicio">Inicio</a></li>
+            <li><a href="/tableros" title="Ir a tableros">Tableros</a></li>
+            <li aria-current="page">
+              Política motorizada de cero y bajas emisiones
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const breadcrumbLinks = document.querySelectorAll(
+          ".omb-breadcrumb-lista li"
+        );
+
+        breadcrumbLinks.forEach((link) => {
+          const text = link.textContent.trim();
+          const words = text.split(" ");
+          if (words.length > 3) {
+            link.textContent = words.slice(0, 3).join(" ") + "…";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

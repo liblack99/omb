@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-section--de-interes {
+      background-color: var(--color-fondo-seccion-intreres);
+      padding-bottom: 80px;
+    }
+    .omb-de-interes-container {
+      width: 90%;
+      position: relative;
+    }
+    .omb-titulo-section {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-parrafo-descripcion-section {
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .omb-carrusel-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .omb-swiper {
+      width: 80%;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+
+    .omb-wrapper {
+      width: 100%;
+    }
+
+    .omb-swiper-slide {
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .omb-paginacion {
+      position: absolute;
+      bottom: -32px !important;
+    }
+    .omb-paginacion-variante {
+      bottom: -60px !important;
+    }
+
+    .omb-paginacion > .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: white !important;
+      border: 2px solid #4b521d;
+      border-radius: 50%;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+    /* Bullet activo */
+    .omb-paginacion > .swiper-pagination-bullet-active {
+      background-color: #4b521d !important;
+      border-color: #4b521d;
+      transform: scale(1.2);
+    }
+    .omb-botom-control-carrousel {
+      position: absolute;
+      z-index: 20;
+      bottom: -40px;
+      min-width: 120px;
+      height: 34px;
+      width: auto;
+      cursor: pointer;
+    }
+
+    .omb-botom-control-carrousel button {
+      color: #565747;
+      border-radius: 8px;
+      font-family: "Worl sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      width: auto;
+      display: flex;
+      padding: 8px;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+
+    .omb-boton-prev {
+      left: -0px;
+    }
+    .omb-boton-next {
+      right: -0px;
+    }
+    .omb-boton-prev,
+    .omb-boton-next {
+      color: #565747 !important;
+      background-color: #f3f4f1cc;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      border-width: 1px;
+      transition: all 0.5s ease;
+      border: 1px solid #d9e36e;
+    }
+    .omb-boton-prev:hover,
+    .omb-boton-next:hover {
+      color: black !important;
+      background-color: var(--color-primario);
+    }
+
+    .omb-boton-prev::after,
+    .omb-boton-next::after {
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .omb-botom-control-carrousel-tableros-interes {
+      position: absolute;
+      z-index: 20;
+      bottom: -40px;
+      left: 0;
+      min-width: 120px;
+      height: 34px;
+      width: auto;
+    }
+
+    .omb-botom-control-carrousel-tableros-interes button {
+      color: #565747;
+      border-radius: 8px;
+      font-family: "Worl sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      width: auto;
+      display: flex;
+      padding: 8px;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: inherit;
+    }
+  </style>
+  <body>
+    <section class="omb-section omb-section--de-interes">
+      <div class="omb-de-interes-container">
+        <h2 class="omb-titulo-section">
+          Otros tableros que podrían ser de tu interés
+        </h2>
+        <p class="omb-parrafo-descripcion-section">
+          Explora nuestros publicaciones sobre movilidad en Bogotá, similares a
+          esta
+        </p>
+
+        <div class="omb-carrusel-container">
+          <div class="swiper-button-prev omb-boton-prev"></div>
+
+          <div class="swiper-button-next omb-boton-next"></div>
+
+          <div class="swiper tablerosSwiper omb-swiper">
+            <div class="swiper-wrapper omb-swiper-wrapper">
+              <!-- Slide 1 -->
+
+              <div class="swiper-slide omb-swiper-slide"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="omb-botom-control-carrousel"
+          id="controlCarrucelTablerosInteres">
+          <button
+            type="button"
+            aria-label="Pausar contenido"
+            title="Pausar contenido">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="16"
+              height="16"
+              fill="currentColor"
+              aria-hidden="true"
+              focusable="false">
+              <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+              <path
+                d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+            </svg>
+
+            Detener
+          </button>
+        </div>
+        <div
+          class="swiper-pagination omb-paginacion omb-paginacion-variante"></div>
+      </div>
+    </section>
+  </body>
+</html>

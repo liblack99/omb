@@ -95,7 +95,7 @@ body {
 .omb-movilidad-container {
   width: 90%;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   position: relative;
 }
 
@@ -370,7 +370,7 @@ body {
     height: 158px;
   }
   .omb-card--pequeña {
-    width: 280px;
+    width: 277px;
   }
 
   .omb-boton-sidebar-mobile {
@@ -391,7 +391,7 @@ body {
   }
 
   .omb-contenedor-derecho {
-    width: calc(100% - 297px - 20px);
+    width: calc(100% - 297px - 30px);
   }
 
   .omb-cards-movilidad-container {
@@ -439,15 +439,15 @@ body {
   }
 
   .omb-contenedor-derecho {
-    width: calc(100% - 297px - 20px);
+    width: calc(100% - 297px - 30px);
   }
   .omb-cards-movilidad-container {
     justify-content: start;
-    gap: 20px;
+    gap: 30px;
   }
 
   .omb-card--pequeña {
-    width: 277px;
+    width: 250px;
   }
 
   .omb-titulo-section {
@@ -492,11 +492,11 @@ body {
     width: calc(100% - 297px - 30px);
   }
   .omb-cards-movilidad-container {
-    gap: 20px;
+    gap: 30px;
     justify-content: start;
   }
   .omb-card--pequeña {
-    width: 255px;
+    width: 248px;
   }
 
   .omb-titulo-section {

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+    .omb-grafica-section {
+      display: flex; /* cambiar a flex para ver*/
+    }
+
+    .omb-grafica-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .omb-selectores-grafica-container {
+      width: 90%;
+      height: 70px;
+      border: 2px solid var(--color-primario);
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      margin-top: 100px;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .omb-nav-grafica {
+      width: 90%;
+      height: 100%;
+    }
+    .omb-lista-selectores-grafica {
+      display: flex;
+      justify-items: center;
+      gap: 16px;
+      list-style: none;
+      margin: 0;
+      position: absolute;
+      padding-left: 12px;
+    }
+    .omb-botones-lista {
+      height: 70px;
+      padding: 24px 16px 24px 16px;
+      gap: 8px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 100%;
+      border: none;
+      background-color: #e6e6e6;
+      color: #000;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .omb-botones-lista:hover {
+      border: 1px solid transparent;
+      color: #212400;
+      background: var(--color-primario);
+    }
+
+    .omb-botones-lista-seleccionado {
+      border: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      background-color: var(--color-primario);
+      color: #212400;
+    }
+    .omb-grafica-mobile {
+      width: 90%;
+      height: 600px;
+      text-align: center;
+    }
+    .omb-grafica {
+      width: 90%;
+      height: 600px;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+  <body>
+    <section class="omb-section omb-grafica-section">
+      <div class="omb-grafica-container">
+        <div class="omb-selectores-grafica-container">
+          <nav class="omb-nav-grafica">
+            <ul class="omb-lista-selectores-grafica">
+              <li class="omb-item-lista-selectores">
+                <button class="omb-botones-lista" type="button">
+                  <span>Fallecidos</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="omb-grafica" data-grafica="fallecidos">
+          <h2>Fallecidos</h2>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

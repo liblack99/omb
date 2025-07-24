@@ -2,6 +2,7 @@
   --color-primario-soft: #f9ffbd;
   --color-primario: #dbf000;
   --color-secundario-hover: #ecff24;
+  --color-boder-tab: #8e9c00;
   --color-texto: #000000;
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
@@ -116,15 +117,17 @@ body {
   top: 0;
   z-index: 50;
 }
-.omb-icono-menu-container {
+.omb-icono-menu-boton {
   padding: 8px;
   box-sizing: border-box;
   cursor: pointer;
+  border: none;
+  background-color: inherit;
 }
-.omb-icono-menu-container:hover {
+.omb-icono-menu-boton:hover {
   transform: scale(1.01);
 }
-.omb-icono-menu-container:hover .omb-nav {
+.omb-icono-menu-boton:hover .omb-nav {
   display: flex;
 }
 .omb-buscador-nav-mobile {
@@ -196,7 +199,7 @@ body {
   font-size: 1.125rem;
   line-height: 26px;
   color: var(--color-texto);
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
 }
 .omb-parrafo-descripcion-section--center {
   text-align: center;
@@ -326,7 +329,6 @@ body {
 }
 
 .omb-swiper-slide {
-  padding: 8px;
   display: flex;
   justify-content: center !important;
   align-items: center !important;
@@ -550,7 +552,7 @@ body {
   font-size: 1.125rem;
   line-height: 26px;
   color: black;
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
 }
 
 .omb-observatorio-container {
@@ -596,11 +598,11 @@ body {
   border-left: 1px solid var(--color-secundario-hover);
 }
 .omb-acordion-boton--home:hover {
-  border-left: 4px solid var(--color-secundario-hover);
+  border-left: 4px solid var(--color-boder-tab);
   background-color: var(--color-primario);
 }
 .omb-acordion-boton--home.activo {
-  border-left: 4px solid var(--color-secundario-hover);
+  border-left: 4px solid var(--color-boder-tab);
   background-color: var(--color-primario);
 }
 .omb-titulo-botton-acordeon {
@@ -655,7 +657,7 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   color: var(--color-texto);
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 
@@ -1114,12 +1116,12 @@ footer {
   transition: all 0.3s ease;
 }
 .omb-tabs-boton--home:hover {
-  border-left: 4px solid var(--color-secundario-hover);
+  border-left: 4px solid var(--color-boder-tab);
   background-color: var(--color-primario);
 }
 
 .omb-tabs-boton--home.activo {
-  border-left: 4px solid var(--color-secundario-hover);
+  border-left: 4px solid var(--color-boder-tab);
   background-color: var(--color-primario);
 }
 .omb-card-observatorio {
@@ -1173,7 +1175,7 @@ footer {
     position: relative;
   }
 
-  .omb-icono-menu-container {
+  .omb-icono-menu-boton {
     display: none;
   }
 
@@ -1397,7 +1399,7 @@ footer {
   .omb-logo-omb-container {
     max-width: 1140px;
   }
-  .omb-icono-menu-container {
+  .omb-icono-menu-boton {
     display: none;
   }
   .omb-header {
@@ -1406,7 +1408,7 @@ footer {
     position: relative;
   }
 
-  .omb-icono-menu-container {
+  .omb-icono-menu-boton {
     display: none;
   }
 
@@ -1591,7 +1593,7 @@ footer {
   .omb-logo-omb-container {
     max-width: 1140px;
   }
-  .omb-icono-menu-container {
+  .omb-icono-menu-boton {
     display: none;
   }
 
@@ -1604,7 +1606,7 @@ footer {
     position: relative;
   }
 
-  .omb-icono-menu-container {
+  .omb-icono-menu-boton {
     display: none;
   }
 

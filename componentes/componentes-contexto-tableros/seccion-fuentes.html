@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-fuentes-container {
+      width: 90%;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .omb-fuentes-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      background-color: #e6e6e6;
+    }
+    .omb-fuente-doble {
+      display: flex;
+      flex-direction: column;
+    }
+    .omb-fuentes-item {
+      padding: 16px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      border-left-width: 1px;
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+    }
+    .omb-boton-fuentes-container {
+      background-color: #fff;
+    }
+
+    .omb-titulo-fuentes {
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.125rem;
+      line-height: 100%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: var(--color-texto);
+      margin: 0;
+    }
+    .omb-parrafo-fuentes {
+      font-weight: 400;
+      font-family: "Work sans", sans-serif;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      color: #1b1b1b;
+      margin: 0;
+    }
+    .omb-boton-fuentes-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .omb-boton {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: "Work sans", sans-serif;
+      text-transform: uppercase;
+      border-width: 0.125rem;
+      border-style: solid;
+      color: var(--color-texto);
+      cursor: pointer;
+    }
+    .omb-boton--primario {
+      background-color: var(--color-primario);
+      border: 1px solid var(--color-primario);
+    }
+    .omb-boton--primario:hover {
+      background-color: var(--color-secundario-hover);
+      border-color: var(--color-secundario-hover);
+    }
+    .omb-boton--con-icono {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+  </style>
+  <body>
+    <section class="omb-section">
+      <div class="omb-fuentes-container">
+        <div class="omb-fuentes-content">
+          <div class="omb-fuentes-item">
+            <h3 class="omb-titulo-fuentes">Fuentes</h3>
+            <p class="omb-parrafo-fuentes">
+              Registro Distrital automotor - Secretaría Distrital de Movilidad
+            </p>
+          </div>
+          <div class="omb-fuente-doble">
+            <div class="omb-fuentes-item">
+              <h3 class="omb-titulo-fuentes">Prioridad de actualizacion</h3>
+              <p class="omb-parrafo-fuentes">Mensual</p>
+            </div>
+            <div class="omb-fuentes-item">
+              <h3 class="omb-titulo-fuentes">Disponibilidad de los datos</h3>
+              <p class="omb-parrafo-fuentes">Desde 2011</p>
+            </div>
+          </div>
+        </div>
+        <div class="omb-boton-fuentes-container">
+          <button
+            type="button"
+            class="omb-boton omb-boton--primario omb-boton--con-icono"
+            aria-label="Abrir ayuda para ver el tablero"
+            title="Ayuda para ver el tablero">
+            <img
+              src="http://101.44.24.97/sites/default/files/2025-07/icono-ayuda.svg"
+              alt="Icono ayuda" />
+            AYUDA PARA VER EL TABLERO
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
