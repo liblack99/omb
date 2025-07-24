@@ -684,6 +684,7 @@ body {
   transform: scale(1.01);
 }
 .omb-imagen-card {
+  aspect-ratio: 4 / 3;
   width: 100%;
 }
 .omb-imagen-card--pequeña {
