@@ -338,6 +338,7 @@ a {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-height: 1.688rem;
+  transition: all 0.3s ease-in;
 }
 .omb-card-recursos p {
   font-size: 16px;
