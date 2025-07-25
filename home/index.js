@@ -263,3 +263,12 @@ window.addEventListener("resize", handleScroll);
 window.addEventListener("scroll", () => {
   console.log(window.scrollY);
 });
+
+const volverArribaBoton = document.getElementById("volverArribaBoton");
+
+volverArribaBoton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+      --color-strong: #c4d600;
+    }
+
+    .omb-boton-volver-arriba {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      cursor: pointer;
+      max-width: 56px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      transition: all 0.3s ease;
+    }
+    .omb-boton-volver-arriba span:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 4px 8px;
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-primario);
+      color: #000;
+    }
+
+    .omb-boton-volver-arriba span svg {
+      flex-shrink: 0;
+    }
+
+    .omb-boton-volver-arriba__texto {
+      white-space: nowrap;
+      overflow: hidden;
+      color: var(--color-texto);
+      opacity: 0;
+      width: 0;
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: "Work Sans", sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .omb-boton-volver-arriba:hover {
+      max-width: 200px;
+    }
+
+    .omb-boton-volver-arriba:hover .omb-boton-volver-arriba__texto {
+      width: auto;
+      opacity: 1;
+    }
+
+    .omb-boton-volver-arriba:focus-visible {
+      outline: 2px solid #000;
+      background-color: var(--color-primario);
+    }
+    .omb-boton-volver-arriba:focus-visible span:first-child {
+      background-color: #fff;
+      color: black;
+    }
+  </style>
+  <body>
+    <button
+      type="button"
+      aria-label="Volver arriba"
+      class="omb-boton-volver-arriba"
+      id="volverArribaBoton">
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 512"
+          width="24"
+          fill="currentColor">
+          <path
+            d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" />
+        </svg>
+      </span>
+      <span class="omb-boton-volver-arriba__texto">Volver arriba</span>
+    </button>
+    <script>
+      const volverArribaBoton = document.getElementById("volverArribaBoton");
+
+      volverArribaBoton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

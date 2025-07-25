@@ -1,7 +1,7 @@
 :root {
   --color-primario-soft: #f9ffbd;
   --color-primario: #dbf000;
-  --color-secundario-hover: #8e9c00;
+  --color-secundario-hover: #ecff24;
   --color-texto: #000000;
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
@@ -164,11 +164,10 @@ body {
 }
 
 .omb-boton {
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 500;
-  text-align: center;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -181,19 +180,17 @@ body {
 }
 .omb-boton--primario {
   background-color: var(--color-primario);
-  border-color: var(--color-primario);
+  border: 1px solid var(--color-primario);
+}
+.omb-boton--primario:hover {
+  background-color: var(--color-secundario-hover);
+  border-color: var(--color-secundario-hover);
 }
 .omb-boton--con-icono {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-}
-
-.omb-boton:hover {
-  background-color: var(--color-secundario-hover);
-  border-color: var(--color-texto);
-  color: white;
+  gap: 16px;
 }
 .omb-acordion-container {
   width: 90%;
@@ -485,7 +482,7 @@ body {
 }
 
 .omb-swiper {
-  width: 90%;
+  width: 80%;
   padding: 4px;
   box-sizing: border-box;
 }
@@ -624,6 +621,8 @@ body {
   transform: scale(1.01);
 }
 .omb-imagen-card {
+  object-fit: cover;
+  aspect-ratio: 16/9;
   width: 100%;
 }
 .omb-imagen-card--pequeña {
@@ -648,7 +647,7 @@ body {
   padding: 6px 12px 6px 12px;
   background-color: #f3f4f1;
   color: #71735e;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 0;
@@ -708,6 +707,9 @@ body {
 @media (min-width: 768px) {
   .omb-titulo-card-container {
     margin: 16px 0px;
+  }
+  .omb-swiper {
+    width: 90%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
@@ -798,6 +800,9 @@ body {
   }
   .omb-parrafos-container {
     width: 50%;
+  }
+  .omb-swiper {
+    width: 90%;
   }
   .omb-boton-prev,
   .omb-boton-next {
@@ -906,6 +911,9 @@ body {
   .omb-parrafos-container {
     width: 50%;
   }
+  .omb-swiper {
+    width: 90%;
+  }
   .omb-boton-prev,
   .omb-boton-next {
     width: 52px;
@@ -919,46 +927,7 @@ body {
     bottom: -32px !important;
   }
 }
-@media (min-width: 1360px) {
-  .omb-buscador {
-    max-width: 1140px;
-  }
-
-  header {
-    display: flex;
-    justify-content: center;
-  }
-  .omb-buscador {
-    max-width: 1280px;
-  }
-  .omb-icono-menu-container {
-    display: none;
-  }
-  .omb-nav {
-    position: relative;
-    display: flex;
-    top: 0;
-    border-radius: 0px;
-    justify-content: start;
-    padding-left: 10px;
-    width: 1280px;
-  }
-  .omb-lista-nav {
-    max-width: 1280px;
-    flex-direction: row;
-  }
-  .omb-lista-nav li {
-    max-width: 160px;
-    border-top: 1px solid transparent;
-    border-right-color: #bbbcae;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .omb-lista-nav li a {
-    padding: 16px;
-  }
+@media (min-width: 1280px) {
   .omb-titulo-section {
     font-weight: 600;
     font-size: 2rem;
@@ -987,10 +956,10 @@ body {
   .omb-contexto-container,
   .omb-grafica-container,
   .omb-de-interes-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-card-contexto-container {
-    width: 1280px;
+    width: 1180px;
   }
   .omb-compartir-container {
     justify-content: space-between;
@@ -1014,10 +983,10 @@ body {
   .omb-fuentes-content {
     flex-direction: row;
     justify-content: start;
-    width: 900px;
+    width: 800px;
   }
   .omb-fuentes-item {
-    width: 460px;
+    width: 400px;
   }
   .omb-boton-fuentes-container {
     background-color: #e6e6e6;
@@ -1048,6 +1017,9 @@ body {
   }
   .omb-parrafos-container {
     width: 50%;
+  }
+  .omb-swiper {
+    width: 90%;
   }
   .omb-boton-prev,
   .omb-boton-next {
