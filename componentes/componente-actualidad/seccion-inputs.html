@@ -106,7 +106,7 @@
       padding: 16px 0px;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
       position: absolute;
-      width: 140px;
+      width: 200px;
       background-color: #fff;
       overflow: hidden;
       top: 32px;
@@ -118,6 +118,10 @@
       box-sizing: border-box;
       width: 100%;
       transition: all 0.3s ease;
+      font-family: "Work sans", sans-serif;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      font-weight: 500;
     }
     .omb-opciones li:hover {
       background-color: var(--color-primario);
@@ -173,12 +177,16 @@
 
         <!-- select custon para ordenar -->
         <div class="omb-select omb-select--con-dos-elementos">
-          <div
-            class="omb-opcion-selecionada omb-opcion-selecionada--ordenar"
-            id="selectTipoContenido"
-            data-select="orden">
-            Odenar por
-            <span>
+          <div>
+            <div
+              class="omb-opcion-selecionada omb-opcion-selecionada--ordenar"
+              id="selectOrdenar"
+              role="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              tabindex="0"
+              data-select="orden">
+              Ordenar por
               <span class="icono-flecha-select">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -189,14 +197,43 @@
                     d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
                 </svg>
               </span>
-            </span>
+            </div>
+            <ul
+              class="omb-opciones omb-opciones--ordenar hidden"
+              role="listbox"
+              id="listbox-orden"
+              aria-labelledby="selectOrdenar"
+              data-select="orden">
+              <li
+                role="option"
+                tabindex="0"
+                data-select="orden"
+                data-value="az">
+                A-Z
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-select="orden"
+                data-value="za">
+                Z-A
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-select="orden"
+                data-value="fecha-reciente">
+                Por fecha recientes
+              </li>
+              <li
+                role="option"
+                tabindex="0"
+                data-select="orden"
+                data-value="fecha-antigua">
+                Por fecha antiguas
+              </li>
+            </ul>
           </div>
-          <ul
-            class="omb-opciones omb-opciones--ordenar hidden"
-            data-select="orden">
-            <li data-select="orden" data-value="az">A-Z</li>
-            <li data-select="orden" data-value="za">Z-A</li>
-          </ul>
         </div>
       </div>
 

@@ -35,40 +35,33 @@
           </svg>
         </div>
         <div class="omb-card-container">
-          <a
-            href="#"
-            class="omb-card-link"
-            aria-label="Ver "
-            title="Ir a Bogotá avanza en su estrategia de gestión de velocidad con
-                  intervenciones que salvan vidas">
-            <div class="omb-card-hero">
-              <img
-                src="http://101.44.24.97/sites/default/files/2025-07/bogota-avanza-noticia.webp"
-                alt="Imagen Bogotá avanza en su estrategia de gestión de velocidad con
+          <div class="omb-card-hero">
+            <img
+              src="http://101.44.24.97/sites/default/files/2025-07/bogota-avanza-noticia.webp"
+              alt="Imagen Bogotá avanza en su estrategia de gestión de velocidad con
                   intervenciones que salvan vidas"
-                class="omb-imagen-card-hero" />
-              <div class="omb-texto-card-hero">
-                <h3
-                  class="omb-titulo-card omb-titulo-card--dos-lineas omb-titulo-card--sin-padding">
-                  Bogotá avanza en su estrategia de gestión de velocidad con
-                  intervenciones que salvan vidas
-                </h3>
-                <p class="omb-fecha">25 may, 2025</p>
-                <p class="omb-parrafo-card omb-parrafo-card--sin-padding">
-                  Encontrarás que los habitantes de la Bogotá-Región se mueven
-                  mayoritariamente en modos sostenibles como la caminata, la
-                  bicicleta y el transporte público, confirmando la apuesta por
-                  consolidar un sistema de movilidad multimodal, sostenible y
-                  descarbonizado, desde lo regional a lo local.
-                </p>
+              class="omb-imagen-card-hero" />
+            <div class="omb-texto-card-hero">
+              <h3
+                class="omb-titulo-card omb-titulo-card--dos-lineas omb-titulo-card--sin-padding">
+                Bogotá avanza en su estrategia de gestión de velocidad con
+                intervenciones que salvan vidas
+              </h3>
+              <p class="omb-fecha">25 may, 2025</p>
+              <p class="omb-parrafo-card omb-parrafo-card--sin-padding">
+                Encontrarás que los habitantes de la Bogotá-Región se mueven
+                mayoritariamente en modos sostenibles como la caminata, la
+                bicicleta y el transporte público, confirmando la apuesta por
+                consolidar un sistema de movilidad multimodal, sostenible y
+                descarbonizado, desde lo regional a lo local.
+              </p>
 
-                <button
-                  class="omb-boton omb-boton--primario omb-boton--con-icono omb-boton--con-margen">
-                  Ver noticia
-                </button>
-              </div>
+              <button
+                class="omb-boton omb-boton--primario omb-boton--con-icono omb-boton--con-margen">
+                Ver noticia
+              </button>
             </div>
-          </a>
+          </div>
         </div>
       </section>
       <section class="omb-section omb-inputs-section">
@@ -77,15 +70,20 @@
             type="text"
             class="omb-input-busqueda"
             id="inputBusqueda"
+            aria-label="Buscar por nombre"
             placeholder="Buscar por nombre" />
 
           <div class="omb-select omb-select--con-dos-elementos">
-            <div
-              class="omb-opcion-selecionada omb-opcion-selecionada--ordenar"
-              id="selectTipoContenido"
-              data-select="orden">
-              Odenar por
-              <span>
+            <div>
+              <div
+                class="omb-opcion-selecionada omb-opcion-selecionada--ordenar"
+                id="selectOrdenar"
+                role="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                tabindex="0"
+                data-select="orden">
+                Ordenar por
                 <span class="icono-flecha-select">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -96,14 +94,43 @@
                       d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
                   </svg>
                 </span>
-              </span>
+              </div>
+              <ul
+                class="omb-opciones omb-opciones--ordenar hidden"
+                role="listbox"
+                id="listbox-orden"
+                aria-labelledby="selectOrdenar"
+                data-select="orden">
+                <li
+                  role="option"
+                  tabindex="0"
+                  data-select="orden"
+                  data-value="az">
+                  A-Z
+                </li>
+                <li
+                  role="option"
+                  tabindex="0"
+                  data-select="orden"
+                  data-value="za">
+                  Z-A
+                </li>
+                <li
+                  role="option"
+                  tabindex="0"
+                  data-select="orden"
+                  data-value="fecha-reciente">
+                  Por fecha recientes
+                </li>
+                <li
+                  role="option"
+                  tabindex="0"
+                  data-select="orden"
+                  data-value="fecha-antigua">
+                  Por fecha antiguas
+                </li>
+              </ul>
             </div>
-            <ul
-              class="omb-opciones omb-opciones--ordenar hidden"
-              data-select="orden">
-              <li data-select="orden" data-value="az">A-Z</li>
-              <li data-select="orden" data-value="za">Z-A</li>
-            </ul>
           </div>
         </div>
         <div class="omb-botton-mobile-container">

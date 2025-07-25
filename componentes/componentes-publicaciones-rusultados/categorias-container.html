@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+      --color-strong: #c4d600;
+    }
+    .omb-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+    .omb-categorias-section {
+      background-color: var(--color-fondo-seccion-intreres);
+    }
+    .omb-encuestas-container {
+      width: 90%;
+      padding: 40px 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .omb-cards-encuesta-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 848px;
+      overflow: hidden;
+      gap: 30px;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+  </style>
+  <body>
+    <section class="omb-section omb-categorias-section">
+      <div class="omb-encuestas-container">
+        <div class="omb-cards-encuesta-container"></div>
+      </div>
+    </section>
+  </body>
+</html>

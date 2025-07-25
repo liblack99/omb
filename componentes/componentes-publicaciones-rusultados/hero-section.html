@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #acbd00;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+      --color-strong: #c4d600;
+    }
+    .omb-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+    .omb-titulo-section {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-parrafo-descripcion-section {
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", "sans-serif";
+    }
+    .omb-card-info-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .omb-card-info-categoria {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .omb-card-info-categoria img {
+      width: 100%;
+      height: 250px;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+    .omb-texto-categoria {
+      width: 100%;
+    }
+    .omb-titulo-card-hero {
+      font-weight: 600;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      text-decoration: underline;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.625rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      padding: 0px;
+      transition: all 0.3s ease-in;
+    }
+
+    .omb-titulo-card {
+      font-weight: 600;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      text-decoration: underline;
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.625rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.688rem;
+      padding: 0px;
+      transition: all 0.3s ease-in;
+    }
+    .omb-parrafo-card {
+      font-size: 1rem;
+      font-family: "Work sans", sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 0;
+      line-height: 1.5rem;
+      padding: 0px 16px;
+      color: var(--color-texto);
+      min-height: 72px;
+    }
+    .omb-parrafo-card--sin-padding {
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .omb-boton {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: "Work sans", sans-serif;
+      text-transform: uppercase;
+      border-width: 0.125rem;
+      border-style: solid;
+      color: var(--color-texto);
+      cursor: pointer;
+    }
+    .omb-boton--primario {
+      background-color: var(--color-primario);
+      border: 1px solid var(--color-primario);
+    }
+    .omb-boton--con-icono {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .omb-boton--primario:hover {
+      background-color: var(--color-secundario-hover);
+      border-color: var(--color-secundario-hover);
+    }
+  </style>
+  <body>
+    <section class="omb-section">
+      <div class="omb-card-info-container">
+        <h1 class="omb-titulo-section">Resultados de encuestas de movilidad</h1>
+        <div class="omb-card-info-categoria">
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/omb-encuesta-2023.png"
+            alt="Imagen encuesta 2023" />
+          <div class="omb-texto-categoria">
+            <h3 class="omb-titulo-card-hero">Encuesta de movilidad 2023</h3>
+            <p class="omb-parrafo-card omb-parrafo-card--sin-padding">
+              Encontrarás que los habitantes de la Bogotá-Región se mueven
+              mayoritariamente en modos sostenibles como la caminata, la
+              bicicleta y el transporte público, confirmando la apuesta por
+              consolidar un sistema de movilidad multimodal, sostenible y
+              descarbonizado, desde lo regional a lo local.
+            </p>
+            <button class="omb-boton omb-boton--primario omb-boton--con-icono">
+              VER ENCUESTA
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

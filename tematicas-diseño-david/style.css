@@ -152,7 +152,9 @@ a {
 .omb-opciones li:hover {
   background-color: var(--color-primario);
 }
-
+.omb-opciones li:focus-visible {
+  background-color: var(--color-primario);
+}
 .omb-opciones--ordenar {
   width: 272px;
 }

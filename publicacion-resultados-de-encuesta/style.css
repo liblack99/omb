@@ -1,10 +1,13 @@
 :root {
   --color-primario-soft: #f9ffbd;
   --color-primario: #dbf000;
-  --color-secundario-hover: #8e9c00;
+  --color-secundario-hover: #ecff24;
+  --color-boder-tab: #8e9c00;
   --color-texto: #000000;
   --color-enlace: #acbd00;
   --color-enlace-hover: #a5ad4a;
+  --color-fondo-seccion-intreres: #f3f4f1;
+  --color-strong: #c4d600;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -65,7 +68,7 @@ main {
   text-decoration: underline;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  margin-top: 0rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.625rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -95,7 +98,7 @@ main {
 }
 
 .omb-boton {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 500;
@@ -112,7 +115,7 @@ main {
 }
 .omb-boton--primario {
   background-color: var(--color-primario);
-  border-color: var(--color-primario);
+  border: 1px solid var(--color-primario);
 }
 .omb-boton--con-icono {
   display: flex;
@@ -121,10 +124,9 @@ main {
   gap: 8px;
 }
 
-.omb-boton:hover {
+.omb-boton--primario:hover {
   background-color: var(--color-secundario-hover);
-  border-color: var(--color-texto);
-  color: white;
+  border-color: var(--color-secundario-hover);
 }
 .omb-categorias-section {
   background-color: #f1f3f7;
@@ -203,7 +205,7 @@ main {
   padding: 16px 0px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
   position: absolute;
-  width: 200px;
+  width: 140px;
   background-color: #fff;
   overflow: hidden;
   top: 32px;
@@ -219,6 +221,9 @@ main {
 .omb-opciones li:hover {
   background-color: var(--color-primario);
 }
+.omb-opciones li:focus-visible {
+  background-color: var(--color-primario);
+}
 
 .omb-cards-encuesta-container {
   width: 100%;
@@ -229,7 +234,6 @@ main {
   gap: 30px;
   padding: 4px;
   box-sizing: border-box;
-  gap: 30px;
 }
 
 .omb-card-encuesta {
@@ -264,7 +268,7 @@ main {
   font-family: "Montserrat", sans-serif;
   text-decoration: underline;
   font-size: 1.125rem;
-  margin-top: 0;
+  margin-top: 0.5rem;
   margin-bottom: 0.625rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -356,6 +360,7 @@ main {
   .omb-titulo-card-hero {
     font-size: 1.5rem;
     line-height: 1.625rem;
+    margin-top: 0rem;
   }
   .omb-cards-encuesta-container {
     justify-content: center;
@@ -399,6 +404,7 @@ main {
   .omb-titulo-card-hero {
     font-size: 1.5rem;
     line-height: 1.625rem;
+    margin-top: 0rem;
   }
   .omb-card-encuesta {
     width: 360px;
@@ -423,7 +429,7 @@ main {
     line-height: 1.625rem;
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-card-info-categoria {
     display: flex;
     flex-direction: row;
@@ -437,47 +443,10 @@ main {
   .omb-titulo-card-hero {
     font-size: 1.5rem;
     line-height: 1.625rem;
+    margin-top: 0rem;
   }
   .omb-card-encuesta {
-    width: 360px;
-  }
-  .omb-titulo-section {
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 2.75rem;
-    color: var(--color-texto);
-    font-family: "Montserrat", sans-serif;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .omb-parrafo-descripcion-section {
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    color: var(--color-texto);
-  }
-  .omb-titulo-publicaciones {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-@media (min-width: 1440px) {
-  .omb-card-info-categoria {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-  }
-  .omb-card-info-container,
-  .omb-encuestas-container,
-  .omb-cards-encuesta-container {
-    max-width: 1280px;
-  }
-  .omb-titulo-card-hero {
-    font-size: 1.5rem;
-    line-height: 1.625rem;
-  }
-  .omb-card-encuesta {
-    width: 360px;
+    width: 350px;
   }
   .omb-titulo-section {
     font-weight: 600;

@@ -4,19 +4,28 @@ const listasDeOpciones = document.querySelectorAll(".omb-opciones");
 // Al cambiar el select de tipo de contenido
 
 opcionSeleccionada.forEach((boton) => {
-  boton.addEventListener("click", () => {
+  const manejarEvento = () => {
     const valorSeleccionado = boton.dataset.select;
-    boton.classList.toggle("activo");
 
     listasDeOpciones.forEach((lista) => {
       if (lista.dataset.select === valorSeleccionado) {
         // Toggle SOLO en la lista correspondiente
         lista.classList.toggle("hidden");
+        flechaSelect.classList.toggle("activo");
       } else {
         // Oculta las otras listas
         lista.classList.add("hidden");
       }
     });
+  };
+
+  boton.addEventListener("click", manejarEvento);
+
+  boton.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault(); // evita que la página se desplace con la barra espaciadora
+      manejarEvento();
+    }
   });
 });
 
@@ -26,7 +35,10 @@ listasDeOpciones.forEach((lista) => {
   const opciones = lista.querySelectorAll("li");
 
   opciones.forEach((option) => {
-    option.addEventListener("click", () => {
+    // Asegura que cada opción sea accesible con teclado
+    option.setAttribute("tabindex", "0");
+
+    const manejarSeleccion = () => {
       const valorSelect = option.dataset.select;
       const valorFiltro = option.dataset.value;
 
@@ -42,13 +54,12 @@ listasDeOpciones.forEach((lista) => {
 
       lista.classList.add("hidden");
 
-      // 🔍 Leer valores de ambos filtros
+      // Leer valores de ambos filtros
       const categoria = document.querySelector('[data-select="categoria"]')
         .dataset.value;
       const tipo = document.querySelector('[data-select="contenido"]').dataset
         .value;
 
-      // ✅ Si ambos son "Todos" o están vacíos, mostrar todo
       const mostrarTodo =
         (!categoria || categoria === "Todos") && (!tipo || tipo === "Todos");
 
@@ -56,23 +67,31 @@ listasDeOpciones.forEach((lista) => {
         const cardCategoria = card.dataset.tematica;
         const cardTipo = card.dataset.tipo;
 
-        if (mostrarTodo) {
+        const coincideCategoria =
+          !categoria || categoria === "Todos" || cardCategoria === categoria;
+        const coincideTipo = !tipo || tipo === "Todos" || cardTipo === tipo;
+
+        if (mostrarTodo || (coincideCategoria && coincideTipo)) {
           card.classList.remove("hidden");
         } else {
-          const coincideCategoria =
-            !categoria || categoria === "Todos" || cardCategoria === categoria;
-          const coincideTipo = !tipo || tipo === "Todos" || cardTipo === tipo;
-
-          if (coincideCategoria && coincideTipo) {
-            card.classList.remove("hidden");
-          } else {
-            card.classList.add("hidden");
-          }
+          card.classList.add("hidden");
         }
       });
+    };
+
+    // Click
+    option.addEventListener("click", manejarSeleccion);
+
+    // Teclado
+    option.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault(); // Evita scroll con barra espaciadora
+        manejarSeleccion();
+      }
     });
   });
 });
+
 const botonReset = document.getElementById("btnResetfiltros");
 
 botonReset.addEventListener("click", () => {

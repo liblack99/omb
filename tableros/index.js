@@ -40,7 +40,7 @@ const flechaSelect = document.querySelector(".icono-flecha-select");
 // Al cambiar el select de tipo de contenido
 
 opcionSeleccionada.forEach((boton) => {
-  boton.addEventListener("click", () => {
+  const manejarEvento = () => {
     const valorSeleccionado = boton.dataset.select;
 
     listasDeOpciones.forEach((lista) => {
@@ -53,6 +53,15 @@ opcionSeleccionada.forEach((boton) => {
         lista.classList.add("hidden");
       }
     });
+  };
+
+  boton.addEventListener("click", manejarEvento);
+
+  boton.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault(); // evita que la página se desplace con la barra espaciadora
+      manejarEvento();
+    }
   });
 });
 

@@ -313,10 +313,6 @@ body {
   box-sizing: border-box;
   color: #71735e;
 }
-.omb-input-busqueda:focus {
-  outline: none;
-  box-shadow: none;
-}
 
 .omb-select {
   position: relative;
@@ -379,7 +375,7 @@ body {
   padding: 16px 0px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
   position: absolute;
-  width: 140px;
+  width: 200px;
   background-color: #fff;
   overflow: hidden;
   top: 32px;
@@ -392,7 +388,11 @@ body {
   width: 100%;
   transition: all 0.3s ease;
 }
+
 .omb-opciones li:hover {
+  background-color: var(--color-primario);
+}
+.omb-opciones li:focus-visible {
   background-color: var(--color-primario);
 }
 .omb-contenedor-derecho {
@@ -456,6 +456,8 @@ body {
   display: flex;
   list-style: none;
   gap: 20px;
+  padding-left: 0;
+  align-items: center;
 }
 
 .omb-paginacion-enlace {
@@ -471,8 +473,8 @@ body {
   -webkit-box-orient: vertical;
   line-height: 1.688rem;
   padding: 0px 16px;
-  transition: all 0.9s ease-in;
-  color: var(--color-enlace);
+  transition: all 0.3s ease-in;
+  color: var(--color-enlace-hover);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -480,17 +482,20 @@ body {
   border: none;
   background-color: inherit;
 }
+
 .omb-pagination-numero {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   padding: 0px;
   border: none;
   background-color: inherit;
+  text-decoration: none;
 }
 
 .omb-paginacion-enlace--activo {
   background-color: var(--color-primario);
-  border-radius: 50%;
+  border-radius: 8px;
+  color: var(--color-texto);
 }
 .omb-enlaces {
   gap: 4px;
