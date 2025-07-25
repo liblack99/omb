@@ -272,3 +272,41 @@ volverArribaBoton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+const htmlRoot = document.documentElement;
+const contrasteBtn = document.getElementById("botonContraste");
+const aumentarLetraBtn = document.getElementById("botonAumentarLetra");
+const reducirLetraBtn = document.getElementById("botonReducirLetra");
+
+// Valores configurables
+const CONTRASTE_CLASE = "modo-contraste-alto";
+const MAX_FONT_SIZE = 150;
+const MIN_FONT_SIZE = 80;
+const FONT_STEP = 10;
+
+// Estado actual de fuente
+let fontSizePercent = 100;
+
+// Función para aplicar el tamaño de fuente
+function aplicarTamanoFuente() {
+  htmlRoot.style.fontSize = `${fontSizePercent}%`;
+}
+
+// Manejadores de eventos
+contrasteBtn.addEventListener("click", () => {
+  document.body.classList.toggle(CONTRASTE_CLASE);
+});
+
+aumentarLetraBtn.addEventListener("click", () => {
+  if (fontSizePercent < MAX_FONT_SIZE) {
+    fontSizePercent += FONT_STEP;
+    aplicarTamanoFuente();
+  }
+});
+
+reducirLetraBtn.addEventListener("click", () => {
+  if (fontSizePercent > MIN_FONT_SIZE) {
+    fontSizePercent -= FONT_STEP;
+    aplicarTamanoFuente();
+  }
+});
