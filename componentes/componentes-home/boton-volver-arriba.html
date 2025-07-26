@@ -14,8 +14,11 @@
       --color-texto: #000000;
       --color-enlace: #acbd00;
       --color-enlace-hover: #a5ad4a;
+      --color-hover-secundario: #8e9c00;
       --color-fondo-seccion-intreres: #f3f4f1;
       --color-strong: #c4d600;
+      --color-govco: #004884;
+      --color-govco-hover: #3366cc;
     }
 
     .omb-boton-volver-arriba {
@@ -32,7 +35,9 @@
       bottom: 20px;
       right: 20px;
       transition: all 0.3s ease;
+      z-index: 1000;
     }
+
     .omb-boton-volver-arriba span:first-child {
       display: flex;
       align-items: center;
@@ -41,8 +46,8 @@
       padding: 4px 8px;
       width: 32px;
       height: 32px;
-      background-color: var(--color-primario);
-      color: #000;
+      background-color: var(--color-govco);
+      color: #fff;
     }
 
     .omb-boton-volver-arriba span svg {
@@ -72,7 +77,7 @@
 
     .omb-boton-volver-arriba:focus-visible {
       outline: 2px solid #000;
-      background-color: var(--color-primario);
+      background-color: var(--color-govco-hover);
     }
     .omb-boton-volver-arriba:focus-visible span:first-child {
       background-color: #fff;

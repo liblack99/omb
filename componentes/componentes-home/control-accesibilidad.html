@@ -14,8 +14,11 @@
       --color-texto: #000000;
       --color-enlace: #acbd00;
       --color-enlace-hover: #a5ad4a;
+      --color-hover-secundario: #8e9c00;
       --color-fondo-seccion-intreres: #f3f4f1;
       --color-strong: #c4d600;
+      --color-govco: #004884;
+      --color-govco-hover: #3366cc;
     }
     .omb-barra-accesibilidad {
       height: 143px;
@@ -27,7 +30,7 @@
       position: fixed;
       top: 35%;
       right: 0;
-      background-color: var(--color-primario);
+      background-color: var(--color-govco);
       border-radius: 10px 0px 0px 10px;
       padding: 12px 0 20px 0;
       z-index: 1000;
@@ -64,6 +67,11 @@
       color: #000;
       flex-shrink: 0;
       z-index: 2;
+      color: var(--color-govco);
+      transition: all 0.3s ease-in;
+    }
+    .omb-boton-accesibilidad:hover span:first-child {
+      color: var(--color-govco-hover);
     }
 
     .omb-boton-accesibilidad__texto {
@@ -81,12 +89,13 @@
 
     .omb-boton-accesibilidad:hover {
       width: 340px;
-      background-color: var(--color-secundario-hover);
+      background-color: var(--color-govco-hover);
     }
 
     .omb-boton-accesibilidad:hover .omb-boton-accesibilidad__texto {
       width: auto;
       opacity: 1;
+      color: #fff;
     }
   </style>
   <body>
