@@ -185,7 +185,7 @@ body {
 }
 /* hero */
 .omb-titulo-section {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: 32px;
   margin-top: 1.5rem;
@@ -966,7 +966,7 @@ footer {
 }
 .omb-info-footer h2 {
   font-weight: 600;
-  color: var(--color-enlace);
+  color: var(--color-hover-secundario);
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   margin-top: 0.625rem;
@@ -984,8 +984,9 @@ footer {
   font-size: 1rem;
   font-family: "Work sans", sans-serif;
   margin: 0;
+  font-family: 500;
   line-height: 1.5rem;
-  color: var(--color-enlace);
+  color: var(--color-hover-secundario);
   margin-top: 4px;
 }
 .omb-info-footer ul {
@@ -1021,7 +1022,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-enlace);
+  color: var(--color-hover-secundario);
   border-left: 2px solid transparent;
   padding-left: 16px;
   box-sizing: border-box;
@@ -1065,7 +1066,7 @@ footer {
   margin-bottom: 32px;
 }
 .omb-enlaces {
-  color: var(--color-enlace);
+  color: var(--color-hover-secundario);
 }
 .omb-enlaces:hover {
   color: var(--color-enlace-hover);
@@ -1076,7 +1077,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-enlace);
+  color: var(--color-hover-secundario);
   box-sizing: border-box;
   gap: 4px;
   font-family: "Work Sans", sans-serif;
