@@ -535,6 +535,8 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
+  background-color: #eeeff1;
+  border-radius: 60px;
 }
 
 .aliados-logos-container img {
@@ -543,6 +545,8 @@ body {
   object-fit: contain;
   opacity: 0.85;
   transition: filter 0.3s ease, opacity 0.3s ease;
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
 }
 .aliados-logos img:hover {
   filter: grayscale(0%);

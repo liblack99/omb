@@ -199,6 +199,10 @@ a {
   box-sizing: border-box;
   border-top: 4px solid transparent;
 }
+.omb-map-card:hover .omb-descripcion-container {
+  transform: translateY(-132px);
+  border-top: 4px solid var(--color-primario);
+}
 .omb-descripcion-container-alzado {
   transform: translateY(-132px);
   border-color: var(--color-primario);
@@ -366,7 +370,7 @@ a {
   .omb-descripcion-container {
     transform: translateY(-0px);
   }
-  .omb-descripcion-container-alzado {
+  .omb-map-card:hover .omb-descripcion-container {
     transform: translateY(-90px);
     border-color: var(--color-primario);
   }
@@ -402,7 +406,7 @@ a {
   .omb-descripcion-container {
     transform: translateY(-44px);
   }
-  .omb-descripcion-container-alzado {
+  .omb-map-card:hover .omb-descripcion-container {
     transform: translateY(-132px);
     border-color: var(--color-primario);
   }
@@ -456,7 +460,7 @@ a {
   .omb-descripcion-container {
     transform: translateY(-40px);
   }
-  .omb-descripcion-container-alzado {
+  .omb-map-card:hover .omb-descripcion-container {
     transform: translateY(-132px);
     border-color: var(--color-primario);
   }
@@ -509,10 +513,11 @@ a {
   .omb-descripcion-container {
     transform: translateY(-20px);
   }
-  .omb-descripcion-container-alzado {
+  .omb-map-card:hover .omb-descripcion-container {
     transform: translateY(-110px);
-    border-color: var(--color-primario);
+    border-top: 4px solid var(--color-primario);
   }
+
   .omb-parrafo-descripcion-logo {
     font-weight: 500;
     font-size: 1.25rem;
