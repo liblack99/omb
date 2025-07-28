@@ -24,7 +24,7 @@
     .omb-paginacion-numerica ul {
       display: flex;
       list-style: none;
-      gap: 20px;
+      gap: 8px;
       padding-left: 0;
       align-items: center;
     }
@@ -43,13 +43,17 @@
       line-height: 1.688rem;
       padding: 0px 16px;
       transition: all 0.3s ease-in;
-      color: var(--color-enlace-hover);
+      color: var(--color-enlace);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       border: none;
       background-color: inherit;
+    }
+    .omb-paginacion-enlace:hover {
+      color: var(--color-enlace-hover);
+      text-decoration: underline;
     }
 
     .omb-pagination-numero {
@@ -87,6 +91,19 @@
         </li>
         <li>
           <button class="omb-paginacion-enlace omb-pagination-numero">3</button>
+        </li>
+        <li>
+          <button class="omb-paginacion-enlace omb-pagination-numero">4</button>
+        </li>
+        <li>
+          <button class="omb-paginacion-enlace omb-pagination-numero">
+            ...
+          </button>
+        </li>
+        <li>
+          <button class="omb-paginacion-enlace omb-pagination-numero">
+            10
+          </button>
         </li>
         <li>
           <button class="omb-paginacion-enlace">Siguiente</button>
