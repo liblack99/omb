@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section class="omb-section">
+        <div class="omb-filtro-container">
+          <h1 class="omb-titulo-section" id="tituloSection">
+            Resultados para su búsqueda mostrando 1 - 5 de 5
+          </h1>
+          <div class="omb-filtros" id="filtros">
+            <div class="omb-inputs-container">
+              <div class="omb-select omb-select--con-dos-elementos">
+                <div>
+                  <p>Odenar por</p>
+                  <div
+                    class="omb-opcion-selecionada omb-opcion-selecionada--ordenar"
+                    id="selectTipoContenido"
+                    role="button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    tabindex="0"
+                    data-select="orden">
+                    Seleccionar
+                    <span class="icono-flecha-select">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 512"
+                        width="12">
+                        <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                        <path
+                          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <ul
+                    class="omb-opciones omb-opciones--ordenar hidden"
+                    role="listbox"
+                    id="listbox-orden"
+                    aria-labelledby="selectTipoContenido"
+                    data-select="orden">
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="orden"
+                      data-value="az">
+                      A-Z
+                    </li>
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="orden"
+                      data-value="za">
+                      Z-A
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="omb-select">
+                <p id="labelFecha">Fecha</p>
+                <div
+                  class="omb-opcion-selecionada"
+                  id="selectFecha"
+                  role="button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-labelledby="labelFecha"
+                  tabindex="0"
+                  data-select="Fecha">
+                  Seleccionar
+                  <span class="icono-flecha-select" aria-hidden="true">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 512"
+                      width="12">
+                      <path
+                        d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                    </svg>
+                  </span>
+                </div>
+                <ul
+                  class="omb-opciones hidden"
+                  id="listboxFecha"
+                  role="listbox"
+                  aria-labelledby="labelFecha"
+                  data-select="Fecha">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-select="Fecha"
+                    data-value="fecha-reciente">
+                    Por fecha recientes
+                  </li>
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-select="Fecha"
+                    data-value="fecha-antigua">
+                    Por fecha antiguas
+                  </li>
+                </ul>
+              </div>
+              <label for="inputBusqueda" class="omb-label-buscador">
+                <p>Buscar palabra clave</p>
+                <div
+                  class="omb-buscador-container omb-buscador-container--escritorio">
+                  <input
+                    type="text"
+                    placeholder="Buscar"
+                    aria-label="Buscador"
+                    class="omb-input-buscar"
+                    id="inputBusqueda" />
+                  <button
+                    type="button"
+                    aria-label="Buscar"
+                    class="omb-boton-buscar">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      width="16"
+                      fill="currentColor">
+                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                      <path
+                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                    </svg>
+                  </button>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="omb-section">
+        <div class="omb-resultados-container">
+          <div class="omb-cards-container">
+            <div class="omb-card-resultado">
+              <p class="omb-fecha">
+                <span class="mes">Feb</span>
+                <span class="dia">21</span>,
+                <span class="anno">2022</span>
+              </p>
+              <h2 class="omb-titulo-card-resultado">
+                <a href="">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea
+                  quidem velit iste illo.
+                </a>
+              </h2>
+              <p class="omb-parrafo-card-resultado">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, illo repellat culpa hic dolorum saepe sit, dolorem
+                nam, est aliquam explicabo laborum unde. Provident praesentium
+                iste accusantium impedit. Debitis, fugiat.
+              </p>
+            </div>
+
+            <div class="omb-card-resultado">
+              <p class="omb-fecha">
+                <span class="mes">Feb</span>
+                <span class="dia">21</span>,
+                <span class="anno">2022</span>
+              </p>
+              <h2 class="omb-titulo-card-resultado">
+                <a href="">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea
+                  quidem velit iste illo.
+                </a>
+              </h2>
+              <p class="omb-parrafo-card-resultado">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, illo repellat culpa hic dolorum saepe sit, dolorem
+                nam, est aliquam explicabo laborum unde. Provident praesentium
+                iste accusantium impedit. Debitis, fugiat.
+              </p>
+            </div>
+
+            <div class="omb-card-resultado">
+              <p class="omb-fecha">
+                <span class="mes">Feb</span>
+                <span class="dia">21</span>,
+                <span class="anno">2022</span>
+              </p>
+              <h2 class="omb-titulo-card-resultado">
+                <a href="">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea
+                  quidem velit iste illo.
+                </a>
+              </h2>
+              <p class="omb-parrafo-card-resultado">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, illo repellat culpa hic dolorum saepe sit, dolorem
+                nam, est aliquam explicabo laborum unde. Provident praesentium
+                iste accusantium impedit. Debitis, fugiat.
+              </p>
+            </div>
+            <div class="omb-card-resultado">
+              <p class="omb-fecha">
+                <span class="mes">Feb</span>
+                <span class="dia">21</span>,
+                <span class="anno">2022</span>
+              </p>
+              <h2 class="omb-titulo-card-resultado">
+                <a href="">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea
+                  quidem velit iste illo.
+                </a>
+              </h2>
+              <p class="omb-parrafo-card-resultado">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, illo repellat culpa hic dolorum saepe sit, dolorem
+                nam, est aliquam explicabo laborum unde. Provident praesentium
+                iste accusantium impedit. Debitis, fugiat.
+              </p>
+            </div>
+            <div class="omb-card-resultado">
+              <p class="omb-fecha">
+                <span class="mes">Feb</span>
+                <span class="dia">21</span>,
+                <span class="anno">2022</span>
+              </p>
+              <h2 class="omb-titulo-card-resultado">
+                <a href="">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea
+                  quidem velit iste illo.
+                </a>
+              </h2>
+              <p class="omb-parrafo-card-resultado">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, illo repellat culpa hic dolorum saepe sit, dolorem
+                nam, est aliquam explicabo laborum unde. Provident praesentium
+                iste accusantium impedit. Debitis, fugiat.
+              </p>
+            </div>
+          </div>
+          <nav
+            class="omb-paginacion-numerica"
+            id="paginacion"
+            aria-label="Paginación de temáticas">
+            <ul>
+              <li>
+                <button class="omb-paginacion-enlace">Anterior</button>
+              </li>
+              <li>
+                <button
+                  class="omb-paginacion-enlace omb-pagination-numero omb-paginacion-enlace--activo">
+                  1
+                </button>
+              </li>
+              <li>
+                <button class="omb-paginacion-enlace omb-pagination-numero">
+                  2
+                </button>
+              </li>
+              <li>
+                <button class="omb-paginacion-enlace omb-pagination-numero">
+                  3
+                </button>
+              </li>
+              <li>
+                <button class="omb-paginacion-enlace">Siguiente</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
