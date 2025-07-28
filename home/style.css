@@ -1584,6 +1584,7 @@ footer {
   .omb-input-container button:hover {
     background-color: var(--color-secundario-hover);
   }
+
   .omb-footer-header {
     flex-direction: row;
     justify-content: space-between;
@@ -1900,6 +1901,15 @@ footer {
   .omb-titulo-section--sin-margin {
     margin-top: 0px;
   }
+  .omb-titulo-section {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--color-texto);
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
   .omb-parrafo-descripcion-section {
     font-weight: 500;
     font-size: 1.25rem;
@@ -2007,7 +2017,7 @@ footer {
   }
   .omb-imagenes-decoraritvas-suscripcion {
     width: 100%;
-    top: 32px;
+    top: 44px;
     padding: 0 24px;
     box-sizing: border-box;
     display: block;
