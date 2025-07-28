@@ -251,7 +251,7 @@ function handleScroll() {
     } else {
       nav.style.position = "static";
       nav.style.top = "";
-      nav.style.display = "flex";
+      // nav.style.display = "flex";
     }
   } else {
     nav.style.position = "absolute";

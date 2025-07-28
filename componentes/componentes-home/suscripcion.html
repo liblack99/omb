@@ -25,27 +25,7 @@
     .omb-suscripcion-section {
       width: 100%;
       position: relative;
-      height: 300px;
-    }
-    .omb-titulo-section {
-      font-weight: 600;
-      font-size: 1.5rem;
-      line-height: 32px;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--color-texto);
-      font-family: "Montserrat", sans-serif;
-    }
-    .omb-titulo-section--centrado {
-      text-align: center;
-    }
-
-    .omb-parrafo-descripcion-section {
-      font-weight: 500;
-      font-size: 1.125rem;
-      line-height: 26px;
-      color: var(--color-texto);
-      font-family: "Montserrat", sans-serif;
+      height: 340px;
     }
     .omb-fondo-suscripcion-section {
       width: 100%;
@@ -54,13 +34,30 @@
       object-fit: cover;
     }
     .omb-suscripcion-container {
-      width: 90%;
+      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
       z-index: 10;
+      gap: 30px;
+      position: relative;
+      overflow: hidden;
     }
-
+    .omb-imagenes-decoraritvas-suscripcion {
+      position: absolute;
+      top: 32px;
+      width: 100%;
+      display: none;
+      z-index: -1;
+    }
+    .omb-imagenes-decoraritvas-suscripcion img:first-child {
+      width: 60px;
+    }
+    .omb-imagenes-decoraritvas-suscripcion img:last-child {
+      width: 300%;
+      position: relative;
+      top: -10px;
+    }
     .omb-suscripcion-content {
       width: 100%;
       display: flex;
@@ -68,21 +65,22 @@
       align-items: center;
     }
     .omb-texto {
-      width: 85%;
+      width: 90%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
       color: white;
     }
-
     .omb-titulo-section--blanco {
       color: white;
+      text-align: start;
+      font-size: 1.25rem;
     }
     .omb-parrafo-descripcion-section--blanco {
       color: white;
       margin: 0;
-      text-align: center;
+      text-align: start;
+      font-size: 1rem;
     }
 
     .omb-suscripcion-decoracion {
@@ -107,7 +105,7 @@
       border-radius: 20px;
       border: 1px solid #d3d3ca;
       box-sizing: border-box;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Montserrat";
       font-weight: 400;
       font-size: 14px;
       line-height: 24px;
@@ -122,7 +120,7 @@
       border-radius: 20px;
       background-color: var(--color-primario);
       color: black;
-      font-family: "Work Sans", sans-serif;
+      font-family: "Work Sans";
       font-weight: 600;
       font-size: 16px;
       line-height: 22px;
@@ -132,7 +130,6 @@
       border: 1px solid var(--color-primario);
       cursor: pointer;
     }
-
     .omb-input-container button:hover {
       background-color: var(--color-secundario-hover);
     }
@@ -142,8 +139,18 @@
       <img
         src="http://101.44.24.97/sites/default/files/2025-07/fondo-suscripcion.webp"
         alt="fondo suscripcion"
+        width="2564"
+        height="841"
         class="omb-fondo-suscripcion-section" />
       <div class="omb-suscripcion-container">
+        <div class="omb-imagenes-decoraritvas-suscripcion" role="presentation">
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/persona-decoracion.svg"
+            alt="Imagen decorativa persona" />
+          <img
+            src="http://101.44.24.97/sites/default/files/2025-07/lineas-decoracion.svg"
+            alt="Imagen decorativa " />
+        </div>
         <div class="omb-texto">
           <h2 class="omb-titulo-section omb-titulo-section--blanco">
             Suscríbete al boletín

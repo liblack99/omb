@@ -236,6 +236,9 @@ body {
   background-color: var(--color-primario);
   font-weight: 700;
 }
+.omb-imagen-hero {
+  width: 100%;
+}
 .omb-parrafo-hero {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -851,10 +854,10 @@ body {
   display: none;
   z-index: -1;
 }
-.omb-imagenes-decoraritvas-suscripcion svg:first-child {
+.omb-imagenes-decoraritvas-suscripcion img:first-child {
   width: 60px;
 }
-.omb-imagenes-decoraritvas-suscripcion svg:last-child {
+.omb-imagenes-decoraritvas-suscripcion img:last-child {
   width: 300%;
   position: relative;
   top: -10px;
@@ -1196,7 +1199,7 @@ footer {
   color: #fff;
 }
 
-.omb-boton-volver-arriba span svg {
+.omb-boton-volver-arriba span img {
   flex-shrink: 0;
 }
 
@@ -1541,12 +1544,12 @@ footer {
     top: 52px;
     display: block;
   }
-  .omb-imagenes-decoraritvas-suscripcion svg:first-child {
+  .omb-imagenes-decoraritvas-suscripcion img:first-child {
     width: 80px;
     position: relative;
     left: 20px;
   }
-  .omb-imagenes-decoraritvas-suscripcion svg:last-child {
+  .omb-imagenes-decoraritvas-suscripcion img:last-child {
     width: 100%;
     position: relative;
     top: -10px;
@@ -1756,12 +1759,12 @@ footer {
     display: block;
     z-index: -1;
   }
-  .omb-imagenes-decoraritvas-suscripcion svg:first-child {
+  .omb-imagenes-decoraritvas-suscripcion img:first-child {
     width: 85px;
     position: relative;
     left: 20px;
   }
-  .omb-imagenes-decoraritvas-suscripcion svg:last-child {
+  .omb-imagenes-decoraritvas-suscripcion img:last-child {
     width: 100%;
     position: relative;
     top: -10px;
@@ -1775,12 +1778,12 @@ footer {
     left: 0;
     z-index: -1;
   }
-  .omb-imagenes-decoraritvas-suscripcion svg:first-child {
+  .omb-imagenes-decoraritvas-suscripcion img:first-child {
     width: 85px;
     position: relative;
     left: 80px;
   }
-  .omb-imagenes-decoraritvas-suscripcion svg:last-child {
+  .omb-imagenes-decoraritvas-suscripcion img:last-child {
     width: 100%;
     position: relative;
     top: -0px;
@@ -2010,12 +2013,12 @@ footer {
     display: block;
     left: 0px;
   }
-  .omb-imagenes-decoraritvas-suscripcion svg:first-child {
+  .omb-imagenes-decoraritvas-suscripcion img:first-child {
     width: 85px;
     position: relative;
     left: 32px;
   }
-  .omb-imagenes-decoraritvas-suscripcion svg:last-child {
+  .omb-imagenes-decoraritvas-suscripcion img:last-child {
     width: 100%;
     position: relative;
     top: -10px;
