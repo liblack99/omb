@@ -4,9 +4,9 @@
   --color-secundario-hover: #ecff24;
   --color-boder-tab: #8e9c00;
   --color-texto: #000000;
-  --color-enlace: #acbd00;
+  --color-enlace: #515900;
   --color-enlace-hover: #a5ad4a;
-  --color-hover-secundario: #8e9c00;
+  --color-hover-secundario: #515900;
   --color-fondo-seccion-intreres: #f3f4f1;
   --color-strong: #c4d600;
   --color-govco: #004884;
@@ -108,9 +108,9 @@ body {
   justify-content: center;
   transition: all 0.3s ease;
 }
-.omb-input-busqueda-home button:hover {
-  color: #fff;
+.omb-boton-buscar:hover {
   background-color: var(--color-secundario-hover);
+  transform: scale(1.05);
 }
 
 .omb-header {
@@ -122,6 +122,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
+  border-bottom: 2px solid var(--color-primario);
 }
 .omb-icono-menu-boton {
   padding: 8px;
@@ -538,18 +539,12 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
-  background-color: #eeeff1;
-  border-radius: 60px;
 }
 
 .aliados-logos-container img {
   width: 100px;
-  height: 94px;
+  height: 80px;
   object-fit: contain;
-  opacity: 0.85;
-  transition: filter 0.3s ease, opacity 0.3s ease;
-  filter: grayscale(1);
-  mix-blend-mode: multiply;
 }
 .aliados-logos img:hover {
   filter: grayscale(0%);

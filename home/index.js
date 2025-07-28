@@ -238,7 +238,6 @@ botonesTab.forEach((boton) => {
     });
   });
 });
-
 function handleScroll() {
   const scrollStart = 144;
 

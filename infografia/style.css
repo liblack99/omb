@@ -3,7 +3,7 @@
   --color-primario: #dbf000;
   --color-secundario-hover: #8e9c00;
   --color-texto: #000000;
-  --color-enlace: #acbd00;
+  --color-enlace: #515900;
   --color-enlace-hover: #a5ad4a;
 }
 a {
@@ -460,7 +460,7 @@ body {
     color: var(--color-texto);
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-boton-sidebar-mobile {
     display: none;
   }
@@ -478,7 +478,7 @@ body {
     display: none;
   }
   .omb-infografia-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-infografia-content {
     display: flex;
@@ -493,7 +493,7 @@ body {
     gap: 30px;
   }
   .omb-card-infografia {
-    width: 460px;
+    width: 388px;
   }
   .omb-card-infografia > img {
     width: 158px;
