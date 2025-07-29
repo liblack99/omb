@@ -24,10 +24,36 @@ a {
   position: relative;
   padding-bottom: 40px;
 }
-.omb-indicadores-container {
+.omb-quienes-somos-container {
   width: 90%;
 }
-
+.omb-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.omb-card-texto {
+  width: 100%;
+}
+.omb-titulo-card-texto {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  color: var(--color-texto);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.omb-card-texto p {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color-texto);
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
 .omb-titulo-section {
   font-weight: 600;
   font-size: 1.5rem;
@@ -53,7 +79,7 @@ a {
   text-align: center;
 }
 
-.omb-cards-planes-politica-container {
+.omb-cards-container {
   width: 100%;
   display: flex;
   align-items: center;
@@ -115,7 +141,6 @@ a {
   font-weight: 600;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
-  text-decoration: underline;
   font-size: 1.125rem;
   margin-top: 0.5rem;
   margin-bottom: 0.625rem;
@@ -156,8 +181,9 @@ a {
 }
 .omb-parrafo-card--variante-card-icono {
   padding: 0;
-  -webkit-line-clamp: 7;
-  min-height: 168px;
+  -webkit-line-clamp: none;
+  min-height: 192px;
+  max-height: 264px;
 }
 
 .omb-enlaces {
@@ -179,16 +205,36 @@ a {
 }
 
 @media (min-width: 768px) {
-  .omb-cards-movilidad-container {
-    place-items: start;
-    grid-template-columns: 1fr 1fr;
+  .omb-card--con-icono {
+    width: 320px;
+  }
+  .omb-cards-container {
     width: 100%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
-  .omb-indicadores-container {
+  .omb-quienes-somos-container {
     max-width: 960px;
   }
+  .omb-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .omb-cards-texto-container {
+    width: 297px;
+  }
+  .omb-cards-container {
+    justify-content: start;
+    width: calc(100% - 297px - 30px);
+  }
+  .omb-card--con-icono {
+    width: 282px;
+  }
+  .omb-parrafo-card--variante-card-icono {
+    min-height: 264px;
+  }
+
   .omb-titulo-section {
     font-weight: 600;
     font-size: 2rem;
@@ -207,8 +253,26 @@ a {
 }
 
 @media (min-width: 1140px) and (max-width: 1359px) {
-  .omb-indicadores-container {
+  .omb-quienes-somos-container {
     max-width: 1140px;
+  }
+  .omb-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .omb-cards-texto-container {
+    width: 360px;
+  }
+  .omb-cards-container {
+    justify-content: start;
+    width: calc(100% - 360px - 30px);
+  }
+  .omb-card--con-icono {
+    width: 360px;
+  }
+  .omb-parrafo-card--variante-card-icono {
+    min-height: 264px;
   }
   .omb-titulo-section {
     font-weight: 600;
@@ -227,9 +291,27 @@ a {
   }
 }
 
-@media (min-width: 1360px) {
-  .omb-indicadores-container {
-    max-width: 1280px;
+@media (min-width: 1280px) {
+  .omb-quienes-somos-container {
+    max-width: 1140px;
+  }
+  .omb-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .omb-cards-texto-container {
+    width: 378px;
+  }
+  .omb-cards-container {
+    justify-content: start;
+    width: calc(100% - 378px - 30px);
+  }
+  .omb-card--con-icono {
+    width: 350px;
+  }
+  .omb-parrafo-card--variante-card-icono {
+    min-height: 192px;
   }
   .omb-titulo-section {
     font-weight: 600;
