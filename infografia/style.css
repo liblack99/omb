@@ -192,7 +192,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   gap: 16px;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease;
 }
 .omb-card-infografia:hover {
   border: 1px solid #000;
