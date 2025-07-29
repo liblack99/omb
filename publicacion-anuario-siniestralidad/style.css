@@ -216,6 +216,18 @@ main {
   color: var(--color-texto);
   position: relative;
 }
+.omb-opcion-selecionada > span {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  transition: all 0.3s ease;
+}
+.omb-opcion-selecionada.activo > span {
+  transform: rotate(-90deg);
+}
+.omb-opcion-selecionada--ordenar {
+  width: 164px;
+}
 .omb-opcion-selecionada--ordenar {
   width: 140px;
 }
@@ -241,6 +253,9 @@ main {
   transition: all 0.3s ease;
 }
 .omb-opciones li:hover {
+  background-color: var(--color-primario);
+}
+.omb-opciones li:focus-visible {
   background-color: var(--color-primario);
 }
 

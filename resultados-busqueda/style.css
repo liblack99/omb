@@ -160,6 +160,9 @@ a {
 .omb-opciones--ordenar {
   width: 160px;
 }
+.omb-label-buscador {
+  width: 100%;
+}
 
 .omb-label-buscador P {
   font-size: 1rem;
@@ -338,7 +341,7 @@ a {
     justify-content: space-between;
     align-items: center;
   }
-  .omb-buscador-container--escritorio {
+  .omb-label-buscador {
     width: 280px;
   }
 }
@@ -352,7 +355,7 @@ a {
     justify-content: space-between;
     align-items: center;
   }
-  .omb-buscador-container--escritorio {
+  .omb-label-buscador {
     width: 360px;
   }
 }
@@ -373,7 +376,7 @@ a {
     justify-content: space-between;
     align-items: center;
   }
-  .omb-buscador-container--escritorio {
+  .omb-label-buscador {
     width: 360px;
   }
 }

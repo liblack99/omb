@@ -4,17 +4,34 @@ const flechaSelect = document.querySelector(".icono-flecha-select");
 
 // Al cambiar el select de tipo de contenido
 
+function cerrarListaSiPierdeFoco(boton) {
+  const lista = [...listasDeOpciones].find(
+    (l) => l.dataset.select === boton.dataset.select
+  );
+
+  setTimeout(() => {
+    const focoActual = document.activeElement;
+
+    const focoEnBoton = boton.contains(focoActual);
+    const focoEnLista = lista && lista.contains(focoActual);
+
+    // Si el foco NO está ni en el botón ni en la lista → cierra
+    if (!focoEnBoton && !focoEnLista) {
+      lista?.classList.add("hidden");
+      boton.classList.remove("activo");
+    }
+  }, 100);
+}
+
 opcionSeleccionada.forEach((boton) => {
   const manejarEvento = () => {
     const valorSeleccionado = boton.dataset.select;
 
     listasDeOpciones.forEach((lista) => {
       if (lista.dataset.select === valorSeleccionado) {
-        // Toggle SOLO en la lista correspondiente
         lista.classList.toggle("hidden");
         boton.classList.toggle("activo");
       } else {
-        // Oculta las otras listas
         lista.classList.add("hidden");
       }
     });
@@ -24,8 +41,45 @@ opcionSeleccionada.forEach((boton) => {
 
   boton.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault(); // evita que la página se desplace con la barra espaciadora
+      e.preventDefault();
       manejarEvento();
     }
   });
+
+  // Detecta si se va el foco desde el botón
+  boton.addEventListener("blur", () => cerrarListaSiPierdeFoco(boton));
+});
+
+// Detecta si se va el foco desde la lista también
+listasDeOpciones.forEach((lista) => {
+  lista.addEventListener(
+    "blur",
+    (e) => {
+      const boton = [...opcionSeleccionada].find(
+        (b) => b.dataset.select === lista.dataset.select
+      );
+      cerrarListaSiPierdeFoco(boton);
+    },
+    true
+  ); // true para capturar blur de hijos
+});
+
+// Cierra si haces clic fuera
+document.addEventListener("click", (e) => {
+  const hizoClickEnSelect = [...opcionSeleccionada].some((boton) =>
+    boton.contains(e.target)
+  );
+
+  const hizoClickEnLista = [...listasDeOpciones].some((lista) =>
+    lista.contains(e.target)
+  );
+
+  if (!hizoClickEnSelect && !hizoClickEnLista) {
+    listasDeOpciones.forEach((lista) => {
+      lista.classList.add("hidden");
+    });
+    opcionSeleccionada.forEach((boton) => {
+      boton.classList.remove("activo");
+    });
+  }
 });
