@@ -3,7 +3,7 @@
   --color-primario: #dbf000;
   --color-secundario-hover: #8e9c00;
   --color-texto: #000000;
-  --color-enlace: #acbd00;
+  --color-enlace: #515900;
   --color-enlace-hover: #a5ad4a;
   --color-fondo-seccion-intreres: #f3f4f1;
 }
@@ -148,7 +148,7 @@ body {
 }
 
 .omb-swiper {
-  width: 90%;
+  width: 80%;
   padding: 4px;
   box-sizing: border-box;
 }
@@ -212,10 +212,10 @@ body {
 }
 
 .omb-boton-prev {
-  left: -16px;
+  left: -0px;
 }
 .omb-boton-next {
-  right: -16px;
+  right: -0px;
 }
 .omb-boton-prev,
 .omb-boton-next {
@@ -357,6 +357,9 @@ body {
   color: var(--color-enlace-hover);
 }
 @media (min-width: 768px) {
+  .omb-swiper {
+    width: 90%;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1139px) {
   .omb-compartir-container,
@@ -384,6 +387,9 @@ body {
     font-size: 1.25rem;
     line-height: 1.875rem;
     color: var(--color-texto);
+  }
+  .omb-swiper {
+    width: 90%;
   }
   .omb-boton-prev,
   .omb-boton-next {
@@ -418,16 +424,19 @@ body {
     line-height: 1.875rem;
     color: var(--color-texto);
   }
+  .omb-swiper {
+    width: 90%;
+  }
   .omb-boton-prev,
   .omb-boton-next {
     width: 48px;
     height: 48px;
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-compartir-container,
   .omb-de-interes-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-evento-container {
     width: 800px;
@@ -451,6 +460,9 @@ body {
     font-size: 1.25rem;
     line-height: 1.875rem;
     color: var(--color-texto);
+  }
+  .omb-swiper {
+    width: 90%;
   }
   .omb-boton-prev,
   .omb-boton-next {

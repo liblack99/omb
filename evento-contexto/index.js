@@ -35,15 +35,15 @@ const botonPausar = `  <button
                   d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
               </svg>
 
-              Pausar
+              Detener
             </button>`;
 
-const swiperEventosInteres = new Swiper(".eventosSwiper", {
+const swiperInteres = new Swiper(".sectionInteresSwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
-    nextEl: ".omb-boton-eventos-next",
-    prevEl: ".omb-boton-eventos-prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
@@ -55,25 +55,32 @@ const swiperEventosInteres = new Swiper(".eventosSwiper", {
     disableOnInteration: false,
   },
   breakpoints: {
-    640: {slidesPerView: 2},
-    1024: {slidesPerView: 3},
-    1280: {slidesPerView: 3},
+    480: {slidesPerView: 1, spaceBetween: 30},
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {slidesPerView: 3, spaceBetween: 30},
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
   },
 });
-let isPlayingEventos = true;
-const pauseButtonEventosInteres = document.getElementById(
-  "controlCarrucelEventosInteres"
+let isPlaying = true;
+const pauseButtonTablerosInteres = document.getElementById(
+  "controlCarrucelInteres"
 );
-if (pauseButtonEventosInteres) {
-  pauseButtonEventosInteres.addEventListener("click", () => {
-    pauseButtonEventosInteres.innerHTML = "";
-    if (isPlayingEventos) {
-      swiperEventosInteres.autoplay.stop();
-      pauseButtonEventosInteres.innerHTML = botonReproducir;
+if (pauseButtonTablerosInteres) {
+  pauseButtonTablerosInteres.addEventListener("click", () => {
+    pauseButtonTablerosInteres.innerHTML = "";
+    if (isPlaying) {
+      swiperInteres.autoplay.stop();
+      pauseButtonTablerosInteres.innerHTML = botonReproducir;
     } else {
-      swiperEventosInteres.autoplay.start();
+      swiperInteres.autoplay.start();
       pauseButtonTablerosInteres.innerHTML = botonPausar;
     }
-    isPlayingEventos = !isPlayingEventos;
+    isPlaying = !isPlaying;
   });
 }

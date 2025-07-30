@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SDM-preguntas-frecuentes</title>
+  </head>
+  <body>
+    <main>
+      <section class="sdm-section">
+        <div class="sdm-filtro-container">
+          <h1 class="sdm-titulo-section sdm" id="tituloSection">
+            Preguntas frecuentes
+          </h1>
+          <div class="sdm-filtros" id="filtros">
+            <div class="sdm-inputs-container">
+              <div class="sdm-select sdm-select--con-dos-elementos">
+                <div>
+                  <p>Categoria</p>
+                  <div
+                    class="sdm-opcion-selecionada sdm-opcion-selecionada--ordenar"
+                    id="selectTipoContenido"
+                    role="button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    tabindex="0"
+                    data-select="categoria">
+                    Seleccionar
+                    <span class="icono-flecha-select">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 512"
+                        width="12">
+                        <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                        <path
+                          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <ul
+                    class="sdm-opciones sdm-opciones--ordenar hidden"
+                    role="listbox"
+                    id="listbox-categoria"
+                    aria-labelledby="selectTipoContenido"
+                    data-select="categoria">
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="categoria"
+                      data-value="Información general">
+                      Información general
+                    </li>
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="categoria"
+                      data-value="Inmovilización">
+                      Inmovilización
+                    </li>
+                    <li
+                      role="option"
+                      tabindex="0"
+                      data-select="categoria"
+                      data-value="Multas y comparendos">
+                      Multas y comparendos
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sdm-select">
+                <p id="labelFecha">Fecha</p>
+                <div
+                  class="sdm-opcion-selecionada"
+                  id="selectFecha"
+                  role="button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-labelledby="labelFecha"
+                  tabindex="0"
+                  data-select="Fecha">
+                  Seleccionar
+                  <span class="icono-flecha-select" aria-hidden="true">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 512"
+                      width="12">
+                      <path
+                        d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                    </svg>
+                  </span>
+                </div>
+                <ul
+                  class="sdm-opciones hidden"
+                  id="listboxFecha"
+                  role="listbox"
+                  aria-labelledby="labelFecha"
+                  data-select="Fecha">
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-select="Fecha"
+                    data-value="fecha-reciente">
+                    Por fecha recientes
+                  </li>
+                  <li
+                    role="option"
+                    tabindex="0"
+                    data-select="Fecha"
+                    data-value="fecha-antigua">
+                    Por fecha antiguas
+                  </li>
+                </ul>
+              </div>
+              <label for="inputBusqueda" class="sdm-label-buscador">
+                <p>Buscar palabra clave</p>
+                <div
+                  class="sdm-buscador-container sdm-buscador-container--escritorio">
+                  <input
+                    type="text"
+                    placeholder="Buscar"
+                    aria-label="Buscador"
+                    class="sdm-input-buscar"
+                    id="inputBusqueda" />
+                  <button
+                    type="button"
+                    aria-label="Buscar"
+                    class="sdm-boton-buscar">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      width="16"
+                      fill="currentColor">
+                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                      <path
+                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                    </svg>
+                  </button>
+                </div>
+              </label>
+              <button class="sdm-boton sdm-boton--primario">Aplica</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sdm-section">
+        <div class="sdm-container">
+          <div class="sdm-cards-resultados-container" id="resultadosContainer">
+            <article
+              id="resultadoCard"
+              tabindex="0"
+              data-categoria="Noticias y Blogs"
+              data-fecha="2024">
+              <div class="sdm-card-resultado">
+                <div class="sdm-card-tipo">Multas y Comparendos</div>
+                <p class="sdm-fecha sdm-fecha--padding">
+                  Fecha de acutalizacion: Mar, 29/07/2025 - 21:12
+                </p>
+                <h2 class="sdm-titulo-card sdm-titulo-card--con-icono">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none">
+                      <path
+                        d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  ¿Conoce usted la normativa, criterios técnicos, tipos de
+                  dispositivos, condiciones de señalización y ubicación de los
+                  dispositivos de detección electrónica de infracciones de
+                  tránsito?
+                </h2>
+                <p class="sdm-parrafo-card sdm-parrafo-card--padding">
+                  La Ley 1843 del 14 de julio de 2017 regula la instalación,
+                  señalización adecuada y puesta en operación de los sistemas
+                  automáticos, semiautomáticos y otros medios tecnológicos para
+                  la detección de infracciones de tránsito (SAST). Estos
+                  sistemas comprenden todas las ayudas tecnológicas, como
+                  cámaras de video y equipos electrónicos de lectura, que
+                  permiten identificar con precisión al vehículo o al conductor,
+                  conforme a lo establecido en el Par.
+                </p>
+                <div class="contenedor-enlace">
+                  <a href="" class="sdm-enlaces">Mas Informacion</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              id="resultadoCard"
+              tabindex="0"
+              data-categoria="Multas y Comparendos"
+              data-fecha="2024">
+              <div class="sdm-card-resultado">
+                <div class="sdm-card-tipo">Multas y Comparendos</div>
+                <p class="sdm-fecha sdm-fecha--padding">
+                  Fecha de acutalizacion: Mar, 29/07/2025 - 21:11
+                </p>
+                <h2 class="sdm-titulo-card sdm-titulo-card--con-icono">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none">
+                      <path
+                        d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  ¿Qué hacer si un comparendo o acuerdo de pago ya cancelado aún
+                  aparece en el sistema de la Secretaría de Movilidad o en el
+                  SIMIT?
+                </h2>
+                <p class="sdm-parrafo-card sdm-parrafo-card--padding">
+                  La no actualización en el sistema de información de la
+                  Secretaría Distrital de Movilidad puede encontrarse
+                  relacionado con la realización del curso en un CIA o un
+                  organismo diferente a la Secretaría de Movilidad, por ende, es
+                  necesario seguir el procedimiento descrito en Validación e
+                  ingreso de cursos pedagógicos sobre normas de tránsito
+                  realizados en CIAS y organismos de tránsito
+                </p>
+                <div class="contenedor-enlace">
+                  <a href="" class="sdm-enlaces">Mas Informacion</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              id="resultadoCard"
+              tabindex="0"
+              data-categoria="Multas y Comparendos"
+              data-fecha="2024">
+              <div class="sdm-card-resultado">
+                <div class="sdm-card-tipo">Multas y Comparendos</div>
+                <p class="sdm-fecha sdm-fecha--padding">
+                  Fecha de acutalizacion: Mar, 29/07/2025 - 21:12
+                </p>
+                <h2 class="sdm-titulo-card sdm-titulo-card--con-icono">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none">
+                      <path
+                        d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  ¿Conoce usted la normativa, criterios técnicos, tipos de
+                  dispositivos, condiciones de señalización y ubicación de los
+                  dispositivos de detección electrónica de infracciones de
+                  tránsito?
+                </h2>
+                <p class="sdm-parrafo-card sdm-parrafo-card--padding">
+                  La Ley 1843 del 14 de julio de 2017 regula la instalación,
+                  señalización adecuada y puesta en operación de los sistemas
+                  automáticos, semiautomáticos y otros medios tecnológicos para
+                  la detección de infracciones de tránsito (SAST). Estos
+                  sistemas comprenden todas las ayudas tecnológicas, como
+                  cámaras de video y equipos electrónicos de lectura, que
+                  permiten identificar con precisión al vehículo o al conductor,
+                  conforme a lo establecido en el Par.
+                </p>
+                <div class="contenedor-enlace">
+                  <a href="" class="sdm-enlaces">Mas Informacion</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              id="resultadoCard"
+              tabindex="0"
+              data-categoria="Multas y Comparendos"
+              data-fecha="2024">
+              <div class="sdm-card-resultado">
+                <div class="sdm-card-tipo">Multas y Comparendos</div>
+                <p class="sdm-fecha sdm-fecha--padding">
+                  Fecha de acutalizacion: Mar, 29/07/2025 - 21:08
+                </p>
+                <h2 class="sdm-titulo-card sdm-titulo-card--con-icono">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none">
+                      <path
+                        d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  ¿Los infractores a las normas de tránsito sancionados con
+                  amonestación y/o comparendos educativos, cuánto tiempo tienen
+                  para asistir al curso?
+                </h2>
+                <p class="sdm-parrafo-card sdm-parrafo-card--padding">
+                  Tanto los comparendos educativos (infracciones tipo “G”) como
+                  las amonestaciones (infracciones tipo “H”) implican la
+                  obligación de asistir a un curso de educación vial, el cual
+                  debe realizarse en los puntos autorizados por la Secretaría
+                  Distrital de Movilidad. Ver puntos aquí
+                </p>
+                <div class="contenedor-enlace">
+                  <a href="" class="sdm-enlaces">Mas Informacion</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              id="resultadoCard"
+              tabindex="0"
+              data-categoria="Información General"
+              data-fecha="2024">
+              <div class="sdm-card-resultado">
+                <div class="sdm-card-tipo">Información General</div>
+                <p class="sdm-fecha sdm-fecha--padding">
+                  Fecha de acutalizacion: Mar, 29/07/2025 - 20:38
+                </p>
+                <h2 class="sdm-titulo-card sdm-titulo-card--con-icono">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none">
+                      <path
+                        d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  ¿En qué consiste el permiso de circulación restringida?
+                </h2>
+                <p class="sdm-parrafo-card sdm-parrafo-card--padding">
+                  Es el documento que autoriza la circulación de vehículos
+                  automotores no matriculados por vías públicas o privadas
+                  abiertas al público, únicamente con su conductor y, si es
+                  necesario, un acompañante. Este permiso no autoriza la
+                  prestación de servicio público de transporte en ningún caso.
+                  Art. 3° de la Resolución No. 20213040045815 de 10 de febrero
+                  de 2021
+                </p>
+                <div class="contenedor-enlace">
+                  <a href="" class="sdm-enlaces">Mas Informacion</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              id="resultadoCard"
+              tabindex="0"
+              data-categoria="Información General"
+              data-fecha="2024">
+              <div class="sdm-card-resultado">
+                <div class="sdm-card-tipo">Información General</div>
+                <p class="sdm-fecha sdm-fecha--padding">
+                  Fecha de acutalizacion: Mar, 29/07/2025 - 20:37
+                </p>
+                <h2 class="sdm-titulo-card sdm-titulo-card--con-icono">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none">
+                      <path
+                        d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  ¿Cuáles son las condiciones para el registro y circulación que
+                  deben cumplir los vehículos tipo ciclomotor, tricimoto y
+                  cuadriciclo?
+                </h2>
+                <p class="sdm-parrafo-card sdm-parrafo-card--padding">
+                  Las condiciones para el registro y la circulación de vehículos
+                  automotores tipo ciclomotor, tricimoto y cuadriciclo ya sean
+                  de combustión interna, eléctricos o con cualquier otro tipo de
+                  energía, están establecidas en la Resolución 160 del 2 de
+                  febrero de 2017, compilada en el Capítulo IX de la Resolución
+                  20223040045295 del 4 de agosto de 2022, ambas expedidas por el
+                  Ministerio de Transporte.
+                </p>
+                <div class="contenedor-enlace">
+                  <a href="" class="sdm-enlaces">Mas Informacion</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              id="resultadoCard"
+              tabindex="0"
+              data-categoria="Información General"
+              data-fecha="2024">
+              <div class="sdm-card-resultado">
+                <div class="sdm-card-tipo">Información General</div>
+                <p class="sdm-fecha sdm-fecha--padding">
+                  Fecha de acutalizacion: Mar, 29/07/2025 - 20:34
+                </p>
+                <h2 class="sdm-titulo-card sdm-titulo-card--con-icono">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none">
+                      <path
+                        d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  ¿Se requiere autorización para la circulación de un vehículo
+                  con vidrios oscurecidos?
+                </h2>
+                <p class="sdm-parrafo-card sdm-parrafo-card--padding">
+                  Los vehículos que posean vidrios polarizados, entintados u
+                  oscurecidos, que cumplan las características, establecidas en
+                  los 1 y 2 del Art. 2° de la Resolución No 003777 del 17 de
+                  junio de 2003, no requieren autorización alguna.
+                </p>
+                <div class="contenedor-enlace">
+                  <a href="" class="sdm-enlaces">Mas Informacion</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              id="resultadoCard"
+              tabindex="0"
+              data-categoria="Información General"
+              data-fecha="2024">
+              <div class="sdm-card-resultado">
+                <div class="sdm-card-tipo">Información General</div>
+                <p class="sdm-fecha sdm-fecha--padding">
+                  Fecha de acutalizacion: Mar, 29/07/2025 - 21:12
+                </p>
+                <h2 class="sdm-titulo-card sdm-titulo-card--con-icono">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none">
+                      <path
+                        d="M9.60611 10.2814C11.2622 8.62642 14.0144 8.62642 15.6705 10.2814C17.1598 11.77 17.3802 14.1429 16.156 15.8547L16.1232 15.9024C15.8164 16.3281 15.2207 16.4293 14.7948 16.1227C14.3659 15.816 14.2646 15.2206 14.5714 14.7949L14.6042 14.7472C15.2862 13.7915 15.179 12.4846 14.348 11.6539C13.4127 10.7191 11.8907 10.7191 10.9524 11.6539L7.61047 14.9973C6.67192 15.9083 6.67192 17.4535 7.61047 18.3913C8.43851 19.2219 9.74909 19.3291 10.7022 18.6473L10.7499 18.5878C11.1788 18.3079 11.7745 18.4062 12.0783 18.8349C12.3851 19.2636 12.2868 19.8591 11.8579 20.1657L11.8103 20.1985C10.0708 21.4221 7.75046 21.2256 6.26148 19.74C4.57951 18.0579 4.57951 15.3308 6.26148 13.6516L9.60611 10.2814ZM18.3929 17.6917C16.71 19.3738 13.9846 19.3738 12.3017 17.6917C10.8124 16.2031 10.6188 13.857 11.843 12.1452L11.8758 12.0975C12.1558 11.6718 12.7515 11.5706 13.2042 11.8772C13.6331 12.1571 13.7344 12.7525 13.4276 13.205L13.3949 13.2527C12.7128 14.1816 12.82 15.5153 13.651 16.346C14.5863 17.2808 16.1083 17.2808 17.0466 16.346L20.3885 13.0026C21.3268 12.0648 21.3268 10.5196 20.3885 9.60859C19.5605 8.77885 18.2499 8.67048 17.2968 9.35255L17.2491 9.3853C16.8202 9.69195 16.2245 9.56691 15.9207 9.16439C15.6139 8.73627 15.7122 8.14113 16.1411 7.83537L16.1888 7.80203C17.9014 6.57873 20.2485 6.77282 21.7378 8.26111C23.4207 9.94204 23.4207 12.6691 21.7378 14.3483L18.3929 17.6917Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                  ¿Cuándo se requiere permiso o la matrícula para halar un
+                  remolque o semirremolque?
+                </h2>
+                <p class="sdm-parrafo-card sdm-parrafo-card--padding">
+                  En Colombia, no se exige un permiso especial general para que
+                  un vehículo automotor pueda halar un remolque o semirremolque.
+                  Sin embargo, es necesario tener en cuenta ciertas condiciones
+                  que dependen del tipo de vehículo que realiza el remolque y
+                  del tipo de remolque utilizado. A continuación, se explican
+                  las principales consideraciones normativas:<br />
+                  <strong>Tipos de vehículos y remolques </strong>(Ley 769 de
+                  2002 - Art. 2)
+                </p>
+                <div class="contenedor-enlace">
+                  <a href="" class="sdm-enlaces">Mas Informacion</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="sdm-sin-resultado hidden" id="sinResultados">
+            <p class="sdm-parrafo-card">no se encontro resultados</p>
+          </div>
+          <nav
+            class="sdm-paginacion-numerica"
+            id="paginacion"
+            aria-label="Paginación de temáticas">
+            <ul>
+              <li><button class="sdm-paginacion-enlace">Anterior</button></li>
+              <li>
+                <button
+                  class="sdm-paginacion-enlace sdm-pagination-numero sdm-paginacion-enlace--activo">
+                  1
+                </button>
+              </li>
+              <li>
+                <button class="sdm-paginacion-enlace sdm-pagination-numero">
+                  2
+                </button>
+              </li>
+              <li>
+                <button class="sdm-paginacion-enlace sdm-pagination-numero">
+                  3
+                </button>
+              </li>
+              <li>
+                <button class="sdm-paginacion-enlace">Siguiente</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

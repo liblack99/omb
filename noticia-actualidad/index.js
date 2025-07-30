@@ -35,15 +35,15 @@ const botonPausar = `  <button
                   d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
               </svg>
 
-              Pausar
+              Detener
             </button>`;
 
-const swiperNoticiasInteres = new Swiper(".noticiasSwiper", {
+const swiperInteres = new Swiper(".sectionInteresSwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
-    nextEl: ".omb-boton-noticias-next",
-    prevEl: ".omb-boton-noticias-prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
@@ -55,25 +55,32 @@ const swiperNoticiasInteres = new Swiper(".noticiasSwiper", {
     disableOnInteration: false,
   },
   breakpoints: {
-    640: {slidesPerView: 2},
-    1024: {slidesPerView: 3},
-    1280: {slidesPerView: 4},
+    480: {slidesPerView: 1, spaceBetween: 30},
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {slidesPerView: 3, spaceBetween: 30},
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
   },
 });
-let isPlayingNoticias = true;
-const pauseButtonNoticiasInteres = document.getElementById(
-  "controlCarrucelNoticiasInteres"
+let isPlaying = true;
+const pauseButtonTablerosInteres = document.getElementById(
+  "controlCarrucelInteres"
 );
-if (pauseButtonNoticiasInteres) {
-  pauseButtonNoticiasInteres.addEventListener("click", () => {
-    pauseButtonNoticiasInteres.innerHTML = "";
-    if (isPlayingNoticias) {
-      swiperNoticiasInteres.autoplay.stop();
-      pauseButtonNoticiasInteres.innerHTML = botonReproducir;
+if (pauseButtonTablerosInteres) {
+  pauseButtonTablerosInteres.addEventListener("click", () => {
+    pauseButtonTablerosInteres.innerHTML = "";
+    if (isPlaying) {
+      swiperInteres.autoplay.stop();
+      pauseButtonTablerosInteres.innerHTML = botonReproducir;
     } else {
-      swiperNoticiasInteres.autoplay.start();
+      swiperInteres.autoplay.start();
       pauseButtonTablerosInteres.innerHTML = botonPausar;
     }
-    isPlayingNoticias = !isPlayingNoticias;
+    isPlaying = !isPlaying;
   });
 }

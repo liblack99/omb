@@ -1,12 +1,51 @@
-const swiperPublicacionesInteres = new Swiper(".infografiasSwiper", {
+const botonReproducir = `<button
+              type="button"
+              aria-label="Reproducir contenido"
+              title="Reproducir contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome -->
+                <path
+                  d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" />
+              </svg>
+              Reproducir
+            </button>`;
+
+const botonPausar = `  <button
+              type="button"
+              aria-label="Pausar contenido"
+              title="Pausar contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                >
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+              </svg>
+
+              Detener
+            </button>`;
+const swiperInteres = new Swiper(".sectionInteresSwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
-    nextEl: ".omb-button-infografia-next",
-    prevEl: ".omb-button-infografia-prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".omb-paginacion",
+    el: ".swiper-pagination",
     clickable: true,
   },
   loop: true,
@@ -15,30 +54,32 @@ const swiperPublicacionesInteres = new Swiper(".infografiasSwiper", {
     disableOnInteration: false,
   },
   breakpoints: {
-    480: {slidesPerView: 1, spaceBetween: 20},
+    480: {slidesPerView: 1, spaceBetween: 30},
     768: {
-      slidesPerView: 1,
-      spaceBetween: 24,
+      slidesPerView: 2,
+      spaceBetween: 30,
     },
-    1024: {slidesPerView: 2},
-    1440: {slidesPerView: 3},
+    1024: {slidesPerView: 2, spaceBetween: 30},
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
   },
 });
-
-let isPlayingPublicacionesInteres = true;
-const pauseButtonPublicacionesInteres = document.getElementById(
-  "controlCarrucelPublicaionesInteres"
+let isPlaying = true;
+const pauseButtonTablerosInteres = document.getElementById(
+  "controlCarrucelInteres"
 );
-if (pauseButtonPublicacionesInteres) {
-  pauseButtonPublicacionesInteres.addEventListener("click", () => {
-    pauseButtonPublicacionesInteres.innerHTML = "";
-    if (isPlayingPublicacionesInteres) {
-      swiperPublicacionesInteres.autoplay.stop();
-      pauseButtonPublicacionesInteres.innerHTML = botonReproducir;
+if (pauseButtonTablerosInteres) {
+  pauseButtonTablerosInteres.addEventListener("click", () => {
+    pauseButtonTablerosInteres.innerHTML = "";
+    if (isPlaying) {
+      swiperInteres.autoplay.stop();
+      pauseButtonTablerosInteres.innerHTML = botonReproducir;
     } else {
-      swiperPublicacionesInteres.autoplay.start();
-      pauseButtonPublicacionesInteres.innerHTML = botonPausar;
+      swiperInteres.autoplay.start();
+      pauseButtonTablerosInteres.innerHTML = botonPausar;
     }
-    isPlayingPublicacionesInteres = !isPlayingPublicacionesInteres;
+    isPlaying = !isPlaying;
   });
 }

@@ -4,7 +4,7 @@
   --color-secundario-hover: #ecff24;
   --color-boder-tab: #8e9c00;
   --color-texto: #000000;
-  --color-enlace: #acbd00;
+  --color-enlace: #515900;
   --color-enlace-hover: #a5ad4a;
   --color-fondo-seccion-intreres: #f3f4f1;
 }
@@ -635,32 +635,6 @@ body {
 .omb-boton-next::after {
   font-size: 32px;
   font-weight: 900;
-}
-
-.omb-botom-control-carrousel-tableros-interes {
-  position: absolute;
-  z-index: 20;
-  bottom: -40px;
-  left: 0;
-  min-width: 120px;
-  height: 34px;
-  width: auto;
-}
-
-.omb-botom-control-carrousel-tableros-interes button {
-  color: #565747;
-  border-radius: 8px;
-  font-family: "Worl sans", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  width: auto;
-  display: flex;
-  padding: 8px;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: inherit;
 }
 
 .omb-card {

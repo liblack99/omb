@@ -3,7 +3,7 @@
   --color-primario: #dbf000;
   --color-secundario-hover: #8e9c00;
   --color-texto: #00000;
-  --color-enlace: #acbd00;
+  --color-enlace: #515900;
   --color-enlace-hover: #a5ad4a;
   --color-fondo-seccion-intreres: #f3f4f1;
 }
@@ -198,9 +198,9 @@ body {
     color: var(--color-texto);
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-comunidad-container {
-    max-width: 1280px;
+    max-width: 1140px;
   }
   .omb-cards-comunidad-container {
     grid-template-columns: 1fr 1fr 1fr;

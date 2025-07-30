@@ -3,7 +3,7 @@
   --color-primario: #dbf000;
   --color-secundario-hover: #8e9c00;
   --color-texto: #000000;
-  --color-enlace: #acbd00;
+  --color-enlace: #515900;
   --color-enlace-hover: #a5ad4a;
 }
 
@@ -357,7 +357,7 @@ main {
 .omb-paginacion-numerica ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 8px;
   padding-left: 0;
   align-items: center;
 }
@@ -376,7 +376,7 @@ main {
   line-height: 1.688rem;
   padding: 0px 16px;
   transition: all 0.3s ease-in;
-  color: var(--color-enlace-hover);
+  color: var(--color-enlace);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,10 +384,14 @@ main {
   border: none;
   background-color: inherit;
 }
+.omb-paginacion-enlace:hover {
+  color: var(--color-enlace-hover);
+  text-decoration: underline;
+}
 
 .omb-pagination-numero {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   padding: 0px;
   border: none;
   background-color: inherit;
@@ -503,7 +507,7 @@ main {
     line-height: 1.625rem;
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1280px) {
   .omb-card-info {
     display: flex;
     flex-direction: row;
@@ -515,7 +519,7 @@ main {
     max-width: 1140px;
   }
   .omb-card-categoria-selecionada {
-    width: 360px;
+    width: 356px;
   }
   .omb-enlaces-hero-container--variante {
     gap: 16px;
@@ -523,44 +527,6 @@ main {
   .omb-titulo-card-hero {
     font-size: 1.5rem;
     line-height: 1.625rem;
-  }
-
-  .omb-titulo-section {
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 2.75rem;
-    color: var(--color-texto);
-    font-family: "Montserrat", sans-serif;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .omb-parrafo-descripcion-section {
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    color: var(--color-texto);
-  }
-  .omb-titulo-publicaciones {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-@media (min-width: 1440px) {
-  .omb-card-info {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-  }
-  .omb-card-info-container,
-  .omb-encuestas-container,
-  .omb-siniestralidad-container {
-    max-width: 1280px;
-  }
-  .omb-card-categoria-selecionada {
-    width: 360px;
-  }
-  .omb-enlaces-hero-container--variante {
-    gap: 16px;
   }
 
   .omb-titulo-section {

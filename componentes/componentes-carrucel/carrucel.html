@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Document</title>
+    <style>
+      .omb-carrusel-container {
+        position: relative;
+        width: 100%;
+      }
+
+      .omb-swiper {
+        width: 80%;
+        padding: 4px;
+        box-sizing: border-box;
+      }
+
+      .omb-wrapper {
+        width: 100%;
+      }
+
+      .omb-swiper-slide {
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      .omb-paginacion {
+        position: absolute;
+        bottom: -32px !important;
+      }
+      .omb-paginacion-variante {
+        bottom: -60px !important;
+      }
+
+      .omb-paginacion > .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: white !important;
+        border: 2px solid #4b521d;
+        border-radius: 50%;
+        opacity: 1;
+        transition: all 0.3s ease;
+      }
+      /* Bullet activo */
+      .omb-paginacion > .swiper-pagination-bullet-active {
+        background-color: #4b521d !important;
+        border-color: #4b521d;
+        transform: scale(1.2);
+      }
+
+      .omb-boton-prev {
+        left: -0px;
+      }
+      .omb-boton-next {
+        right: -0px;
+      }
+      .omb-boton-prev,
+      .omb-boton-next {
+        color: #565747 !important;
+        background-color: #f3f4f1cc;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        border-width: 1px;
+        transition: all 0.5s ease;
+        border: 1px solid #d9e36e;
+      }
+      .omb-boton-prev:hover,
+      .omb-boton-next:hover {
+        color: black !important;
+        background-color: var(--color-primario);
+      }
+
+      .omb-boton-prev::after,
+      .omb-boton-next::after {
+        font-size: 32px;
+        font-weight: 900;
+      }
+      .omb-botom-control-carrousel {
+        position: absolute;
+        z-index: 20;
+        bottom: -40px;
+        min-width: 120px;
+        height: 34px;
+        width: auto;
+        cursor: pointer;
+      }
+
+      .omb-botom-control-carrousel button {
+        color: #565747;
+        border-radius: 8px;
+        font-family: "Worl sans", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        width: auto;
+        display: flex;
+        padding: 8px;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="omb-section omb-section--de-interes">
+      <div class="omb-de-interes-container">
+        <h2 class="omb-titulo-section">
+          Otros tableros que podrían ser de tu interés
+        </h2>
+        <p class="omb-parrafo-descripcion-section">
+          Explora nuestros publicaciones sobre movilidad en Bogotá, similares a
+          esta
+        </p>
+
+        <div class="omb-carrusel-container">
+          <div class="swiper-button-prev omb-boton-prev"></div>
+
+          <div class="swiper-button-next omb-boton-next"></div>
+
+          <div class="swiper sectionInteresSwiper omb-swiper">
+            <div class="swiper-wrapper omb-swiper-wrapper">
+              <!-- Slide 1 -->
+
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Movilidad sostenible">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-pcbe.jpg"
+                    alt="imagen Política motorizada de cero y bajas emisiones"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Movilidad sostenible</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Política motorizada de cero y bajas emisiones
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que el Sistema Integrado de Transporte de Bogotá
+                    cuenta con más de 1.485 buses eléctricos?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Movilidad sostenible">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-diasincarro-min.jpg"
+                    alt="imagen Día sin carro y sin moto"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Movilidad sostenible</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Día sin carro y sin moto, una oportunidad para transformar
+                    la movilidad urbana
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que en el día sin carro y sin moto se aumenta en un
+                    90% los viajes en el sistema de bicicletas compartidas
+                    respecto a un día típico?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 3-->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Movilidad sostenible">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-ciclista-min.jpg"
+                    alt="imagen Ciclista"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Movilidad sostenible</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    La cicloinfraestructura de Bogotá
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que en Bogotá hay más de 630 km de
+                    cicloinfraestructura?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Transporte público">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-06/omb-tableros-sitp-min.jpg"
+                    alt="imagen Sistema Integrado de Transporte Público (SITP)"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Transporte público</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Sistema Integrado de Transporte Público (SITP)
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que el SITP moviliza aproximadamente a 4 millones de
+                    personas en un día típico?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Transporte público">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-transporte-intermunicipal-min.jpg"
+                    alt="imagen Transporte intermunicipal"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Transporte público</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Transporte intermunicipal en Bogotá
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que se realizan 144.288 viajes diarios hacia Bogotá
+                    en transporte público provenientes de los municipios
+                    vecinos, con motivo trabajo o estudio?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Transporte público taxi">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-06/omb-tableros-taxi-min.jpg"
+                    alt="imagen Transporte intermunicipal"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Transporte público</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Transporte público individual (Taxi)
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que solo dos empresas, tienen la mitad del total de
+                    vehículos que prestan el servicio de Taxi en Bogotá?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 7 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Comportamiento en vía">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-06/omb-tableros-comparendos-min.jpg"
+                    alt="imagen Comparendos"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Comportamiento en vía</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Comparendos por infracciones de tránsito
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que las infracciones de tránsito se clasifican por
+                    categorías que establecen el valor de las multas, ligado a
+                    la gravedad de la infracción
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 8 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Comportamiento en vía">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-siniestralidad-vial-min.jpg"
+                    alt="imagen Siniestralidad vial"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Comportamiento en vía</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Alta siniestralidad entre motociclistas
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que aproximadamente uno de cada tres lesionados en
+                    siniestro viales son motociclistas?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 9 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Comportamiento en vía">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-velocidades-min.jpg"
+                    alt="imagen Velocidades"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Comportamiento en vía</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Límite de velocidad urbana en Bogotá
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que el límite de velocidad en la zona urbana de
+                    Bogotá es de 50 kilómetros por hora?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 10 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Viajes y volúmenes">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-06/omb-tableros-vol-carga-min.jpg"
+                    alt="imagen Volúmenes de carga"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Viajes y volúmenes</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Pico de vehículos de carga en Bogotá
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que el periodo máximo de flujo vehicular de carga en
+                    Bogotá es entre las 10 am y las 12 m?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 11 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Viajes y volúmenes">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-06/omb-tableros-encuestas-movilidad-min.jpg"
+                    alt="imagen Encuestas de movilidad"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Viajes y volúmenes</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Encuestas de movilidad en bogota
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que la primera Encuesta de Movilidad fue realizada
+                    en el año 1995 por el Instituto de Desarrollo Urbano IDU?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 12 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Viajes y volúmenes">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-reg-distrital-automotor.jpg"
+                    alt="imagen Registro Distrital Automotor"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Viajes y volúmenes</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Registro Distrital de vehículos Automotor
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que el rango de edad en el que hay la mayor cantidad
+                    de vehículos registrados en Bogotá es entre 10 y 20 años?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 13 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Enfoque de género">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-movilidad-mujer-min.jpg"
+                    alt="imagen Movilidad y mujer"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Enfoque de género</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Movilidad y mujer en bogota
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que el 42% de los viajes diarios de las mujeres se
+                    realizan a pie?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 14 -->
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Transparencia">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-participacion-ciudadana-min.jpg"
+                    alt="imagen Participación ciudadana"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Transparencia</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Participación ciudadana en la mejora de la movilidad urbana
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Sabías que el Sistema de Semaforización Inteligente de
+                    Bogotá - SSIB actualmente cuenta con más de 1605 semáforos
+                    en intersecciones viales?
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide omb-swiper-slide">
+                <div class="omb-card" data-categoria="Transparencia">
+                  <img
+                    src="http://101.44.24.97/sites/default/files/2025-07/omb-tableros-ejecucion-presupuestal-min.jpg"
+                    alt="imagen Ejecución presupuestal"
+                    class="omb-card-img" />
+                  <div class="omb-tags-card-container">
+                    <div class="omb-tag-card">
+                      <img
+                        src="http://101.44.24.97/sites/default/files/2025-07/icono-tag.png"
+                        alt="Icono de tag" />
+                      <span>Transparencia</span>
+                    </div>
+                  </div>
+                  <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+                    Ejecución del presupuesto de movilidad en Bogotá
+                  </h5>
+                  <p class="omb-parrafo-card">
+                    ¿Quieres saber cómo se está ejecutando el presupuesto de la
+                    Secretaría de movilidad en Bogotá este 2025?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="omb-botom-control-carrousel" id="controlCarrucelInteres">
+          <button
+            type="button"
+            aria-label="Pausar contenido"
+            title="Pausar contenido">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="16"
+              height="16"
+              fill="currentColor"
+              aria-hidden="true"
+              focusable="false">
+              <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+              <path
+                d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+            </svg>
+
+            Detener
+          </button>
+        </div>
+        <div
+          class="swiper-pagination omb-paginacion omb-paginacion-variante"></div>
+      </div>
+    </section>
+    <script>
+      const botonReproducir = `<button
+              type="button"
+              aria-label="Reproducir contenido"
+              title="Reproducir contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome -->
+                <path
+                  d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" />
+              </svg>
+              Reproducir
+            </button>`;
+
+      const botonPausar = `  <button
+              type="button"
+              aria-label="Pausar contenido"
+              title="Pausar contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                >
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+              </svg>
+
+              Detener
+            </button>`;
+
+      const swiperInteres = new Swiper(".sectionInteresSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteration: false,
+        },
+        breakpoints: {
+          480: {slidesPerView: 1, spaceBetween: 30},
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {slidesPerView: 3, spaceBetween: 30},
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+      let isPlaying = true;
+      const pauseButtonTablerosInteres = document.getElementById(
+        "controlCarrucelInteres"
+      );
+      if (pauseButtonTablerosInteres) {
+        pauseButtonTablerosInteres.addEventListener("click", () => {
+          pauseButtonTablerosInteres.innerHTML = "";
+          if (isPlaying) {
+            swiperInteres.autoplay.stop();
+            pauseButtonTablerosInteres.innerHTML = botonReproducir;
+          } else {
+            swiperInteres.autoplay.start();
+            pauseButtonTablerosInteres.innerHTML = botonPausar;
+          }
+          isPlaying = !isPlaying;
+        });
+      }
+
+      // Variante galeria infografia realmente solo cambia el brakepoint
+
+      //   const swiperInteres = new Swiper(".sectionInteresSwiper", {
+      //     slidesPerView: 1,
+      //     spaceBetween: 30,
+      //     navigation: {
+      //       nextEl: ".swiper-button-next",
+      //       prevEl: ".swiper-button-prev",
+      //     },
+      //     pagination: {
+      //       el: ".swiper-pagination",
+      //       clickable: true,
+      //     },
+      //     loop: true,
+      //     autoplay: {
+      //       delay: 3000,
+      //       disableOnInteration: false,
+      //     },
+      //     breakpoints: {
+      //       480: {slidesPerView: 1, spaceBetween: 30},
+      //       768: {
+      //         slidesPerView: 2,
+      //         spaceBetween: 30,
+      //       },
+      //       1024: {slidesPerView: 2, spaceBetween: 30},
+      //       1280: {
+      //         slidesPerView: 3,
+      //         spaceBetween: 30,
+      //       },
+      //     },
+      //   });
+
+      // Variante eventos realmente solo cambia el brakepoint
+
+      //       const swiperInteres = new Swiper(".sectionInteresSwiper", {
+      //   slidesPerView: 1,
+      //   spaceBetween: 30,
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      //   pagination: {
+      //     el: ".swiper-pagination",
+      //     clickable: true,
+      //   },
+      //   loop: true,
+      //   autoplay: {
+      //     delay: 3000,
+      //     disableOnInteration: false,
+      //   },
+      //   breakpoints: {
+      //     480: {slidesPerView: 1, spaceBetween: 30},
+      //     768: {
+      //       slidesPerView: 2,
+      //       spaceBetween: 30,
+      //     },
+      //     1024: {slidesPerView: 3, spaceBetween: 30},
+      //     1280: {
+      //       slidesPerView: 3,
+      //       spaceBetween: 30,
+      //     },
+      //   },
+      // });
+    </script>
+  </body>
+</html>

@@ -3,7 +3,7 @@
   --color-primario: #dbf000;
   --color-secundario-hover: #8e9c00;
   --color-texto: #000000;
-  --color-enlace: #acbd00;
+  --color-enlace: #515900;
   --color-enlace-hover: #a5ad4a;
 }
 
@@ -188,19 +188,66 @@ body {
   width: 100%;
 }
 
-.omb-input-busqueda {
-  width: 90%;
-  height: 40px;
-  background-color: #f8f9f1;
-  border: none;
-  padding: 0px 16px;
-  font-size: 16px;
-  color: #71735e;
-  border-radius: 32px;
+.omb-label-buscador {
+  width: 100%;
 }
 
-.omb-icon-busqueda {
-  padding: 6px 16px 6px 16px;
+.omb-label-buscador P {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: "Work sans", sans-serif;
+}
+.omb-buscador-container {
+  border-radius: 20px;
+  height: 40px;
+  border: 1px solid var(--color-fondo-seccion-intreres);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  transition: border 0.2s;
+  overflow: hidden;
+  padding-right: 4px;
+  background-color: #fff;
+}
+.omb-buscador-container--escritorio {
+  display: flex;
+  width: 100%;
+}
+
+.omb-input-buscar {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 100%;
+  font-family: "Work sans", sans-serif;
+  font-size: 1rem;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.omb-buscador-container:focus-within {
+  border: 2px solid #000;
+}
+.omb-boton-buscar {
+  background-color: var(--color-primario);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.omb-boton-buscar:hover {
+  background-color: var(--color-secundario-hover);
+  transform: scale(1.05);
 }
 .omb-select {
   position: relative;

@@ -10,44 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const swiperTablerosInteres = new Swiper(".tablerosSwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteration: false,
-  },
-  breakpoints: {
-    480: {slidesPerView: 1, spaceBetween: 20},
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-    1024: {slidesPerView: 3},
-    1280: {
-      slidesPerView: 4,
-    },
-  },
-});
-let isPlaying = true;
-const pauseButtonTablerosInteres = document.getElementById(
-  "controlCarrucelTablerosInteres"
-);
-if (pauseButtonTablerosInteres) {
-  pauseButtonTablerosInteres.addEventListener("click", () => {
-    pauseButtonTablerosInteres.innerHTML = "";
-    if (isPlaying) {
-      swiperTablerosInteres.autoplay.stop();
-      pauseButtonTablerosInteres.innerHTML = `<button
+const botonReproducir = `<button
               type="button"
               aria-label="Reproducir contenido"
               title="Reproducir contenido">
@@ -65,9 +28,8 @@ if (pauseButtonTablerosInteres) {
               </svg>
               Reproducir
             </button>`;
-    } else {
-      swiperTablerosInteres.autoplay.start();
-      pauseButtonTablerosInteres.innerHTML = `  <button
+
+const botonPausar = `  <button
               type="button"
               aria-label="Pausar contenido"
               title="Pausar contenido">
@@ -85,8 +47,51 @@ if (pauseButtonTablerosInteres) {
                   d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
               </svg>
 
-            Detener
+              Detener
             </button>`;
+
+const swiperInteres = new Swiper(".sectionInteresSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteration: false,
+  },
+  breakpoints: {
+    480: {slidesPerView: 1, spaceBetween: 30},
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {slidesPerView: 3, spaceBetween: 30},
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+});
+let isPlaying = true;
+const pauseButtonTablerosInteres = document.getElementById(
+  "controlCarrucelInteres"
+);
+if (pauseButtonTablerosInteres) {
+  pauseButtonTablerosInteres.addEventListener("click", () => {
+    pauseButtonTablerosInteres.innerHTML = "";
+    if (isPlaying) {
+      swiperInteres.autoplay.stop();
+      pauseButtonTablerosInteres.innerHTML = botonReproducir;
+    } else {
+      swiperInteres.autoplay.start();
+      pauseButtonTablerosInteres.innerHTML = botonPausar;
     }
     isPlaying = !isPlaying;
   });
