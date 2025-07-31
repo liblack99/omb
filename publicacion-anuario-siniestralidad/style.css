@@ -1,10 +1,13 @@
 :root {
   --color-primario-soft: #f9ffbd;
   --color-primario: #dbf000;
-  --color-secundario-hover: #8e9c00;
+  --color-secundario-hover: #ecff24;
+  --color-boder-tab: #8e9c00;
   --color-texto: #000000;
   --color-enlace: #515900;
   --color-enlace-hover: #a5ad4a;
+  --color-fondo-seccion-intreres: #f3f4f1;
+  --color-strong: #c4d600;
 }
 
 body {
@@ -54,7 +57,7 @@ main {
   width: 100%;
   border-radius: 16px;
 }
-.omb-texto {
+.omb-texto-card-info {
   width: 100%;
 }
 .omb-titulo-card-hero {
@@ -73,6 +76,19 @@ main {
   -webkit-box-orient: vertical;
   padding: 0px;
   transition: all 0.3s ease-in;
+}
+.omb-parrafo-card-hero {
+  font-size: 1rem;
+  font-family: "Work sans", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.5rem;
+  padding: 0px;
+  color: var(--color-texto);
+  min-height: 72px;
 }
 .omb-enlaces-hero-container {
   display: flex;
@@ -130,7 +146,7 @@ main {
 }
 
 .omb-boton {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 500;
@@ -147,7 +163,7 @@ main {
 }
 .omb-boton--primario {
   background-color: var(--color-primario);
-  border-color: var(--color-primario);
+  border: 1px solid var(--color-primario);
 }
 .omb-boton--con-icono {
   display: flex;
@@ -156,16 +172,15 @@ main {
   gap: 8px;
 }
 
-.omb-boton:hover {
+.omb-boton--primario:hover {
   background-color: var(--color-secundario-hover);
-  border-color: var(--color-texto);
-  color: white;
+  border-color: var(--color-secundario-hover);
 }
 .omb-section--color-fondo {
   background-color: #f1f3f7;
 }
 
-.omb-siniestralidad-container {
+.omb-container {
   width: 90%;
   padding: 40px 0px;
   display: flex;
@@ -259,13 +274,13 @@ main {
   background-color: var(--color-primario);
 }
 
-.omb-siniestralidad-container {
+.omb-container {
   width: 90%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.omb-cards-anuario-container {
+.omb-cards-container {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -276,7 +291,7 @@ main {
   box-sizing: border-box;
 }
 
-.omb-card-categoria-selecionada {
+.omb-card {
   width: 100%;
   background-color: #ffffff;
   display: flex;
@@ -290,19 +305,19 @@ main {
   border: 1px solid transparent;
 }
 
-.omb-card-categoria-selecionada:hover {
+.omb-card:hover {
   border: 1px solid black;
   transform: scale(1.02);
 }
-.omb-card-categoria-selecionada:hover .omb-enlace-categoria-selecionada {
+.omb-card:hover .omb-enlace-categoria-selecionada {
   color: #7e8a00;
 }
-.omb-card-categoria-selecionada img {
+.omb-card img {
   width: 100%;
   height: 216px;
 }
 
-.omb-card-categoria-selecionada h5 {
+.omb-card h5 {
   font-weight: 600;
   color: var(--color-texto);
   font-family: "Montserrat", sans-serif;
@@ -320,7 +335,7 @@ main {
   transition: all 0.3s ease-in;
 }
 
-.omb-card-categoria-selecionada p {
+.omb-card p {
   font-size: 1rem;
   font-family: "Work sans", sans-serif;
   overflow: hidden;
@@ -408,7 +423,7 @@ main {
   display: none;
 }
 @media (min-width: 768px) {
-  .omb-card-categoria-selecionada {
+  .omb-card {
     width: 320px;
   }
 }
@@ -426,13 +441,13 @@ main {
 
   .omb-card-info-container,
   .omb-encuestas-container,
-  .omb-siniestralidad-container {
+  .omb-container {
     max-width: 960px;
   }
   .omb-cards-anuario-container {
     justify-content: center;
   }
-  .omb-card-categoria-selecionada {
+  .omb-card {
     width: 360px;
   }
   .omb-enlaces-hero-container--variante {
@@ -473,10 +488,10 @@ main {
 
   .omb-card-info-container,
   .omb-encuestas-container,
-  .omb-siniestralidad-container {
+  .omb-container {
     max-width: 1140px;
   }
-  .omb-card-categoria-selecionada {
+  .omb-card {
     width: 360px;
   }
   .omb-enlaces-hero-container--variante {
@@ -515,10 +530,10 @@ main {
   }
   .omb-card-info-container,
   .omb-encuestas-container,
-  .omb-siniestralidad-container {
+  .omb-container {
     max-width: 1140px;
   }
-  .omb-card-categoria-selecionada {
+  .omb-card {
     width: 356px;
   }
   .omb-enlaces-hero-container--variante {
