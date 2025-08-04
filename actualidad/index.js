@@ -120,7 +120,6 @@ document.addEventListener("click", (e) => {
 });
 
 const sidebarContent = document.getElementById("sidebar");
-
 const contenedorPadre = document.querySelector(".omb-noticias-container");
 
 function handleScroll() {
@@ -156,20 +155,3 @@ function handleScroll() {
 
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("resize", handleScroll);
-
-document.addEventListener("click", (e) => {
-  const hizoClickEnSelect = [...opcionSeleccionada].some((boton) =>
-    boton.contains(e.target)
-  );
-
-  const hizoClickEnLista = [...listasDeOpciones].some((lista) =>
-    lista.contains(e.target)
-  );
-
-  // Si el clic fue FUERA de los botones y de las listas → oculta todas las listas
-  if (!hizoClickEnSelect && !hizoClickEnLista) {
-    listasDeOpciones.forEach((lista) => {
-      lista.classList.add("hidden");
-    });
-  }
-});

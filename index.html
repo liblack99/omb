@@ -143,13 +143,11 @@
   hero - ecuesta
 
   <div class="omb-card-info">
-    <img
-      src="http://101.44.24.97/sites/default/files/2025-07/omb-encuesta-2023.png"
-      alt="Imagen encuesta 2023" />
+    {{ field_imagen_publicacion }}
     <div class="omb-texto-card-info">
-      <h3 class="omb-titulo-card-hero"></h3>
+      <h3 class="omb-titulo-card-hero">{{ title }}</h3>
       <div class="omb-parrafo-card-hero">{{ body }}</div>
-      <a class="omb-boton omb-boton--primario omb-boton--con-icono">
+      <a href="" class="omb-boton omb-boton--primario omb-boton--con-icono">
         VER ENCUESTA
       </a>
     </div>
