@@ -236,11 +236,11 @@ body {
   border-left: 1px solid var(--color-secundario-hover);
 }
 .omb-acordion-boton--home:hover {
-  border-left: 4px solid var(--color-secundario-hover);
+  border-left: 4px solid var(--color-enlace);
   background-color: var(--color-primario);
 }
 .omb-acordion-boton--home.activo {
-  border-left: 4px solid var(--color-secundario-hover);
+  border-left: 4px solid var(--color-enlace);
   background-color: var(--color-primario);
 }
 .omb-titulo-botton-acordeon {

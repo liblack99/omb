@@ -130,14 +130,27 @@ const botonesAcordeon = document.querySelectorAll(".omb-acordion-boton--home");
 
 botonesAcordeon.forEach((boton) => {
   boton.addEventListener("click", () => {
-    const contenido = boton.nextElementSibling;
+    const dataGrafica = boton.getAttribute("data-grafica");
+
+    // Buscar el contenido con el mismo data-grafica
+    const contenido = document.querySelector(
+      `.omb-acordion-content[data-grafica="${dataGrafica}"]`
+    );
+    console.log(contenido);
 
     // Cerrar todos menos el actual
-    document.querySelectorAll(".omb-acordion-content-home").forEach((el) => {
+    document.querySelectorAll(".omb-acordion-content").forEach((el) => {
       if (el !== contenido) {
         el.style.maxHeight = null;
         el.classList.remove("abierto");
-        el.previousElementSibling.classList.remove("activo");
+        const botonRelacionado = document.querySelector(
+          `.omb-acordion-boton--home[data-grafica="${el.getAttribute(
+            "data-grafica"
+          )}"]`
+        );
+        if (botonRelacionado) {
+          botonRelacionado.classList.remove("activo");
+        }
       }
     });
 
