@@ -200,7 +200,11 @@
                             height="150" />
                         </div>
                       </div>
-                      <div class="valor">661,1 <span>km</span></div>
+                      <div class="valor">
+                        {{ field_numero_indicador|raw }}<span
+                          >{{ field_medida_indicador }}</span
+                        >
+                      </div>
                       <div class="omb-texto-indicadores">
                         Cicloinfraestructura 2024
                       </div>
@@ -431,202 +435,232 @@
           </div>
           <div class="omb-acordion-home" id="acordionHome">
             <div class="omb-acordion-item">
-              <button class="omb-acordion-boton--home activo">
-                <h2 class="omb-titulo-botton-acordeon">
-                  <span class="omb-icono-titulo-acordion">
-                    <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tableros-home_0.webp"
-                      alt="Icono Tableros" />
+              <div>
+                <button class="omb-acordion-boton--home" data-boton="1">
+                  <span class="omb-titulo-botton-acordeon">
+                    <span class="omb-icono-titulo-acordion activo">
+                      <img
+                        src="/sites/default/files/2025-07/icono-tableros-home_0.webp"
+                        alt="Icono Tableros" />
+                    </span>
+                    Tableros
                   </span>
-                  Tableros
-                </h2>
-                <span class="omb-flecha-acordion"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    fill="currentColor"
-                    viewBox="0 0 320 512">
-                    <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                    <path
-                      d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
-                  </svg>
-                </span>
-              </button>
-              <div class="omb-acordion-content-home abierto">
+                  <span class="omb-flecha-acordion"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      fill="currentColor"
+                      viewBox="0 0 320 512">
+                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                      <path
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="omb-acordion-content-home abierto" data-boton="1">
                 <div class="omb-card-acordion">
                   <img
                     class="omb-imagen-card-acordion"
-                    src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-tableros.webp"
-                    alt="Imagen tableros" />
+                    src="/sites/default/files/2025-07/omb-contenido-destacado-tableros.webp"
+                    alt="Imagen tableros"
+                    width="728"
+                    height="432" />
                   <p class="omb-parrafo-card-acorderon">
                     Nuestros tableros de control interactivos le dan el poder de
                     analizar la evidencia por sí mismo. Cree las visualizaciones
                     que necesita, exporte los datos y acceda a una comprensión
                     más profunda de cómo se mueve Bogotá.
                   </p>
-                  <button type="button" class="omb-boton omb-boton--primario">
-                    Explorar Tableros Ahora
-                  </button>
+                  <p>
+                    <button class="omb-boton omb-boton--primario" type="button">
+                      Explorar Tableros Ahora
+                    </button>
+                  </p>
                 </div>
               </div>
             </div>
             <div class="omb-acordion-item">
-              <button class="omb-acordion-boton--home">
-                <h2 class="omb-titulo-botton-acordeon">
-                  <span class="omb-icono-titulo-acordion">
-                    <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-libro-mapas_0.webp"
-                      alt="Icono libro mapas" />
+              <div>
+                <button class="omb-acordion-boton--home" data-boton="2">
+                  <span class="omb-titulo-botton-acordeon">
+                    <span class="omb-icono-titulo-acordion">
+                      <img
+                        src="/sites/default/files/2025-07/icono-libro-mapas_0.webp"
+                        alt="Icono libro mapas" />
+                    </span>
+                    Libro de mapas
                   </span>
-                  Libro de mapas
-                </h2>
-                <span class="omb-flecha-acordion"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    fill="currentColor"
-                    viewBox="0 0 320 512">
-                    <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                    <path
-                      d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
-                  </svg>
-                </span>
-              </button>
-              <div class="omb-acordion-content-home">
+                  <span class="omb-flecha-acordion"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      fill="currentColor"
+                      viewBox="0 0 320 512">
+                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                      <path
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="omb-acordion-content-home" data-boton="2">
                 <div class="omb-card-acordion">
                   <img
                     class="omb-imagen-card-acordion"
-                    src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-librodemapas.webp"
-                    alt="Imagen libro mapas" />
+                    src="/sites/default/files/2025-07/omb-contenido-destacado-librodemapas.webp"
+                    alt="Imagen libro mapas"
+                    width="729"
+                    height="432" />
                   <p class="omb-parrafo-card-acorderon">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Ipsa mollitia qui magni odio illo! Excepturi quis debitis
                     odit velit animi, dolorum, voluptatum voluptas suscipit
                     atque nobis, temporibus alias nihil. Veniam!
                   </p>
-                  <button type="button" class="omb-boton omb-boton--primario">
-                    Explorar Libro de mapas
-                  </button>
+                  <p>
+                    <button class="omb-boton omb-boton--primario" type="button">
+                      Explorar Libro de mapas
+                    </button>
+                  </p>
                 </div>
               </div>
             </div>
             <div class="omb-acordion-item">
-              <button class="omb-acordion-boton--home">
-                <h2 class="omb-titulo-botton-acordeon">
-                  <span class="omb-icono-titulo-acordion">
-                    <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-publicaciones_0.webp"
-                      alt="Icono publicaciones" />
+              <div>
+                <button class="omb-acordion-boton--home" data-boton="3">
+                  <span class="omb-titulo-botton-acordeon">
+                    <span class="omb-icono-titulo-acordion">
+                      <img
+                        src="/sites/default/files/2025-07/icono-publicaciones_0.webp"
+                        alt="Icono publicaciones" />
+                    </span>
+                    Publicaciones
                   </span>
-                  Publicaciones
-                </h2>
-                <span class="omb-flecha-acordion"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    fill="currentColor"
-                    viewBox="0 0 320 512">
-                    <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                    <path
-                      d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
-                  </svg>
-                </span>
-              </button>
-              <div class="omb-acordion-content-home">
+                  <span class="omb-flecha-acordion"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      fill="currentColor"
+                      viewBox="0 0 320 512">
+                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                      <path
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="omb-acordion-content-home" data-boton="3">
                 <div class="omb-card-acordion">
                   <img
                     class="omb-imagen-card-acordion"
-                    src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-publicaciones.webp"
-                    alt="Imagen Publicaciones" />
+                    src="/sites/default/files/2025-07/omb-contenido-destacado-publicaciones.webp"
+                    alt="Imagen Publicaciones"
+                    width="728"
+                    height="433" />
                   <p class="omb-parrafo-card-acorderon">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Fugit non quidem molestiae pariatur dolorum? Unde ad
                     facilis, debitis mollitia doloribus quia cumque? Neque quas
                     veniam, reiciendis ipsum necessitatibus assumenda odio?
                   </p>
-                  <button type="button" class="omb-boton omb-boton--primario">
-                    Explorar Publicaciones
-                  </button>
+                  <p>
+                    <button class="omb-boton omb-boton--primario" type="button">
+                      Explorar Publicaciones
+                    </button>
+                  </p>
                 </div>
               </div>
             </div>
             <div class="omb-acordion-item">
-              <button class="omb-acordion-boton--home">
-                <h2 class="omb-titulo-botton-acordeon">
-                  <span class="omb-icono-titulo-acordion">
-                    <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-comunidad_0.webp"
-                      alt="Icono Comunidad" />
+              <div>
+                <button class="omb-acordion-boton--home" data-boton="4">
+                  <span class="omb-titulo-botton-acordeon">
+                    <span class="omb-icono-titulo-acordion">
+                      <img
+                        src="/sites/default/files/2025-07/icono-comunidad_0.webp"
+                        alt="Icono Comunidad" />
+                    </span>
+                    Comunidad
                   </span>
-                  Comunidad
-                </h2>
-                <span class="omb-flecha-acordion"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    fill="currentColor"
-                    viewBox="0 0 320 512">
-                    <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                    <path
-                      d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
-                  </svg>
-                </span>
-              </button>
-              <div class="omb-acordion-content-home">
+                  <span class="omb-flecha-acordion"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      fill="currentColor"
+                      viewBox="0 0 320 512">
+                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                      <path
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="omb-acordion-content-home" data-boton="4">
                 <div class="omb-card-acordion">
                   <img
                     class="omb-imagen-card-acordion"
-                    src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-comunidad.webp"
-                    alt="Imagen comunidad" />
+                    src="/sites/default/files/2025-07/omb-contenido-destacado-comunidad.webp"
+                    alt="Imagen comunidad"
+                    width="729"
+                    height="433" />
                   <p class="omb-parrafo-card-acorderon">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Fugit non quidem molestiae pariatur dolorum? Unde ad
                     facilis, debitis mollitia doloribus quia cumque? Neque quas
                     veniam, reiciendis ipsum necessitatibus assumenda odio?
                   </p>
-                  <button type="button" class="omb-boton omb-boton--primario">
-                    Explorar Comunidad
-                  </button>
+                  <p>
+                    <button class="omb-boton omb-boton--primario" type="button">
+                      Explorar Comunidad
+                    </button>
+                  </p>
                 </div>
               </div>
             </div>
             <div class="omb-acordion-item">
-              <button class="omb-acordion-boton--home">
-                <h2 class="omb-titulo-botton-acordeon">
-                  <span class="omb-icono-titulo-acordion">
-                    <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-infografia_0.webp"
-                      alt="Icono infografías" />
+              <div>
+                <button class="omb-acordion-boton--home" data-boton="5">
+                  <span class="omb-titulo-botton-acordeon">
+                    <span class="omb-icono-titulo-acordion">
+                      <img
+                        src="/sites/default/files/2025-07/icono-infografia_0.webp"
+                        alt="Icono infografías" />
+                    </span>
+                    Infografías
                   </span>
-                  Infografías
-                </h2>
-                <span class="omb-flecha-acordion"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    fill="currentColor"
-                    viewBox="0 0 320 512">
-                    <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                    <path
-                      d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
-                  </svg>
-                </span>
-              </button>
-              <div class="omb-acordion-content-home">
+                  <span class="omb-flecha-acordion"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      fill="currentColor"
+                      viewBox="0 0 320 512">
+                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                      <path
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="omb-acordion-content-home" data-boton="5">
                 <div class="omb-card-acordion">
                   <img
                     class="omb-imagen-card-acordion"
-                    src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-infografias.webp"
-                    alt="Imagen infografías" />
+                    src="/sites/default/files/2025-07/omb-contenido-destacado-infografias.webp"
+                    alt="Imagen infografías"
+                    width="728"
+                    height="433" />
                   <p class="omb-parrafo-card-acorderon">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Fugit non quidem molestiae pariatur dolorum? Unde ad
                     facilis, debitis mollitia doloribus quia cumque? Neque quas
                     veniam, reiciendis ipsum necessitatibus assumenda odio?
                   </p>
-                  <button type="button" class="omb-boton omb-boton--primario">
-                    Explorar Infografías
-                  </button>
+                  <p>
+                    <button class="omb-boton omb-boton--primario" type="button">
+                      Explorar Infografías
+                    </button>
+                  </p>
                 </div>
               </div>
             </div>
@@ -638,7 +672,7 @@
         <div class="omb-observatorio-container">
           <div class="omb-tabs-header">
             <h2 class="omb-titulo-section omb-titulo-section--centrado">
-              En el Observatorio de Movilidad <br />
+              En el Observatorio de Movilidad&nbsp;<br />
               puedes encontrar
             </h2>
             <div class="separador">
@@ -650,7 +684,7 @@
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M5.85705 6L0 0H57.2937L63.1507 6H5.85705ZM102.276 6L96.4188 0H153.712L159.57 6H102.276ZM198.706 6L192.849 0H250.143L256 6H198.706Z"
-                  fill="#DBF000" />
+                  fill="#DBF000"></path>
               </svg>
             </div>
             <p class="omb-parrafo-descripcion-section">
@@ -660,61 +694,63 @@
           <div class="omb-tabs-container">
             <div class="omb-tabs-menu">
               <button class="omb-tabs-boton--home activo" data-tab="1">
-                <h2 class="omb-titulo-botton-acordeon">
+                <span class="omb-titulo-botton-acordeon">
                   <span class="omb-icono-titulo-acordion">
                     <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-tableros-home_0.webp"
+                      src="/sites/default/files/2025-07/icono-tableros-home_0.webp"
                       alt="Icono Tableros" />
                   </span>
                   Tableros
-                </h2>
+                </span>
               </button>
               <button class="omb-tabs-boton--home" data-tab="2">
-                <h2 class="omb-titulo-botton-acordeon">
+                <span class="omb-titulo-botton-acordeon">
                   <span class="omb-icono-titulo-acordion">
                     <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-libro-mapas_0.webp"
+                      src="/sites/default/files/2025-07/icono-libro-mapas_0.webp"
                       alt="Icono libro mapas" />
                   </span>
                   Libro de mapas
-                </h2>
+                </span>
               </button>
               <button class="omb-tabs-boton--home" data-tab="3">
-                <h2 class="omb-titulo-botton-acordeon">
+                <span class="omb-titulo-botton-acordeon">
                   <span class="omb-icono-titulo-acordion">
                     <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-publicaciones_0.webp"
+                      src="/sites/default/files/2025-07/icono-publicaciones_0.webp"
                       alt="Icono publicaciones" />
                   </span>
                   Publicaciones
-                </h2>
+                </span>
               </button>
               <button class="omb-tabs-boton--home" data-tab="4">
-                <h2 class="omb-titulo-botton-acordeon">
+                <span class="omb-titulo-botton-acordeon">
                   <span class="omb-icono-titulo-acordion">
                     <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-comunidad_0.webp"
+                      src="/sites/default/files/2025-07/icono-comunidad_0.webp"
                       alt="Icono Comunidad" />
                   </span>
                   Comunidad
-                </h2>
+                </span>
               </button>
               <button class="omb-tabs-boton--home" data-tab="5">
-                <h2 class="omb-titulo-botton-acordeon">
+                <span class="omb-titulo-botton-acordeon">
                   <span class="omb-icono-titulo-acordion">
                     <img
-                      src="http://101.44.24.97/sites/default/files/2025-07/icono-infografia_0.webp"
+                      src="/sites/default/files/2025-07/icono-infografia_0.webp"
                       alt="Icono infografías" />
                   </span>
                   Infografías
-                </h2>
+                </span>
               </button>
             </div>
             <div class="omb-card-acordion omb-card-observatorio" data-tab="1">
               <img
                 class="omb-imagen-card-acordion"
-                src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-tableros.webp"
-                alt="Imagen tableros" />
+                src="/sites/default/files/2025-07/omb-contenido-destacado-tableros.webp"
+                alt="Imagen tableros"
+                width="728"
+                height="432" />
               <p class="omb-parrafo-card-acorderon">
                 Nuestros tableros de control interactivos le dan el poder de
                 analizar la evidencia por sí mismo. Cree las visualizaciones que
@@ -722,9 +758,9 @@
                 profunda de cómo se mueve Bogotá.
               </p>
               <div>
-                <button type="button" class="omb-boton omb-boton--primario">
-                  Explorar Tableros Ahora
-                </button>
+                <a class="omb-boton omb-boton--primario" href="/tableros"
+                  >Explorar Tableros Ahora</a
+                >
               </div>
             </div>
             <div
@@ -732,18 +768,25 @@
               data-tab="2">
               <img
                 class="omb-imagen-card-acordion"
-                src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-librodemapas.webp"
-                alt="Imagen libro mapas" />
+                src="/sites/default/files/2025-07/omb-contenido-destacado-librodemapas.webp"
+                alt="Imagen libro mapas"
+                width="729"
+                height="432" />
               <p class="omb-parrafo-card-acorderon">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-                mollitia qui magni odio illo! Excepturi quis debitis odit velit
-                animi, dolorum, voluptatum voluptas suscipit atque nobis,
-                temporibus alias nihil. Veniam!
+                “En el Observatorio de Movilidad de Bogotá (OMB) estamos
+                comprometidos con mejorar la movilidad en la ciudad. Por eso,
+                somos una herramienta que ayuda a planear, evaluar y actualizar
+                las acciones para mejorar la infraestructura y los servicios de
+                transporte en la ciudad (Políticas públicas) y que a su vez
+                entrega información relevante del sector, a toda la ciudadanía.
+                Esto lo hacemos mediante la publicación de estudios, tableros de
+                control, infografías, artículos de investigación y otros
+                formatos.”
               </p>
               <div>
-                <button type="button" class="omb-boton omb-boton--primario">
-                  Explorar Libro de mapas
-                </button>
+                <a class="omb-boton omb-boton--primario" href="/mapas"
+                  >Explorar Libro de mapas</a
+                >
               </div>
             </div>
             <div
@@ -751,18 +794,25 @@
               data-tab="3">
               <img
                 class="omb-imagen-card-acordion"
-                src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-publicaciones.webp"
-                alt="Imagen Publicaciones" />
+                src="/sites/default/files/2025-07/omb-contenido-destacado-publicaciones.webp"
+                alt="Imagen Publicaciones"
+                width="728"
+                height="433" />
               <p class="omb-parrafo-card-acorderon">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-                non quidem molestiae pariatur dolorum? Unde ad facilis, debitis
-                mollitia doloribus quia cumque? Neque quas veniam, reiciendis
-                ipsum necessitatibus assumenda odio?
+                “En el Observatorio de Movilidad de Bogotá (OMB) estamos
+                comprometidos con mejorar la movilidad en la ciudad. Por eso,
+                somos una herramienta que ayuda a planear, evaluar y actualizar
+                las acciones para mejorar la infraestructura y los servicios de
+                transporte en la ciudad (Políticas públicas) y que a su vez
+                entrega información relevante del sector, a toda la ciudadanía.
+                Esto lo hacemos mediante la publicación de estudios, tableros de
+                control, infografías, artículos de investigación y otros
+                formatos.”
               </p>
               <div>
-                <button type="button" class="omb-boton omb-boton--primario">
-                  Explorar Publicaciones
-                </button>
+                <a class="omb-boton omb-boton--primario" href="/publicaciones"
+                  >Explorar Publicaciones</a
+                >
               </div>
             </div>
             <div
@@ -770,18 +820,25 @@
               data-tab="4">
               <img
                 class="omb-imagen-card-acordion"
-                src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-comunidad.webp"
-                alt="Imagen comunidad" />
+                src="/sites/default/files/2025-07/omb-contenido-destacado-comunidad.webp"
+                alt="Imagen comunidad"
+                width="729"
+                height="433" />
               <p class="omb-parrafo-card-acorderon">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-                non quidem molestiae pariatur dolorum? Unde ad facilis, debitis
-                mollitia doloribus quia cumque? Neque quas veniam, reiciendis
-                ipsum necessitatibus assumenda odio?
+                “En el Observatorio de Movilidad de Bogotá (OMB) estamos
+                comprometidos con mejorar la movilidad en la ciudad. Por eso,
+                somos una herramienta que ayuda a planear, evaluar y actualizar
+                las acciones para mejorar la infraestructura y los servicios de
+                transporte en la ciudad (Políticas públicas) y que a su vez
+                entrega información relevante del sector, a toda la ciudadanía.
+                Esto lo hacemos mediante la publicación de estudios, tableros de
+                control, infografías, artículos de investigación y otros
+                formatos.”
               </p>
               <div>
-                <button type="button" class="omb-boton omb-boton--primario">
-                  Explorar Comunidad
-                </button>
+                <a class="omb-boton omb-boton--primario" href="/comunidad"
+                  >Explorar Comunidad</a
+                >
               </div>
             </div>
             <div
@@ -789,18 +846,27 @@
               data-tab="5">
               <img
                 class="omb-imagen-card-acordion"
-                src="http://101.44.24.97/sites/default/files/2025-07/omb-contenido-destacado-infografias.webp"
-                alt="Imagen infografías" />
+                src="/sites/default/files/2025-07/omb-contenido-destacado-infografias.webp"
+                alt="Imagen infografías"
+                width="728"
+                height="433" />
               <p class="omb-parrafo-card-acorderon">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-                non quidem molestiae pariatur dolorum? Unde ad facilis, debitis
-                mollitia doloribus quia cumque? Neque quas veniam, reiciendis
-                ipsum necessitatibus assumenda odio?
+                “En el Observatorio de Movilidad de Bogotá (OMB) estamos
+                comprometidos con mejorar la movilidad en la ciudad. Por eso,
+                somos una herramienta que ayuda a planear, evaluar y actualizar
+                las acciones para mejorar la infraestructura y los servicios de
+                transporte en la ciudad (Políticas públicas) y que a su vez
+                entrega información relevante del sector, a toda la ciudadanía.
+                Esto lo hacemos mediante la publicación de estudios, tableros de
+                control, infografías, artículos de investigación y otros
+                formatos.”
               </p>
               <div>
-                <button type="button" class="omb-boton omb-boton--primario">
-                  Explorar Infografías
-                </button>
+                <a
+                  class="omb-boton omb-boton--primario"
+                  href="/publicaciones/infografias"
+                  >Explorar Infografías</a
+                >
               </div>
             </div>
           </div>

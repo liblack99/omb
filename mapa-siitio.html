@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #515900;
+      --color-enlace-hover: #a5ad4a;
+      --color-hover-secundario: #515900;
+      --color-fondo-seccion-intreres: #f3f4f1;
+      --color-strong: #c4d600;
+      --color-govco: #004884;
+      --color-govco-hover: #3366cc;
+    }
+
+    .omb-titulo-section {
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 32px;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+    }
+    #html-sitemap {
+      max-width: 1140px;
+      padding: 0 20px;
+      margin: 0 auto;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    #html-sitemap h3 {
+      width: 100%;
+      align-items: center;
+      text-align: left;
+      background-color: inherit;
+      border-radius: 12px;
+      min-height: 4.375rem;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      position: relative;
+      border-left: 4px solid transparent;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+      border: 1px solid var(--color-fondo-seccion-intreres);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      margin: 0;
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 8px;
+    }
+
+    #html-sitemap h3::after {
+      content: "▼"; /* flecha hacia abajo */
+      position: absolute;
+      right: 16px;
+      font-size: 14px;
+      transition: transform 0.3s ease;
+      background-color: black;
+      color: var(--color-enlace-hover);
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+
+    #html-sitemap h3:hover,
+    #html-sitemap h3.activo {
+      background-color: var(--color-primario);
+    }
+    #html-sitemap h3.activo::after {
+      transform: rotate(180deg); /* flecha hacia arriba */
+    }
+
+    #html-sitemap ul {
+      list-style: none;
+      padding: 0 16px;
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+      background: #f8f9fa;
+      border-radius: 0 0 6px 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    #html-sitemap ul li {
+      padding: 6px;
+      box-sizing: border-box;
+      border: 8px;
+    }
+
+    #html-sitemap ul li:nth-child(odd) {
+      background-color: #ffffff; /* blanco */
+    }
+
+    #html-sitemap ul li:nth-child(even) {
+      background-color: #f1f1f1; /* gris claro */
+    }
+
+    #html-sitemap ul li a {
+      color: var(--color-enlace);
+      font-family: "Work Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      text-decoration: underline;
+    }
+
+    #html-sitemap ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Estado abierto */
+    #html-sitemap ul.open {
+      padding: 10px 16px;
+      max-height: 10000px;
+    }
+  </style>
+  <body>
+    <section class="omb-section">
+      <h1 class="omb-titulo-section">Mapa de sitio</h1>
+      <div id="html-sitemap">
+        <p>Cargando mapa del sitio...</p>
+      </div>
+    </section>
+
+    <div id="html-sitemap">
+      <h3>Inicio</h3>
+      <ul>
+        <li><a href="http://101.44.24.97/" target="_blank">/</a></li>
+      </ul>
+      <h3>Actualidad</h3>
+      <ul>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/bogota-impulsa-estrategia-de"
+            target="_blank"
+            >/actualidad/bogota-impulsa-estrategia-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/anuario-de-siniestralidad-vial"
+            target="_blank"
+            >/actualidad/anuario-de-siniestralidad-vial</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/bogota-avanza-hacia-una"
+            target="_blank"
+            >/actualidad/bogota-avanza-hacia-una</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/modos-sostenibles-y-resultados"
+            target="_blank"
+            >/actualidad/modos-sostenibles-y-resultados</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/bogota-inaugura-red-de-recarga"
+            target="_blank"
+            >/actualidad/bogota-inaugura-red-de-recarga</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/bogota-impulsa-la-movilidad"
+            target="_blank"
+            >/actualidad/bogota-impulsa-la-movilidad</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/avances-y-desafios-bogota"
+            target="_blank"
+            >/actualidad/avances-y-desafios-bogota</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/bogota-expande-su-red-de"
+            target="_blank"
+            >/actualidad/bogota-expande-su-red-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/bogota-fortalece-seguridad"
+            target="_blank"
+            >/actualidad/bogota-fortalece-seguridad</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad/siniestralidad-vial-en-bogota"
+            target="_blank"
+            >/actualidad/siniestralidad-vial-en-bogota</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/actualidad?field_busqueda=all&amp;orden=actualidad_bloque&amp;orden_key=A-Z&amp;ajax=1"
+            target="_blank"
+            >/actualidad</a
+          >
+        </li>
+      </ul>
+      <h3>Comunidad</h3>
+      <ul>
+        <li>
+          <a
+            href="http://101.44.24.97/comunidad/eventos/movi-innova-2025"
+            target="_blank"
+            >/comunidad/eventos/movi-innova-2025</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/comunidad/eventos/lanzamiento-anuario-de"
+            target="_blank"
+            >/comunidad/eventos/lanzamiento-anuario-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/comunidad/eventos/movi-innova-2024-foro-de"
+            target="_blank"
+            >/comunidad/eventos/movi-innova-2024-foro-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/comunidad/eventos/ii-foro-de-ciudades-del"
+            target="_blank"
+            >/comunidad/eventos/ii-foro-de-ciudades-del</a
+          >
+        </li>
+        <li>
+          <a href="http://101.44.24.97/comunidad" target="_blank">/comunidad</a>
+        </li>
+      </ul>
+      <h3>Indicadores-movilidad</h3>
+      <ul>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/porcentaje-de-vias-en-buen"
+            target="_blank"
+            >/indicadores-movilidad/porcentaje-de-vias-en-buen</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/porcentaje-de-vias-primarias-y"
+            target="_blank"
+            >/indicadores-movilidad/porcentaje-de-vias-primarias-y</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/acciones-para-mitigar-impactos"
+            target="_blank"
+            >/indicadores-movilidad/acciones-para-mitigar-impactos</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/porcentaje-del-sistema-de"
+            target="_blank"
+            >/indicadores-movilidad/porcentaje-del-sistema-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/velocidad-promedio-transporte"
+            target="_blank"
+            >/indicadores-movilidad/velocidad-promedio-transporte</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/edad-promedio-de-los-vehiculos"
+            target="_blank"
+            >/indicadores-movilidad/edad-promedio-de-los-vehiculos</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/indice-de-pasajeros-por"
+            target="_blank"
+            >/indicadores-movilidad/indice-de-pasajeros-por</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/pasajeros-en-la-terminal-de"
+            target="_blank"
+            >/indicadores-movilidad/pasajeros-en-la-terminal-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/cables-construidos-en-bogota"
+            target="_blank"
+            >/indicadores-movilidad/cables-construidos-en-bogota</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/porcentaje-de-avance-del"
+            target="_blank"
+            >/indicadores-movilidad/porcentaje-de-avance-del</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/kilometros-de-troncales-en"
+            target="_blank"
+            >/indicadores-movilidad/kilometros-de-troncales-en</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/porcentaje-de-avance-sir"
+            target="_blank"
+            >/indicadores-movilidad/porcentaje-de-avance-sir</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/porcentaje-de-usuarios"
+            target="_blank"
+            >/indicadores-movilidad/porcentaje-de-usuarios</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/tasa-de-morbilidad-en"
+            target="_blank"
+            >/indicadores-movilidad/tasa-de-morbilidad-en</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/tasa-de-mortalidad-en"
+            target="_blank"
+            >/indicadores-movilidad/tasa-de-mortalidad-en</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/porcentaje-de-evasion-medido"
+            target="_blank"
+            >/indicadores-movilidad/porcentaje-de-evasion-medido</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/tiempos-de-viajes-por-minutos"
+            target="_blank"
+            >/indicadores-movilidad/tiempos-de-viajes-por-minutos</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/tiempo-promedio-de"
+            target="_blank"
+            >/indicadores-movilidad/tiempo-promedio-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/velocidad-promedio-ponderada"
+            target="_blank"
+            >/indicadores-movilidad/velocidad-promedio-ponderada</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/velocidad-promedio-para-modos"
+            target="_blank"
+            >/indicadores-movilidad/velocidad-promedio-para-modos</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad/particion-modal-de-viajes-en"
+            target="_blank"
+            >/indicadores-movilidad/particion-modal-de-viajes-en</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-movilidad?field_busqueda=all&amp;orden=indicadores&amp;orden_key=A-Z&amp;ajax=1"
+            target="_blank"
+            >/indicadores-movilidad</a
+          >
+        </li>
+      </ul>
+      <h3>Indicadores-planes-y-politicas</h3>
+      <ul>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-planes-y-politicas/politica-publica-del-peaton-en"
+            target="_blank"
+            >/indicadores-planes-y-politicas/politica-publica-del-peaton-en</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-planes-y-politicas/politica-publica-de-la"
+            target="_blank"
+            >/indicadores-planes-y-politicas/politica-publica-de-la</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-planes-y-politicas/politica-publica-movilidad"
+            target="_blank"
+            >/indicadores-planes-y-politicas/politica-publica-movilidad</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-planes-y-politicas/plan-distrital-de-desarrollo"
+            target="_blank"
+            >/indicadores-planes-y-politicas/plan-distrital-de-desarrollo</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-planes-y-politicas/plan-de-movilidad-sostenible-y"
+            target="_blank"
+            >/indicadores-planes-y-politicas/plan-de-movilidad-sostenible-y</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/indicadores-planes-y-politicas"
+            target="_blank"
+            >/indicadores-planes-y-politicas</a
+          >
+        </li>
+      </ul>
+      <h3>Mapas</h3>
+      <ul>
+        <li>
+          <a
+            href="http://101.44.24.97/mapas/planes-de-manejo-de-transito"
+            target="_blank"
+            >/mapas/planes-de-manejo-de-transito</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/mapas/semaforizacion-en-bogota"
+            target="_blank"
+            >/mapas/semaforizacion-en-bogota</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/mapas/velocidades-en-14-corredores"
+            target="_blank"
+            >/mapas/velocidades-en-14-corredores</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/mapas/volumenes-vehiculares"
+            target="_blank"
+            >/mapas/volumenes-vehiculares</a
+          >
+        </li>
+        <li>
+          <a href="http://101.44.24.97/mapas" target="_blank">/mapas</a>
+        </li>
+      </ul>
+      <h3>Publicaciones</h3>
+      <ul>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/resultados-del-dia-sin-carro-y"
+            target="_blank"
+            >/publicaciones/infografias/resultados-del-dia-sin-carro-y</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/tips-seguridad-vial-servicio"
+            target="_blank"
+            >/publicaciones/infografias/tips-seguridad-vial-servicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/siniestralidad-vial-2024"
+            target="_blank"
+            >/publicaciones/infografias/siniestralidad-vial-2024</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/conoce-el-sitp"
+            target="_blank"
+            >/publicaciones/infografias/conoce-el-sitp</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/principales-proyectos-de"
+            target="_blank"
+            >/publicaciones/infografias/principales-proyectos-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/conoces-la-situacion-actual-de"
+            target="_blank"
+            >/publicaciones/infografias/conoces-la-situacion-actual-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/encuesta-de-movilidad-bogota"
+            target="_blank"
+            >/publicaciones/infografias/encuesta-de-movilidad-bogota</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/transporte-publico-accesible"
+            target="_blank"
+            >/publicaciones/infografias/transporte-publico-accesible</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/seguridad-en-el-transporte"
+            target="_blank"
+            >/publicaciones/infografias/seguridad-en-el-transporte</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/seguridad-vial-en-paraderos-de"
+            target="_blank"
+            >/publicaciones/infografias/seguridad-vial-en-paraderos-de</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/centros-locales-de-movilidad"
+            target="_blank"
+            >/publicaciones/infografias/centros-locales-de-movilidad</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/tips-de-seguridad-vial-para-el"
+            target="_blank"
+            >/publicaciones/infografias/tips-de-seguridad-vial-para-el</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/siniestralidad-vial-2023-en"
+            target="_blank"
+            >/publicaciones/infografias/siniestralidad-vial-2023-en</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/matriz-de-interaccion"
+            target="_blank"
+            >/publicaciones/infografias/matriz-de-interaccion</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/plan-de-bogota-para-consolidar"
+            target="_blank"
+            >/publicaciones/infografias/plan-de-bogota-para-consolidar</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/como-y-para-que-se-mueven-las"
+            target="_blank"
+            >/publicaciones/infografias/como-y-para-que-se-mueven-las</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/encuesta-de-movilidad-2023"
+            target="_blank"
+            >/publicaciones/infografias/encuesta-de-movilidad-2023</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/donde-realizar-tramites-y"
+            target="_blank"
+            >/publicaciones/infografias/donde-realizar-tramites-y</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/acciones-para-mejorar-la"
+            target="_blank"
+            >/publicaciones/infografias/acciones-para-mejorar-la</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/centro-de-gestion-de-transito"
+            target="_blank"
+            >/publicaciones/infografias/centro-de-gestion-de-transito</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/infografias/centros-locales-de-movilidad-0"
+            target="_blank"
+            >/publicaciones/infografias/centros-locales-de-movilidad-0</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/resultados/encuesta-de-movilidad-2023"
+            target="_blank"
+            >/publicaciones/resultados/encuesta-de-movilidad-2023</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/resultados/encuesta-de-movilidad-2019"
+            target="_blank"
+            >/publicaciones/resultados/encuesta-de-movilidad-2019</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/resultados/encuesta-de-movilidad-2015"
+            target="_blank"
+            >/publicaciones/resultados/encuesta-de-movilidad-2015</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/resultados/encuesta-de-movilidad-2011"
+            target="_blank"
+            >/publicaciones/resultados/encuesta-de-movilidad-2011</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://101.44.24.97/publicaciones/resultados/encuesta-de-movilidad-2005"
+            target="_blank"
+            >/publicaciones/resultados/encuesta-de-movilidad-2005</a
+          >
+        </li>
+        <li>
+          <a href="http://101.44.24.97/publicaciones" target="_blank"
+            >/publicaciones</a
+          >
+        </li>
+      </ul>
+      <h3>Sobre-nosotros</h3>
+      <ul>
+        <li>
+          <a href="http://101.44.24.97/sobre-nosotros" target="_blank"
+            >/sobre-nosotros</a
+          >
+        </li>
+      </ul>
+      <h3>Tableros</h3>
+      <ul>
+        <li>
+          <a
+            href="http://101.44.24.97/tableros?field_busqueda=all&amp;orden=tableros"
+            target="_blank"
+            >/tableros</a
+          >
+        </li>
+      </ul>
+      <h3>Tematicas</h3>
+      <ul>
+        <li>
+          <a
+            href="http://101.44.24.97/tematicas?contenido=all&amp;txm=all&amp;contenido_key=Todos&amp;categoria=all&amp;categoria_key=Todos&amp;orden=block_3&amp;orden_key=A-Z"
+            target="_blank"
+            >/tematicas</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const headers = document.querySelectorAll("#html-sitemap h3");
+
+      headers.forEach((header) => {
+        header.addEventListener("click", () => {
+          const list = header.nextElementSibling;
+          const isOpen = list.classList.contains("open");
+
+          // Cerrar todos los demás
+          document
+            .querySelectorAll("#html-sitemap ul")
+            .forEach((ul) => ul.classList.remove("open"));
+          document
+            .querySelectorAll("#html-sitemap h3")
+            .forEach((h) => h.classList.remove("activo"));
+
+          // Si no estaba abierto, abrirlo
+          if (!isOpen) {
+            list.classList.add("open");
+            header.classList.add("activo");
+          }
+          // Si estaba abierto, simplemente no hacemos nada más (queda cerrado)
+        });
+      });
+    });
+  </script>
+</html>

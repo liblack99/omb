@@ -57,7 +57,7 @@ const swiperIndicadores = new Swiper(".indicadoresSwiper", {
     480: {slidesPerView: 2, spaceBetween: 20},
     768: {
       slidesPerView: 3,
-      spaceBetween: 24,
+      spaceBetween: 30,
     },
     1024: {slidesPerView: 4, spaceBetween: 30},
     1360: {slidesPerView: 5, spaceBetween: 30},
@@ -174,32 +174,70 @@ const cardsObservatorio = document.querySelectorAll(".omb-card-observatorio");
 const nav = document.querySelector(".omb-nav");
 
 const botonesAcordeon = document.querySelectorAll(".omb-acordion-boton--home");
+const acordionContenido = document.querySelectorAll(
+  ".omb-acordion-content-home"
+);
 
+// Función para abrir un grupo por data-boton
+function abrirGrupo(botonId) {
+  acordionContenido.forEach((contenido) => {
+    if (contenido.dataset.boton === botonId) {
+      contenido.style.maxHeight = contenido.scrollHeight + "px";
+      contenido.classList.add("abierto");
+    }
+  });
+
+  botonesAcordeon.forEach((btn) => {
+    if (btn.dataset.boton === botonId) {
+      btn.classList.add("activo");
+    }
+  });
+}
+
+// Evento click
 botonesAcordeon.forEach((boton) => {
   boton.addEventListener("click", () => {
-    const contenido = boton.nextElementSibling;
+    const botonId = boton.dataset.boton;
 
-    // Cerrar todos menos el actual
-    document.querySelectorAll(".omb-acordion-content-home").forEach((el) => {
-      if (el !== contenido) {
-        el.style.maxHeight = null;
-        el.classList.remove("abierto");
-        el.previousElementSibling.classList.remove("activo");
+    // Cerrar todos los que no coincidan
+    acordionContenido.forEach((contenido) => {
+      if (contenido.dataset.boton !== botonId) {
+        contenido.style.maxHeight = null;
+        contenido.classList.remove("abierto");
       }
     });
 
-    // Alternar el actual
-    if (contenido.style.maxHeight) {
-      contenido.style.maxHeight = null;
-      contenido.classList.remove("abierto");
-      boton.classList.remove("activo");
+    botonesAcordeon.forEach((btn) => {
+      if (btn.dataset.boton !== botonId) {
+        btn.classList.remove("activo");
+      }
+    });
+
+    // Alternar el grupo que coincide
+    const grupoAbierto = document.querySelector(
+      `.omb-acordion-content-home[data-boton="${botonId}"].abierto`
+    );
+
+    if (grupoAbierto) {
+      acordionContenido.forEach((contenido) => {
+        if (contenido.dataset.boton === botonId) {
+          contenido.style.maxHeight = null;
+          contenido.classList.remove("abierto");
+        }
+      });
+      botonesAcordeon.forEach((btn) => {
+        if (btn.dataset.boton === botonId) {
+          btn.classList.remove("activo");
+        }
+      });
     } else {
-      contenido.style.maxHeight = contenido.scrollHeight + "px";
-      contenido.classList.add("abierto");
-      boton.classList.add("activo");
+      abrirGrupo(botonId);
     }
   });
 });
+
+// 📌 Abrir por defecto el data-boton = "1" al cargar
+abrirGrupo("1");
 
 botonMenu.addEventListener("click", () => {
   if (nav.style.display === "flex") {

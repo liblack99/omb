@@ -52,6 +52,7 @@
       line-height: 100%;
       vertical-align: middle;
       font-family: "Work sans", sans-serif;
+      text-transform: capitalize;
     }
     .omb-breadcrumb-lista li a {
       color: #4c4c4c;
@@ -66,11 +67,33 @@
       float: left;
       padding-left: 0.8rem;
       color: #282c34;
-      content: var(--bs-breadcrumb-divider, ">");
-      font-weight: 500; /* No existe 'medium' como valor válido, usa 500 */
+      content: url("http://101.44.24.97/sites/default/files/2025-08/fecha-mig-de-pan.svg");
     }
+    .omb-breadcrumb-lista li.sin-after::after {
+      content: none !important;
+    }
+
     .omb-breadcrumb-lista li a:hover {
       color: #000;
+    }
+
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) and (max-width: 1139px) {
+      .omb-breadcrumb-container {
+        max-width: 960px;
+      }
+    }
+
+    @media (min-width: 1140px) and (max-width: 1359px) {
+      .omb-breadcrumb-container {
+        max-width: 1140px;
+      }
+    }
+    @media (min-width: 1280px) {
+      .omb-breadcrumb-container {
+        max-width: 1140px;
+      }
     }
   </style>
   <body>
@@ -81,7 +104,7 @@
             <li><a href="/" title="Ir a inicio">Inicio</a></li>
             <li><a href="/tableros" title="Ir a tableros">Tableros</a></li>
             <li aria-current="page">
-              Política motorizada de cero y bajas emisiones
+              política motorizada de cero y bajas emisiones
             </li>
           </ol>
         </nav>
@@ -96,11 +119,63 @@
         breadcrumbLinks.forEach((link) => {
           const text = link.textContent.trim();
           const words = text.split(" ");
+
+          // Acortar si tiene más de 3 palabras
           if (words.length > 3) {
             link.textContent = words.slice(0, 3).join(" ") + "…";
+          }
+
+          // Si el siguiente hermano no existe o está vacío
+          const next = link.nextElementSibling;
+          if (!next || !next.textContent.trim()) {
+            link.classList.add("sin-after");
           }
         });
       });
     </script>
+
+    <div class="swiper-slide omb-swiper-slide">
+      <a href="{{ view_node }}" class="omb-enlace--not-underline">
+        <div class="omb-card omb-card--tableros">
+          {{ field_imagen|raw }}
+          <div class="omb-card-tableros-tags-container">
+            <div class="omb-card-tableros-tag">
+              {{ field_taxonomia_tematica|raw }}
+            </div>
+          </div>
+          <h5>{{ title|raw }}</h5>
+          {{ body|raw }}
+        </div>
+      </a>
+    </div>
+
+    <a href="{{ view_node }}" class="omb-enlace--not-underline">
+      <div class="omb-card omb-card--mediana">
+        {{ field_imagen }}
+        <div class="omb-card-infografia-content">
+          <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+            {{ title }}
+          </h5>
+          <div class="omb-fecha omb-fecha--padding">
+            <span
+              ><img
+                src="/sites/default/files/2025-08/icono-locacion.svg"
+                alt="Icono locacion" /> </span
+            >{{ field_direccion }}
+          </div>
+          <div class="omb-fecha omb-fecha--padding">
+            <span
+              ><img
+                src="/sites/default/files/2025-08/icono-fecha.svg"
+                alt="Icono fecha" /> </span
+            >{{ field_fecha }}
+          </div>
+          <div class="omb-parrafo-card">{{ body }}</div>
+          <div class="omb-enlaces omb-enlaces--con-padding">
+            Ver información del evento
+          </div>
+        </div>
+      </div>
+    </a>
   </body>
 </html>

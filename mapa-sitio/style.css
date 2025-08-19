@@ -44,14 +44,13 @@ body {
 }
 .omb-acordion-boton {
   width: 100%;
-  height: 88px;
   display: flex;
   align-items: center;
   text-align: left;
   background-color: inherit;
   border: 0;
   min-height: 4.375rem;
-  padding: 0.5rem 1rem;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -148,12 +147,12 @@ body {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .omb-acordion-boton {
+  /* .omb-acordion-boton {
     padding: 2.188rem 1.5rem 2.188rem 2.375rem;
   }
   .omb-acordion-boton--nivel-2 {
     padding: 1.438rem 1.5rem 1.438rem 3.125rem;
-  }
+  } */
   .omb-lista-sitios {
     padding: 1.875rem 3.125rem;
   }
@@ -163,14 +162,14 @@ body {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .omb-titulo-botton-acordeon {
+  /* .omb-titulo-botton-acordeon {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
   .omb-titulo-botton-acordeon--nivel-2 {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
+  } */
   .omb-lista-sitios {
     padding: 1.875rem 3.125rem;
   }

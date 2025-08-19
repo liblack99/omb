@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --color-primario-soft: #f9ffbd;
+      --color-primario: #dbf000;
+      --color-secundario-hover: #ecff24;
+      --color-boder-tab: #8e9c00;
+      --color-texto: #000000;
+      --color-enlace: #515900;
+      --color-enlace-hover: #a5ad4a;
+      --color-fondo-seccion-intreres: #f3f4f1;
+    }
+    a {
+      text-decoration: none;
+    }
+    body {
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+    }
+
+    .omb-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+
+    .omb-section--de-interes {
+      background-color: var(--color-fondo-seccion-intreres);
+      padding-bottom: 80px;
+    }
+    .omb-texto-container {
+      width: 90%;
+    }
+
+    .omb-card-contexto-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .omb-card-contexto-content {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      width: 90%;
+    }
+
+    .omb-texto-card-contexto {
+      display: flex;
+      flex-direction: column;
+      border-radius: 16px;
+      position: relative;
+    }
+
+    .omb-titulo-card-contexto {
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 2.75rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .omb-titulo-card-container {
+      width: 100%;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      box-sizing: border-box;
+      position: relative;
+      margin: 16px 0px;
+    }
+
+    .omb-parrafo-card-contexto {
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Work sans", sans-serif;
+      line-height: 30px;
+      letter-spacing: 0;
+      color: #1b1b1b;
+      margin: 0;
+    }
+    .omb-icono-container {
+      width: auto;
+      height: auto;
+      padding: 8px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(103, 108, 46, 0.1);
+    }
+    .omb-icon-card-contexto {
+      width: auto;
+      height: auto;
+      padding: 20px;
+      background: #dbf000;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .omb-imagen-card-contexto {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .omb-fuentes-container {
+      width: 90%;
+
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .omb-fuentes-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      background-color: #e6e6e6;
+    }
+    .omb-fuente-doble {
+      display: flex;
+      flex-direction: column;
+    }
+    .omb-fuentes-item {
+      padding: 16px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      border-left-width: 1px;
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+    }
+    .omb-boton-fuentes-container {
+      background-color: #fff;
+    }
+
+    .omb-titulo-fuentes {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: #1b1b1b;
+      margin: 0;
+    }
+    .omb-parrafo-fuentes {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      color: #1b1b1b;
+      margin: 0;
+      font-family: "Work sans", sans-serif;
+    }
+    .omb-boton-fuentes-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .omb-boton {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: "Work sans", sans-serif;
+      text-transform: uppercase;
+      border-width: 0.125rem;
+      border-style: solid;
+      color: var(--color-texto);
+      cursor: pointer;
+    }
+    .omb-boton--primario {
+      background-color: var(--color-primario);
+      border: 1px solid var(--color-primario);
+    }
+    .omb-boton--primario:hover {
+      background-color: var(--color-secundario-hover);
+      border-color: var(--color-secundario-hover);
+    }
+    .omb-boton--con-icono {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    .omb-mapa-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding-bottom: 40px;
+    }
+    .omb-mapa-container {
+      overflow: hidden;
+      width: 90%;
+      height: 808px;
+      border-radius: 16px;
+      position: relative;
+    }
+    .omb-mapa-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .omb-descripcion-mapa {
+      position: absolute;
+      border: 1px solid #bbbcae;
+      border-radius: 16px 0px 0px 16px;
+      border-right: 4px solid var(--color-primario);
+      width: 384px;
+      height: 232px;
+      opacity: 0.7;
+      gap: 8px;
+      padding: 32px;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+
+    .omb-compartir-container {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      border-radius: 24px;
+      padding: 12px;
+      background-color: #e6e6e6;
+      box-sizing: border-box;
+    }
+
+    .omb-redes-sociales {
+      width: 424px;
+      height: 76px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .omb-redes-sociales p {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: right;
+      vertical-align: middle;
+      margin: 0;
+    }
+    .omb-lista-redes {
+      display: flex;
+      gap: 8px;
+    }
+    .omb-lista-redes a {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4c531e;
+      border-radius: 50%;
+      padding: 8px;
+    }
+    .omb-de-interes-container {
+      width: 90%;
+      position: relative;
+    }
+
+    .omb-contexto-section {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .omb-contexto-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .omb-titulos-contexto-container {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000;
+      margin: 0;
+    }
+    .omb-parrafo-contexto-container {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0;
+      font-family: "Work sans", sans-serif;
+    }
+
+    .omb-enlaces-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .omb-parrafos-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .omb-parrafos-container ul {
+      padding: 0px 0px 0px 20px;
+    }
+    .omb-parrafos-container ul li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0;
+      font-family: "Work sans", sans-serif;
+    }
+
+    .omb-lista-enlaces {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .omb-enlaces {
+      gap: 4px;
+      display: flex;
+      font-family: "Work Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      text-decoration: underline;
+      color: var(--color-enlace);
+    }
+    .omb-enlace:hover {
+      color: var(--color-enlace-hover);
+    }
+
+    .omb-de-interes-container {
+      width: 90%;
+      position: relative;
+    }
+    .omb-titulo-section {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+    }
+    .omb-parrafo-descripcion-section {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: black;
+    }
+
+    .omb-carrusel-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .omb-swiper {
+      width: 80%;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+
+    .omb-wrapper {
+      width: 100%;
+    }
+
+    .omb-swiper-slide {
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .omb-paginacion {
+      position: absolute;
+      bottom: -32px !important;
+    }
+
+    .omb-paginacion > .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: white !important;
+      border: 2px solid #4b521d;
+      border-radius: 50%;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+    /* Bullet activo */
+    .omb-paginacion > .swiper-pagination-bullet-active {
+      background-color: #4b521d !important;
+      border-color: #4b521d;
+      transform: scale(1.2);
+    }
+    .omb-botom-control-carrousel {
+      position: absolute;
+      z-index: 20;
+      bottom: -40px;
+      min-width: 120px;
+      height: 34px;
+      width: auto;
+      cursor: pointer;
+    }
+
+    .omb-botom-control-carrousel button {
+      color: #565747;
+      border-radius: 8px;
+      font-family: "Worl sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      width: auto;
+      display: flex;
+      padding: 8px;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+
+    .omb-boton-prev {
+      left: 0px;
+    }
+    .omb-boton-next {
+      right: 0px;
+    }
+    .omb-boton-prev,
+    .omb-boton-next {
+      color: #565747 !important;
+      background-color: #f3f4f1cc;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      border-width: 1px;
+      transition: all 0.5s ease;
+      border: 1px solid #d9e36e;
+    }
+    .omb-boton-prev:hover,
+    .omb-boton-next:hover {
+      color: black !important;
+      background-color: var(--color-primario);
+    }
+
+    .omb-boton-prev::after,
+    .omb-boton-next::after {
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .omb-botom-control-carrousel-tableros-interes {
+      position: absolute;
+      z-index: 20;
+      bottom: -40px;
+      left: 0;
+      min-width: 120px;
+      height: 34px;
+      width: auto;
+    }
+
+    .omb-botom-control-carrousel-tableros-interes button {
+      color: #565747;
+      border-radius: 8px;
+      font-family: "Worl sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      width: auto;
+      display: flex;
+      padding: 8px;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: inherit;
+    }
+
+    .omb-card {
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      flex-direction: column;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      padding-bottom: 16px;
+    }
+
+    .omb-card--pequeña {
+      width: 100%;
+    }
+    .omb-card:hover {
+      border: 1px solid black;
+      transform: scale(1.01);
+    }
+    .omb-card:hover h5 {
+      color: var(--color-enlace);
+    }
+    .omb-imagen-card {
+      width: 100%;
+    }
+    .omb-imagen-card--pequeña {
+      height: 158px;
+    }
+
+    .omb-titulo-card {
+      font-weight: 600;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      text-decoration: underline;
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.625rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.688rem;
+      padding: 0px 16px;
+      transition: all 0.3s ease-in;
+    }
+
+    .omb-titulo-card--dos-lineas {
+      height: 53px;
+    }
+
+    .omb-parrafo-card {
+      font-size: 1rem;
+      font-family: "Work sans", sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 0;
+      line-height: 1.5rem;
+      padding: 0px 16px;
+      color: black;
+      min-height: 72px;
+    }
+    .omb-parrafo-card--sin-limite {
+      overflow: visible;
+      text-overflow: clip;
+      display: block;
+      -webkit-line-clamp: unset;
+      line-height: 1.5rem;
+      min-height: auto;
+    }
+    .hidden {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .omb-parrafos-contexto-container {
+        display: flex;
+        gap: 30px;
+      }
+      .omb-titulo-card-container {
+        margin: 16px 0px;
+      }
+      .omb-titulo-card-contexto {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.75rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .omb-swiper {
+        width: 90%;
+      }
+    }
+    @media (min-width: 1024px) and (max-width: 1139px) {
+      .omb-parrafos-contexto-container {
+        display: flex;
+        gap: 30px;
+      }
+      .omb-texto-card-contexto {
+        width: 50%;
+      }
+      .omb-titulo-card-contexto {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.75rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .omb-mapa-container,
+      .omb-texto-container,
+      .omb-fuentes-container,
+      .omb-contexto-container,
+      .omb-compartir-container,
+      .omb-de-interes-container {
+        max-width: 960px;
+      }
+      .omb-compartir-container {
+        justify-content: end;
+      }
+      .omb-card-contexto-content {
+        flex-direction: row;
+        justify-content: start;
+        gap: 30px;
+        width: 100%;
+      }
+      .omb-imagen-card-contexto {
+        width: 50%;
+        height: 316px;
+      }
+      .omb-titulo-card-container {
+        margin: 16px 0px;
+      }
+      .omb-fuentes-container {
+        flex-direction: row;
+      }
+      .omb-fuentes-content {
+        flex-direction: row;
+        justify-content: start;
+        width: 600px;
+      }
+      .omb-fuentes-item {
+        width: 300px;
+      }
+      .omb-boton-fuentes-container {
+        background-color: #e6e6e6;
+        flex: 1;
+      }
+      .omb-boton-fuentes-container {
+        background-color: #e6e6e6;
+      }
+      .omb-fuentes-container {
+        justify-content: start;
+        background-color: #e6e6e6;
+        overflow: hidden;
+      }
+      .omb-grafica-section-mobile {
+        display: none;
+      }
+      .omb-grafica-section {
+        display: flex;
+      }
+      .omb-selectores-grafica-container {
+        width: 100%;
+      }
+      .omb-nav-grafica {
+        width: 100%;
+      }
+      .omb-contexto-container {
+        flex-direction: row;
+      }
+      .omb-enlaces-container {
+        width: 50%;
+      }
+      .omb-parrafos-container {
+        width: 50%;
+      }
+      .omb-swiper {
+        width: 90%;
+      }
+      .omb-boton-prev,
+      .omb-boton-next {
+        width: 52px;
+        height: 52px;
+      }
+      .omb-titulo-section {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.75rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    @media (min-width: 1140px) and (max-width: 1359px) {
+      .omb-texto-card-contexto {
+        width: 50%;
+      }
+      .omb-titulo-card-contexto {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.75rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .omb-mapa-container,
+      .omb-texto-container,
+      .omb-fuentes-container,
+      .omb-contexto-container,
+      .omb-compartir-container,
+      .omb-de-interes-container {
+        max-width: 1140px;
+      }
+
+      .omb-compartir-container {
+        justify-content: end;
+      }
+      .omb-card-contexto-content {
+        flex-direction: row;
+        justify-content: start;
+        gap: 30px;
+        width: 100%;
+      }
+      .omb-imagen-card-contexto {
+        width: 50%;
+        height: 316px;
+      }
+      .omb-titulo-card-container {
+        margin: 16px 0px;
+      }
+      .omb-fuentes-container {
+        flex-direction: row;
+      }
+      .omb-fuentes-content {
+        flex-direction: row;
+        justify-content: start;
+        width: 700px;
+      }
+      .omb-fuentes-item {
+        width: 360px;
+      }
+      .omb-boton-fuentes-container {
+        background-color: #e6e6e6;
+        flex: 1;
+      }
+      .omb-boton-fuentes-container {
+        background-color: #e6e6e6;
+      }
+      .omb-fuentes-container {
+        justify-content: start;
+        background-color: #e6e6e6;
+        overflow: hidden;
+      }
+      .omb-grafica-section-mobile {
+        display: none;
+      }
+      .omb-grafica-section {
+        display: flex;
+      }
+      .omb-selectores-grafica-container {
+        width: 100%;
+      }
+      .omb-nav-grafica {
+        width: 100%;
+      }
+      .omb-contexto-container {
+        flex-direction: row;
+      }
+      .omb-enlaces-container {
+        width: 50%;
+      }
+      .omb-parrafos-container {
+        width: 50%;
+      }
+      .omb-swiper {
+        width: 90%;
+      }
+      .omb-boton-prev,
+      .omb-boton-next {
+        width: 52px;
+        height: 52px;
+      }
+      .omb-titulo-section {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.75rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+    @media (min-width: 1280px) {
+      .omb-titulo-section {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.75rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .omb-compartir-container {
+        justify-content: end;
+      }
+      .omb-texto-card-contexto {
+        width: 50%;
+      }
+      .omb-titulo-card-contexto {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.75rem;
+        color: var(--color-texto);
+        font-family: "Montserrat", sans-serif;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .omb-mapa-container,
+      .omb-texto-container,
+      .omb-fuentes-container,
+      .omb-contexto-container,
+      .omb-compartir-container,
+      .omb-de-interes-container {
+        max-width: 1140px;
+      }
+      .omb-card-contexto-container {
+        width: 1140px;
+      }
+
+      .omb-card-contexto-content {
+        flex-direction: row;
+        justify-content: start;
+        gap: 30px;
+        width: 100%;
+      }
+      .omb-imagen-card-contexto {
+        width: 50%;
+        height: 316px;
+      }
+      .omb-titulo-card-container {
+        margin: 16px 0px;
+      }
+      .omb-fuentes-container {
+        flex-direction: row;
+      }
+      .omb-fuentes-content {
+        flex-direction: row;
+        justify-content: start;
+        width: 800px;
+      }
+      .omb-fuentes-item {
+        width: 400px;
+      }
+      .omb-boton-fuentes-container {
+        background-color: #e6e6e6;
+        flex: 1;
+      }
+      .omb-fuentes-container {
+        justify-content: start;
+        background-color: #e6e6e6;
+        overflow: hidden;
+      }
+      .omb-grafica-section-mobile {
+        display: none;
+      }
+      .omb-grafica-section {
+        display: flex;
+      }
+      .omb-selectores-grafica-container {
+        width: 100%;
+      }
+      .omb-nav-grafica {
+        width: 100%;
+      }
+      .omb-contexto-container {
+        flex-direction: row;
+      }
+      .omb-enlaces-container {
+        width: 50%;
+      }
+      .omb-parrafos-container {
+        width: 50%;
+      }
+      .omb-swiper {
+        width: 90%;
+      }
+      .omb-boton-prev,
+      .omb-boton-next {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  </style>
+  <body>
+    <main class="main-content col" id="content" role="main">
+      <section class="section">
+        <a href="#main-content" id="main-content" tabindex="-1"></a>
+        <div data-drupal-messages-fallback="" class="hidden"></div>
+        <div
+          id="block-mitema-content"
+          class="block block-system block-system-main-block">
+          <div class="content">
+            <article
+              data-history-node-id="160"
+              class="contextual-region nodo-omb-mapa">
+              <section class="omb-section">
+                <div class="omb-texto-container">
+                  <h2 class="omb-titulo-card-contexto">
+                    <span
+                      class="field field--name-title field--type-string field--label-hidden"
+                      >Volúmenes vehiculares</span
+                    >
+                  </h2>
+                  <div class="omb-parrafos-contexto-container">
+                    <div class="omb-parrafo-card-contexto">
+                      <div
+                        class="clearfix text-formatted field field--name-field-descripcion-completa-conte field--type-text-with-summary field--label-hidden field__item">
+                        <p>
+                          El visor de volúmenes de vehiculares, peatonales y de
+                          bicicletas, es una herramienta diseñada para facilitar
+                          la visualización y análisis de los datos recolectados
+                          a través de las tomas de información de campo del
+                          Contrato de Monitoreo de la Entidad. Este aplicativo
+                          se enfoca en presentar datos detallados, brindando una
+                          interfaz intuitiva y funcional para los usuarios
+                          interesados en el análisis de volúmenes de tránsito.
+                        </p>
+                        <p>
+                          El aplicativo permite a los usuarios seleccionar nodos
+                          específicos de toma de información, por medio de un
+                          mapa interactivo y generar reportes personalizados con
+                          gráficos y estadísticas. Además, ofrece la
+                          visualización de los esquemas de campo de los
+                          movimientos que se aforan y fotografías de los accesos
+                          de la toma de información. Las tomas existentes en
+                          cada nodo se pueden descargar en archivos planos para
+                          facilitar su integración con otras herramientas de
+                          análisis.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="omb-section">
+                <div class="omb-fuentes-container">
+                  <div class="omb-fuentes-content">
+                    <div class="omb-fuentes-item">
+                      <h3 class="omb-titulo-fuentes">Fuentes</h3>
+                      <p class="omb-parrafo-fuentes">
+                        Estudios de Monitoreo - Dirección de Inteligencia para
+                        la Movilidada, SDM
+                      </p>
+                    </div>
+                    <div class="omb-fuente-doble">
+                      <div class="omb-fuentes-item omb-fuentes-item--doble">
+                        <h3 class="omb-titulo-fuentes">
+                          Prioridad de actualizacion
+                        </h3>
+                        <p class="omb-parrafo-fuentes">a Demanda</p>
+                      </div>
+                      <div class="omb-fuentes-item omb-fuentes-item--doble">
+                        <h3 class="omb-titulo-fuentes">
+                          Disponibilidad de los datos
+                        </h3>
+                        <p class="omb-parrafo-fuentes">Desde 2021</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="omb-boton-fuentes-container">
+                    <button
+                      type="button"
+                      class="omb-boton omb-boton--primario omb-boton--con-icono"
+                      aria-label="Abrir ayuda para ver el mapa"
+                      title="Ayuda para ver el mapa">
+                      <span aria-hidden="true">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 7 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_10561_3173)">
+                            <path
+                              d="M1.15595 13.9648H1.77283V9.56776H1.15595C0.815241 9.56776 0.539062 9.29521 0.539062 8.95899V7.50492C0.539062 7.1687 0.815241 6.89616 1.15595 6.89616H4.61049C4.9512 6.89616 5.22737 7.1687 5.22737 7.50492V13.9648H5.84426C6.18496 13.9648 6.46114 14.2374 6.46114 14.5736V16.0277C6.46114 16.3639 6.18496 16.6364 5.84426 16.6364H1.15595C0.815241 16.6364 0.539062 16.3639 0.539062 16.0277V14.5736C0.539062 14.2374 0.815241 13.9648 1.15595 13.9648ZM3.5001 1.052C2.27358 1.052 1.27932 2.03318 1.27932 3.24356C1.27932 4.45394 2.27358 5.43512 3.5001 5.43512C4.72662 5.43512 5.72088 4.45394 5.72088 3.24356C5.72088 2.03318 4.72659 1.052 3.5001 1.052Z"
+                              fill="currentColor"></path>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_10561_3173">
+                              <rect
+                                width="6.54545"
+                                height="17.4545"
+                                fill="currentColor"
+                                transform="translate(0.227539 0.116943)"></rect>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      AYUDA PARA VER EL MAPA
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <section class="omb-section">
+                <div class="omb-mapa-container">
+                  <div class="omb-descripcion-mapa">
+                    <h5 class="omb-titulo-card">Cuadro descriptivo del mapa</h5>
+                    <div class="omb-parrafo-card omb-parrafo-card--sin-limite">
+                      <div
+                        class="clearfix text-formatted field field--name-field-cuadro-descriptivo-del-map field--type-text-long field--label-hidden field__item">
+                        <p>
+                          “En el Observatorio de Movilidad de Bogotá (OMB)
+                          estamos comprometidos con mejorar la movilidad en la
+                          ciudad. "
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <iframe
+                    src="https://dim.movilidadbogota.gov.co/visualizacion_monitoreo/public-view"
+                    frameborder="0"
+                    allowfullscreen="">
+                  </iframe>
+                  <a
+                    href="https://dim.movilidadbogota.gov.co/visualizacion_monitoreo/public-view"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Ir al mapa"
+                    aria-label="Ir al mapa"
+                    >Ver mapa completo</a
+                  >
+                </div>
+              </section>
+
+              <section class="omb-section">
+                <div
+                  class="omb-compartir-container omb-compartir-container--variante">
+                  <div class="omb-redes-sociales">
+                    <p>Comparte este contenido en tus redes</p>
+                    <div class="omb-lista-redes">
+                      <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Ir a facebook"
+                        aria-label="Ir a facebook">
+                        <img
+                          src="http://101.44.24.97/sites/default/files/2025-07/icono-facebook.svg"
+                          alt="Icono Facebook" />
+                      </a>
+
+                      <a
+                        href="https://www.twitter.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Ir a twitter"
+                        aria-label=" IR A twitter">
+                        <img
+                          src="http://101.44.24.97/sites/default/files/2025-07/icono-twitter.svg"
+                          alt="Icono Twitter" />
+                      </a>
+
+                      <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Ir a instagram"
+                        aria-label="Ir a instagram">
+                        <img
+                          src="http://101.44.24.97/sites/default/files/2025-07/icono-instagram.svg"
+                          alt="Icono instagram" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="omb-section">
+                <div class="omb-contexto-container">
+                  <div class="omb-enlaces-container">
+                    <h2 class="omb-titulos-contexto-container">Enlaces</h2>
+                    <div class="omb-lista-enlaces">
+                      <div
+                        class="clearfix text-formatted field field--name-field-enlaces field--type-text-with-summary field--label-hidden field__item">
+                        <p>
+                          “En el Observatorio de Movilidad de Bogotá (OMB)
+                          estamos comprometidos con mejorar la movilidad en la
+                          ciudad. Por eso, somos una herramienta que ayuda a
+                          planear, evaluar y actualizar las acciones para
+                          mejorar la infraestructura y los servicios de
+                          transporte en la ciudad (Políticas públicas) y que a
+                          su vez entrega información relevante del sector, a
+                          toda la ciudadanía. Esto lo hacemos mediante la
+                          publicación de estudios, tableros de control,
+                          infografías, artículos de investigación y otros
+                          formatos.”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="omb-parrafos-container">
+                    <h2 class="omb-titulos-contexto-container">Contexto</h2>
+                    <div class="omb-parrafo-contexto-container">
+                      <div
+                        class="clearfix text-formatted field field--name-field-descripcion-contexto field--type-text-with-summary field--label-hidden field__item">
+                        <p>
+                          Para el año 2018 se registraron &nbsp;18,996,286
+                          &nbsp;viajes en total, con un tiempo de duración del
+                          viaje promedio de &nbsp;51.53 &nbsp;minutos. La
+                          principal manera en que se movilizaron, o también
+                          llamado modo principal, fue &nbsp;A pie (mayor o igual
+                          a 15 minutos) &nbsp;con el &nbsp;20.41% &nbsp;de
+                          participación que equivale a &nbsp;3,956,917 &nbsp;de
+                          viajes. La manera menos frecuente en que se movilizan
+                          fue &nbsp;Cable &nbsp;con el &nbsp;0.0037 % &nbsp;de
+                          participación que equivale a &nbsp;949 &nbsp;viajes.
+                          Los modos principales reflejan la cercanía que tienen
+                          los encuestados con su lugar de trabajo, e incluso,
+                          para los que aplican, con su lugar de estudio, ya que
+                          la opción más viable para ellos es el traslado a pie.
+                        </p>
+                        <p>
+                          Los habitantes de Bogotá y la sabana se conocen por su
+                          hábito de empezar el día desde tempranas horas, y esto
+                          se ve reflejado en la hora de inicio del viaje, la
+                          hora más frecuente de movilidad es las &nbsp;6
+                          &nbsp;horas del día con un registro de circulación de
+                          &nbsp;2,112,178 &nbsp;de viajes diarios
+                          aproximadamente, que representa el &nbsp;11.12%
+                          &nbsp;de los viajes diarios. Este comportamiento
+                          &nbsp;horario permiten reflejar la estacionalidad
+                          presente en los bogotanos que se movilizan, los cuales
+                          en su mayoría salen de la casa a las &nbsp;6
+                          &nbsp;horas del día para sus actividades comunes.
+                        </p>
+                        <p>
+                          Por género, se observa que la cantidad de &nbsp;Viajes
+                          diarios para Mujer (10,036,139) fue mayor que Hombre
+                          (8,960,146). &nbsp;Esto debido a que el género
+                          &nbsp;Mujer cuenta para 52.83% de Viajes diarios.
+                          &nbsp;Por grupo etario, el rango de edad comprendido
+                          entre &nbsp;41-60 &nbsp;años es el que presenta mayor
+                          frecuencia, con un total de &nbsp;5,019,501
+                          &nbsp;viajes que representa el &nbsp;27.03 % &nbsp;del
+                          total. El estrato socioeconómico que presenta mayor
+                          frecuencia en los hogares del área metropolitana de
+                          Bogotá es el &nbsp;2 &nbsp;con un total de
+                          &nbsp;7,237,312 &nbsp;de viajes que representa el
+                          &nbsp;38.10% &nbsp;de los viajes. Los hogares con
+                          estrato &nbsp;6 &nbsp;son los que presentan menor
+                          participación en el área metropolitana de Bogotá, con
+                          &nbsp;374,236 &nbsp;de viajes que representa el
+                          &nbsp;1.97% &nbsp;de los viajes. El rango de ingreso
+                          de los hogares se ubica por lo general entre
+                          &nbsp;0-829 &nbsp;con &nbsp;4,357,612 &nbsp;viajes que
+                          equivale al &nbsp;22.94%﻿. De los que se movilizan, la
+                          mayoría se traslada por motivos de &nbsp;Volver a casa
+                          &nbsp;con el &nbsp;44.52% &nbsp;que equivale a
+                          &nbsp;8,479,601 &nbsp;viajes. Por nivel educativo la
+                          proporción es mayor en &nbsp;Media completa (10 y 11)
+                          &nbsp;con el &nbsp;15.64% &nbsp;de participación que
+                          equivale a &nbsp;3,168,232 &nbsp;de viajes. Lo cual
+                          refleja que son más los jóvenes que prefieren
+                          movilizarse a pie.
+                        </p>
+                        <p>
+                          Cuando se analiza espacialmente la localidad de origen
+                          de los ciudadanos que se movilizan, principalmente son
+                          de &nbsp;Colombia, Bogotá, SUBA &nbsp;con
+                          &nbsp;1,993,830 &nbsp;de viajes que equivale al
+                          &nbsp;10.50 % &nbsp;del total de los viajes. Ahora
+                          bien, la principal localidad destino es
+                          &nbsp;Colombia, Bogotá, SUBA &nbsp;con &nbsp;1,979,430
+                          &nbsp;de viajes que equivale al &nbsp;10.42 %
+                          &nbsp;del total de los viajes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="omb-section omb-section-recursos">
+                <div class="omb-recursos-container">
+                  <div class="omb-titulo-container-recuros">
+                    <h2 class="omb-titulo-section">
+                      Otros mapas que podrían ser de tu interés
+                    </h2>
+                    <p class="omb-parrafo-descripcion-section">
+                      Explora nuestros publicaciones sobre movilidad en Bogotá,
+                      similares a esta
+                    </p>
+                  </div>
+                  <div
+                    class="omb-boton-control-carrusel-container"
+                    id="controlCarrucelSectionNoticias">
+                    <button
+                      class="omb-boton-control-carrusel"
+                      type="button"
+                      aria-label="Pausar contenido"
+                      title="Pausar contenido"
+                      id="detenerMapas">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        focusable="false">
+                        <path
+                          d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"></path>
+                      </svg>
+                      Pausar
+                    </button>
+                  </div>
+                  <div
+                    class="swiper-button-prev omb-boton-prev swiper-button-lock"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Previous slide"
+                    aria-controls="swiper-wrapper-4d6141216f69c38f">
+                    &nbsp;
+                  </div>
+                  <div
+                    class="swiper-button-next omb-boton-next swiper-button-lock"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Next slide"
+                    aria-controls="swiper-wrapper-4d6141216f69c38f">
+                    &nbsp;
+                  </div>
+                  <div
+                    class="omb-paginacion-mapas omb-paginacion swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock">
+                    <span
+                      class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Go to slide 1"
+                      aria-current="true"></span
+                    ><span
+                      class="swiper-pagination-bullet"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Go to slide 2"></span
+                    ><span
+                      class="swiper-pagination-bullet"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Go to slide 3"></span
+                    ><span
+                      class="swiper-pagination-bullet"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Go to slide 4"></span>
+                  </div>
+                  <div
+                    class="swiper mapasSwiper omb-swiper omb-swiper--home-publicaciones swiper-initialized swiper-horizontal swiper-backface-hidden"
+                    style="max-width: 1280px">
+                    <div
+                      class="swiper-wrapper omb-wrapper"
+                      id="swiper-wrapper-4d6141216f69c38f"
+                      aria-live="off">
+                      <div
+                        class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaiones-home swiper-slide-active"
+                        style="width: 295.5px; margin-right: 30px"
+                        role="group"
+                        aria-label="1 / 4"
+                        data-swiper-slide-index="0">
+                        <div class="views-element-container">
+                          <div
+                            class="omb-card-recursos-container view view-mapas-recursos-cartograficos view-id-mapas_recursos_cartograficos view-display-id-block_2 js-view-dom-id-3d7ceee9769719f47bede63698c640a9a0179b729cebef70fff576806b839fe7">
+                            <div class="view-content row">
+                              <div>
+                                <div>
+                                  <div>
+                                    <a
+                                      href="/mapas/volumenes-vehiculares"
+                                      class="omb-enlace--not-underline"
+                                      ><div class="omb-card-recursos">
+                                        <img
+                                          loading="lazy"
+                                          src="/sites/default/files/2025-07/ldm-recursos-cartograficos-01-visor-volumenes.jpg"
+                                          width="288"
+                                          height="208"
+                                          alt="recursos-cartograficos-01-visor-volumenes" />
+
+                                        <h5>Volúmenes vehiculares</h5>
+                                        <p>
+                                          En el Observatorio de Movilidad de
+                                          Bogotá (OMB) analizamos los
+                                          <strong
+                                            data-start="235"
+                                            data-end="270"
+                                            >volúmenes vehiculares en
+                                            Bogotá</strong
+                                          >
+                                          para comprender el flujo de tránsito y
+                                          mejorar la movilidad en la ciudad.
+                                        </p>
+                                      </div></a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaiones-home swiper-slide-next"
+                        style="width: 295.5px; margin-right: 30px"
+                        role="group"
+                        aria-label="2 / 4"
+                        data-swiper-slide-index="1">
+                        <div class="views-element-container">
+                          <div
+                            class="omb-card-recursos-container view view-mapas-recursos-cartograficos view-id-mapas_recursos_cartograficos view-display-id-block_3 js-view-dom-id-ff512a5a9f4d14576ea8a7139b1ca6c24023cf31f74dc0e8415d3711f106f2eb">
+                            <div class="view-content row">
+                              <div>
+                                <div>
+                                  <div>
+                                    <a
+                                      href="/mapas/velocidades-en-14-corredores"
+                                      class="omb-enlace--not-underline"
+                                      ><div class="omb-card-recursos">
+                                        <img
+                                          loading="lazy"
+                                          src="/sites/default/files/2025-07/ldm-recursos-cartograficos-02-vel-14-corredores.jpg"
+                                          width="288"
+                                          height="208"
+                                          alt="recursos-cartograficos-02-vel-14-corredores" />
+
+                                        <h5>
+                                          Velocidades en 14 corredores viales de
+                                          Bogotá
+                                        </h5>
+                                        <p>
+                                          En Bogotá, la regulación de
+                                          velocidades en 14 corredores viales
+                                          busca mejorar la seguridad vial,
+                                          reducir la siniestralidad y promover
+                                          una movilidad más ordenada.
+                                        </p>
+                                      </div></a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaiones-home"
+                        style="width: 295.5px; margin-right: 30px"
+                        role="group"
+                        aria-label="3 / 4"
+                        data-swiper-slide-index="2">
+                        <div class="views-element-container">
+                          <div
+                            class="omb-card-recursos-container view view-mapas-recursos-cartograficos view-id-mapas_recursos_cartograficos view-display-id-block_4 js-view-dom-id-a46cd7ac3d4cefa5c6026adaacd4eff82d49d96fe108b2b034136078de0f9157">
+                            <div class="view-content row">
+                              <div>
+                                <div>
+                                  <div>
+                                    <a
+                                      href="/mapas/semaforizacion-en-bogota"
+                                      class="omb-enlace--not-underline"
+                                      ><div class="omb-card-recursos">
+                                        <img
+                                          loading="lazy"
+                                          src="/sites/default/files/2025-07/ldm-recursos-cartograficos-03-semaforizacion.jpg"
+                                          width="288"
+                                          height="208"
+                                          alt="recursos-cartograficos-03-semaforizacion" />
+
+                                        <h5>Semaforización en Bogotá</h5>
+                                        <p>
+                                          La semaforización en Bogotá es un
+                                          elemento clave para garantizar una
+                                          movilidad segura y ordenada en la
+                                          ciudad.&nbsp;
+                                        </p>
+                                      </div></a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaiones-home"
+                        role="group"
+                        aria-label="4 / 4"
+                        data-swiper-slide-index="3"
+                        style="width: 295.5px; margin-right: 30px">
+                        <div class="views-element-container">
+                          <div
+                            class="omb-card-recursos-container view view-mapas-recursos-cartograficos view-id-mapas_recursos_cartograficos view-display-id-block_5 js-view-dom-id-a2752d8635c6fc8b89b151bff7a08bc8d8b58b817ed0bef925b24cbaf1383862">
+                            <div class="view-content row">
+                              <div>
+                                <div>
+                                  <div>
+                                    <a
+                                      href="/mapas/planes-de-manejo-de-transito"
+                                      class="omb-enlace--not-underline"
+                                      ><div class="omb-card-recursos">
+                                        <img
+                                          loading="lazy"
+                                          src="/sites/default/files/2025-07/ldm-recursos-cartograficos-04-pmt.jpg"
+                                          width="288"
+                                          height="208"
+                                          alt="ldm-recursos-cartograficos-04" />
+
+                                        <h5>
+                                          Planes de Manejo de Tránsito (PMT)
+                                        </h5>
+                                        <p>
+                                          En el Observatorio de Movilidad de
+                                          Bogotá (OMB) impulsamos los
+                                          <strong
+                                            data-start="160"
+                                            data-end="202"
+                                            >Planes de Manejo de Tránsito en
+                                            Bogotá</strong
+                                          >, herramientas clave para planificar,
+                                          regular y minimizar el impacto de
+                                          obras o eventos en la circulación
+                                          vehicular y peatonal.
+                                        </p>
+                                      </div></a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="swiper-notification"
+                      aria-live="assertive"
+                      aria-atomic="true"></span
+                    ><span
+                      class="swiper-notification"
+                      aria-live="assertive"
+                      aria-atomic="true"></span
+                    ><span
+                      class="swiper-notification"
+                      aria-live="assertive"
+                      aria-atomic="true"></span
+                    ><span
+                      class="swiper-notification"
+                      aria-live="assertive"
+                      aria-atomic="true"></span
+                    ><span
+                      class="swiper-notification"
+                      aria-live="assertive"
+                      aria-atomic="true"></span
+                    ><span
+                      class="swiper-notification"
+                      aria-live="assertive"
+                      aria-atomic="true"></span
+                    ><span
+                      class="swiper-notification"
+                      aria-live="assertive"
+                      aria-atomic="true"></span>
+                  </div>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

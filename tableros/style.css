@@ -385,14 +385,14 @@ body {
   color: black;
 }
 
-.omb-contenedor-derecho {
+/* .omb-contenedor-derecho {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   width: 100%;
   height: 1120px;
   overflow: hidden;
-}
+} */
 
 .omb-cards-container {
   width: 100%;
@@ -451,7 +451,7 @@ body {
   border-radius: 16px;
   padding: 6px 12px 6px 12px;
   background-color: #f3f4f1;
-  color: #71735e;
+  color: #525344;
   font-size: 14px;
   font-weight: 500;
   line-height: 100%;

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .omb-card {
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      flex-direction: column;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      padding-bottom: 16px;
+    }
+
+    .omb-card--pequeña {
+      max-width: 80%;
+    }
+    .omb-card:hover {
+      border: 1px solid black;
+      transform: scale(1.01);
+    }
+    .omb-imagen-card {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    .omb-imagen-card--pequeña {
+      height: 158px;
+    }
+
+    .omb-titulo-card {
+      font-weight: 600;
+      color: var(--color-texto);
+      font-family: "Montserrat", sans-serif;
+      text-decoration: underline;
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.625rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.688rem;
+      padding: 0px 16px;
+      transition: all 0.9s ease-in;
+    }
+
+    .omb-titulo-card--dos-lineas {
+      height: 53px;
+    }
+
+    .omb-parrafo-card {
+      font-size: 1rem;
+      font-family: "Work sans", sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 0;
+      line-height: 1.5rem;
+      padding: 0px 16px;
+      color: black;
+      min-height: 72px;
+    }
+  </style>
+  <body>
+    <div class="omb-card omb-card--pequeña">
+      <img
+        class="omb-imagen-card omb-imagen-card--pequeña"
+        src="/sites/default/files/2025-07/omb-encuesta-2023.png"
+        alt="Imagen Abecé plan distrital de desarrollo" />
+
+      <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">
+        Encuesta de movilidad 2023
+      </h5>
+      <p class="omb-parrafo-card">
+        Encontrarás que los habitantes de la Bogotá-Región se mueven
+        mayoritariamente en modos sostenibles como la caminata, la bicicleta y
+        el transporte público, confirmando la apuesta por consolidar un sistema
+        de movilidad multimodal, sostenible y descarbonizado, desde lo regional
+        a lo local.
+      </p>
+    </div>
+
+    <section class="omb-section">
+      <div class="omb-tableros-container">
+        <h1 class="omb-titulo-section">Tableros</h1>
+        <p class="omb-parrafo-section">
+          Descubre reportes y estadísticas sobre la movilidad en Bogotá para una
+          mejor toma de decisiones.
+        </p>
+        <p>
+          <button
+            class="omb-boton-sidebar-mobile"
+            type="button"
+            id="botonTablerosMobile"
+            aria-label="Todos los tableros">
+            <span class="omb-icon-boton-sidebar">
+              <img
+                src="/sites/default/files/2025-08/omb-icon-todos-tableros.svg"
+                alt="icono Todos los tableros" />
+            </span>
+            <span class="omb-text-button"> Todos los tableros </span>
+            <span class="icono-flecha">
+              <svg viewBox="0 0 256 512" width="16">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path>
+              </svg>
+            </span>
+          </button>
+        </p>
+        <div class="omb-tableros-content">
+          <div class="omb-sidebar-container">
+            <div class="omb-sidebar-content" id="sidebar">
+              <p>
+                <button
+                  class="omb-boton-sidebar omb-boton-sidebar--width omb-boton-sidebar--activo"
+                  type="button"
+                  aria-label="Todos los tableros">
+                  <span class="omb-icon-boton-sidebar">
+                    <img
+                      src="/sites/default/files/2025-08/omb-icon-todos-tableros.svg"
+                      alt="icono Todos los tableros" />
+                  </span>
+                  <span class="omb-text-button">Todos los tableros </span>
+                </button>
+              </p>
+              <div class="omb-sidebar">
+                <nav class="omb-sidebar-nav">
+                  <ul class="omb-sidebar-list">
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Todos los tableros">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-movilidad-sostenible.svg"
+                            alt="icono Todos los tableros" />
+                        </span>
+                        <span class="omb-text-button"
+                          >Movilidad sostenible</span
+                        >
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Todos los tableros">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-transporte-publico.svg"
+                            alt="icono Todos los tableros" />
+                        </span>
+                        <span class="omb-text-button">Transporte público</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Todos los tableros">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-comportamiento-via.svg"
+                            alt="icono Todos los tableros" />
+                        </span>
+                        <span class="omb-text-button"
+                          >Comportamiento en vía</span
+                        >
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Todos los tableros">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-viajes-volumenes.svg"
+                            alt="icono Todos los tableros" />
+                        </span>
+                        <span class="omb-text-button">Viajes y volúmenes</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Todos los tableros">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-enfoque-genero.svg"
+                            alt="icono Todos los tableros" />
+                        </span>
+                        <span class="omb-text-button">Enfoque de género</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Todos los tableros">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-transparencia.svg"
+                            alt="icono Todos los tableros" />
+                        </span>
+                        <span class="omb-text-button">Transparencia</span>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="omb-content">
+            <div class="omb-busqueda-container">
+              <div
+                class="omb-buscador-container omb-buscador-container--escritorio">
+                <label class="omb-label-buscador" for="inputBusqueda"
+                  ><input
+                    class="omb-input-buscar"
+                    type="text"
+                    placeholder="Buscar"
+                    aria-label="Buscador"
+                    id="inputBusqueda" />
+                  <button
+                    class="omb-boton-buscar"
+                    id="btnBuscar"
+                    type="button"
+                    aria-label="Buscar">
+                    <svg viewBox="0 0 512 512" width="16" fill="currentColor">
+                      <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                      <path
+                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                    </svg></button
+                ></label>
+              </div>
+              <!-- Ordenar -->
+              <div class="omb-select">
+                <label for="orden">Ordenar por</label>
+                <select class="omb-opcion-selecionada" id="orden" name="orden">
+                  <option value="actualidad_bloque" selected="">A-Z</option>
+                  <option value="">-----</option>
+                  <option value="actualidad_bloque2">Z-A</option>
+                </select>
+              </div>
+            </div>
+            <div class="omb-div">
+              <div id="ombContainer">
+                {{ drupal_view('tableros', 'page_1') }} {{
+                drupal_view('tableros', 'page_2') }} {{ drupal_view('tableros',
+                'page_3') }} {{ drupal_view('tableros', 'page_4') }} {{
+                drupal_view('tableros', 'page_5') }} {{ drupal_view('tableros',
+                'page_16') }} {{ drupal_view('tableros', 'page_7') }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="omb-card omb-card--tableros" data-categoria="Enfoque de género">
+      <a href="/contexto-tableros"
+        >{{ field_imagen }}
+        <div class="omb-card-tableros-tags-container">
+          <div class="omb-card-tableros-tag">
+            {{ field_taxonomia_tematica }}
+          </div>
+        </div>
+        <h5><a href="/contexto-tableros">{{ title }}</a></h5>
+        {{ body }}</a
+      >
+    </div>
+
+    <section class="omb-section">
+      <div class="omb-infografia-container">
+        <h2 class="omb-titulo-section">Infografia</h2>
+        <p
+          class="omb-parrafo-descripcion-section omb-parrafo-descripcion-section--centrado">
+          Galería infográfica con datos clave y tendencias sobre la movilidad en
+          Bogotá y la región, presentados de forma visual y accesible.
+        </p>
+        <p>
+          <button
+            class="omb-boton-sidebar-mobile"
+            type="button"
+            id="botonTablerosMobile"
+            aria-label="Todos los tableros">
+            <span class="omb-icon-boton-sidebar">
+              <img
+                src="/sites/default/files/2025-08/omb-icon-todos-tableros.svg"
+                alt="icono Todos los tableros" />
+            </span>
+            <span class="omb-text-button"> Infografia </span>
+            <span class="icono-flecha">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 512"
+                width="16">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path>
+              </svg>
+            </span>
+          </button>
+        </p>
+        <div class="omb-infografia-content">
+          <div class="omb-sidebar-container">
+            <div class="omb-sidebar-content" id="sidebar">
+              <p>
+                <button
+                  class="omb-boton-sidebar omb-boton-sidebar--width"
+                  type="button"
+                  aria-label="Todas las infográficas">
+                  <span class="omb-icon-boton-sidebar">
+                    <img
+                      src="/sites/default/files/2025-08/omb-icon-todos-tableros.svg"
+                      alt="icono Todos los tableros" />
+                  </span>
+                  <span> Todas las infografias </span>
+                </button>
+              </p>
+              <div class="omb-sidebar">
+                <nav class="omb-sidebar-nav">
+                  <ul class="omb-sidebar-list">
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Categoria 1">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-movilidad-sostenible_0.svg"
+                            alt="Icono movilidad sostenible " />
+                        </span>
+                        <span class="omb-text-button">
+                          Movilidad sostenible
+                        </span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Categoria 2">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-transporte-publico_0.svg"
+                            alt="Icono transporte público" />
+                        </span>
+                        <span class="omb-text-button">Transporte público</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Categoria 3">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-comportamiento-via_0.svg"
+                            alt="Icono Comportamiento en via" />
+                        </span>
+                        <span class="omb-text-button"
+                          >Comportamiento en via</span
+                        >
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Categoria 4">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-viajes-volumenes_0.svg"
+                            alt="Icono Viajes y volumenes" />
+                        </span>
+                        <span class="omb-text-button">Viajes y volúmenes</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Categoria 4">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-enfoque-genero_0.svg"
+                            alt="Icono enfoque de genero" />
+                        </span>
+                        <span class="omb-text-button">Enfoque de genero</span>
+                      </button>
+                    </li>
+                    <li class="omb-sidebar-item">
+                      <button
+                        class="omb-boton-sidebar omb-boton-sidebar--secundario"
+                        type="button"
+                        aria-label="Categoria 4">
+                        <span class="omb-icon-boton-sidebar">
+                          <img
+                            src="/sites/default/files/2025-08/omb-icon-transparencia_0.svg"
+                            alt="icono transparencia" />
+                        </span>
+                        <span class="omb-text-button">Transparencia</span>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="omb-contenedor-derecho">
+            <div
+              class="omb-cards-infogracia-container"
+              id="ombInfografiaCardsContainer">
+              <div class="omb-busqueda-container">
+                <div
+                  class="omb-buscador-container omb-buscador-container--escritorio">
+                  <label class="omb-label-buscador" for="inputBusqueda"
+                    ><input
+                      class="omb-input-buscar"
+                      type="text"
+                      placeholder="Buscar"
+                      aria-label="Buscador"
+                      id="inputBusqueda" />
+                    <button
+                      class="omb-boton-buscar"
+                      id="btnBuscar"
+                      type="button"
+                      aria-label="Buscar">
+                      <svg viewBox="0 0 512 512" width="16" fill="currentColor">
+                        <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                        <path
+                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                      </svg></button
+                  ></label>
+                </div>
+                <!-- Ordenar -->
+                <div class="omb-select">
+                  <label for="orden">Ordenar por</label>
+                  <select
+                    class="omb-opcion-selecionada"
+                    id="orden"
+                    name="orden">
+                    <option value="actualidad_bloque" selected="">A-Z</option>
+                    <option value="">-----</option>
+                    <option value="actualidad_bloque2">Z-A</option>
+                  </select>
+                </div>
+              </div>
+              <p>
+                {{ drupal_view('infografias', 'page_1') }} {{
+                drupal_view('infografias', 'page_10') }} {{
+                drupal_view('infografias', 'page_11') }} {{
+                drupal_view('infografias', 'page_12') }} {{
+                drupal_view('infografias', 'page_13') }} {{
+                drupal_view('infografias', 'page_14') }} {{
+                drupal_view('infografias', 'page_15') }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="omb-section omb-section--de-interes">
+        <div class="omb-de-interes-container">
+          <h2 class="omb-titulo-section">
+            Estas publicaciones también podrían ser de tu interés
+          </h2>
+          <p class="omb-parrafo-descripcion-section">
+            Explora nuestros publicaciones sobre movilidad en Bogotá, similares
+            a esta
+          </p>
+          <div
+            class="omb-botom-control-carrousel"
+            id="controlCarrucelPublicaionesInteres">
+            <button
+              type="button"
+              aria-label="Pausar contenido"
+              title="Pausar contenido">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path
+                  d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"></path>
+              </svg>
+              Pausar
+            </button>
+          </div>
+          <div class="swiper-pagination omb-paginacion">&nbsp;</div>
+          <div class="omb-carrusel-container">
+            <div class="swiper-button-prev omb-boton-prev">&nbsp;</div>
+            <div class="swiper-button-next omb-boton-next">&nbsp;</div>
+            <div class="swiper omb-swiper publicacionesInteresSlideSwiper">
+              <div class="swiper-wrapper omb-wrapper">
+                <div
+                  class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaciones-home">
+                  <div class="omb-card omb-card--pequeña">
+                    {{ drupal_view('resultados_de_encuentas_de_mobilidad',
+                    'page_2') }}
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaciones-home">
+                  <div class="omb-card omb-card--pequeña">
+                    {{ drupal_view('anuarios_de_siniestralidad', 'page_2') }}
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaciones-home">
+                  <div class="omb-card omb-card--pequeña">
+                    {{ drupal_view('infografias', 'page_2') }}
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaciones-home">
+                  <div class="omb-card omb-card--pequeña">
+                    {{ drupal_view('informes_tecnicos_consultorias', 'page_2')
+                    }}
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaciones-home">
+                  <div class="omb-card omb-card--pequeña">
+                    {{ drupal_view('articulos_e_investigaciones', 'page_2') }}
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide omb-swiper-slide omb-swiper-slide--publicaciones-home">
+                  <div class="omb-card omb-card--pequeña">
+                    {{ drupal_view('memorias_movi_innova', 'page_2') }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <a href="/contexto-tableros" class="omb-enlace--not-underline">
+      <div
+        class="omb-card omb-card--tableros"
+        data-categoria="Enfoque de género">
+        {{ field_imagen }}
+        <div class="omb-card-tableros-tags-container">
+          <div class="omb-card-tableros-tag">
+            {{ field_taxonomia_tematica }}
+          </div>
+        </div>
+        <h5>{{ title }}</h5>
+        {{ body }}
+      </div>
+    </a>
+
+    <a href="{{ view_node }}">
+      <div class="omb-card omb-card--pequeña">
+        {{ field_imagen_publicacion }}
+        <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">{{ title }}</h5>
+        <div class="omb-parrafo-card">{{ field_descripcion_breve_corta }}</div>
+      </div>
+    </a>
+    <a href="{{ view_node }}" class="omb-enlace--not-underline">
+      <div
+        class="omb-card omb-card--tableros"
+        data-categoria="Movilidad sostenible">
+        {{ field_imagen }}
+        <div class="omb-tags-card-container">
+          <div class="omb-tag-card">
+            <img
+              src="/sites/default/files/2025-07/icono-tag.png"
+              alt="Icono de tag" />
+            <span>{{ field_taxonomia_tematica }}</span>
+          </div>
+        </div>
+        <h5 class="omb-titulo-card omb-titulo-card--dos-lineas">{{ title }}</h5>
+        {{ body }}
+      </div>
+    </a>
+    <style>
+      .omb-opcion-selecionada.activo > span {
+        transform: rotate(-90deg);
+      }
+    </style>
+    <section class="omb-section">
+      <div class="omb-filtro-tematica-container">
+        <h1 class="omb-titulo-section" id="tituloSection">Temáticas</h1>
+        <div class="omb-filtros" id="filtros">
+          <h2 class="omb-parrafo-descripcion-section omb-titulo-section--color">
+            Filtra por tipo de contenido, palabra clave y fecha
+          </h2>
+          <div class="omb-inputs-container">
+            <!-- Tipo de contenido -->
+            <div class="omb-select">
+              <label for="tipoContenido">Tipo de contenido</label>{# Obtener el
+              parámetro desde la URL #}{% set tipo =
+              drupal_token('current-page:query:contenido')|default('all') %}{#
+              Definir las opciones disponibles #} {% set opciones_tipo = { '':
+              '-----', 'all': 'Todos', 'tarjetas_a': 'Tableros', 'article':
+              'Noticias', 'mapas': 'Mapas',
+              'resultados_encuestas_de_movilida+categorias_publicaciones':
+              'Publicaciones', 'infografias': 'Infografías', 'tarjetas_b':
+              'Indicadores' } %}
+              <select
+                class="omb-opcion-selecionada"
+                id="tipoContenido"
+                name="contenido">
+                {# Imprimir solo la opción seleccionada actual #} {% if
+                opciones_tipo[tipo] is defined %}
+                <option value="{{ tipo }}" selected="">
+                  {{ opciones_tipo[tipo] }}
+                </option>
+                {% else %}
+                <option value="" selected="">{{ opciones_tipo[''] }}</option>
+                {% endif %} {# Imprimir el resto de las opciones, excluyendo la
+                seleccionada y la vacía si ya fue mostrada #} {% for key, label
+                in opciones_tipo %} {% if key != tipo and not (key == '' and
+                (tipo == '' or tipo is empty)) %}
+                <option value="{{ key }}">{{ label }}</option>
+                {% endif %} {% endfor %}
+              </select>
+            </div>
+            <!-- Categoría -->
+            <div class="omb-select">
+              <label for="categoria">Categoría</label> {% set cat =
+              drupal_token('current-page:query:categoria') %}
+              <select
+                class="omb-opcion-selecionada"
+                id="categoria"
+                name="categoria">
+                {% set opciones = { '': '-----', 'all': 'Todos', '5': 'Movilidad
+                sostenible', '6': 'Transporte público', '7': 'Comportamiento en
+                vía', '8': 'Viajes y volúmenes', '9': 'Enfoque de género', '10':
+                'Transparencia', '11': 'Infraestructura' } %} {# Imprimir solo
+                la opción seleccionada actual #} {% if opciones[cat] is defined
+                %}
+                <option value="{{ cat }}" selected="">
+                  {{ opciones[cat] }}
+                </option>
+                {% else %}
+                <option value="" selected="">{{ opciones[''] }}</option>
+                {% endif %} {# Imprimir las demás opciones, excluyendo la
+                seleccionada actual y la clave vacía si ya se imprimió #} {% for
+                key, label in opciones %} {% if key != cat and not (key == ''
+                and (cat == '' or cat is empty)) %}
+                <option value="{{ key }}">{{ label }}</option>
+                {% endif %} {% endfor %}
+              </select>
+            </div>
+            <!-- Ordenar -->
+            <div class="omb-select omb-select--con-dos-elementos">
+              <div>
+                <label for="orden">Ordenar por</label>{% set orden =
+                drupal_token('current-page:query:orden') %}<select
+                  class="omb-opcion-selecionada"
+                  id="orden"
+                  name="orden">
+                  {% set opciones = { '': '-----', 'block_3': 'A-Z', 'block_4':
+                  'Z-A', 'block_2': 'Fecha-reciente', 'block_1': 'Fecha-antigua'
+                  } %} {# Imprimir solo la opción seleccionada actual #} {% if
+                  opciones[orden] is defined %}
+                  <option value="{{ orden}}" selected="">
+                    {{ opciones[orden] }}
+                  </option>
+                  {% else %}
+                  <option value="" selected="">{{ opciones[''] }}</option>
+                  {% endif %} {# Imprimir las demás opciones, excluyendo la
+                  seleccionada actual y la clave vacía si ya se imprimió #} {%
+                  for key, label in opciones %} {% if key != orden and not (key
+                  == '' and (orden == '' or orden is empty)) %}
+                  <option value="{{ key }}">{{ label }}</option>
+                  {% endif %} {% endfor %}
+                </select>
+              </div>
+              <div class="omb-boton-filtro-container">
+                <button
+                  class="omb-boton omb-boton--primario omb-boton--filtro"
+                  id="btnAplicarFiltros">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-filter">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"></path></svg
+                  >Filtrar</button
+                ><a
+                  class="omb-boton omb-boton--primario omb-boton--filtro"
+                  href="/tematicas?contenido=all&amp;txm=all&amp;contenido_key=Todos&amp;categoria=all&amp;categoria_key=Todos&amp;orden=block_3&amp;orden_key=A-Z"
+                  id="btnAplicarFiltros"
+                  ><svg
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-filter-off"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M8 4h12v2.172a2 2 0 0 1 -.586 1.414l-3.914 3.914m-.5 3.5v4l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227"></path>
+                    <path d="M3 3l18 18"></path></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="omb-section">
+      <div class="omb-tematicas-container">
+        {% set val0 = drupal_token('current-page:query:orden') %}{% set val1 =
+        drupal_token('current-page:query:categoria') %} {% set val3 =
+        drupal_token('current-page:query:txm') %} {% set contenido_raw =
+        drupal_token('current-page:query:contenido') %} {% if contenido_raw ==
+        'tarjetas_a' or contenido_raw == 'tarjetas_b' %} {% set val2 =
+        'tarjetas' %} {% else %} {% set val2 = contenido_raw %} {% endif %} {%
+        if val1 is not empty or val2 is not empty or val3 is not empty %} {{
+        drupal_view('tematica', val0 , val2, val1, val3) }} {% endif %}
+      </div>
+    </section>
+    <script>
+      const opt = document.querySelector("#categoria > option:nth-child(2)");
+      const opt2 = document.querySelector(
+        "#tipoContenido > option:nth-child(2)"
+      );
+      const opt3 = document.querySelector("#orden> option:nth-child(2)");
+      if (opt) {
+        opt.disabled = true;
+      }
+      if (opt2) {
+        opt2.disabled = true;
+      }
+      if (opt3) {
+        opt3.disabled = true;
+      }
+      document
+        .getElementById("btnAplicarFiltros")
+        .addEventListener("click", function () {
+          const contenido =
+            document.querySelector("#tipoContenido").options[
+              document.querySelector("#tipoContenido").selectedIndex
+            ].value;
+          const contenido_key =
+            document.querySelector("#tipoContenido").options[
+              document.querySelector("#tipoContenido").selectedIndex
+            ].text;
+          const categoria =
+            document.querySelector("#categoria").options[
+              document.querySelector("#categoria").selectedIndex
+            ].value;
+          const categoria_key =
+            document.querySelector("#categoria").options[
+              document.querySelector("#categoria").selectedIndex
+            ].text;
+          const orden =
+            document.querySelector("#orden").options[
+              document.querySelector("#orden").selectedIndex
+            ].value;
+          const orden_key =
+            document.querySelector("#orden").options[
+              document.querySelector("#orden").selectedIndex
+            ].text;
+          const params = new URLSearchParams();
+          if (contenido == "tarjetas_a") {
+            params.append("contenido", "tarjetas_a");
+            params.append("txm", 12);
+          } else if (contenido == "tarjetas_b") {
+            params.append("contenido", "tarjetas_b");
+            params.append("txm", 39);
+          } else {
+            params.append("contenido", contenido);
+            params.append("txm", "all");
+          }
+          if (contenido_key) params.append("contenido_key", contenido_key);
+          if (categoria) params.append("categoria", categoria);
+          if (categoria_key) params.append("categoria_key", categoria_key);
+          if (orden) params.append("orden", orden);
+          if (orden_key) params.append("orden_key", orden_key);
+          window.location.search = params.toString();
+        });
+    </script>
+  </body>
+</html>
